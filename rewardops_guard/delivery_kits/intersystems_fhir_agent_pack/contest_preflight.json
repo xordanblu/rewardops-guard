@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-30T13:18:06+00:00",
+  "checked_at": "2026-05-30T13:21:25+00:00",
   "contest_value": {
     "expert_first_place_usd": 5000,
     "submission_deadline": "2026-06-07 23:59 EST",
@@ -7,9 +7,12 @@
   },
   "covered_bonus_angles": [
     "Suggested task: Smart Patient Summary Generator",
+    "InterSystems FHIR Server container scaffold",
     "Embedded Python-style local agent logic",
     "LLM/AI-agent-ready summary workflow",
-    "Docker/ZPM/Open Exchange gates documented but not executed"
+    "Docker container scaffold",
+    "ZPM/IPM module.xml package scaffold",
+    "Open Exchange gates documented but not executed"
   ],
   "external_blockers_before_contest_submission": [
     "Create or log into InterSystems Developer Community / Open Exchange account",
@@ -25,7 +28,22 @@
     {
       "exists": true,
       "path": "README.md",
-      "size_bytes": 2076
+      "size_bytes": 2501
+    },
+    {
+      "exists": true,
+      "path": "Dockerfile",
+      "size_bytes": 286
+    },
+    {
+      "exists": true,
+      "path": "docker-compose.yml",
+      "size_bytes": 545
+    },
+    {
+      "exists": true,
+      "path": "module.xml",
+      "size_bytes": 600
     },
     {
       "exists": true,
@@ -40,15 +58,57 @@
     {
       "exists": true,
       "path": "test_fhir_summary_agent.py",
-      "size_bytes": 3503
+      "size_bytes": 3778
     },
     {
       "exists": true,
       "path": "contest_packet.py",
-      "size_bytes": 6868
+      "size_bytes": 7401
+    },
+    {
+      "exists": true,
+      "path": "src/cls/RewardOps/FHIR/CareBriefAgent.cls",
+      "size_bytes": 371
     }
   ],
   "local_ok": true,
+  "packaging_checks": [
+    {
+      "evidence": "Dockerfile references InterSystems IRIS for Health Community image",
+      "name": "iris_health_container_image",
+      "ok": true
+    },
+    {
+      "evidence": "Dockerfile runs the synthetic FHIR summary agent during image build",
+      "name": "docker_build_smoke_command",
+      "ok": true
+    },
+    {
+      "evidence": "docker-compose.yml exposes the standard local IRIS web port",
+      "name": "docker_compose_service",
+      "ok": true
+    },
+    {
+      "evidence": "module.xml declares fhir-care-brief-agent",
+      "name": "zpm_module_name",
+      "ok": true
+    },
+    {
+      "evidence": "module.xml packages RewardOps.FHIR classes",
+      "name": "zpm_resource_package",
+      "ok": true
+    },
+    {
+      "evidence": "module.xml declares /fhir-care-brief-agent web app",
+      "name": "zpm_csp_application",
+      "ok": true
+    },
+    {
+      "evidence": "ObjectScript package bridge class is present",
+      "name": "objectscript_bridge_class",
+      "ok": true
+    }
+  ],
   "resource_coverage": {
     "found": [
       "AllergyIntolerance",

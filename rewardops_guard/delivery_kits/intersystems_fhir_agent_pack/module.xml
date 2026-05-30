@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="RewardOps Guard">
+  <Document name="fhir-care-brief-agent.ZPM">
+    <Module>
+      <Name>fhir-care-brief-agent</Name>
+      <Version>0.1.0</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="RewardOps.FHIR.PKG"/>
+      <CSPApplication
+        Url="/fhir-care-brief-agent"
+        Recurse="1"
+        ServeFiles="1"
+        CookiePath="/fhir-care-brief-agent"
+        UseCookies="2"
+        PasswordAuthEnabled="0"
+        UnauthenticatedEnabled="1"/>
+    </Module>
+  </Document>
+</Export>

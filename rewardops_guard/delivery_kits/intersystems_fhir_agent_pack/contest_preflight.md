@@ -1,6 +1,6 @@
 # InterSystems FHIR Contest Preflight
 
-Checked: 2026-05-30T13:18:06+00:00
+Checked: 2026-05-30T13:21:25+00:00
 Local OK: `true`
 External submission OK: `false`
 First-place target: `$5000`
@@ -22,6 +22,16 @@ Deadline: 2026-06-07 23:59 EST
 - ok: ed_doctor
 - ok: family_caregiver
 - ok: patient
+
+## Packaging Checks
+
+- ok: iris_health_container_image - Dockerfile references InterSystems IRIS for Health Community image
+- ok: docker_build_smoke_command - Dockerfile runs the synthetic FHIR summary agent during image build
+- ok: docker_compose_service - docker-compose.yml exposes the standard local IRIS web port
+- ok: zpm_module_name - module.xml declares fhir-care-brief-agent
+- ok: zpm_resource_package - module.xml packages RewardOps.FHIR classes
+- ok: zpm_csp_application - module.xml declares /fhir-care-brief-agent web app
+- ok: objectscript_bridge_class - ObjectScript package bridge class is present
 
 ## External Blockers
 

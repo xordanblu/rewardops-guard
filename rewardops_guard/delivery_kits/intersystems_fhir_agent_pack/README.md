@@ -14,6 +14,9 @@ patient data, or submitting to Open Exchange.
 - Medication-safety findings, duplicate therapy checks, and allergy alerts.
 - Care-plan task candidates for clinician handoff and patient follow-up.
 - Evidence traceability showing required FHIR resource coverage.
+- Docker and `docker-compose.yml` scaffold for IRIS for Health Community review.
+- `module.xml` and `RewardOps.FHIR.CareBriefAgent` ObjectScript bridge for
+  ZPM/IPM packaging review.
 - A contest packet that preserves prize/deadline context and approval gates.
 
 ## Run
@@ -26,12 +29,21 @@ python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packe
 python3 -m unittest rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.test_fhir_summary_agent -v
 ```
 
+From this kit directory, validate the container configuration without starting
+IRIS:
+
+```bash
+docker compose config
+```
+
 ## Contest Fit
 
 The current package targets the official Smart Patient Summary Generator idea
-and adds adjacent Medication Safety and Care Plan Navigator behavior. The local
-preflight checks required FHIR resources, role outputs, README/package presence,
-and the external gates that still need human approval before public submission.
+and adds adjacent Medication Safety and Care Plan Navigator behavior. It also
+adds Docker and ZPM/IPM packaging artifacts so reviewers can inspect the IRIS
+deployment path. The local preflight checks required FHIR resources, role
+outputs, README/package presence, packaging files, and the external gates that
+still need human approval before public submission.
 
 ## Submission Boundary
 

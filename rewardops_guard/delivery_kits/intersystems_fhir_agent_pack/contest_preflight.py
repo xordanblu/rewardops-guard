@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 import sys
 from typing import Any
+from xml.etree import ElementTree
 
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -32,10 +33,14 @@ KIT_ROOT = Path(__file__).resolve().parent
 
 REQUIRED_LOCAL_FILES = [
     "README.md",
+    "Dockerfile",
+    "docker-compose.yml",
+    "module.xml",
     "fhir_summary_agent.py",
     "sample_patient_bundle.json",
     "test_fhir_summary_agent.py",
     "contest_packet.py",
+    "src/cls/RewardOps/FHIR/CareBriefAgent.cls",
 ]
 
 EXTERNAL_BLOCKERS = [
@@ -66,6 +71,70 @@ def local_file_checks() -> list[dict[str, Any]]:
     for name in REQUIRED_LOCAL_FILES:
         path = KIT_ROOT / name
         checks.append({"path": name, "exists": path.exists(), "size_bytes": path.stat().st_size if path.exists() else 0})
+    return checks
+
+
+def packaging_checks() -> list[dict[str, Any]]:
+    checks: list[dict[str, Any]] = []
+    dockerfile = KIT_ROOT / "Dockerfile"
+    docker_compose = KIT_ROOT / "docker-compose.yml"
+    module_xml = KIT_ROOT / "module.xml"
+    cls_file = KIT_ROOT / "src/cls/RewardOps/FHIR/CareBriefAgent.cls"
+
+    dockerfile_text = dockerfile.read_text(encoding="utf-8") if dockerfile.exists() else ""
+    checks.append(
+        {
+            "name": "iris_health_container_image",
+            "ok": "intersystemsdc/irishealth-community:latest" in dockerfile_text,
+            "evidence": "Dockerfile references InterSystems IRIS for Health Community image",
+        }
+    )
+    checks.append(
+        {
+            "name": "docker_build_smoke_command",
+            "ok": "fhir_summary_agent.py" in dockerfile_text and "--role ed_doctor" in dockerfile_text,
+            "evidence": "Dockerfile runs the synthetic FHIR summary agent during image build",
+        }
+    )
+
+    compose_text = docker_compose.read_text(encoding="utf-8") if docker_compose.exists() else ""
+    checks.append(
+        {
+            "name": "docker_compose_service",
+            "ok": "fhir-care-brief-agent" in compose_text and "52773:52773" in compose_text,
+            "evidence": "docker-compose.yml exposes the standard local IRIS web port",
+        }
+    )
+
+    try:
+        tree = ElementTree.parse(module_xml)
+        root = tree.getroot()
+        module_text = " ".join(element.text or "" for element in root.iter())
+        resource_names = [element.attrib.get("Name", "") for element in root.iter() if element.tag == "Resource"]
+        csp_urls = [element.attrib.get("Url", "") for element in root.iter() if element.tag == "CSPApplication"]
+        module_ok = "fhir-care-brief-agent" in module_text
+        resource_ok = "RewardOps.FHIR.PKG" in resource_names
+        csp_ok = "/fhir-care-brief-agent" in csp_urls
+    except (ElementTree.ParseError, OSError):
+        module_ok = False
+        resource_ok = False
+        csp_ok = False
+    checks.extend(
+        [
+            {"name": "zpm_module_name", "ok": module_ok, "evidence": "module.xml declares fhir-care-brief-agent"},
+            {"name": "zpm_resource_package", "ok": resource_ok, "evidence": "module.xml packages RewardOps.FHIR classes"},
+            {"name": "zpm_csp_application", "ok": csp_ok, "evidence": "module.xml declares /fhir-care-brief-agent web app"},
+        ]
+    )
+
+    cls_text = cls_file.read_text(encoding="utf-8") if cls_file.exists() else ""
+    checks.append(
+        {
+            "name": "objectscript_bridge_class",
+            "ok": "Class RewardOps.FHIR.CareBriefAgent" in cls_text and "SummaryRoles" in cls_text,
+            "evidence": "ObjectScript package bridge class is present",
+        }
+    )
     return checks
 
 
@@ -106,10 +175,12 @@ def build_report() -> dict[str, Any]:
     missing_resources = sorted(REQUIRED_CONTEST_RESOURCES - resource_types)
     files = local_file_checks()
     roles = role_checks(bundle)
+    packaging = packaging_checks()
     local_ok = (
         all(item["exists"] and item["size_bytes"] > 0 for item in files)
         and not missing_resources
         and all(item["ok"] for item in roles)
+        and all(item["ok"] for item in packaging)
     )
     return {
         "checked_at": now_iso(),
@@ -128,11 +199,15 @@ def build_report() -> dict[str, Any]:
             "missing": missing_resources,
         },
         "role_checks": roles,
+        "packaging_checks": packaging,
         "covered_bonus_angles": [
             "Suggested task: Smart Patient Summary Generator",
+            "InterSystems FHIR Server container scaffold",
             "Embedded Python-style local agent logic",
             "LLM/AI-agent-ready summary workflow",
-            "Docker/ZPM/Open Exchange gates documented but not executed",
+            "Docker container scaffold",
+            "ZPM/IPM module.xml package scaffold",
+            "Open Exchange gates documented but not executed",
         ],
         "external_blockers_before_contest_submission": EXTERNAL_BLOCKERS,
         "side_effects": "none; local read/validation only",
@@ -158,6 +233,9 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
     lines.extend(["", "## Role Checks", ""])
     for role in report["role_checks"]:
         lines.append(f"- {'ok' if role['ok'] else 'missing'}: {role['role']}")
+    lines.extend(["", "## Packaging Checks", ""])
+    for check in report["packaging_checks"]:
+        lines.append(f"- {'ok' if check['ok'] else 'missing'}: {check['name']} - {check['evidence']}")
     lines.extend(["", "## External Blockers", ""])
     lines.extend(f"- {item}" for item in report["external_blockers_before_contest_submission"])
     lines.append("")

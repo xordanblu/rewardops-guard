@@ -64,6 +64,10 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertTrue(report["local_ok"])
         self.assertFalse(report["external_submission_ok"])
         self.assertIn("Open Exchange", " ".join(report["external_blockers_before_contest_submission"]))
+        packaging = {item["name"]: item["ok"] for item in report["packaging_checks"]}
+        self.assertTrue(packaging["iris_health_container_image"])
+        self.assertTrue(packaging["zpm_resource_package"])
+        self.assertTrue(packaging["objectscript_bridge_class"])
 
     def test_unknown_role_rejected(self) -> None:
         with self.assertRaises(ValueError):

@@ -1,0 +1,14 @@
+services:
+  fhir-care-brief-agent:
+    build:
+      context: .
+    image: rewardops/fhir-care-brief-agent:local
+    container_name: fhir-care-brief-agent
+    ports:
+      - "52773:52773"
+    volumes:
+      - ./sample_patient_bundle.json:/irisdev/app/sample_patient_bundle.json:ro
+    labels:
+      org.opencontainers.image.title: "FHIR Care Brief Agent"
+      org.opencontainers.image.description: "Synthetic-data-first InterSystems FHIR contest agent package"
+      org.opencontainers.image.source: "https://github.com/xordanx/rewardops-guard"

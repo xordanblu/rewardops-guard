@@ -19,11 +19,15 @@ OPEN_EXCHANGE_URL = "https://openexchange.intersystems.com/contests?archive=1"
 
 LOCAL_ARTIFACTS = [
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/README.md",
+    "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/Dockerfile",
+    "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml",
+    "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_patient_bundle.json",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.json",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.md",
+    "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/src/cls/RewardOps/FHIR/CareBriefAgent.cls",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py",
 ]
 
@@ -87,7 +91,7 @@ def build_packet() -> dict[str, Any]:
         "project": {
             "name": "FHIR Care Brief Agent",
             "one_liner": "A synthetic-data-first FHIR agent that turns Patient, Condition, MedicationRequest, AllergyIntolerance, Observation, Encounter, and CarePlan resources into role-specific care summaries.",
-            "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety and care-plan navigator outputs for a stronger expert-judging story.",
+            "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, Docker, and ZPM/IPM packaging artifacts for a stronger expert-judging story.",
             "suggested_tracks": SUGGESTED_TRACKS,
             "agent_workflow": [
                 "Load an approved FHIR Bundle.",
@@ -95,6 +99,7 @@ def build_packet() -> dict[str, Any]:
                 "Generate current issues, recent changes, and risks/follow-up items.",
                 "Generate medication-safety findings, care-plan task candidates, and evidence traceability.",
                 "Render role-specific outputs for ED doctor, care manager, patient, or family caregiver.",
+                "Ship Docker, docker-compose, module.xml, and a minimal RewardOps.FHIR ObjectScript bridge class for IRIS/Open Exchange packaging review.",
                 "Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved.",
             ],
         },

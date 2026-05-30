@@ -19,13 +19,28 @@
     "youtube_video": 3,
     "zpm_package_deployment": 2
   },
-  "generated_at": "2026-05-30T13:16:45+00:00",
+  "generated_at": "2026-05-30T13:21:32+00:00",
   "kit": "intersystems_fhir_agent_pack",
   "local_artifacts": [
     {
       "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/README.md",
-      "size_bytes": 2076
+      "size_bytes": 2501
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/Dockerfile",
+      "size_bytes": 286
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml",
+      "size_bytes": 545
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml",
+      "size_bytes": 600
     },
     {
       "exists": true,
@@ -35,7 +50,7 @@
     {
       "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
-      "size_bytes": 6750
+      "size_bytes": 10140
     },
     {
       "exists": true,
@@ -54,8 +69,13 @@
     },
     {
       "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/src/cls/RewardOps/FHIR/CareBriefAgent.cls",
+      "size_bytes": 371
+    },
+    {
+      "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py",
-      "size_bytes": 3503
+      "size_bytes": 3778
     }
   ],
   "missing_local_artifacts": [],
@@ -75,9 +95,10 @@
       "Generate current issues, recent changes, and risks/follow-up items.",
       "Generate medication-safety findings, care-plan task candidates, and evidence traceability.",
       "Render role-specific outputs for ED doctor, care manager, patient, or family caregiver.",
+      "Ship Docker, docker-compose, module.xml, and a minimal RewardOps.FHIR ObjectScript bridge class for IRIS/Open Exchange packaging review.",
       "Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved."
     ],
-    "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety and care-plan navigator outputs for a stronger expert-judging story.",
+    "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, Docker, and ZPM/IPM packaging artifacts for a stronger expert-judging story.",
     "name": "FHIR Care Brief Agent",
     "one_liner": "A synthetic-data-first FHIR agent that turns Patient, Condition, MedicationRequest, AllergyIntolerance, Observation, Encounter, and CarePlan resources into role-specific care summaries.",
     "suggested_tracks": [
