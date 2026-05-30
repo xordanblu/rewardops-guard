@@ -51,7 +51,12 @@ python3 dfir_triage_agent/case_runner.py \
   --markdown-output "$OUT/find_evil_case_report.md"
 echo
 
-echo "== 7. Show reviewer-facing Markdown report =="
+echo "== 7. Run Devpost readiness preflight =="
+python3 submission/devpost_preflight.py \
+  --json-output "$OUT/devpost_preflight.json"
+echo
+
+echo "== 8. Show reviewer-facing Markdown report =="
 sed -n '1,120p' "$OUT/dfir_triage_report.md"
 echo
 sed -n '1,120p' "$OUT/rewardops_defender_report.md"

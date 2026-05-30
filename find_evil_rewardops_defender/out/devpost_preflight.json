@@ -1,0 +1,135 @@
+{
+  "checks": [
+    {
+      "evidence": "README.md",
+      "ok": true,
+      "requirement": "file:README.md"
+    },
+    {
+      "evidence": "LICENSE",
+      "ok": true,
+      "requirement": "file:LICENSE"
+    },
+    {
+      "evidence": "docs/ARCHITECTURE.md",
+      "ok": true,
+      "requirement": "file:docs/ARCHITECTURE.md"
+    },
+    {
+      "evidence": "docs/architecture.svg",
+      "ok": true,
+      "requirement": "file:docs/architecture.svg"
+    },
+    {
+      "evidence": "docs/EVIDENCE_DATASET.md",
+      "ok": true,
+      "requirement": "file:docs/EVIDENCE_DATASET.md"
+    },
+    {
+      "evidence": "docs/ACCURACY_REPORT.md",
+      "ok": true,
+      "requirement": "file:docs/ACCURACY_REPORT.md"
+    },
+    {
+      "evidence": "submission/SUBMISSION_DRAFT.md",
+      "ok": true,
+      "requirement": "file:submission/SUBMISSION_DRAFT.md"
+    },
+    {
+      "evidence": "submission/SCREENCAST_SCRIPT.md",
+      "ok": true,
+      "requirement": "file:submission/SCREENCAST_SCRIPT.md"
+    },
+    {
+      "evidence": "cases/find_evil_local_case.json",
+      "ok": true,
+      "requirement": "file:cases/find_evil_local_case.json"
+    },
+    {
+      "evidence": "out/find_evil_case_report.json",
+      "ok": true,
+      "requirement": "file:out/find_evil_case_report.json"
+    },
+    {
+      "evidence": "out/find_evil_case_report.md",
+      "ok": true,
+      "requirement": "file:out/find_evil_case_report.md"
+    },
+    {
+      "evidence": "out/submission_guard_manifest.json",
+      "ok": true,
+      "requirement": "file:out/submission_guard_manifest.json"
+    },
+    {
+      "evidence": "run_terminal_demo.sh",
+      "ok": true,
+      "requirement": "file:run_terminal_demo.sh"
+    },
+    {
+      "evidence": "https://github.com/xordanx/rewardops-guard",
+      "ok": true,
+      "requirement": "public_repo_url"
+    },
+    {
+      "evidence": "LICENSE",
+      "ok": true,
+      "requirement": "mit_license"
+    },
+    {
+      "evidence": "out/find_evil_case_report.json",
+      "ok": true,
+      "requirement": "ground_truth_case_passes"
+    },
+    {
+      "evidence": "out/find_evil_case_report.json",
+      "ok": true,
+      "requirement": "no_case_false_positives"
+    },
+    {
+      "evidence": "out/find_evil_case_report.json",
+      "ok": true,
+      "requirement": "no_case_false_negatives"
+    },
+    {
+      "evidence": "out/submission_guard_manifest.json",
+      "ok": true,
+      "requirement": "release_guard_ready"
+    },
+    {
+      "evidence": "missing external video URL",
+      "external_action_required": true,
+      "ok": false,
+      "requirement": "youtube_vimeo_or_youku_video_url"
+    },
+    {
+      "evidence": "not submitted by local preflight",
+      "external_action_required": true,
+      "ok": false,
+      "requirement": "devpost_form_submission"
+    }
+  ],
+  "external_blocking": [
+    {
+      "evidence": "missing external video URL",
+      "external_action_required": true,
+      "ok": false,
+      "requirement": "youtube_vimeo_or_youku_video_url"
+    },
+    {
+      "evidence": "not submitted by local preflight",
+      "external_action_required": true,
+      "ok": false,
+      "requirement": "devpost_form_submission"
+    }
+  ],
+  "external_submission_ok": false,
+  "local_blocking": [],
+  "local_ok": true,
+  "next_external_actions": [
+    "Upload the demo video to YouTube, Vimeo, or Youku and rerun this preflight with --video-url.",
+    "Complete the Devpost FIND EVIL submission form using submission/SUBMISSION_DRAFT.md."
+  ],
+  "schema": "rewardops.find_evil.devpost_preflight.v1",
+  "status": "ready_for_external_submission",
+  "video_url": null
+}

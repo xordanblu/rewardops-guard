@@ -1,6 +1,6 @@
 # RewardOps Defender Report
 
-Generated: 2026-05-30T12:48:48Z
+Generated: 2026-05-30T12:58:16Z
 Case: find-evil-agent-defense
 Verdict: agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain
 Events: 6

@@ -1,6 +1,6 @@
 # DFIR Triage Report
 
-Generated: 2026-05-30T12:48:48Z
+Generated: 2026-05-30T12:58:16Z
 Case: find-evil-demo
 Severity: critical
 Events: 5

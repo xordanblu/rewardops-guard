@@ -1,9 +1,10 @@
 # FIND EVIL Submission Draft
 
-Status: public repository and demo video asset prepared. Do not submit to
-Devpost/FIND EVIL, upload to an external video host, create accounts, configure
-payout, sign wallet messages, or provide tax/KYC/banking information without a
-fresh preflight.
+Status: public repository and repo-hosted demo video asset prepared. FIND EVIL
+still requires a YouTube, Vimeo, or Youku video URL in the Devpost form. Do not
+submit to Devpost/FIND EVIL, upload to an external video host, create accounts,
+configure payout, sign wallet messages, or provide tax/KYC/banking information
+without a fresh preflight.
 
 ## Project Name
 
@@ -35,7 +36,8 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 
 - Repository: https://github.com/xordanx/rewardops-guard
 - Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
-- Demo video: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- Repo-hosted demo video asset: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- Devpost-required video URL: TODO - upload to YouTube, Vimeo, or Youku.
 - Contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
@@ -48,14 +50,14 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 - Read-only tool wrapper: a compact JSON-RPC interface exposes load, triage, explain, and export tools.
 - Submission guard: a local release manifest detects secrets before publication and records prompt-injection fixtures without obeying them.
 - Terminal reproducibility: the full demo runs with Python standard library commands.
-- Public package: a sanitized GitHub repository, dashboard, demo video, and contact sheet are ready for review.
+- Public package: a sanitized GitHub repository, dashboard, repo-hosted demo video asset, and contact sheet are ready for review.
 - Revenue boundary: confirmed revenue is separated from pending submissions and inbound market surface; no failed BountyBook amount is counted as earned.
 
 ## How It Maps To FIND EVIL
 
 - Autonomous execution quality: the terminal demo runs tests, DFIR triage, agent-defense sequence analysis, tool-wrapper calls, and report export as a repeatable flow.
-- IR accuracy: labelled expected rules produce a concrete accuracy report.
-- Breadth/depth: the synthetic cases cover prompt injection, wallet traps, endpoint process execution, credential access, network egress, authentication, file-write persistence, and self-correction.
+- IR accuracy: labelled expected rules and the labelled FIND EVIL local case produce concrete accuracy reports.
+- Breadth/depth: the synthetic cases cover prompt injection, obfuscated prompt smuggling, wallet traps, endpoint process execution, credential access, network egress, authentication, file-write persistence, and self-correction.
 - Constraint implementation: boundaries are implemented in code and docs: no live probing, credential use, malware execution, or raw secret retention.
 - Audit trail quality: event hashes, matched rules, corrections, and exported reports make each finding traceable.
 - Accuracy report quality: false positives, missed-artifact risk, hallucination controls, and evidence integrity are documented in `docs/ACCURACY_REPORT.md`.
@@ -65,14 +67,16 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 ## Demo Commands
 
 ```bash
-python3 -m unittest discover -s tests
+python3 -m unittest discover -s tests -v
 ./run_terminal_demo.sh
+python3 submission/devpost_preflight.py
 ```
 
 Public bundle validation from repository root:
 
 ```bash
-python3 -m unittest discover -s . -p 'test_*.py' -v
+python3 -m unittest discover -s safety_gate -t . -p 'test_*.py' -v
+python3 -m unittest discover -s find_evil_rewardops_defender/tests -t find_evil_rewardops_defender -v
 python3 -m unittest discover -s rewardops_guard -p 'test_*.py' -v
 python3 rewardops_guard/public_submission_bundle.py
 ```

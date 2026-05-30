@@ -30,6 +30,7 @@ The demo regenerates these reviewer-facing reports:
 - `out/submission_guard_manifest.json`
 - `out/find_evil_case_report.json`
 - `out/find_evil_case_report.md`
+- `out/devpost_preflight.json`
 
 ## DFIR Triage Accuracy
 

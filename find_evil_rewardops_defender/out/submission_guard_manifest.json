@@ -1,11 +1,11 @@
 {
   "blocking_findings": [],
-  "file_count": 33,
+  "file_count": 40,
   "file_manifest": [
     {
-      "bytes": 34,
+      "bytes": 29,
       "path": ".gitignore",
-      "sha256": "1432fdfe6e077980c75c910be191dd950efc3c7415d5b8a8adfdaf656fb37ebc"
+      "sha256": "60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672"
     },
     {
       "bytes": 1065,
@@ -13,9 +13,9 @@
       "sha256": "ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9"
     },
     {
-      "bytes": 5186,
+      "bytes": 5417,
       "path": "README.md",
-      "sha256": "5ea22dba92446968b528be6368f6bfe44f04579a0263cdbc481cf2ceb175ded7"
+      "sha256": "5fa1aaf9108eab28085a3361fbf7483a078bcb33d777b3faa1f793cccd1acb29"
     },
     {
       "bytes": 297954,
@@ -73,9 +73,9 @@
       "sha256": "e4863467d041a73a93a6f5dd75c3aaae05ecbb475aab694b46f75a49d92a0b4b"
     },
     {
-      "bytes": 5876,
+      "bytes": 5907,
       "path": "docs/ACCURACY_REPORT.md",
-      "sha256": "a5497c1072ddc5affff6f4c62415cf57e8007733937478b9ac2fafae66d65488"
+      "sha256": "099e3ff0c7d141db2249171407fb3aedadd35c2df87e78de3d879274b1ee6d66"
     },
     {
       "bytes": 2370,
@@ -105,32 +105,47 @@
     {
       "bytes": 8172,
       "path": "out/dfir_triage_report.json",
-      "sha256": "a892d92d8e750f2949e2f84f61932cab5fc893ebd92ac816010bfd8dc0c86574"
+      "sha256": "531f96c7df24e480600b49aedf996acea157f11aa3f251ba94cb48f1449fe35c"
     },
     {
       "bytes": 1894,
       "path": "out/dfir_triage_report.md",
-      "sha256": "19bb0666522fe32ccc7e62d572b78dd0075f59adca2a02bd44ede8be2bb02a88"
+      "sha256": "84f9fc24b118fdaebb4b06672d4a6743fa2d95cf8c9670e2fa9c27dec441aaca"
+    },
+    {
+      "bytes": 8368,
+      "path": "out/find_evil_case_report.json",
+      "sha256": "d3ab79c6a9290bd21a47bfba652ff9fc918af1eba9e5031e19134c88554d0690"
+    },
+    {
+      "bytes": 962,
+      "path": "out/find_evil_case_report.md",
+      "sha256": "819f5f6bac55926348296d83ee4df4237d63dcc7549bc9af83536bd67ffe5182"
     },
     {
       "bytes": 6427,
       "path": "out/rewardops_defender_report.json",
-      "sha256": "f92a31d191a598b43ebc3f8e15d40d8db4e0bc5a0656b21c9a657c53d593999b"
+      "sha256": "9ef20d9f838913a6f352b78cfaff0f805a97380172bab75edd4ade11339620fe"
     },
     {
       "bytes": 1929,
       "path": "out/rewardops_defender_report.md",
-      "sha256": "1cbc3cb3d7d2b470357f0bd019ca1fd137ac4f852026c3f999668d0606ab9e47"
+      "sha256": "cefa79383bfbaac00c43e0ea7e3620fb0b39e6e1d8cd63e2abee156a35fa8f01"
     },
     {
-      "bytes": 1978,
+      "bytes": 9448,
+      "path": "out/submission_guard_manifest.json",
+      "sha256": "4bd6dcb8deecaf42fff7872f67d411fb12a696889dccedbeddc489ef00ab61cc"
+    },
+    {
+      "bytes": 2120,
       "path": "run_terminal_demo.sh",
-      "sha256": "3e3650d07c4c39597119489666ef76f426160a2019cec831807461171c82b691"
+      "sha256": "6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be"
     },
     {
-      "bytes": 2331,
+      "bytes": 2721,
       "path": "submission/PUBLISH_CHECKLIST.md",
-      "sha256": "da84ff78a61b41147c1d8072edb671acd348db8d162800d34cffbe24d390015b"
+      "sha256": "f9470ed6064a01d4c5aadaddeeb566e6f51e1da3dcc24311569c915537351ed0"
     },
     {
       "bytes": 1892,
@@ -138,14 +153,34 @@
       "sha256": "3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c"
     },
     {
-      "bytes": 5074,
+      "bytes": 5504,
       "path": "submission/SUBMISSION_DRAFT.md",
-      "sha256": "9e7e523ca0aeb34852ded0623a599345a2319cf137e8e9a61bd7492887491659"
+      "sha256": "f614551682a598974c22ed00160889dd8838066551633879306e0f77340490e4"
+    },
+    {
+      "bytes": 0,
+      "path": "submission/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5569,
+      "path": "submission/devpost_preflight.py",
+      "sha256": "09a1582a9dd16d72e64a29083cc5885916cee02ef0f4b784edfceb9ac921fbd3"
+    },
+    {
+      "bytes": 32,
+      "path": "tests/__init__.py",
+      "sha256": "98d7b18e4354029c958891950d8f3c67d02080e0e253ef5eaea3aa8b450f1fc8"
     },
     {
       "bytes": 1261,
       "path": "tests/test_case_runner.py",
       "sha256": "84a76a44fc7be2dd8b6e0a958b9b3b1733211ae0fa05cd228b732e6156a5c1ad"
+    },
+    {
+      "bytes": 1190,
+      "path": "tests/test_devpost_preflight.py",
+      "sha256": "87e813e0ccede3712eda4c4d79c1dea9a7993c6b13956d0792331f0f9b432e71"
     },
     {
       "bytes": 2373,
@@ -168,7 +203,7 @@
       "sha256": "576167450bcb7c87d0b3294cafbdaa9ff3ca5d46f853d9956fb3fe3a99964009"
     }
   ],
-  "generated_at": "2026-05-30T12:48:48Z",
+  "generated_at": "2026-05-30T12:58:16Z",
   "injection_fixture_count": 26,
   "injection_fixtures": [
     {
@@ -243,7 +278,7 @@
     },
     {
       "file": "docs/ACCURACY_REPORT.md",
-      "line": 174,
+      "line": 175,
       "pattern": "ignore_instructions"
     },
     {
@@ -308,8 +343,8 @@
     "Prompt-injection phrases are recorded as fixtures, not executed as instructions.",
     "The guard does not make network calls, publish content, sign wallets, or submit forms."
   ],
-  "scanned_text_file_count": 30,
+  "scanned_text_file_count": 37,
   "schema": "rewardops.submission_guard.v1",
-  "total_bytes": 6031378,
+  "total_bytes": 6058166,
   "verdict": "release_ready"
 }

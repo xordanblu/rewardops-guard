@@ -49,6 +49,8 @@ python3 dfir_triage_agent/case_runner.py \
   --case-json cases/find_evil_local_case.json \
   --json-output out/find_evil_case_report.json \
   --markdown-output out/find_evil_case_report.md
+
+python3 submission/devpost_preflight.py
 ```
 
 Expected summary:
@@ -58,6 +60,7 @@ Expected summary:
 {"event_count": 6, "high_event_count": 4, "verdict": "agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain"}
 {"blocking_findings": 0, "file_count": 33, "injection_fixture_count": 26, "verdict": "release_ready"}
 {"case_id": "rewardops-find-evil-local-001", "passes_ground_truth": true, "event_precision": 1.0, "event_recall": 1.0}
+{"status": "ready_for_external_submission", "local_ok": true, "external_submission_ok": false, "local_blocking": 0, "external_blocking": 2}
 ```
 
 ## JSON-RPC Tool Wrapper
@@ -125,6 +128,7 @@ regenerates `out/find_evil_case_report.{json,md}` and currently scores:
 - Labelled local case: `cases/find_evil_local_case.json`
 - Local case score: `out/find_evil_case_report.md` after running the demo
 - Publication manifest: `out/submission_guard_manifest.json`
+- Devpost preflight: `out/devpost_preflight.json`
 - Screencast script: `submission/SCREENCAST_SCRIPT.md`
 - Submission draft: `submission/SUBMISSION_DRAFT.md`
 - Publication checklist: `submission/PUBLISH_CHECKLIST.md`

@@ -1,13 +1,15 @@
 # Publish Checklist
 
-Status: public repository and repo-hosted video asset are prepared. HOLD
-external contest submission, external video hosting, account creation, payout,
-tax/KYC, wallet signing, and social activity until explicitly approved.
+Status: public repository and repo-hosted video asset are prepared. The FIND
+EVIL form still needs a YouTube, Vimeo, or Youku video URL. HOLD external
+contest submission, external video hosting, account creation, payout, tax/KYC,
+wallet signing, and social activity until explicitly approved.
 
 ## Local Quality Gate
 
-- Run `python3 -m unittest discover -s tests`.
+- Run `python3 -m unittest discover -s tests -v`.
 - Run `./run_terminal_demo.sh`.
+- Run `python3 submission/devpost_preflight.py`.
 - Confirm `out/dfir_triage_report.md` shows:
   - severity `critical`
   - 5 events
@@ -21,6 +23,13 @@ tax/KYC, wallet signing, and social activity until explicitly approved.
   - 4 high/critical events
   - 2 self-corrections
   - approval-gated containment steps
+- Confirm `out/find_evil_case_report.md` shows:
+  - expected malicious events `6`
+  - detected malicious events `6`
+  - false positives `0`
+  - false negatives `0`
+  - precision `1.0000`
+  - recall `1.0000`
 - Review README, architecture, dataset docs, and submission draft for claims that exceed local evidence.
 - Confirm `docs/architecture.svg` renders as a readable visual architecture diagram.
 - Confirm `docs/ACCURACY_REPORT.md` clearly documents false positives, missed artifacts, hallucination controls, and evidence integrity.
@@ -40,6 +49,7 @@ Already prepared without those external actions:
 - Sanitized public repository: `https://github.com/xordanx/rewardops-guard`
 - Dashboard source: `https://github.com/xordanx/rewardops-guard/blob/main/index.html`
 - Repo-hosted demo video asset: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4`
+- Devpost-required YouTube/Vimeo/Youku URL: not prepared yet.
 - Repo-hosted contact sheet: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png`
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
