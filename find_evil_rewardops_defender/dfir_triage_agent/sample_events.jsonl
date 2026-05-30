@@ -1,0 +1,5 @@
+{"ts":"2026-05-29T01:02:03Z","host":"workstation-17","user":"analyst@example.com","event_type":"process_start","process":"powershell.exe","command_line":"powershell -EncodedCommand SQBFAFgA","src_ip":"10.0.1.44","expected_rules":["encodedcommand"]}
+{"ts":"2026-05-29T01:05:12Z","host":"workstation-17","user":"analyst@example.com","event_type":"network_connection","process":"powershell.exe","dst":"8.8.8.8","dst_port":443,"expected_rules":["external_connection"]}
+{"ts":"2026-05-29T01:08:22Z","host":"workstation-17","user":"analyst@example.com","event_type":"failed_login","src_ip":"203.0.113.9","count":8,"expected_rules":["failed_login"]}
+{"ts":"2026-05-29T01:11:55Z","host":"workstation-17","user":"analyst@example.com","event_type":"file_write","path":"C:\\Users\\analyst\\AppData\\Roaming\\payload.dll","expected_rules":["payload.dll","appdata"]}
+{"ts":"2026-05-29T01:15:05Z","host":"workstation-17","user":"analyst@example.com","event_type":"network_connection","process":"svchost.exe","dst":"172.20.0.4","dst_port":443,"expected_rules":[]}

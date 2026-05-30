@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RewardOps Defender FIND EVIL Package</title>
+    <style>
+      body {
+        color: #17202a;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 32px;
+      }
+
+      main {
+        max-width: 920px;
+      }
+
+      code {
+        background: #f2f4f7;
+        padding: 2px 5px;
+      }
+
+      a {
+        color: #0b5cad;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>RewardOps Defender</h1>
+      <p>
+        Local, read-only DFIR and agent-security package prepared for the FIND
+        EVIL prize route. It detects hostile agent workflows, hashes raw prompt
+        evidence, self-corrects false positives, validates labelled findings,
+        and blocks unsafe publication when secrets are present.
+      </p>
+      <h2>Verification Snapshot</h2>
+      <ul>
+        <li>Unit tests: <code>14</code> passing.</li>
+        <li>DFIR demo: <code>5</code> events, <code>5</code> findings, critical severity.</li>
+        <li>Agent-defense verdict: <code>agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain</code>.</li>
+        <li>Publication guard: <code>release_ready</code>, <code>0</code> blocking secret findings.</li>
+      </ul>
+      <h2>Reviewer Links</h2>
+      <ul>
+        <li><a href="README.md">Package README</a></li>
+        <li><a href="docs/ACCURACY_REPORT.md">Accuracy report</a></li>
+        <li><a href="docs/ARCHITECTURE.md">Architecture</a></li>
+        <li><a href="submission/SUBMISSION_DRAFT.md">Submission draft</a></li>
+        <li><a href="out/submission_guard_manifest.json">Publication guard manifest</a></li>
+        <li><a href="../rewardops_guard/index.html">RewardOps dashboard</a></li>
+      </ul>
+    </main>
+  </body>
+</html>

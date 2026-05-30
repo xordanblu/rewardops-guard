@@ -27,9 +27,36 @@ Run from the repository root:
 ```bash
 python3 -m unittest rewardops_guard.test_revenue_evidence_pack rewardops_guard.test_hackathon_submission_builder rewardops_guard.test_ops_event_report rewardops_guard.test_policy_agent rewardops_guard.test_find_evil_defender_demo rewardops_guard.test_dfir_agent_demo safety_gate.test_protective_pipeline safety_gate.test_safety_gate
 python3 rewardops_guard/build_dashboard.py
+
+cd find_evil_rewardops_defender
+python3 -m unittest discover -s tests
+./run_terminal_demo.sh
 ```
 
-## Files
+## FIND EVIL Defender Package
+
+`find_evil_rewardops_defender/` contains the standalone RewardOps Defender
+package prepared for the FIND EVIL prize route. It includes a terminal demo,
+DFIR triage module, agent-defense sequence detector, publication guard,
+accuracy report, architecture diagram, sample events, tests, and submission
+draft.
+
+The latest local verification produced:
+
+- 14 unit tests passing.
+- DFIR report: 5 events, 5 findings, critical severity.
+- Agent-defense verdict:
+  `agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain`.
+- Publication guard: `release_ready`, 0 blocking secret findings, 19
+  prompt-injection fixtures counted as evidence rather than instructions.
+
+## Current Manifest
+
+The current complete file manifest is `manifest.json`. The hash list below is
+kept as the original bundle inventory reference; `manifest.json` supersedes it
+for files changed by later publication hardening.
+
+## Initial Bundle Files
 
 - `rewardops_guard/README.md` sha256=1dbee345b349b71077eaa3fb81c4cf5c66c0ad5f872357c9e5811bb87235a496
 - `rewardops_guard/index.html` sha256=491cbea4d24666a643110ea57350901c0c17c6e47e41a3759e2574f81c55a7b3
