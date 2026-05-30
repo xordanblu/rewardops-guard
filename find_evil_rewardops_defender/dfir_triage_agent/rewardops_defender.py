@@ -16,9 +16,19 @@ import json
 from pathlib import Path
 import re
 from typing import Any
+import unicodedata
 
 
 BENIGN_CONTEXT_SOURCES = {"training_doc", "documentation", "security_blog"}
+LEET_TRANSLATION = str.maketrans({"0": "o", "1": "i", "3": "e", "4": "a", "5": "s", "7": "t", "@": "a", "$": "s"})
+FOLDED_SIGNAL_TARGETS = [
+    "system prompt",
+    "developer instructions",
+    "internal instructions",
+    "hidden instructions",
+    "tool schema",
+    "ignore previous instructions",
+]
 
 SIGNALS: list[tuple[str, int, str, str]] = [
     (
@@ -66,6 +76,13 @@ def sha256_text(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8", errors="replace")).hexdigest()
 
 
+def fold_obfuscation(value: str) -> str:
+    normalized = unicodedata.normalize("NFKC", value).translate(LEET_TRANSLATION).lower()
+    decomposed = unicodedata.normalize("NFKD", normalized)
+    without_marks = "".join(ch for ch in decomposed if not unicodedata.combining(ch))
+    return re.sub(r"[^a-z0-9]+", "", without_marks)
+
+
 def load_events(path: Path) -> list[dict[str, Any]]:
     text = path.read_text(encoding="utf-8")
     stripped = text.strip()
@@ -96,6 +113,11 @@ def classify(detail: str) -> tuple[list[str], int, list[str]]:
             signals.append(signal_id)
             score += weight
             explanations.append(explanation)
+    folded = fold_obfuscation(detail)
+    if any(fold_obfuscation(target) in folded for target in FOLDED_SIGNAL_TARGETS):
+        signals.append("obfuscated_prompt_smuggling")
+        score += 5
+        explanations.append("spaced or leetspeak prompt-injection/exfiltration phrase")
     return signals, score, explanations
 
 

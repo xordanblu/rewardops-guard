@@ -44,6 +44,11 @@ python3 dfir_triage_agent/rewardops_defender.py \
 python3 dfir_triage_agent/submission_guard.py \
   --root . \
   --json-output out/submission_guard_manifest.json
+
+python3 dfir_triage_agent/case_runner.py \
+  --case-json cases/find_evil_local_case.json \
+  --json-output out/find_evil_case_report.json \
+  --markdown-output out/find_evil_case_report.md
 ```
 
 Expected summary:
@@ -51,7 +56,8 @@ Expected summary:
 ```text
 {"event_count": 5, "finding_count": 5, "severity": "critical"}
 {"event_count": 6, "high_event_count": 4, "verdict": "agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain"}
-{"blocking_findings": 0, "file_count": 29, "injection_fixture_count": 19, "verdict": "release_ready"}
+{"blocking_findings": 0, "file_count": 33, "injection_fixture_count": 26, "verdict": "release_ready"}
+{"case_id": "rewardops-find-evil-local-001", "passes_ground_truth": true, "event_precision": 1.0, "event_recall": 1.0}
 ```
 
 ## JSON-RPC Tool Wrapper
@@ -86,6 +92,21 @@ generates `out/submission_guard_manifest.json` with file hashes, blocking
 secret-pattern findings, and prompt-injection fixture counts. Hostile text in
 test fixtures is recorded as evidence but never treated as an instruction.
 
+## Labelled Local Case
+
+`cases/find_evil_local_case.json` is a reproducible FIND EVIL validation case
+with documented ground truth. It covers benign training text, direct prompt
+injection, obfuscated prompt smuggling, a wallet-signing trap, encoded endpoint
+execution, credential access, and outbound exfiltration. The case runner
+regenerates `out/find_evil_case_report.{json,md}` and currently scores:
+
+- expected malicious events: 6;
+- detected malicious events: 6;
+- false positives: 0;
+- false negatives: 0;
+- event precision: 1.0000;
+- event recall: 1.0000.
+
 ## Safety Boundaries
 
 - Defensive triage only.
@@ -101,6 +122,8 @@ test fixtures is recorded as evidence but never treated as an instruction.
 - Visual architecture diagram: `docs/architecture.svg` and `docs/architecture.png`
 - Evidence dataset: `docs/EVIDENCE_DATASET.md`
 - Accuracy report: `docs/ACCURACY_REPORT.md`
+- Labelled local case: `cases/find_evil_local_case.json`
+- Local case score: `out/find_evil_case_report.md` after running the demo
 - Publication manifest: `out/submission_guard_manifest.json`
 - Screencast script: `submission/SCREENCAST_SCRIPT.md`
 - Submission draft: `submission/SUBMISSION_DRAFT.md`

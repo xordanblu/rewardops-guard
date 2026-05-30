@@ -1,0 +1,315 @@
+{
+  "blocking_findings": [],
+  "file_count": 33,
+  "file_manifest": [
+    {
+      "bytes": 34,
+      "path": ".gitignore",
+      "sha256": "1432fdfe6e077980c75c910be191dd950efc3c7415d5b8a8adfdaf656fb37ebc"
+    },
+    {
+      "bytes": 1065,
+      "path": "LICENSE",
+      "sha256": "ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9"
+    },
+    {
+      "bytes": 5186,
+      "path": "README.md",
+      "sha256": "5ea22dba92446968b528be6368f6bfe44f04579a0263cdbc481cf2ceb175ded7"
+    },
+    {
+      "bytes": 297954,
+      "path": "assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+      "sha256": "f93b6cae993e29650d80374ac13245dc2a1329b45f3e0b4b762f8e5de8b276f3"
+    },
+    {
+      "bytes": 5508281,
+      "path": "assets/rewardops-find-evil-guard-20260530.mp4",
+      "sha256": "7c0f1dd0c59e3312864f0e65e4a293d02c10d29c6c14e91a1da11c1e330d8b1c"
+    },
+    {
+      "bytes": 3439,
+      "path": "cases/find_evil_local_case.json",
+      "sha256": "71a3f16d1c457606ae06cbc82737212a551cc78219c7b4fb9ccea4f81c9528f2"
+    },
+    {
+      "bytes": 32,
+      "path": "dfir_triage_agent/__init__.py",
+      "sha256": "2975b81e18a7bc356bf089dc33477f438f5811e681061802d7d370ae616d8a92"
+    },
+    {
+      "bytes": 7659,
+      "path": "dfir_triage_agent/case_runner.py",
+      "sha256": "8e54218b39589f318d4f02e68152524d04c28281bca5d0679a3bfa87393f48be"
+    },
+    {
+      "bytes": 13001,
+      "path": "dfir_triage_agent/dfir_triage.py",
+      "sha256": "0901ec62ef3e6e4dc70ac912c3ca7ebe5d149d21f8741001937995b79f594598"
+    },
+    {
+      "bytes": 6544,
+      "path": "dfir_triage_agent/mcp_server.py",
+      "sha256": "2067605d825901b5917e7dc6ce3e8e8f9e19850e1631d681bbf3954ee459b3f8"
+    },
+    {
+      "bytes": 13091,
+      "path": "dfir_triage_agent/rewardops_defender.py",
+      "sha256": "ccfe665df7719e234084de5819aa72d0ca821397dab772f13bc544cca7ec8908"
+    },
+    {
+      "bytes": 1181,
+      "path": "dfir_triage_agent/sample_agent_events.jsonl",
+      "sha256": "244dab66a187b1ab46d6cc5d53962e4645b939acdd96d44cec8e3ee24006a83a"
+    },
+    {
+      "bytes": 1049,
+      "path": "dfir_triage_agent/sample_events.jsonl",
+      "sha256": "e042449b0a525e183636bcdfa2a5f8c954b3d0f4a832ba7d5118d90991c06af3"
+    },
+    {
+      "bytes": 6006,
+      "path": "dfir_triage_agent/submission_guard.py",
+      "sha256": "e4863467d041a73a93a6f5dd75c3aaae05ecbb475aab694b46f75a49d92a0b4b"
+    },
+    {
+      "bytes": 5876,
+      "path": "docs/ACCURACY_REPORT.md",
+      "sha256": "a5497c1072ddc5affff6f4c62415cf57e8007733937478b9ac2fafae66d65488"
+    },
+    {
+      "bytes": 2370,
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "48aaf355764836ccfd7b28416a3a3dd929b52a0c9cd9698ca0f34d296b0c6338"
+    },
+    {
+      "bytes": 3496,
+      "path": "docs/EVIDENCE_DATASET.md",
+      "sha256": "2df884e276d085cae2ab846ff9f908983986da539b4fa5c87960741191d00e6c"
+    },
+    {
+      "bytes": 107463,
+      "path": "docs/architecture.png",
+      "sha256": "e21917bb987f140191bbe878fb9f9249f4e02cfe9c2e78f77fac3df3ccd5cf52"
+    },
+    {
+      "bytes": 4005,
+      "path": "docs/architecture.svg",
+      "sha256": "366b0747dbe2539b7692a2035cc37486f6b9a180e8679ed70cf8e653afa5abbc"
+    },
+    {
+      "bytes": 1943,
+      "path": "index.html",
+      "sha256": "417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d"
+    },
+    {
+      "bytes": 8172,
+      "path": "out/dfir_triage_report.json",
+      "sha256": "a892d92d8e750f2949e2f84f61932cab5fc893ebd92ac816010bfd8dc0c86574"
+    },
+    {
+      "bytes": 1894,
+      "path": "out/dfir_triage_report.md",
+      "sha256": "19bb0666522fe32ccc7e62d572b78dd0075f59adca2a02bd44ede8be2bb02a88"
+    },
+    {
+      "bytes": 6427,
+      "path": "out/rewardops_defender_report.json",
+      "sha256": "f92a31d191a598b43ebc3f8e15d40d8db4e0bc5a0656b21c9a657c53d593999b"
+    },
+    {
+      "bytes": 1929,
+      "path": "out/rewardops_defender_report.md",
+      "sha256": "1cbc3cb3d7d2b470357f0bd019ca1fd137ac4f852026c3f999668d0606ab9e47"
+    },
+    {
+      "bytes": 1978,
+      "path": "run_terminal_demo.sh",
+      "sha256": "3e3650d07c4c39597119489666ef76f426160a2019cec831807461171c82b691"
+    },
+    {
+      "bytes": 2331,
+      "path": "submission/PUBLISH_CHECKLIST.md",
+      "sha256": "da84ff78a61b41147c1d8072edb671acd348db8d162800d34cffbe24d390015b"
+    },
+    {
+      "bytes": 1892,
+      "path": "submission/SCREENCAST_SCRIPT.md",
+      "sha256": "3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c"
+    },
+    {
+      "bytes": 5074,
+      "path": "submission/SUBMISSION_DRAFT.md",
+      "sha256": "9e7e523ca0aeb34852ded0623a599345a2319cf137e8e9a61bd7492887491659"
+    },
+    {
+      "bytes": 1261,
+      "path": "tests/test_case_runner.py",
+      "sha256": "84a76a44fc7be2dd8b6e0a958b9b3b1733211ae0fa05cd228b732e6156a5c1ad"
+    },
+    {
+      "bytes": 2373,
+      "path": "tests/test_dfir_triage.py",
+      "sha256": "df609a1d1731501d2638452019394fee539c1768c3bbb15cc413079eb1795875"
+    },
+    {
+      "bytes": 3106,
+      "path": "tests/test_mcp_server.py",
+      "sha256": "2708061df4f2c7ef308f98f00cf2a474092a3a686e03cb7ec1656272f9951e9e"
+    },
+    {
+      "bytes": 3833,
+      "path": "tests/test_rewardops_defender.py",
+      "sha256": "8192cfa414cb6157ab0c2e0a7c288dd66ac0f000260243509331d304d7658a10"
+    },
+    {
+      "bytes": 1433,
+      "path": "tests/test_submission_guard.py",
+      "sha256": "576167450bcb7c87d0b3294cafbdaa9ff3ca5d46f853d9956fb3fe3a99964009"
+    }
+  ],
+  "generated_at": "2026-05-30T12:48:48Z",
+  "injection_fixture_count": 26,
+  "injection_fixtures": [
+    {
+      "file": "cases/find_evil_local_case.json",
+      "line": 13,
+      "pattern": "system_prompt_request"
+    },
+    {
+      "file": "cases/find_evil_local_case.json",
+      "line": 22,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "cases/find_evil_local_case.json",
+      "line": 22,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 25,
+      "pattern": "system_prompt_request"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 26,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 30,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 37,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 37,
+      "pattern": "system_prompt_request"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 37,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "dfir_triage_agent/rewardops_defender.py",
+      "line": 37,
+      "pattern": "internal_instruction_request"
+    },
+    {
+      "file": "dfir_triage_agent/sample_agent_events.jsonl",
+      "line": 1,
+      "pattern": "system_prompt_request"
+    },
+    {
+      "file": "dfir_triage_agent/sample_agent_events.jsonl",
+      "line": 2,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "dfir_triage_agent/sample_agent_events.jsonl",
+      "line": 2,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "dfir_triage_agent/sample_agent_events.jsonl",
+      "line": 2,
+      "pattern": "internal_instruction_request"
+    },
+    {
+      "file": "docs/ACCURACY_REPORT.md",
+      "line": 174,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "docs/EVIDENCE_DATASET.md",
+      "line": 23,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "docs/EVIDENCE_DATASET.md",
+      "line": 23,
+      "pattern": "internal_instruction_request"
+    },
+    {
+      "file": "docs/EVIDENCE_DATASET.md",
+      "line": 24,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "tests/test_rewardops_defender.py",
+      "line": 18,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "tests/test_rewardops_defender.py",
+      "line": 18,
+      "pattern": "internal_instruction_request"
+    },
+    {
+      "file": "tests/test_rewardops_defender.py",
+      "line": 52,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "tests/test_rewardops_defender.py",
+      "line": 70,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "tests/test_rewardops_defender.py",
+      "line": 70,
+      "pattern": "system_prompt_request"
+    },
+    {
+      "file": "tests/test_submission_guard.py",
+      "line": 15,
+      "pattern": "ignore_instructions"
+    },
+    {
+      "file": "tests/test_submission_guard.py",
+      "line": 15,
+      "pattern": "developer_instruction_request"
+    },
+    {
+      "file": "tests/test_submission_guard.py",
+      "line": 15,
+      "pattern": "internal_instruction_request"
+    }
+  ],
+  "root": "/Users/openclaw/Documents/Dinero/outputs/rewardops_guard_public_repo/find_evil_rewardops_defender",
+  "safe_boundaries": [
+    "Release is blocked if private keys, API keys, GitHub tokens, AWS keys, or credential assignments are found.",
+    "Prompt-injection phrases are recorded as fixtures, not executed as instructions.",
+    "The guard does not make network calls, publish content, sign wallets, or submit forms."
+  ],
+  "scanned_text_file_count": 30,
+  "schema": "rewardops.submission_guard.v1",
+  "total_bytes": 6031378,
+  "verdict": "release_ready"
+}

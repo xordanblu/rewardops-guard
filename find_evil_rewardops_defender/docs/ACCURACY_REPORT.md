@@ -9,6 +9,7 @@ RewardOps Defender currently validates two local sanitized datasets:
 
 - `dfir_triage_agent/sample_events.jsonl`
 - `dfir_triage_agent/sample_agent_events.jsonl`
+- `cases/find_evil_local_case.json`
 
 Both datasets are synthetic and contain no private credentials, personal
 records, live target data, or production system artifacts.
@@ -27,6 +28,8 @@ The demo regenerates these reviewer-facing reports:
 - `out/rewardops_defender_report.json`
 - `out/rewardops_defender_report.md`
 - `out/submission_guard_manifest.json`
+- `out/find_evil_case_report.json`
+- `out/find_evil_case_report.md`
 
 ## DFIR Triage Accuracy
 
@@ -79,6 +82,32 @@ Validated sequence hypotheses:
   outbound upload appeared in the same host timeline.
 - `scripted_execution_chain`: encoded shell activity preceded higher-risk
   endpoint and network signals.
+
+## Labelled FIND EVIL Local Case
+
+The local case contains seven events with explicit ground truth labels. It adds
+an obfuscated prompt-smuggling event to the agent-defense sequence and verifies
+that the benign training reference is self-corrected rather than counted as a
+malicious side-effect.
+
+Current deterministic result:
+
+| Metric | Value |
+| --- | ---: |
+| Event count | 7 |
+| Expected malicious events | 6 |
+| Detected malicious events | 6 |
+| False positives | 0 |
+| False negatives | 0 |
+| Precision | 1.0 |
+| Recall | 1.0 |
+| True negative/self-corrected benign adjustments | 1 |
+
+Validated ground-truth hypotheses:
+
+- `agent_tool_abuse`
+- `credential_theft_with_exfiltration`
+- `scripted_execution_chain`
 
 ## False Positives
 

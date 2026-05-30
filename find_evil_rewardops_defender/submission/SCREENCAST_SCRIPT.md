@@ -1,6 +1,6 @@
 # Screencast Script
 
-Target length: under 10 minutes.
+Target length: under 5 minutes.
 
 Format: live terminal execution with narration. No slides, no marketing-only footage.
 
@@ -10,7 +10,7 @@ This is RewardOps Defender, a local read-only defensive triage agent for
 sanitized incident and agent-tool evidence. It does not probe live systems,
 execute malware, use credentials, sign wallets, or perform remediation. The
 demo shows a reproducible agent loop: tests, case triage, JSON-RPC tool call,
-agent-defense sequence analysis, accuracy validation, and audit trail.
+agent-defense sequence analysis, labelled local-case validation, and audit trail.
 
 ## Terminal Steps
 
@@ -25,7 +25,7 @@ Narration points while it runs:
 3. The self-correction pass removes the private-network event from the final public-egress findings.
 4. The agent-defense sequence adds prompt-injection, wallet-signing, endpoint credential access, and exfiltration signals.
 5. The defender downgrades a benign training-document phrase while keeping live tool and wallet requests high risk.
-6. The accuracy report compares labelled expected rules to observed rules and reports precision/recall.
+6. The labelled FIND EVIL local case detects 6 of 6 malicious events, keeps the benign training event as a true negative, and reports precision/recall as 1.0 on the included ground truth.
 7. The audit trail records every event hash, matched rules, and correction count so findings are traceable without exposing raw secrets.
 
 ## Close

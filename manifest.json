@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "bundle_20260530T075420539799Z",
+  "bundle_dir": "bundle_20260530T125109096821Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -7,7 +7,7 @@
     "social/KYC/payment setup artifacts"
   ],
   "external_actions_performed": [],
-  "file_count": 77,
+  "file_count": 88,
   "files": [
     {
       "bytes": 1,
@@ -16,22 +16,22 @@
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
-      "bytes": 10790,
+      "bytes": 12446,
       "ok": true,
       "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "ff9403794d3916bcda527985b0f6c765271889f11aba13aa5b74d7fbb496448e"
+      "sha256": "6ba8b9db484a57bb4902f6f8f452309d1a6f369fc41249c6c81983f644fb3a76"
     },
     {
-      "bytes": 10790,
+      "bytes": 12446,
       "ok": true,
       "path": "README.md",
-      "sha256": "ff9403794d3916bcda527985b0f6c765271889f11aba13aa5b74d7fbb496448e"
+      "sha256": "6ba8b9db484a57bb4902f6f8f452309d1a6f369fc41249c6c81983f644fb3a76"
     },
     {
-      "bytes": 34,
+      "bytes": 29,
       "ok": true,
       "path": "find_evil_rewardops_defender/.gitignore",
-      "sha256": "1432fdfe6e077980c75c910be191dd950efc3c7415d5b8a8adfdaf656fb37ebc"
+      "sha256": "60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672"
     },
     {
       "bytes": 1065,
@@ -40,10 +40,10 @@
       "sha256": "ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9"
     },
     {
-      "bytes": 4182,
+      "bytes": 5186,
       "ok": true,
       "path": "find_evil_rewardops_defender/README.md",
-      "sha256": "2c57c55df954b7f15c7485678e3e53b154b5d804ad02a4e8f38322fce2116210"
+      "sha256": "b7431611312e32e3a1b1fd641823617a30375cf885767588ba8abbd8b5a019ef"
     },
     {
       "bytes": 297954,
@@ -58,10 +58,22 @@
       "sha256": "7c0f1dd0c59e3312864f0e65e4a293d02c10d29c6c14e91a1da11c1e330d8b1c"
     },
     {
+      "bytes": 3439,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/cases/find_evil_local_case.json",
+      "sha256": "71a3f16d1c457606ae06cbc82737212a551cc78219c7b4fb9ccea4f81c9528f2"
+    },
+    {
       "bytes": 32,
       "ok": true,
       "path": "find_evil_rewardops_defender/dfir_triage_agent/__init__.py",
       "sha256": "2975b81e18a7bc356bf089dc33477f438f5811e681061802d7d370ae616d8a92"
+    },
+    {
+      "bytes": 7659,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/dfir_triage_agent/case_runner.py",
+      "sha256": "8e54218b39589f318d4f02e68152524d04c28281bca5d0679a3bfa87393f48be"
     },
     {
       "bytes": 13001,
@@ -76,10 +88,10 @@
       "sha256": "2067605d825901b5917e7dc6ce3e8e8f9e19850e1631d681bbf3954ee459b3f8"
     },
     {
-      "bytes": 12154,
+      "bytes": 13091,
       "ok": true,
       "path": "find_evil_rewardops_defender/dfir_triage_agent/rewardops_defender.py",
-      "sha256": "7d385a28c0dbd680917dc2bb48fb59945a2319ae8bf6653e66cef7888389be4b"
+      "sha256": "ccfe665df7719e234084de5819aa72d0ca821397dab772f13bc544cca7ec8908"
     },
     {
       "bytes": 1181,
@@ -100,10 +112,10 @@
       "sha256": "e4863467d041a73a93a6f5dd75c3aaae05ecbb475aab694b46f75a49d92a0b4b"
     },
     {
-      "bytes": 5055,
+      "bytes": 5876,
       "ok": true,
       "path": "find_evil_rewardops_defender/docs/ACCURACY_REPORT.md",
-      "sha256": "18e07604a7851d03533a8c129ef80a3fff9b0fadb780eddbf0d870c133ff52c2"
+      "sha256": "a5497c1072ddc5affff6f4c62415cf57e8007733937478b9ac2fafae66d65488"
     },
     {
       "bytes": 2370,
@@ -112,10 +124,10 @@
       "sha256": "48aaf355764836ccfd7b28416a3a3dd929b52a0c9cd9698ca0f34d296b0c6338"
     },
     {
-      "bytes": 2601,
+      "bytes": 3496,
       "ok": true,
       "path": "find_evil_rewardops_defender/docs/EVIDENCE_DATASET.md",
-      "sha256": "9e5fff06fa4a2a08fdc773703810f398d2a7d6692ac5e382082b5812e580ad52"
+      "sha256": "2df884e276d085cae2ab846ff9f908983986da539b4fa5c87960741191d00e6c"
     },
     {
       "bytes": 107463,
@@ -136,10 +148,52 @@
       "sha256": "417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d"
     },
     {
-      "bytes": 1666,
+      "bytes": 8172,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/dfir_triage_report.json",
+      "sha256": "a892d92d8e750f2949e2f84f61932cab5fc893ebd92ac816010bfd8dc0c86574"
+    },
+    {
+      "bytes": 1894,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/dfir_triage_report.md",
+      "sha256": "19bb0666522fe32ccc7e62d572b78dd0075f59adca2a02bd44ede8be2bb02a88"
+    },
+    {
+      "bytes": 8368,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/find_evil_case_report.json",
+      "sha256": "d3ab79c6a9290bd21a47bfba652ff9fc918af1eba9e5031e19134c88554d0690"
+    },
+    {
+      "bytes": 962,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/find_evil_case_report.md",
+      "sha256": "819f5f6bac55926348296d83ee4df4237d63dcc7549bc9af83536bd67ffe5182"
+    },
+    {
+      "bytes": 6427,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/rewardops_defender_report.json",
+      "sha256": "f92a31d191a598b43ebc3f8e15d40d8db4e0bc5a0656b21c9a657c53d593999b"
+    },
+    {
+      "bytes": 1929,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/rewardops_defender_report.md",
+      "sha256": "1cbc3cb3d7d2b470357f0bd019ca1fd137ac4f852026c3f999668d0606ab9e47"
+    },
+    {
+      "bytes": 9448,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/out/submission_guard_manifest.json",
+      "sha256": "4bd6dcb8deecaf42fff7872f67d411fb12a696889dccedbeddc489ef00ab61cc"
+    },
+    {
+      "bytes": 1978,
       "ok": true,
       "path": "find_evil_rewardops_defender/run_terminal_demo.sh",
-      "sha256": "822cb0445187054bc455a992bfa62a5b1df4944329b40fe0b64e5ddfca674269"
+      "sha256": "3e3650d07c4c39597119489666ef76f426160a2019cec831807461171c82b691"
     },
     {
       "bytes": 2331,
@@ -148,16 +202,28 @@
       "sha256": "da84ff78a61b41147c1d8072edb671acd348db8d162800d34cffbe24d390015b"
     },
     {
-      "bytes": 1798,
+      "bytes": 1892,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md",
-      "sha256": "44678464c81b4a15a4af29446b4e5b7b777b5a4ccf3c5393e82bd952aa5997b4"
+      "sha256": "3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c"
     },
     {
       "bytes": 5074,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md",
       "sha256": "9e7e523ca0aeb34852ded0623a599345a2319cf137e8e9a61bd7492887491659"
+    },
+    {
+      "bytes": 32,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/tests/__init__.py",
+      "sha256": "98d7b18e4354029c958891950d8f3c67d02080e0e253ef5eaea3aa8b450f1fc8"
+    },
+    {
+      "bytes": 1261,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/tests/test_case_runner.py",
+      "sha256": "84a76a44fc7be2dd8b6e0a958b9b3b1733211ae0fa05cd228b732e6156a5c1ad"
     },
     {
       "bytes": 2373,
@@ -172,10 +238,10 @@
       "sha256": "2708061df4f2c7ef308f98f00cf2a474092a3a686e03cb7ec1656272f9951e9e"
     },
     {
-      "bytes": 3106,
+      "bytes": 3833,
       "ok": true,
       "path": "find_evil_rewardops_defender/tests/test_rewardops_defender.py",
-      "sha256": "141e31257edebe6e6bede8dcbe90d30160840a7cf635d698931b1f155585ab85"
+      "sha256": "8192cfa414cb6157ab0c2e0a7c288dd66ac0f000260243509331d304d7658a10"
     },
     {
       "bytes": 1433,
@@ -226,10 +292,10 @@
       "sha256": "3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72"
     },
     {
-      "bytes": 37425,
+      "bytes": 34574,
       "ok": true,
       "path": "rewardops_guard/data.js",
-      "sha256": "84a7fda2becd9c4367187ace0c46f0ac4977aa6c141b4244bc84923254f5566d"
+      "sha256": "9ac07bbe750e39bc355f0e35efc9e11a8ac07d7827d0d03ef75c9e4fa64254b8"
     },
     {
       "bytes": 2084,
@@ -346,10 +412,10 @@
       "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
     },
     {
-      "bytes": 13140,
+      "bytes": 13337,
       "ok": true,
       "path": "rewardops_guard/public_submission_bundle.py",
-      "sha256": "4c368ba7c8cc749e8929a4ff8a4bfe23087e0f6c7a2309728125bf6a5ac11b92"
+      "sha256": "3d2c857ed65235f51bf924e5f7f6ff8d83219b5cb347d1853f434b08e4ec395f"
     },
     {
       "bytes": 5347,
@@ -472,8 +538,8 @@
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
     }
   ],
-  "generated_at": "2026-05-30T07:54:20+00:00",
-  "manifest_sha256": "0add247df65575f03641020d150d0a650275a9d12fa8361005daf8b4a40e4710",
+  "generated_at": "2026-05-30T12:51:09+00:00",
+  "manifest_sha256": "4e2ef6f1c70f6b8f5d88b188be5aaa97e7b95a8142640d54ecfec2dbbf7831ca",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
@@ -488,8 +554,8 @@
     "find_evil_demo_video": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
     "repository": "https://github.com/xordanx/rewardops-guard"
   },
-  "single_html_path": "bundle_20260530T075420539799Z.html",
+  "single_html_path": "bundle_20260530T125109096821Z.html",
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "bundle_20260530T075420539799Z.zip",
-  "zip_sha256": "4fff8cdc3e101beb500cbbfe2bfdd79514555a23795bca1c59f4d4279b8c474a"
+  "zip_path": "bundle_20260530T125109096821Z.zip",
+  "zip_sha256": "e8487f9bd6730c47a194fec51596acb930cb678a2381c6751b1bcefb71f3aaa7"
 }

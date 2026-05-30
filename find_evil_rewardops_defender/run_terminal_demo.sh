@@ -44,7 +44,16 @@ python3 dfir_triage_agent/submission_guard.py \
   --json-output "$OUT/submission_guard_manifest.json"
 echo
 
-echo "== 6. Show reviewer-facing Markdown report =="
+echo "== 6. Run labelled FIND EVIL local case =="
+python3 dfir_triage_agent/case_runner.py \
+  --case-json "$ROOT/cases/find_evil_local_case.json" \
+  --json-output "$OUT/find_evil_case_report.json" \
+  --markdown-output "$OUT/find_evil_case_report.md"
+echo
+
+echo "== 7. Show reviewer-facing Markdown report =="
 sed -n '1,120p' "$OUT/dfir_triage_report.md"
 echo
 sed -n '1,120p' "$OUT/rewardops_defender_report.md"
+echo
+sed -n '1,120p' "$OUT/find_evil_case_report.md"

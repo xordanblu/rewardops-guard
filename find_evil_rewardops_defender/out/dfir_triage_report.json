@@ -1,0 +1,275 @@
+{
+  "accuracy_report": {
+    "events": [
+      {
+        "event_hash": "982ee5cfccd0f2f62c8ab720cf10f7cf14b5bd3505b173cfb44e5541106cd28d",
+        "expected_rules": [
+          "encodedcommand"
+        ],
+        "missed_rules": [],
+        "observed_rules": [
+          "encodedcommand"
+        ],
+        "unexpected_rules": []
+      },
+      {
+        "event_hash": "8c8190b684405aa43ad3c8f8a7173d3e52d1006eb3f8e280a9ec18ef648d5d87",
+        "expected_rules": [
+          "external_connection"
+        ],
+        "missed_rules": [],
+        "observed_rules": [
+          "external_connection"
+        ],
+        "unexpected_rules": []
+      },
+      {
+        "event_hash": "5a922e241a784dbba69d089f1c2a9a1008b3efb6da3734b62fa388df2b89e3fa",
+        "expected_rules": [
+          "failed_login"
+        ],
+        "missed_rules": [],
+        "observed_rules": [
+          "failed_login"
+        ],
+        "unexpected_rules": []
+      },
+      {
+        "event_hash": "fe4b96c402aed6344232057b3869c92a7917ea37124f26c7ee8e4d0405fb89ab",
+        "expected_rules": [
+          "appdata",
+          "payload.dll"
+        ],
+        "missed_rules": [],
+        "observed_rules": [
+          "appdata",
+          "payload.dll"
+        ],
+        "unexpected_rules": []
+      }
+    ],
+    "labelled_event_count": 4,
+    "missed_rule_count": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "status": "validated",
+    "unexpected_rule_count": 0
+  },
+  "audit_trail": [
+    {
+      "correction_count": 0,
+      "event_hash": "982ee5cfccd0f2f62c8ab720cf10f7cf14b5bd3505b173cfb44e5541106cd28d",
+      "event_type": "process_start",
+      "matched_rules": [
+        "encodedcommand"
+      ],
+      "step": 1
+    },
+    {
+      "correction_count": 0,
+      "event_hash": "8c8190b684405aa43ad3c8f8a7173d3e52d1006eb3f8e280a9ec18ef648d5d87",
+      "event_type": "network_connection",
+      "matched_rules": [
+        "external_connection"
+      ],
+      "step": 2
+    },
+    {
+      "correction_count": 0,
+      "event_hash": "5a922e241a784dbba69d089f1c2a9a1008b3efb6da3734b62fa388df2b89e3fa",
+      "event_type": "failed_login",
+      "matched_rules": [
+        "failed_login"
+      ],
+      "step": 3
+    },
+    {
+      "correction_count": 0,
+      "event_hash": "fe4b96c402aed6344232057b3869c92a7917ea37124f26c7ee8e4d0405fb89ab",
+      "event_type": "file_write",
+      "matched_rules": [
+        "payload.dll",
+        "appdata"
+      ],
+      "step": 4
+    },
+    {
+      "correction_count": 1,
+      "event_hash": "8fb2b0fe7c52a8d1b2757e860552f129489259206b1596f3a6da037d37a3558b",
+      "event_type": "network_connection",
+      "matched_rules": [],
+      "step": 5
+    }
+  ],
+  "case_id": "find-evil-demo",
+  "containment_checklist": [
+    "Isolate host and collect PowerShell transcript/logs.",
+    "Block destination pending reputation review.",
+    "Check source reputation and enforce MFA/session review.",
+    "Quarantine file and hash it in a sandboxed workflow.",
+    "Review Run keys, startup folders, and scheduled tasks."
+  ],
+  "event_count": 5,
+  "finding_count": 5,
+  "generated_at": "2026-05-30T12:48:48Z",
+  "max_event_score": 55,
+  "safe_boundaries": [
+    "Defensive triage only; no exploitation, live probing, credential use, or malware execution.",
+    "Emails and token-like values are redacted before reporting.",
+    "Event hashes are over redacted canonical event data for reproducible evidence tracking."
+  ],
+  "schema": "rewardops.dfir_triage.v1",
+  "self_corrections": [
+    {
+      "event_hash": "8fb2b0fe7c52a8d1b2757e860552f129489259206b1596f3a6da037d37a3558b",
+      "reason": "destination is non-public or reserved test evidence, so it is not treated as internet egress",
+      "rule": "external_connection",
+      "type": "false_positive_removed"
+    }
+  ],
+  "severity": "critical",
+  "timeline": [
+    {
+      "corrections": [],
+      "event_hash": "982ee5cfccd0f2f62c8ab720cf10f7cf14b5bd3505b173cfb44e5541106cd28d",
+      "event_type": "process_start",
+      "findings": [
+        {
+          "recommendation": "Isolate host and collect PowerShell transcript/logs.",
+          "rule": "encodedcommand",
+          "title": "PowerShell encoded command",
+          "weight": 40
+        }
+      ],
+      "host": "workstation-17",
+      "redacted_event": {
+        "command_line": "powershell -EncodedCommand SQBFAFgA",
+        "event_type": "process_start",
+        "expected_rules": [
+          "encodedcommand"
+        ],
+        "host": "workstation-17",
+        "process": "powershell.exe",
+        "src_ip": "10.0.1.44",
+        "ts": "2026-05-29T01:02:03Z",
+        "user": "[redacted-email]"
+      },
+      "score": 40,
+      "ts": "2026-05-29T01:02:03Z"
+    },
+    {
+      "corrections": [],
+      "event_hash": "8c8190b684405aa43ad3c8f8a7173d3e52d1006eb3f8e280a9ec18ef648d5d87",
+      "event_type": "network_connection",
+      "findings": [
+        {
+          "recommendation": "Block destination pending reputation review.",
+          "rule": "external_connection",
+          "title": "External network connection",
+          "weight": 20
+        }
+      ],
+      "host": "workstation-17",
+      "redacted_event": {
+        "dst": "8.8.8.8",
+        "dst_port": 443,
+        "event_type": "network_connection",
+        "expected_rules": [
+          "external_connection"
+        ],
+        "host": "workstation-17",
+        "process": "powershell.exe",
+        "ts": "2026-05-29T01:05:12Z",
+        "user": "[redacted-email]"
+      },
+      "score": 20,
+      "ts": "2026-05-29T01:05:12Z"
+    },
+    {
+      "corrections": [],
+      "event_hash": "5a922e241a784dbba69d089f1c2a9a1008b3efb6da3734b62fa388df2b89e3fa",
+      "event_type": "failed_login",
+      "findings": [
+        {
+          "recommendation": "Check source reputation and enforce MFA/session review.",
+          "rule": "failed_login",
+          "title": "Repeated failed login",
+          "weight": 15
+        }
+      ],
+      "host": "workstation-17",
+      "redacted_event": {
+        "count": 8,
+        "event_type": "failed_login",
+        "expected_rules": [
+          "failed_login"
+        ],
+        "host": "workstation-17",
+        "src_ip": "203.0.113.9",
+        "ts": "2026-05-29T01:08:22Z",
+        "user": "[redacted-email]"
+      },
+      "score": 15,
+      "ts": "2026-05-29T01:08:22Z"
+    },
+    {
+      "corrections": [],
+      "event_hash": "fe4b96c402aed6344232057b3869c92a7917ea37124f26c7ee8e4d0405fb89ab",
+      "event_type": "file_write",
+      "findings": [
+        {
+          "recommendation": "Quarantine file and hash it in a sandboxed workflow.",
+          "rule": "payload.dll",
+          "title": "Suspicious payload write",
+          "weight": 35
+        },
+        {
+          "recommendation": "Review Run keys, startup folders, and scheduled tasks.",
+          "rule": "appdata",
+          "title": "User-profile persistence path",
+          "weight": 20
+        }
+      ],
+      "host": "workstation-17",
+      "redacted_event": {
+        "event_type": "file_write",
+        "expected_rules": [
+          "payload.dll",
+          "appdata"
+        ],
+        "host": "workstation-17",
+        "path": "C:\\Users\\analyst\\AppData\\Roaming\\payload.dll",
+        "ts": "2026-05-29T01:11:55Z",
+        "user": "[redacted-email]"
+      },
+      "score": 55,
+      "ts": "2026-05-29T01:11:55Z"
+    },
+    {
+      "corrections": [
+        {
+          "reason": "destination is non-public or reserved test evidence, so it is not treated as internet egress",
+          "rule": "external_connection",
+          "type": "false_positive_removed"
+        }
+      ],
+      "event_hash": "8fb2b0fe7c52a8d1b2757e860552f129489259206b1596f3a6da037d37a3558b",
+      "event_type": "network_connection",
+      "findings": [],
+      "host": "workstation-17",
+      "redacted_event": {
+        "dst": "172.20.0.4",
+        "dst_port": 443,
+        "event_type": "network_connection",
+        "expected_rules": [],
+        "host": "workstation-17",
+        "process": "svchost.exe",
+        "ts": "2026-05-29T01:15:05Z",
+        "user": "[redacted-email]"
+      },
+      "score": 0,
+      "ts": "2026-05-29T01:15:05Z"
+    }
+  ],
+  "total_score": 130
+}
