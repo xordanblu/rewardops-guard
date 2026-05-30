@@ -14,9 +14,11 @@ patient data, or submitting to Open Exchange.
 - Medication-safety findings, duplicate therapy checks, and allergy alerts.
 - Care-plan task candidates for clinician handoff and patient follow-up.
 - Evidence traceability showing required FHIR resource coverage.
+- Read-only FHIR REST fetch path for approved synthetic/test servers.
 - Docker and `docker-compose.yml` scaffold for IRIS for Health Community review.
 - `module.xml` and `RewardOps.FHIR.CareBriefAgent` ObjectScript bridge for
   ZPM/IPM packaging review.
+- Open Exchange submission draft and Developer Community article draft.
 - A contest packet that preserves prize/deadline context and approval gates.
 
 ## Run
@@ -27,6 +29,15 @@ python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_
 python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py
 python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.py
 python3 -m unittest rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.test_fhir_summary_agent -v
+```
+
+For an approved synthetic/test FHIR server:
+
+```bash
+python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py \
+  --fhir-base-url http://localhost:52773/fhir/r4 \
+  --patient-id patient-001 \
+  --role ed_doctor
 ```
 
 From this kit directory, validate the container configuration without starting

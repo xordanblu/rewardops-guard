@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-30T13:21:25+00:00",
+  "checked_at": "2026-05-30T13:25:04+00:00",
   "contest_value": {
     "expert_first_place_usd": 5000,
     "submission_deadline": "2026-06-07 23:59 EST",
@@ -10,8 +10,10 @@
     "InterSystems FHIR Server container scaffold",
     "Embedded Python-style local agent logic",
     "LLM/AI-agent-ready summary workflow",
+    "Read-only FHIR REST fetch path for approved test servers",
     "Docker container scaffold",
     "ZPM/IPM module.xml package scaffold",
+    "Open Exchange submission and Developer Community article drafts",
     "Open Exchange gates documented but not executed"
   ],
   "external_blockers_before_contest_submission": [
@@ -28,7 +30,17 @@
     {
       "exists": true,
       "path": "README.md",
-      "size_bytes": 2501
+      "size_bytes": 2891
+    },
+    {
+      "exists": true,
+      "path": "SUBMISSION_DRAFT.md",
+      "size_bytes": 2217
+    },
+    {
+      "exists": true,
+      "path": "ARTICLE_DRAFT.md",
+      "size_bytes": 2033
     },
     {
       "exists": true,
@@ -48,7 +60,7 @@
     {
       "exists": true,
       "path": "fhir_summary_agent.py",
-      "size_bytes": 14388
+      "size_bytes": 16785
     },
     {
       "exists": true,
@@ -58,12 +70,12 @@
     {
       "exists": true,
       "path": "test_fhir_summary_agent.py",
-      "size_bytes": 3778
+      "size_bytes": 6381
     },
     {
       "exists": true,
       "path": "contest_packet.py",
-      "size_bytes": 7401
+      "size_bytes": 7749
     },
     {
       "exists": true,
@@ -106,6 +118,16 @@
     {
       "evidence": "ObjectScript package bridge class is present",
       "name": "objectscript_bridge_class",
+      "ok": true
+    },
+    {
+      "evidence": "Open Exchange submission draft is present but not submitted",
+      "name": "open_exchange_submission_draft",
+      "ok": true
+    },
+    {
+      "evidence": "Developer Community article draft is present but not published",
+      "name": "developer_community_article_draft",
       "ok": true
     }
   ],

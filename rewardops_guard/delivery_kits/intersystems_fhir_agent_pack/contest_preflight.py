@@ -33,6 +33,8 @@ KIT_ROOT = Path(__file__).resolve().parent
 
 REQUIRED_LOCAL_FILES = [
     "README.md",
+    "SUBMISSION_DRAFT.md",
+    "ARTICLE_DRAFT.md",
     "Dockerfile",
     "docker-compose.yml",
     "module.xml",
@@ -135,6 +137,22 @@ def packaging_checks() -> list[dict[str, Any]]:
             "evidence": "ObjectScript package bridge class is present",
         }
     )
+    submission_draft = (KIT_ROOT / "SUBMISSION_DRAFT.md").read_text(encoding="utf-8") if (KIT_ROOT / "SUBMISSION_DRAFT.md").exists() else ""
+    article_draft = (KIT_ROOT / "ARTICLE_DRAFT.md").read_text(encoding="utf-8") if (KIT_ROOT / "ARTICLE_DRAFT.md").exists() else ""
+    checks.append(
+        {
+            "name": "open_exchange_submission_draft",
+            "ok": "Application Name" in submission_draft and "FHIR Care Brief Agent" in submission_draft,
+            "evidence": "Open Exchange submission draft is present but not submitted",
+        }
+    )
+    checks.append(
+        {
+            "name": "developer_community_article_draft",
+            "ok": "Synthetic-Data-First" in article_draft and "FHIR Server Path" in article_draft,
+            "evidence": "Developer Community article draft is present but not published",
+        }
+    )
     return checks
 
 
@@ -205,8 +223,10 @@ def build_report() -> dict[str, Any]:
             "InterSystems FHIR Server container scaffold",
             "Embedded Python-style local agent logic",
             "LLM/AI-agent-ready summary workflow",
+            "Read-only FHIR REST fetch path for approved test servers",
             "Docker container scaffold",
             "ZPM/IPM module.xml package scaffold",
+            "Open Exchange submission and Developer Community article drafts",
             "Open Exchange gates documented but not executed",
         ],
         "external_blockers_before_contest_submission": EXTERNAL_BLOCKERS,

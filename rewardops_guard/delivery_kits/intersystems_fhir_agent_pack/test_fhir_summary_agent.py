@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import json
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import threading
 import unittest
+from urllib.parse import urlparse
 
 from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.contest_packet import (
     APPROVAL_GATES,
@@ -8,6 +12,8 @@ from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.contest_packet i
 )
 from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.contest_preflight import build_report
 from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.fhir_summary_agent import (
+    FHIR_SEARCH_RESOURCES,
+    fetch_patient_bundle,
     load_bundle,
     render_markdown,
     summarize_bundle,
@@ -68,6 +74,60 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertTrue(packaging["iris_health_container_image"])
         self.assertTrue(packaging["zpm_resource_package"])
         self.assertTrue(packaging["objectscript_bridge_class"])
+        self.assertTrue(packaging["open_exchange_submission_draft"])
+        self.assertTrue(packaging["developer_community_article_draft"])
+
+    def test_fetch_patient_bundle_from_read_only_fhir_server(self) -> None:
+        sample_bundle = load_bundle()
+        resources_by_type: dict[str, list[dict[str, object]]] = {}
+        for entry in sample_bundle["entry"]:
+            resource = entry["resource"]
+            resources_by_type.setdefault(resource["resourceType"], []).append(resource)
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_GET(self) -> None:
+                parsed = urlparse(self.path)
+                if parsed.path == "/fhir/Patient/patient-001":
+                    self.send_json(resources_by_type["Patient"][0])
+                    return
+                resource_type = parsed.path.rsplit("/", 1)[-1]
+                if resource_type in FHIR_SEARCH_RESOURCES:
+                    self.send_json(
+                        {
+                            "resourceType": "Bundle",
+                            "type": "searchset",
+                            "entry": [{"resource": resource} for resource in resources_by_type.get(resource_type, [])],
+                        }
+                    )
+                    return
+                self.send_response(404)
+                self.end_headers()
+
+            def log_message(self, format: str, *args: object) -> None:
+                return
+
+            def send_json(self, data: dict[str, object]) -> None:
+                payload = json.dumps(data).encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "application/fhir+json")
+                self.send_header("Content-Length", str(len(payload)))
+                self.end_headers()
+                self.wfile.write(payload)
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            base_url = f"http://127.0.0.1:{server.server_port}/fhir"
+            fetched = fetch_patient_bundle(base_url, "patient-001")
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
+
+        summary = summarize_bundle(fetched, "ed_doctor")
+        self.assertIn("Alex Rivera", summary.patient_label)
+        self.assertIn("MedicationRequest: 2", " ".join(summary.evidence_trace))
 
     def test_unknown_role_rejected(self) -> None:
         with self.assertRaises(ValueError):

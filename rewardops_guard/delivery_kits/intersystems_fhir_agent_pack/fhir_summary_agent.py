@@ -12,6 +12,8 @@ from dataclasses import dataclass
 import json
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urlencode, urljoin
+from urllib.request import Request, urlopen
 
 
 KIT_ROOT = Path(__file__).resolve().parent
@@ -47,6 +49,16 @@ REQUIRED_CONTEST_RESOURCES = {
     "CarePlan",
 }
 
+FHIR_SEARCH_RESOURCES = [
+    "Patient",
+    "Condition",
+    "MedicationRequest",
+    "AllergyIntolerance",
+    "Observation",
+    "Encounter",
+    "CarePlan",
+]
+
 
 @dataclass(frozen=True)
 class FhirSummary:
@@ -78,6 +90,44 @@ def load_bundle(path: Path = SAMPLE_BUNDLE) -> dict[str, Any]:
     if bundle.get("resourceType") != "Bundle":
         raise ValueError("Expected a FHIR Bundle resource")
     return bundle
+
+
+def fetch_json(url: str, timeout: float = 20.0) -> dict[str, Any]:
+    request = Request(url, headers={"Accept": "application/fhir+json, application/json"})
+    with urlopen(request, timeout=timeout) as response:
+        payload = response.read().decode("utf-8")
+    data = json.loads(payload)
+    if not isinstance(data, dict):
+        raise ValueError(f"Expected JSON object from {url}")
+    return data
+
+
+def bundle_entries_from_response(response: dict[str, Any]) -> list[dict[str, Any]]:
+    if response.get("resourceType") == "Bundle":
+        return [entry for entry in response.get("entry", []) if isinstance(entry, dict)]
+    if response.get("resourceType"):
+        return [{"resource": response}]
+    return []
+
+
+def fetch_patient_bundle(fhir_base_url: str, patient_id: str, timeout: float = 20.0) -> dict[str, Any]:
+    """Fetch a patient-centered bundle from a FHIR REST base URL.
+
+    The function uses read-only GET requests and assumes the caller has already
+    approved the endpoint and data. It does not send credentials.
+    """
+
+    base = fhir_base_url.rstrip("/") + "/"
+    entries: list[dict[str, Any]] = []
+    patient_url = urljoin(base, f"Patient/{patient_id}")
+    entries.extend(bundle_entries_from_response(fetch_json(patient_url, timeout=timeout)))
+    for resource_type in FHIR_SEARCH_RESOURCES:
+        if resource_type == "Patient":
+            continue
+        query = urlencode({"patient": patient_id})
+        url = urljoin(base, resource_type) + "?" + query
+        entries.extend(bundle_entries_from_response(fetch_json(url, timeout=timeout)))
+    return {"resourceType": "Bundle", "type": "collection", "entry": entries}
 
 
 def iter_resources(bundle: dict[str, Any], resource_type: str | None = None) -> Iterable[dict[str, Any]]:
@@ -339,12 +389,21 @@ def render_markdown(summary: FhirSummary) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--bundle", type=Path, default=SAMPLE_BUNDLE)
+    parser.add_argument("--fhir-base-url", help="Read-only FHIR REST base URL, for approved synthetic/test servers only")
+    parser.add_argument("--patient-id", help="FHIR Patient id to fetch when --fhir-base-url is supplied")
     parser.add_argument("--role", default="ed_doctor", choices=sorted(ROLE_GUIDANCE))
     parser.add_argument("--json-output", type=Path)
     parser.add_argument("--markdown-output", type=Path)
     args = parser.parse_args()
 
-    summary = summarize_bundle(load_bundle(args.bundle), args.role)
+    if args.fhir_base_url:
+        if not args.patient_id:
+            parser.error("--patient-id is required when --fhir-base-url is supplied")
+        bundle = fetch_patient_bundle(args.fhir_base_url, args.patient_id)
+    else:
+        bundle = load_bundle(args.bundle)
+
+    summary = summarize_bundle(bundle, args.role)
     if args.json_output:
         args.json_output.write_text(json.dumps(summary.as_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8")
     markdown = render_markdown(summary)

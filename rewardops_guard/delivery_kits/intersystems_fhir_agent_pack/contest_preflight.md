@@ -1,6 +1,6 @@
 # InterSystems FHIR Contest Preflight
 
-Checked: 2026-05-30T13:21:25+00:00
+Checked: 2026-05-30T13:25:04+00:00
 Local OK: `true`
 External submission OK: `false`
 First-place target: `$5000`
@@ -32,6 +32,8 @@ Deadline: 2026-06-07 23:59 EST
 - ok: zpm_resource_package - module.xml packages RewardOps.FHIR classes
 - ok: zpm_csp_application - module.xml declares /fhir-care-brief-agent web app
 - ok: objectscript_bridge_class - ObjectScript package bridge class is present
+- ok: open_exchange_submission_draft - Open Exchange submission draft is present but not submitted
+- ok: developer_community_article_draft - Developer Community article draft is present but not published
 
 ## External Blockers
 
