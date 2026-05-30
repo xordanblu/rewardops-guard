@@ -11,7 +11,17 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LIVE = ROOT / "live_status"
+
+
+def find_workspace_root() -> Path:
+    for candidate in [ROOT, *ROOT.parents]:
+        if (candidate / "live_status" / "goal5000_strategy_board_latest.json").exists():
+            return candidate
+    return ROOT
+
+
+WORKSPACE_ROOT = find_workspace_root()
+LIVE = WORKSPACE_ROOT / "live_status"
 OUT = ROOT / "rewardops_guard" / "ops_events.jsonl"
 
 

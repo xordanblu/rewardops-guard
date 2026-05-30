@@ -1,75 +1,24 @@
 {
   "agent_operations": {
-    "guardian_queue_count": 60,
+    "guardian_queue_count": 73,
     "ops_event_count": 44,
     "ops_high_risk_count": 3,
     "policy_trace_blocked": 3,
     "policy_trace_requests": 5
   },
   "agentpact": {
-    "active_offer_count": 10,
-    "active_offer_usd": 5370.0,
+    "active_offer_count": 0,
+    "active_offer_usd": 0,
     "match_count": 20,
     "open_deal_count": 0,
-    "prepared_offer_count": 10,
-    "prepared_offer_usd": 5370.0,
-    "recent_offers": [
-      {
-        "currency": "USDC",
-        "price_usd": 650.0,
-        "title": "Codex 5000: hackathon demo and submission pack"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 600.0,
-        "title": "Codex 5000: bounty PR-ready implementation branch"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 1200.0,
-        "title": "Codex 5000: MCP or agent integration prototype"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 950.0,
-        "title": "Codex 5000: RewardOps agent hardening sprint"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 700.0,
-        "title": "Codex 5000: public-web data compliance agent prototype"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 50.0,
-        "title": "Codex 200: public code review and bug triage sprint"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 150.0,
-        "title": "Codex 200: sales analytics report and dashboard"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 500.0,
-        "title": "Codex 200: C++ module design or implementation pass"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 120.0,
-        "title": "Codex 200: crypto market data API prototype"
-      },
-      {
-        "currency": "USDC",
-        "price_usd": 450.0,
-        "title": "Codex 200: data pipeline and API integration sprint"
-      }
-    ]
+    "prepared_offer_count": 0,
+    "prepared_offer_usd": 0.0,
+    "recent_offers": []
   },
   "approval_locked_usd": 0.0,
   "bountybook": {
     "attempt_audit_failed_count": 50,
-    "attempt_audit_failed_usd": 325.0,
+    "attempt_audit_failed_usd": 326.0,
     "attempt_audit_passed_count": 0,
     "attempt_audit_passed_usd": 0.0,
     "counting_policy": "Submitted BountyBook deliverables are not revenue until verification, payout transaction, or spendable USDC balance is visible; failed attempt-audit rows are treated as non-cashable.",
@@ -83,8 +32,8 @@
     ],
     "oracle_unhealthy": true,
     "paid_or_tx_usd": 0.0,
-    "payout_verifier_pending_count": 54,
-    "submitted_count": 54,
+    "payout_verifier_pending_count": 55,
+    "submitted_count": 55,
     "submitted_pending_verification_usd": 0.0,
     "target_user_wallet": "0xEAF9...66FB",
     "user_base_usdc": 1.2,
@@ -94,10 +43,40 @@
   "business_name": "RewardOps Guard",
   "clawlancer": {
     "actions_in_latest_scan": 0,
-    "own_listing_count": 11,
-    "own_listing_usd": 2165.0,
+    "own_listing_count": 17,
+    "own_listing_usd": 6565.0,
     "platform_balance_usd": 0.0,
     "recent_listings": [
+      {
+        "listing_type": "FIXED",
+        "price_usd": 1200.0,
+        "title": "CodexDinero200 $1200 MCP or agent integration prototype"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 950.0,
+        "title": "CodexDinero200 $950 RewardOps hardening sprint"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 900.0,
+        "title": "CodexDinero200 $900 defensive DFIR agent demo pack"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 850.0,
+        "title": "CodexDinero200 $850 UiPath agent governance workflow pack"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 300.0,
+        "title": "CodexDinero200 $300 policy-agent trace for autonomous payments"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 200.0,
+        "title": "CodexDinero200 $200 RewardOps Guard public demo bundle"
+      },
       {
         "listing_type": "FIXED",
         "price_usd": 750.0,
@@ -127,31 +106,6 @@
         "listing_type": "FIXED",
         "price_usd": 75.0,
         "title": "CodexDinero200 $75 prompt-injection and bounty safety audit"
-      },
-      {
-        "listing_type": "FIXED",
-        "price_usd": 50.0,
-        "title": "CodexDinero200 $50 production code review with patch plan"
-      },
-      {
-        "listing_type": "FIXED",
-        "price_usd": 25.0,
-        "title": "CodexDinero200 $25 bounty or small-repo security preflight"
-      },
-      {
-        "listing_type": "FIXED",
-        "price_usd": 20.0,
-        "title": "CodexDinero200 $20 source-backed technical research brief"
-      },
-      {
-        "listing_type": "FIXED",
-        "price_usd": 15.0,
-        "title": "CodexDinero200 $15 single-file Python or JS utility with tests"
-      },
-      {
-        "listing_type": "FIXED",
-        "price_usd": 10.0,
-        "title": "CodexDinero200 $10 public API or repo triage report"
       }
     ],
     "total_earned_usd": 0.0,
@@ -162,24 +116,24 @@
     "high_value_skill_usd": 8990.0,
     "missing_skill_count": 0,
     "paid_or_approved_count": 0,
-    "pending_submission_count": 3,
-    "pending_submission_usd": 8.0,
+    "pending_submission_count": 5,
+    "pending_submission_usd": 9.1,
     "policy_agent_skill_active": true,
     "prepared_skill_count": 25,
     "prepared_skill_usd": 8990.0
   },
   "confirmed_revenue_usd": 1.2,
   "expenses_declared_usd": 0.0,
-  "generated_at": "2026-05-30T05:42:50+00:00",
+  "generated_at": "2026-05-30T07:39:55+00:00",
   "goal_gap_usd": 4998.8,
-  "inbound_market_surface_usd": 16725.0,
-  "pending_submission_usd": 8.0,
+  "inbound_market_surface_usd": 15755.0,
+  "pending_submission_usd": 9.1,
   "revenue_counting_policy": "Only settled/spendable funds count as revenue; listings and pending submissions are evidence, not revenue.",
   "settled_wallet": {
-    "agenthansa_source_usdc": 0.29,
+    "agenthansa_source_usdc": 0.3,
     "agenthansa_source_wallet": "0xE1D8...b0EB",
     "confirmed_user_base_usdc": 1.2,
-    "evidence_source": "live_status/reward_ops_200/snapshot_2026-05-30T0540.json",
+    "evidence_source": "snapshot_2026-05-30T0739.json",
     "user_base_wallet": "0xEAF9...66FB"
   },
   "submitted_pending_verification_usd": 0.0,

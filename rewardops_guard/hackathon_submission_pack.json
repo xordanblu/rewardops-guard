@@ -17,16 +17,16 @@
     "find_evil_self_corrections": 2,
     "find_evil_verdict": "agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain",
     "goal_gap_usd": 4998.8,
-    "inbound_market_surface_usd": 16725.0,
+    "inbound_market_surface_usd": 15755.0,
     "ops_blocked_count": 3,
     "ops_event_count": 44,
     "ops_high_risk_count": 3,
-    "pending_submission_usd": 8.0,
+    "pending_submission_usd": 9.1,
     "policy_blocked_count": 3,
     "policy_request_count": 5,
-    "ready_local_count": 50
+    "ready_local_count": 58
   },
-  "generated_at": "2026-05-30T05:43:26+00:00",
+  "generated_at": "2026-05-30T07:39:55+00:00",
   "objective": "Package a local defensive agent demo for cash-prize routes without making public submissions.",
   "product": "RewardOps Guard",
   "routes": [

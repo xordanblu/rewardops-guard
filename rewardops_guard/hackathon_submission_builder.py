@@ -15,6 +15,16 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def find_workspace_root() -> Path:
+    for candidate in [ROOT, *ROOT.parents]:
+        if (candidate / "live_status" / "goal5000_strategy_board_latest.json").exists():
+            return candidate
+    return ROOT
+
+
+WORKSPACE_ROOT = find_workspace_root()
 OUT_JSON = ROOT / "rewardops_guard" / "hackathon_submission_pack.json"
 OUT_MD = ROOT / "rewardops_guard" / "hackathon_submission_pack.md"
 
@@ -171,7 +181,7 @@ def evidence_summary() -> dict[str, Any]:
     ops = read_json(ROOT / "rewardops_guard" / "ops_event_report.json", {})
     policy = read_json(ROOT / "rewardops_guard" / "policy_agent_trace.json", {})
     find_evil = read_json(ROOT / "rewardops_guard" / "find_evil_defender_report.json", {})
-    strategy = read_json(ROOT / "live_status" / "goal5000_strategy_board_latest.json", {})
+    strategy = read_json(WORKSPACE_ROOT / "live_status" / "goal5000_strategy_board_latest.json", {})
     return {
         "confirmed_revenue_usd": money(revenue.get("confirmed_revenue_usd")),
         "goal_gap_usd": money(revenue.get("goal_gap_usd")),

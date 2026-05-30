@@ -6,7 +6,7 @@
     "Superteam autonomous agent: auditable task intake before blockchain/data-cloud work.",
     "Buyer service: compact trace proving unsafe actions were blocked before delivery."
   ],
-  "generated_at": "2026-05-30T05:39:40+00:00",
+  "generated_at": "2026-05-30T07:26:13+00:00",
   "policy_version": 7,
   "raw_text_policy": "raw request text is hashed and not stored",
   "request_count": 5,

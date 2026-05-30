@@ -6,7 +6,7 @@
     "false-positive correction for benign training/documentation context",
     "approval-gated containment for irreversible actions"
   ],
-  "generated_at": "2026-05-30T05:39:46+00:00",
+  "generated_at": "2026-05-30T07:26:13+00:00",
   "high_event_count": 4,
   "hypotheses": [
     {

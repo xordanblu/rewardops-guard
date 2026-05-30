@@ -1,26 +1,26 @@
 {
-  "allow_count": 35,
-  "allow_reward_usd": 14925.0,
+  "allow_count": 36,
+  "allow_reward_usd": 12515.0,
   "blocked_count": 3,
   "blocked_reward_usd": 5330.0,
   "by_decision": {
-    "ALLOW": 35,
+    "ALLOW": 36,
     "BLOCK": 3,
-    "REVIEW": 6
+    "REVIEW": 5
   },
   "by_severity": {
     "critical": 1,
     "high": 2,
     "info": 1,
-    "low": 34,
-    "medium": 6
+    "low": 35,
+    "medium": 5
   },
   "event_count": 44,
-  "generated_at": "2026-05-30T05:39:41+00:00",
+  "generated_at": "2026-05-30T07:26:50+00:00",
   "high_risk_count": 3,
   "raw_text_policy": "raw external task text is not stored",
-  "review_count": 6,
-  "review_reward_usd": 317.1,
+  "review_count": 5,
+  "review_reward_usd": 9.1,
   "schema": [
     "decision",
     "event_id",
@@ -37,9 +37,9 @@
   "top_events": [
     {
       "decision": "BLOCK",
-      "event_id": "068a63ad42652c137b4a5f20",
+      "event_id": "5ad9032ba16fde4812b46ad4",
       "event_type": "prompt_injection_block",
-      "evidence_hash": "068a63ad42652c137b4a5f20",
+      "evidence_hash": "5ad9032ba16fde4812b46ad4",
       "next_action": "Reject route and retain only hash/signals for audit.",
       "reward_usd": 5000.0,
       "route": "internal-instruction exfiltration lure",
@@ -50,13 +50,13 @@
         "raw_text_not_stored"
       ],
       "source": "hostile_bounty_probe",
-      "ts": "2026-05-30T00:37:55+00:00"
+      "ts": "2026-05-30T07:22:50+00:00"
     },
     {
       "decision": "BLOCK",
-      "event_id": "38b90e32774030447e348197",
+      "event_id": "9b2e3f8158633c2bfe004354",
       "event_type": "wallet_action_hold",
-      "evidence_hash": "38b90e32774030447e348197",
+      "evidence_hash": "9b2e3f8158633c2bfe004354",
       "next_action": "Hold until the user gives exact scoped approval for a non-spending auth signature.",
       "reward_usd": 230.0,
       "route": "wallet authentication/signature request",
@@ -66,13 +66,13 @@
         "exact_approval_required"
       ],
       "source": "wallet_flow_probe",
-      "ts": "2026-05-30T00:38:55+00:00"
+      "ts": "2026-05-30T07:23:50+00:00"
     },
     {
       "decision": "BLOCK",
-      "event_id": "e5e51c3ad2e7019c48a38920",
+      "event_id": "f4658e993cb5cc0d8e7b5096",
       "event_type": "social_route_block",
-      "evidence_hash": "e5e51c3ad2e7019c48a38920",
+      "evidence_hash": "f4658e993cb5cc0d8e7b5096",
       "next_action": "Do not use user social accounts; search non-social payout routes.",
       "reward_usd": 100.0,
       "route": "social proof or engagement task",
@@ -81,29 +81,13 @@
         "user_social_forbidden"
       ],
       "source": "social_task_probe",
-      "ts": "2026-05-30T00:39:55+00:00"
+      "ts": "2026-05-30T07:24:50+00:00"
     },
     {
       "decision": "REVIEW",
-      "event_id": "4453b63e4a2fc4bfa077e093",
+      "event_id": "03a5d73806972280585b33bc",
       "event_type": "money_path_triage",
-      "evidence_hash": "4453b63e4a2fc4bfa077e093",
-      "next_action": "Monitor BountyBook acceptance and payout; do not resubmit duplicates.",
-      "reward_usd": 308.0,
-      "route": "49 submitted deliverables awaiting platform result",
-      "severity": "medium",
-      "signals": [
-        "pending_verification",
-        "high_value"
-      ],
-      "source": "BountyBook",
-      "ts": "2026-05-30T00:32:35+00:00"
-    },
-    {
-      "decision": "REVIEW",
-      "event_id": "5249afd58d216b657ddcc28b",
-      "event_type": "money_path_triage",
-      "evidence_hash": "5249afd58d216b657ddcc28b",
+      "evidence_hash": "03a5d73806972280585b33bc",
       "next_action": "Monitor acceptance and payout; do not submit duplicates.",
       "reward_usd": 5.0,
       "route": "Design a mascot logo for ClawMoney",
@@ -112,13 +96,13 @@
         "pending_submission"
       ],
       "source": "ClawMoney",
-      "ts": "2026-05-30T00:21:55+00:00"
+      "ts": "2026-05-30T07:06:50+00:00"
     },
     {
       "decision": "REVIEW",
-      "event_id": "3c6760db196019dd67455afd",
+      "event_id": "6406558456bd1bedf11e76c0",
       "event_type": "money_path_triage",
-      "evidence_hash": "3c6760db196019dd67455afd",
+      "evidence_hash": "6406558456bd1bedf11e76c0",
       "next_action": "Monitor acceptance and payout; do not submit duplicates.",
       "reward_usd": 2.0,
       "route": "Code Review: BNBOT Hub Marketplace PR",
@@ -127,13 +111,13 @@
         "pending_submission"
       ],
       "source": "ClawMoney",
-      "ts": "2026-05-30T00:22:15+00:00"
+      "ts": "2026-05-30T07:07:10+00:00"
     },
     {
       "decision": "REVIEW",
-      "event_id": "a0c6d95e4319d2aa41201c25",
+      "event_id": "0956cca3e289249ca01b77fb",
       "event_type": "money_path_triage",
-      "evidence_hash": "a0c6d95e4319d2aa41201c25",
+      "evidence_hash": "0956cca3e289249ca01b77fb",
       "next_action": "Monitor acceptance and payout; do not submit duplicates.",
       "reward_usd": 1.0,
       "route": "Code Review: FastAPI framework",
@@ -142,13 +126,13 @@
         "pending_submission"
       ],
       "source": "ClawMoney",
-      "ts": "2026-05-30T00:22:55+00:00"
+      "ts": "2026-05-30T07:07:50+00:00"
     },
     {
       "decision": "REVIEW",
-      "event_id": "c79239e3996c1b8407627566",
+      "event_id": "ded4f5f331a9d78cd04dc861",
       "event_type": "money_path_triage",
-      "evidence_hash": "c79239e3996c1b8407627566",
+      "evidence_hash": "ded4f5f331a9d78cd04dc861",
       "next_action": "Monitor acceptance and payout; do not submit duplicates.",
       "reward_usd": 1.0,
       "route": "Review & file issues: fastapi/fastapi recent changes",
@@ -157,13 +141,13 @@
         "pending_submission"
       ],
       "source": "ClawMoney",
-      "ts": "2026-05-30T00:22:35+00:00"
+      "ts": "2026-05-30T07:07:30+00:00"
     },
     {
       "decision": "REVIEW",
-      "event_id": "8e0352aca83e9e86c239c203",
+      "event_id": "f0868061dbaa1844fd950f1c",
       "event_type": "money_path_triage",
-      "evidence_hash": "8e0352aca83e9e86c239c203",
+      "evidence_hash": "f0868061dbaa1844fd950f1c",
       "next_action": "Monitor acceptance and payout; do not submit duplicates.",
       "reward_usd": 0.1,
       "route": "Design a ClawMoney Logo",
@@ -172,13 +156,13 @@
         "pending_submission"
       ],
       "source": "ClawMoney",
-      "ts": "2026-05-30T00:23:15+00:00"
+      "ts": "2026-05-30T07:08:10+00:00"
     },
     {
       "decision": "ALLOW",
-      "event_id": "fee1064ba98e61617c2d8772",
+      "event_id": "18511b315371f3d94ab3d811",
       "event_type": "money_path_triage",
-      "evidence_hash": "fee1064ba98e61617c2d8772",
+      "evidence_hash": "18511b315371f3d94ab3d811",
       "next_action": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
       "reward_usd": 1200.0,
       "route": "CodexDinero200 $1200 MCP or agent integration prototype",
@@ -188,13 +172,13 @@
         "high_value"
       ],
       "source": "Clawlancer",
-      "ts": "2026-05-30T00:23:55+00:00"
+      "ts": "2026-05-30T07:12:10+00:00"
     },
     {
       "decision": "ALLOW",
-      "event_id": "ab5aaf35635eeea451cdcaaa",
+      "event_id": "78ce83e6547817dfe1b73afe",
       "event_type": "money_path_triage",
-      "evidence_hash": "ab5aaf35635eeea451cdcaaa",
+      "evidence_hash": "78ce83e6547817dfe1b73afe",
       "next_action": "Monitor for inbound service calls; run protective preflight before doing buyer work.",
       "reward_usd": 1000.0,
       "route": "google-rapid-agent-",
@@ -204,13 +188,13 @@
         "high_value"
       ],
       "source": "ClawMoney Skill",
-      "ts": "2026-05-30T00:29:15+00:00"
+      "ts": "2026-05-30T07:17:50+00:00"
     },
     {
       "decision": "ALLOW",
-      "event_id": "53b36ff9dad0ffc370794313",
+      "event_id": "780b3e30306e0f26b13c386a",
       "event_type": "money_path_triage",
-      "evidence_hash": "53b36ff9dad0ffc370794313",
+      "evidence_hash": "780b3e30306e0f26b13c386a",
       "next_action": "Monitor for inbound service calls; run protective preflight before doing buyer work.",
       "reward_usd": 950.0,
       "route": "rewardops-productio",
@@ -220,17 +204,37 @@
         "high_value"
       ],
       "source": "ClawMoney Skill",
-      "ts": "2026-05-30T00:29:35+00:00"
+      "ts": "2026-05-30T07:18:10+00:00"
+    },
+    {
+      "decision": "ALLOW",
+      "event_id": "83e1af4a09972f0b1556b756",
+      "event_type": "money_path_triage",
+      "evidence_hash": "83e1af4a09972f0b1556b756",
+      "next_action": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
+      "reward_usd": 950.0,
+      "route": "CodexDinero200 $950 RewardOps hardening sprint",
+      "severity": "low",
+      "signals": [
+        "active_inbound_listing",
+        "high_value"
+      ],
+      "source": "Clawlancer",
+      "ts": "2026-05-30T07:12:30+00:00"
     }
   ],
   "top_sources": [
     [
-      "ClawMoney Skill",
+      "Clawlancer",
       17
     ],
     [
-      "Clawlancer",
-      16
+      "AgentPact",
+      10
+    ],
+    [
+      "ClawMoney Skill",
+      7
     ],
     [
       "ClawMoney",
@@ -238,10 +242,6 @@
     ],
     [
       "Agoragentic",
-      1
-    ],
-    [
-      "BountyBook",
       1
     ],
     [

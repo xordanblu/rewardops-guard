@@ -1,6 +1,6 @@
 # RewardOps FIND EVIL Defender Report
 
-Generated: 2026-05-30T05:39:46+00:00
+Generated: 2026-05-30T07:26:13+00:00
 Verdict: agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain
 Events: 6
 High/Critical events: 4

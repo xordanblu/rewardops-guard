@@ -1,6 +1,6 @@
 # RewardOps DFIR Agent Report
 
-Generated: 2026-05-30T05:39:46+00:00
+Generated: 2026-05-30T07:26:13+00:00
 Verdict: probable_credential_theft_with_exfiltration+agent_prompt_injection
 Events: 5
 High/Critical events: 2
