@@ -20,6 +20,7 @@ patient data, or submitting to Open Exchange.
   ZPM/IPM packaging review.
 - Open Exchange submission draft and Developer Community article draft.
 - Dependency-free local web demo with HTML dashboard and `/summary.json`.
+- Desktop and mobile screenshot assets under `demo_assets/`.
 - A contest packet that preserves prize/deadline context and approval gates.
 
 ## Run

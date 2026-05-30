@@ -59,6 +59,7 @@ def render_demo_html(summary: FhirSummary, role_key: str) -> str:
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background: var(--surface);
+      overflow-x: hidden;
     }}
     header {{
       padding: 28px min(5vw, 48px) 18px;
@@ -78,6 +79,7 @@ def render_demo_html(summary: FhirSummary, role_key: str) -> str:
       color: var(--muted);
       font-size: 16px;
       line-height: 1.5;
+      overflow-wrap: anywhere;
     }}
     nav {{
       display: flex;
@@ -118,6 +120,7 @@ def render_demo_html(summary: FhirSummary, role_key: str) -> str:
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--panel);
+      min-width: 0;
     }}
     .metric {{
       padding: 14px 16px;
@@ -134,6 +137,7 @@ def render_demo_html(summary: FhirSummary, role_key: str) -> str:
       margin-top: 4px;
       font-size: 20px;
       line-height: 1.2;
+      overflow-wrap: anywhere;
     }}
     .grid {{
       display: grid;
@@ -161,6 +165,7 @@ def render_demo_html(summary: FhirSummary, role_key: str) -> str:
     li {{
       margin: 8px 0;
       line-height: 1.45;
+      overflow-wrap: anywhere;
     }}
     code {{
       color: var(--warn);

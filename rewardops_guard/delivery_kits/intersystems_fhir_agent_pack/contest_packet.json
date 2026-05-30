@@ -19,13 +19,13 @@
     "youtube_video": 3,
     "zpm_package_deployment": 2
   },
-  "generated_at": "2026-05-30T13:28:40+00:00",
+  "generated_at": "2026-05-30T13:35:14+00:00",
   "kit": "intersystems_fhir_agent_pack",
   "local_artifacts": [
     {
       "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/README.md",
-      "size_bytes": 3059
+      "size_bytes": 3120
     },
     {
       "exists": true,
@@ -60,12 +60,27 @@
     {
       "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py",
-      "size_bytes": 7681
+      "size_bytes": 7820
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/README.md",
+      "size_bytes": 1169
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_desktop.png",
+      "size_bytes": 152793
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_mobile.png",
+      "size_bytes": 59550
     },
     {
       "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
-      "size_bytes": 11670
+      "size_bytes": 12325
     },
     {
       "exists": true,
@@ -90,7 +105,7 @@
     {
       "exists": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py",
-      "size_bytes": 7185
+      "size_bytes": 7246
     }
   ],
   "missing_local_artifacts": [],
@@ -112,10 +127,11 @@
       "Render role-specific outputs for ED doctor, care manager, patient, or family caregiver.",
       "Ship Docker, docker-compose, module.xml, and a minimal RewardOps.FHIR ObjectScript bridge class for IRIS/Open Exchange packaging review.",
       "Expose a dependency-free local web demo with HTML dashboard and /summary.json endpoint.",
+      "Package desktop and mobile screenshots for quick visual review.",
       "Prepare Open Exchange submission and Developer Community article drafts without publishing them.",
       "Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved."
     ],
-    "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, and submission/article drafts for a stronger expert-judging story.",
+    "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, screenshot assets, and submission/article drafts for a stronger expert-judging story.",
     "name": "FHIR Care Brief Agent",
     "one_liner": "A synthetic-data-first FHIR agent that turns local or read-only server FHIR resources into role-specific care summaries.",
     "suggested_tracks": [

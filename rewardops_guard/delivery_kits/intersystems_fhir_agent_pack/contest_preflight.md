@@ -1,6 +1,6 @@
 # InterSystems FHIR Contest Preflight
 
-Checked: 2026-05-30T13:28:40+00:00
+Checked: 2026-05-30T13:35:14+00:00
 Local OK: `true`
 External submission OK: `false`
 First-place target: `$5000`
@@ -35,6 +35,7 @@ Deadline: 2026-06-07 23:59 EST
 - ok: open_exchange_submission_draft - Open Exchange submission draft is present but not submitted
 - ok: developer_community_article_draft - Developer Community article draft is present but not published
 - ok: local_web_demo - Dependency-free local web demo with JSON endpoint is present
+- ok: local_demo_screenshots - Desktop and mobile local demo screenshots are present
 
 ## External Blockers
 

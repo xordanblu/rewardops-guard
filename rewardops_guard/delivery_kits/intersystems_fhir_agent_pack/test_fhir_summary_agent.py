@@ -88,6 +88,7 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertTrue(packaging["open_exchange_submission_draft"])
         self.assertTrue(packaging["developer_community_article_draft"])
         self.assertTrue(packaging["local_web_demo"])
+        self.assertTrue(packaging["local_demo_screenshots"])
 
     def test_fetch_patient_bundle_from_read_only_fhir_server(self) -> None:
         sample_bundle = load_bundle()

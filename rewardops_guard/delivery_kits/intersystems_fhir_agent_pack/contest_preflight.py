@@ -40,6 +40,9 @@ REQUIRED_LOCAL_FILES = [
     "module.xml",
     "fhir_summary_agent.py",
     "demo_server.py",
+    "demo_assets/README.md",
+    "demo_assets/care_brief_demo_desktop.png",
+    "demo_assets/care_brief_demo_mobile.png",
     "sample_patient_bundle.json",
     "test_fhir_summary_agent.py",
     "contest_packet.py",
@@ -162,6 +165,15 @@ def packaging_checks() -> list[dict[str, Any]]:
             "evidence": "Dependency-free local web demo with JSON endpoint is present",
         }
     )
+    desktop_shot = KIT_ROOT / "demo_assets/care_brief_demo_desktop.png"
+    mobile_shot = KIT_ROOT / "demo_assets/care_brief_demo_mobile.png"
+    checks.append(
+        {
+            "name": "local_demo_screenshots",
+            "ok": desktop_shot.exists() and desktop_shot.stat().st_size > 10000 and mobile_shot.exists() and mobile_shot.stat().st_size > 10000,
+            "evidence": "Desktop and mobile local demo screenshots are present",
+        }
+    )
     return checks
 
 
@@ -237,6 +249,7 @@ def build_report() -> dict[str, Any]:
             "ZPM/IPM module.xml package scaffold",
             "Open Exchange submission and Developer Community article drafts",
             "Dependency-free local web demo for judge review",
+            "Desktop and mobile screenshot assets for local demo review",
             "Open Exchange gates documented but not executed",
         ],
         "external_blockers_before_contest_submission": EXTERNAL_BLOCKERS,
