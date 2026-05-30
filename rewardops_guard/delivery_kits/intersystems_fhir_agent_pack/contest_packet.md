@@ -1,6 +1,6 @@
 # InterSystems FHIR Agent Packet
 
-Generated: 2026-05-30T13:35:14+00:00
+Generated: 2026-05-30T13:42:50+00:00
 Project: FHIR Care Brief Agent
 Expert first-place fit: $5000
 Submission deadline: 2026-06-07 23:59 EST
@@ -9,7 +9,7 @@ Submission deadline: 2026-06-07 23:59 EST
 
 A synthetic-data-first FHIR agent that turns local or read-only server FHIR resources into role-specific care summaries.
 
-Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, screenshot assets, and submission/article drafts for a stronger expert-judging story.
+Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, screenshot assets, reproducible ZIP bundle builder, and submission/article drafts for a stronger expert-judging story.
 
 ## Agent Workflow
 
@@ -21,6 +21,7 @@ Matches the Smart Patient Summary Generator bonus idea and now includes medicati
 - Ship Docker, docker-compose, module.xml, and a minimal RewardOps.FHIR ObjectScript bridge class for IRIS/Open Exchange packaging review.
 - Expose a dependency-free local web demo with HTML dashboard and /summary.json endpoint.
 - Package desktop and mobile screenshots for quick visual review.
+- Build a local ZIP submission bundle with manifest and checksums.
 - Prepare Open Exchange submission and Developer Community article drafts without publishing them.
 - Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved.
 
@@ -40,6 +41,7 @@ Matches the Smart Patient Summary Generator bonus idea and now includes medicati
 - ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml`
 - ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py`
 - ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py`
+- ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle.py`
 - ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/README.md`
 - ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_desktop.png`
 - ready: `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_mobile.png`

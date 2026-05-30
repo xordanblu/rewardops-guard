@@ -2,9 +2,12 @@ from __future__ import annotations
 
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+import tempfile
 import threading
 import unittest
 from urllib.parse import urlparse
+import zipfile
 
 from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.contest_packet import (
     APPROVAL_GATES,
@@ -19,6 +22,7 @@ from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.fhir_summary_age
     render_markdown,
     summarize_bundle,
 )
+from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.submission_bundle import build_bundle
 
 
 class FhirSummaryAgentTests(unittest.TestCase):
@@ -89,6 +93,7 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertTrue(packaging["developer_community_article_draft"])
         self.assertTrue(packaging["local_web_demo"])
         self.assertTrue(packaging["local_demo_screenshots"])
+        self.assertTrue(packaging["local_submission_bundle_builder"])
 
     def test_fetch_patient_bundle_from_read_only_fhir_server(self) -> None:
         sample_bundle = load_bundle()
@@ -141,6 +146,27 @@ class FhirSummaryAgentTests(unittest.TestCase):
         summary = summarize_bundle(fetched, "ed_doctor")
         self.assertIn("Alex Rivera", summary.patient_label)
         self.assertIn("MedicationRequest: 2", " ".join(summary.evidence_trace))
+
+    def test_submission_bundle_has_manifest_and_excludes_cache(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            manifest = build_bundle(Path(directory))
+            self.assertTrue(manifest["local_ok"])
+            self.assertFalse(manifest["external_submission_ok"])
+            self.assertEqual(manifest["submission_gate"], "HOLD_OPEN_EXCHANGE_SUBMISSION")
+            self.assertFalse(manifest["missing_required"])
+            self.assertIn("zip_sha256", manifest)
+            zip_path = Path(directory) / "fhir_care_brief_agent_submission_bundle.zip"
+            self.assertTrue(zip_path.exists())
+            with zipfile.ZipFile(zip_path) as archive:
+                names = archive.namelist()
+            self.assertIn("README.md", names)
+            self.assertIn("SUBMISSION_DRAFT.md", names)
+            self.assertIn("demo_server.py", names)
+            self.assertIn("submission_bundle.py", names)
+            self.assertIn("demo_assets/care_brief_demo_desktop.png", names)
+            self.assertFalse(any(name.startswith("submission_bundle/") for name in names))
+            self.assertFalse(any("__pycache__" in name for name in names))
+            self.assertFalse(any(name.endswith(".pyc") for name in names))
 
     def test_unknown_role_rejected(self) -> None:
         with self.assertRaises(ValueError):

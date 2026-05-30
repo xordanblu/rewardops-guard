@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-30T13:35:14+00:00",
+  "checked_at": "2026-05-30T13:42:51+00:00",
   "contest_value": {
     "expert_first_place_usd": 5000,
     "submission_deadline": "2026-06-07 23:59 EST",
@@ -16,6 +16,7 @@
     "Open Exchange submission and Developer Community article drafts",
     "Dependency-free local web demo for judge review",
     "Desktop and mobile screenshot assets for local demo review",
+    "Local ZIP submission bundle builder with manifest and checksums",
     "Open Exchange gates documented but not executed"
   ],
   "external_blockers_before_contest_submission": [
@@ -32,7 +33,7 @@
     {
       "exists": true,
       "path": "README.md",
-      "size_bytes": 3120
+      "size_bytes": 3281
     },
     {
       "exists": true,
@@ -71,6 +72,11 @@
     },
     {
       "exists": true,
+      "path": "submission_bundle.py",
+      "size_bytes": 5570
+    },
+    {
+      "exists": true,
       "path": "demo_assets/README.md",
       "size_bytes": 1169
     },
@@ -92,12 +98,12 @@
     {
       "exists": true,
       "path": "test_fhir_summary_agent.py",
-      "size_bytes": 7246
+      "size_bytes": 8737
     },
     {
       "exists": true,
       "path": "contest_packet.py",
-      "size_bytes": 8354
+      "size_bytes": 8558
     },
     {
       "exists": true,
@@ -160,6 +166,11 @@
     {
       "evidence": "Desktop and mobile local demo screenshots are present",
       "name": "local_demo_screenshots",
+      "ok": true
+    },
+    {
+      "evidence": "Local ZIP bundle builder with manifest generation is present",
+      "name": "local_submission_bundle_builder",
       "ok": true
     }
   ],

@@ -40,6 +40,7 @@ REQUIRED_LOCAL_FILES = [
     "module.xml",
     "fhir_summary_agent.py",
     "demo_server.py",
+    "submission_bundle.py",
     "demo_assets/README.md",
     "demo_assets/care_brief_demo_desktop.png",
     "demo_assets/care_brief_demo_mobile.png",
@@ -174,6 +175,16 @@ def packaging_checks() -> list[dict[str, Any]]:
             "evidence": "Desktop and mobile local demo screenshots are present",
         }
     )
+    bundle_script = (KIT_ROOT / "submission_bundle.py").read_text(encoding="utf-8") if (KIT_ROOT / "submission_bundle.py").exists() else ""
+    checks.append(
+        {
+            "name": "local_submission_bundle_builder",
+            "ok": "ZipFile" in bundle_script
+            and "submission_bundle_manifest.json" in bundle_script
+            and "HOLD_OPEN_EXCHANGE_SUBMISSION" in bundle_script,
+            "evidence": "Local ZIP bundle builder with manifest generation is present",
+        }
+    )
     return checks
 
 
@@ -250,6 +261,7 @@ def build_report() -> dict[str, Any]:
             "Open Exchange submission and Developer Community article drafts",
             "Dependency-free local web demo for judge review",
             "Desktop and mobile screenshot assets for local demo review",
+            "Local ZIP submission bundle builder with manifest and checksums",
             "Open Exchange gates documented but not executed",
         ],
         "external_blockers_before_contest_submission": EXTERNAL_BLOCKERS,

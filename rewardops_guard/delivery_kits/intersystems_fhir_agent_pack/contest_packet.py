@@ -26,6 +26,7 @@ LOCAL_ARTIFACTS = [
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py",
+    "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle.py",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/README.md",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_desktop.png",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_mobile.png",
@@ -97,7 +98,7 @@ def build_packet() -> dict[str, Any]:
         "project": {
             "name": "FHIR Care Brief Agent",
             "one_liner": "A synthetic-data-first FHIR agent that turns local or read-only server FHIR resources into role-specific care summaries.",
-            "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, screenshot assets, and submission/article drafts for a stronger expert-judging story.",
+            "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, screenshot assets, reproducible ZIP bundle builder, and submission/article drafts for a stronger expert-judging story.",
             "suggested_tracks": SUGGESTED_TRACKS,
             "agent_workflow": [
                 "Load an approved FHIR Bundle or fetch a patient-centered Bundle from an approved read-only FHIR REST base URL.",
@@ -108,6 +109,7 @@ def build_packet() -> dict[str, Any]:
                 "Ship Docker, docker-compose, module.xml, and a minimal RewardOps.FHIR ObjectScript bridge class for IRIS/Open Exchange packaging review.",
                 "Expose a dependency-free local web demo with HTML dashboard and /summary.json endpoint.",
                 "Package desktop and mobile screenshots for quick visual review.",
+                "Build a local ZIP submission bundle with manifest and checksums.",
                 "Prepare Open Exchange submission and Developer Community article drafts without publishing them.",
                 "Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved.",
             ],
