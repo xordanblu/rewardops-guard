@@ -39,6 +39,7 @@ REQUIRED_LOCAL_FILES = [
     "docker-compose.yml",
     "module.xml",
     "fhir_summary_agent.py",
+    "demo_server.py",
     "sample_patient_bundle.json",
     "test_fhir_summary_agent.py",
     "contest_packet.py",
@@ -153,6 +154,14 @@ def packaging_checks() -> list[dict[str, Any]]:
             "evidence": "Developer Community article draft is present but not published",
         }
     )
+    demo_server = (KIT_ROOT / "demo_server.py").read_text(encoding="utf-8") if (KIT_ROOT / "demo_server.py").exists() else ""
+    checks.append(
+        {
+            "name": "local_web_demo",
+            "ok": "ThreadingHTTPServer" in demo_server and "summary.json" in demo_server,
+            "evidence": "Dependency-free local web demo with JSON endpoint is present",
+        }
+    )
     return checks
 
 
@@ -227,6 +236,7 @@ def build_report() -> dict[str, Any]:
             "Docker container scaffold",
             "ZPM/IPM module.xml package scaffold",
             "Open Exchange submission and Developer Community article drafts",
+            "Dependency-free local web demo for judge review",
             "Open Exchange gates documented but not executed",
         ],
         "external_blockers_before_contest_submission": EXTERNAL_BLOCKERS,

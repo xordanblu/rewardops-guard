@@ -11,6 +11,7 @@ from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.contest_packet i
     build_packet,
 )
 from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.contest_preflight import build_report
+from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.demo_server import render_demo_html, selected_role
 from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.fhir_summary_agent import (
     FHIR_SEARCH_RESOURCES,
     fetch_patient_bundle,
@@ -50,6 +51,15 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertIn("## Care Plan Next Steps", markdown)
         self.assertIn("## Evidence Trace", markdown)
 
+    def test_demo_html_has_roles_and_json_endpoint_hint(self) -> None:
+        summary = summarize_bundle(load_bundle(), "care_manager")
+        html = render_demo_html(summary, "care_manager")
+        self.assertIn("FHIR Care Brief Agent", html)
+        self.assertIn("/summary.json?role=care_manager", html)
+        self.assertIn("Medication Safety", html)
+        self.assertEqual(selected_role("/?role=patient"), "patient")
+        self.assertEqual(selected_role("/?role=unknown"), "ed_doctor")
+
     def test_contest_packet_preserves_prize_and_gates(self) -> None:
         packet = build_packet()
         self.assertEqual(packet["prize_context"]["expert_first_place_usd"], 5000)
@@ -61,6 +71,7 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertIn("social", gates)
         self.assertIn("bonus_context", packet)
         self.assertIn("contest_preflight.py", " ".join(item["path"] for item in packet["local_artifacts"]))
+        self.assertIn("demo_server.py", " ".join(item["path"] for item in packet["local_artifacts"]))
 
     def test_family_caregiver_role_and_preflight(self) -> None:
         caregiver = summarize_bundle(load_bundle(), "family_caregiver")
@@ -76,6 +87,7 @@ class FhirSummaryAgentTests(unittest.TestCase):
         self.assertTrue(packaging["objectscript_bridge_class"])
         self.assertTrue(packaging["open_exchange_submission_draft"])
         self.assertTrue(packaging["developer_community_article_draft"])
+        self.assertTrue(packaging["local_web_demo"])
 
     def test_fetch_patient_bundle_from_read_only_fhir_server(self) -> None:
         sample_bundle = load_bundle()

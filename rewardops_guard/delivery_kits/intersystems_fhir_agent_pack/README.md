@@ -19,6 +19,7 @@ patient data, or submitting to Open Exchange.
 - `module.xml` and `RewardOps.FHIR.CareBriefAgent` ObjectScript bridge for
   ZPM/IPM packaging review.
 - Open Exchange submission draft and Developer Community article draft.
+- Dependency-free local web demo with HTML dashboard and `/summary.json`.
 - A contest packet that preserves prize/deadline context and approval gates.
 
 ## Run
@@ -28,6 +29,7 @@ python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_
 python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py --role family_caregiver
 python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py
 python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.py
+python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py --port 8765
 python3 -m unittest rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.test_fhir_summary_agent -v
 ```
 

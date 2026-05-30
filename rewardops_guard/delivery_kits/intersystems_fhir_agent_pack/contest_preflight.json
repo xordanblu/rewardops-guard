@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-30T13:25:04+00:00",
+  "checked_at": "2026-05-30T13:28:40+00:00",
   "contest_value": {
     "expert_first_place_usd": 5000,
     "submission_deadline": "2026-06-07 23:59 EST",
@@ -14,6 +14,7 @@
     "Docker container scaffold",
     "ZPM/IPM module.xml package scaffold",
     "Open Exchange submission and Developer Community article drafts",
+    "Dependency-free local web demo for judge review",
     "Open Exchange gates documented but not executed"
   ],
   "external_blockers_before_contest_submission": [
@@ -30,7 +31,7 @@
     {
       "exists": true,
       "path": "README.md",
-      "size_bytes": 2891
+      "size_bytes": 3059
     },
     {
       "exists": true,
@@ -64,18 +65,23 @@
     },
     {
       "exists": true,
+      "path": "demo_server.py",
+      "size_bytes": 7681
+    },
+    {
+      "exists": true,
       "path": "sample_patient_bundle.json",
       "size_bytes": 3950
     },
     {
       "exists": true,
       "path": "test_fhir_summary_agent.py",
-      "size_bytes": 6381
+      "size_bytes": 7185
     },
     {
       "exists": true,
       "path": "contest_packet.py",
-      "size_bytes": 7749
+      "size_bytes": 7953
     },
     {
       "exists": true,
@@ -128,6 +134,11 @@
     {
       "evidence": "Developer Community article draft is present but not published",
       "name": "developer_community_article_draft",
+      "ok": true
+    },
+    {
+      "evidence": "Dependency-free local web demo with JSON endpoint is present",
+      "name": "local_web_demo",
       "ok": true
     }
   ],

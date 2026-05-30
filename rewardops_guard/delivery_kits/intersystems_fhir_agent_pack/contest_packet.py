@@ -25,6 +25,7 @@ LOCAL_ARTIFACTS = [
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py",
+    "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_patient_bundle.json",
     "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.json",
@@ -93,7 +94,7 @@ def build_packet() -> dict[str, Any]:
         "project": {
             "name": "FHIR Care Brief Agent",
             "one_liner": "A synthetic-data-first FHIR agent that turns local or read-only server FHIR resources into role-specific care summaries.",
-            "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, and submission/article drafts for a stronger expert-judging story.",
+            "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety, care-plan navigator, read-only FHIR REST fetching, Docker, ZPM/IPM packaging, local web demo, and submission/article drafts for a stronger expert-judging story.",
             "suggested_tracks": SUGGESTED_TRACKS,
             "agent_workflow": [
                 "Load an approved FHIR Bundle or fetch a patient-centered Bundle from an approved read-only FHIR REST base URL.",
@@ -102,6 +103,7 @@ def build_packet() -> dict[str, Any]:
                 "Generate medication-safety findings, care-plan task candidates, and evidence traceability.",
                 "Render role-specific outputs for ED doctor, care manager, patient, or family caregiver.",
                 "Ship Docker, docker-compose, module.xml, and a minimal RewardOps.FHIR ObjectScript bridge class for IRIS/Open Exchange packaging review.",
+                "Expose a dependency-free local web demo with HTML dashboard and /summary.json endpoint.",
                 "Prepare Open Exchange submission and Developer Community article drafts without publishing them.",
                 "Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved.",
             ],
