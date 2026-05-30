@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "bundle_20260530T142716325053Z",
+  "bundle_dir": "bundle_20260530T204950861827Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -19,13 +19,13 @@
       "bytes": 24153,
       "ok": true,
       "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "1f3da45be947fc3a77074b35b7a74cfb3d00d5d9aac9bd20f0c6163d71d1fe40"
+      "sha256": "435858b2d72322e42a7958623a99019274ed944eb415a3874adf7fd2f56412d2"
     },
     {
       "bytes": 24153,
       "ok": true,
       "path": "README.md",
-      "sha256": "1f3da45be947fc3a77074b35b7a74cfb3d00d5d9aac9bd20f0c6163d71d1fe40"
+      "sha256": "435858b2d72322e42a7958623a99019274ed944eb415a3874adf7fd2f56412d2"
     },
     {
       "bytes": 29,
@@ -202,10 +202,10 @@
       "sha256": "6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be"
     },
     {
-      "bytes": 3201,
+      "bytes": 3464,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md",
-      "sha256": "ae2788f6126a9fc07cb74f41143e1717ea36a95eb3f42f9c86f922354af4903b"
+      "sha256": "c5441a03d97fd98be45224d00780fd8fb2c42870a49949f62c6bba5d08538a37"
     },
     {
       "bytes": 1892,
@@ -214,10 +214,10 @@
       "sha256": "3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c"
     },
     {
-      "bytes": 6040,
+      "bytes": 6267,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md",
-      "sha256": "3b20c0d8dd4a5be14cc9a5974fa59bd7f0a365549e6981ca286763ab67a96a0f"
+      "sha256": "e123d3d3b5c7f328da68dc079c3deaf203cb2cc916b5e98d6a6207d1e19e9173"
     },
     {
       "bytes": 1255,
@@ -232,10 +232,10 @@
       "sha256": "50d5fbe7d1bb3f639be447c807752034e9401e8eda9bc0bde32cb6152f249aed"
     },
     {
-      "bytes": 1491,
+      "bytes": 1744,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md",
-      "sha256": "d39aae5cf36b51f5a3674edbb65d3a3afba072bc70956a0047ebe5ab334d42e9"
+      "sha256": "ea554aa9341b0ab9c2df8222235ac29683e7b9823254873b2a36bd639878735b"
     },
     {
       "bytes": 0,
@@ -541,13 +541,13 @@
       "bytes": 2252,
       "ok": true,
       "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.json",
-      "sha256": "c673943322a511ed538e82842f71087f43a6137db02884efb6187e8262572b97"
+      "sha256": "73e3bef32653797c56c590d55f4174be63857153f1d62aa05fb55ad5eb9965bd"
     },
     {
       "bytes": 695,
       "ok": true,
       "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md",
-      "sha256": "793507904ccdf82d3ef049cbcea4123f983df2a84bf25e03ba2d73ef2b3f3090"
+      "sha256": "4e749de6fe370e6960da50cf64f0c63dfef331bb2cb29e1d3341850be6b5394d"
     },
     {
       "bytes": 5389,
@@ -892,8 +892,8 @@
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
     }
   ],
-  "generated_at": "2026-05-30T14:27:16+00:00",
-  "manifest_sha256": "b1f8ac511b2e0c360005e5e11a68aa82f3b12e73c456773073308f33e221bc18",
+  "generated_at": "2026-05-30T20:49:50+00:00",
+  "manifest_sha256": "2766136a8dd477929a216f130fb446ee1fa9ea5e9c1e88c5b75d42fcc6633676",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
@@ -918,8 +918,8 @@
     "qdrant_video_manifest": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md",
     "repository": "https://github.com/xordanx/rewardops-guard"
   },
-  "single_html_path": "bundle_20260530T142716325053Z.html",
+  "single_html_path": "bundle_20260530T204950861827Z.html",
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "bundle_20260530T142716325053Z.zip",
-  "zip_sha256": "e0fa98d38ecdf7082ac35cdb7dd14b1265b903a308fe6702228cb9c4e1da1880"
+  "zip_path": "bundle_20260530T204950861827Z.zip",
+  "zip_sha256": "211350de7f6990db01a7e7ce69065c6f5998ba0a8976ae7d3274a41d0a834ec5"
 }

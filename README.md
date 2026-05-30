@@ -1,6 +1,6 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T14:27:16+00:00
+Generated: 2026-05-30T20:49:50+00:00
 
 ## Purpose
 
@@ -74,8 +74,8 @@ tasks.
 ## Files
 
 - `.nojekyll` sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-- `PUBLIC_SUBMISSION_README.md` sha256=e18edb302734964f37797012782ae737a244e93af6fa22dc9b50241a1617d20c
-- `README.md` sha256=e18edb302734964f37797012782ae737a244e93af6fa22dc9b50241a1617d20c
+- `PUBLIC_SUBMISSION_README.md` sha256=038b037e05fef29fb1e9283e629f68b1d33e3c0895a15f6def3d91d27947991f
+- `README.md` sha256=038b037e05fef29fb1e9283e629f68b1d33e3c0895a15f6def3d91d27947991f
 - `find_evil_rewardops_defender/.gitignore` sha256=60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672
 - `find_evil_rewardops_defender/LICENSE` sha256=ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9
 - `find_evil_rewardops_defender/README.md` sha256=508612140173b2256989a7442d592409fe3b6383ef43e331577462da84d50b68
@@ -105,12 +105,12 @@ tasks.
 - `find_evil_rewardops_defender/out/rewardops_defender_report.md` sha256=922acc87a55e2fefb9c9d8477ff901c63547069e01abc076a353e6d01af408e6
 - `find_evil_rewardops_defender/out/submission_guard_manifest.json` sha256=1c262c8d8aefd1843842d3a6cbb9d7111e0f7f3fb96415b6f3f5a4184ce4a2da
 - `find_evil_rewardops_defender/run_terminal_demo.sh` sha256=6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be
-- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=ae2788f6126a9fc07cb74f41143e1717ea36a95eb3f42f9c86f922354af4903b
+- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=c5441a03d97fd98be45224d00780fd8fb2c42870a49949f62c6bba5d08538a37
 - `find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md` sha256=3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c
-- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=3b20c0d8dd4a5be14cc9a5974fa59bd7f0a365549e6981ca286763ab67a96a0f
+- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=e123d3d3b5c7f328da68dc079c3deaf203cb2cc916b5e98d6a6207d1e19e9173
 - `find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt` sha256=0fcedb0e675695636ff7b52b6305ca745e88d79813543b010d6dae050950026f
 - `find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md` sha256=50d5fbe7d1bb3f639be447c807752034e9401e8eda9bc0bde32cb6152f249aed
-- `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md` sha256=d39aae5cf36b51f5a3674edbb65d3a3afba072bc70956a0047ebe5ab334d42e9
+- `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md` sha256=ea554aa9341b0ab9c2df8222235ac29683e7b9823254873b2a36bd639878735b
 - `find_evil_rewardops_defender/submission/__init__.py` sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 - `find_evil_rewardops_defender/submission/devpost_preflight.py` sha256=ad09be80bbacf27eb926d2f2564d96d3f754576e79b945c762a70d66047bdb49
 - `find_evil_rewardops_defender/submission/video_upload_metadata.json` sha256=23f67efd1f494d731270f72a7ff11c14413e587f1dce57644b808640839fadca
@@ -161,8 +161,8 @@ tasks.
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/SUBMISSION_DRAFT.md` sha256=df0dfa965ef28a0f859f1854e74bda49072dfc11dca31c17fd08627174a15d1c
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/VIDEO_SCRIPT.md` sha256=c9c1fa9fcad36426aa16f3beb113923b5fe8550d5eb7586384d4e8099e702c3b
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/__init__.py` sha256=d66eaf0995a7392e8a1aeedeec288f9f0b2482ed54d4ab49aba957ec3c07099b
-- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.json` sha256=c673943322a511ed538e82842f71087f43a6137db02884efb6187e8262572b97
-- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md` sha256=793507904ccdf82d3ef049cbcea4123f983df2a84bf25e03ba2d73ef2b3f3090
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.json` sha256=73e3bef32653797c56c590d55f4174be63857153f1d62aa05fb55ad5eb9965bd
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md` sha256=4e749de6fe370e6960da50cf64f0c63dfef331bb2cb29e1d3341850be6b5394d
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.py` sha256=eb45fff2aca04f3d2a5cfe0d61b885feabe9e0d0f757bd697c95e6c6be461042
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/AGENTS.md` sha256=c2a687d387d243ab30bd237ffa470758cda8ddf137411adf25490b460a2cc8e5
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/CLAUDE.md` sha256=fdd412b33a7be3e21fba6749ec1d09b1c59f2f1a957c7ad8bf2791b022ed319c
