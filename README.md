@@ -1,6 +1,6 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T00:59:21+00:00
+Generated: 2026-05-30T05:44:02+00:00
 
 ## Purpose
 
@@ -17,7 +17,7 @@ hackathon review, buyer diligence, or repository publication.
 ## Current Money Evidence
 
 - Confirmed revenue: $1.20
-- Pending ClawMoney submissions: $9.10
+- Pending ClawMoney submissions: $8.00
 - Submitted pending verification after failed-audit adjustment: $0.00
 
 ## Verification
@@ -27,64 +27,36 @@ Run from the repository root:
 ```bash
 python3 -m unittest rewardops_guard.test_revenue_evidence_pack rewardops_guard.test_hackathon_submission_builder rewardops_guard.test_ops_event_report rewardops_guard.test_policy_agent rewardops_guard.test_find_evil_defender_demo rewardops_guard.test_dfir_agent_demo safety_gate.test_protective_pipeline safety_gate.test_safety_gate
 python3 rewardops_guard/build_dashboard.py
-
-cd find_evil_rewardops_defender
-python3 -m unittest discover -s tests
-./run_terminal_demo.sh
 ```
 
-## FIND EVIL Defender Package
-
-`find_evil_rewardops_defender/` contains the standalone RewardOps Defender
-package prepared for the FIND EVIL prize route. It includes a terminal demo,
-DFIR triage module, agent-defense sequence detector, publication guard,
-accuracy report, architecture diagram, sample events, tests, and submission
-draft.
-
-The latest local verification produced:
-
-- 14 unit tests passing.
-- DFIR report: 5 events, 5 findings, critical severity.
-- Agent-defense verdict:
-  `agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain`.
-- Publication guard: `release_ready`, 0 blocking secret findings, 19
-  prompt-injection fixtures counted as evidence rather than instructions.
-
-## Current Manifest
-
-The current complete file manifest is `manifest.json`. The hash list below is
-kept as the original bundle inventory reference; `manifest.json` supersedes it
-for files changed by later publication hardening.
-
-## Initial Bundle Files
+## Files
 
 - `rewardops_guard/README.md` sha256=1dbee345b349b71077eaa3fb81c4cf5c66c0ad5f872357c9e5811bb87235a496
 - `rewardops_guard/index.html` sha256=491cbea4d24666a643110ea57350901c0c17c6e47e41a3759e2574f81c55a7b3
-- `rewardops_guard/data.js` sha256=338dfa502b579fc9f756bb3292b896c27d565fd2acd9cb4a153cc3af0eaca75d
+- `rewardops_guard/data.js` sha256=90012de5de66e9b13920dfe0968fe438916ad417d65ce64015d8b7fbe4137716
 - `rewardops_guard/demo_script.md` sha256=a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf
 - `rewardops_guard/submission_packet.md` sha256=90591f4a9fe62b8a56fcbf73719a5db6d69b918511753f9ea69005b56fad8b88
-- `rewardops_guard/hackathon_submission_pack.md` sha256=d999faaa55836768c43c5060be950e7495a950bd1b715ff358f8e14044f1f3db
-- `rewardops_guard/hackathon_submission_pack.json` sha256=5f050020eb30be1fba912ffb6364b099e7efa9d99628c2f8837558ee8f66fee4
-- `rewardops_guard/revenue_evidence_pack.md` sha256=1eb94a4ee58a51c0541569c967a9c52ee96ee8ab3d5604d66998f1d31a9a41c0
-- `rewardops_guard/revenue_evidence_pack.json` sha256=769b4c969a513a180a87c58cab8487eebbb4ea61fedf3c469ae2a6e9f5ea9c15
-- `rewardops_guard/ops_event_report.md` sha256=dcde613474699f66f9a65a31aca1f26e8910d76b0eef82db796d7840982d3810
-- `rewardops_guard/ops_event_report.json` sha256=a03988c0a4ddc050a4f06a75e09650a66f330ce9933445d105ae458b4180928c
+- `rewardops_guard/hackathon_submission_pack.md` sha256=edf246d1379e80429dd510da7b8bea68685cf0da16271c08f0e7fc949a5969a1
+- `rewardops_guard/hackathon_submission_pack.json` sha256=8bbb25135e6a265d781136d2085a2c6ecf2f5dba84252f2a6ce0040529db4c68
+- `rewardops_guard/revenue_evidence_pack.md` sha256=ee7538565d8470ce296ce4859830d7dc38ee9759b89bf2d3a2a3fa2d85b22059
+- `rewardops_guard/revenue_evidence_pack.json` sha256=e243fbfd98769cf3ab50fd39d38f0bbda16227a46b74950adf87b4ee4996f916
+- `rewardops_guard/ops_event_report.md` sha256=64bc9726ab6802890a8c7a597442160731556427f40d7070a43157c510b08b7a
+- `rewardops_guard/ops_event_report.json` sha256=060679abc75a546204eeb250b0c37ed023813295681750589fa939d87e410e9e
 - `rewardops_guard/ops_events.jsonl` sha256=2de29fdb68d59739f16b8456e56c16c6d929df8cb5ddfe6fe2041058f61d762a
-- `rewardops_guard/policy_agent_trace.md` sha256=8389305ec6e545d172cd75998098140a140be16073e0b6c70d420e5ea76bcee5
-- `rewardops_guard/policy_agent_trace.json` sha256=bb9a1bee26b42ed8bdceba062763850b7d6027140339dd58f1aa661c3a835956
-- `rewardops_guard/find_evil_defender_report.md` sha256=f82695d233c2b27c1d69edfe58c8f8350eeaf6662644e33d2170029846db1658
-- `rewardops_guard/find_evil_defender_report.json` sha256=423a85d6637e612c1f37ab1c225dee3db3534487fc57a051523fc7d6272ddd80
-- `rewardops_guard/dfir_agent_report.md` sha256=cb5c6a12b38c9c558591280b122a9ae4b142c3d0dd1ab7c8ecfd84a555ef6bb0
-- `rewardops_guard/dfir_agent_report.json` sha256=d83ecbc63a14b50ae197fb4cf03e95cd405f22ae10c0b96259068c2fb56ed6ea
+- `rewardops_guard/policy_agent_trace.md` sha256=294debfd5e17f963bff00f2d78ae956f6a566a5dacd17b5214d3b8b9fee96bdb
+- `rewardops_guard/policy_agent_trace.json` sha256=c3edfabd44c93550c329f3bb470a5783a7be5116b135e61c0cd93cbd0eb78e96
+- `rewardops_guard/find_evil_defender_report.md` sha256=c2e53d6592865985c9296f676d7536cd2c36d6c670c6bfc10277ca03dd5538c2
+- `rewardops_guard/find_evil_defender_report.json` sha256=7b83b5e8844fbfacb5cfaf2f2583b8fc490c794c8bf8894dbb80e6e79a0b1b4d
+- `rewardops_guard/dfir_agent_report.md` sha256=3c05ebeb1de685578ed335732f8f134e1cd42d3b7a6f3138e8e098e38f0a38d4
+- `rewardops_guard/dfir_agent_report.json` sha256=8a9ee91b2c3bea1aead641a7c29be91d617e6009c9a8ba941c0b80690895b4c5
 - `rewardops_guard/splunk_detection_pack.md` sha256=15a3a97b0dee6dc5f34c847d05e816ac5c45b4bb610e6f5c5c1a7c3531afa6b8
 - `rewardops_guard/service_menu.md` sha256=90e34b4db5984afeded7993265e0fcd0ff438d322e652c93b5a72a1a46b312f5
 - `rewardops_guard/buyer_onepager.md` sha256=20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29
 - `rewardops_guard/buyer_intake.md` sha256=ee133394d94603ce6e7011a90f164f87871116f5da1ab36855f18bdf9c08801d
 - `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
-- `rewardops_guard/clawmoney_skill_fulfillment_pack.md` sha256=f5eadf683ae84878225838a8023ceecd09e2063e857e28403232411c5689f776
-- `rewardops_guard/clawmoney_skill_fulfillment_pack.json` sha256=c07df4398811de514d3e6c6996e4ecfe3ce717a8c796b491bb3393e9b4f6612a
-- `rewardops_guard/goal5000_current_routes.md` sha256=b012baefcf58b700fb760b42ca39d789bf1ed879a3c9288fdf44ba77d1ebd5af
-- `rewardops_guard/revenue_evidence_pack.py` sha256=374169b42d8134133be2b34e1500a395003a53d2d65979f6818fef2635c6de84
+- `rewardops_guard/clawmoney_skill_fulfillment_pack.md` sha256=3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72
+- `rewardops_guard/clawmoney_skill_fulfillment_pack.json` sha256=ca33d5ccb6cf6792a1328da4782a98f51a9302091ce88f9db93e9c0ca6c2782c
+- `rewardops_guard/revenue_evidence_pack.py` sha256=26abaa8a26d0c70d008b67148e2ab6c6e9515c332a83763d7e0efca6600bc547
 - `rewardops_guard/hackathon_submission_builder.py` sha256=c7e32db54663258dd2056124b1841a293d38fc77dbfa26d222bd3b14f09c2865
 - `rewardops_guard/build_dashboard.py` sha256=93ae303ba94aa2d0034b2b5fd4c2be7849c10f1cdf9d2283c5aba5cffba5dff0
 - `rewardops_guard/ops_event_report.py` sha256=962a18bdf58219cb248a97e3fe2758021893f23d28cf440f849e2164466528c2

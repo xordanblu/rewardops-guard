@@ -16,7 +16,7 @@ class DfirAgentDemoTest(unittest.TestCase):
         self.assertIn("unsafe_tool_request", report["signal_counts"])
 
     def test_report_does_not_store_raw_detail_text(self) -> None:
-        marker_value = "PRIVATE-RAW-LOG-DO-NOT-STORE"
+        secret = "PRIVATE-RAW-LOG-DO-NOT-STORE"
         report = dfir_agent_demo.build_report(
             [
                 {
@@ -25,13 +25,13 @@ class DfirAgentDemoTest(unittest.TestCase):
                     "source": "endpoint",
                     "event_type": "process",
                     "actor": "user",
-                    "detail": f"powershell -enc {marker_value}",
+                    "detail": f"powershell -enc {secret}",
                 }
             ]
         )
 
         rendered = str(report)
-        self.assertNotIn(marker_value, rendered)
+        self.assertNotIn(secret, rendered)
         self.assertIn("detail_sha256", report["timeline"][0])
         self.assertNotIn("detail", report["timeline"][0])
 

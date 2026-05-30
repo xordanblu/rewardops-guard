@@ -35,6 +35,26 @@ def one_line(value: Any, limit: int = 180) -> str:
     return " ".join(str(value or "").split())[:limit]
 
 
+def public_evidence_ref(path: Path | None) -> str | None:
+    if not path:
+        return None
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return path.name
+
+
+def redact_public_identifier(value: Any) -> str:
+    text = one_line(value, 90)
+    if not text:
+        return ""
+    if text.startswith("0x") and len(text) == 42:
+        return f"{text[:6]}...{text[-4:]}"
+    if len(text) > 16:
+        return f"{text[:6]}...{text[-4:]}"
+    return text
+
+
 def latest_json_file(directory: Path, pattern: str) -> tuple[Path | None, dict[str, Any]]:
     try:
         paths = sorted(directory.glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)
@@ -163,19 +183,33 @@ def bountybook_evidence() -> dict[str, Any]:
     audit_submitted_count = int(attempt_audit.get("submitted_count") or 0)
     payout_submitted_count = int(data.get("submitted_count") or 0)
     audit_applies = bool(audit_submitted_count and audit_submitted_count == payout_submitted_count)
-    pending_after_audit = max(0.0, nominal_submitted - nominal_failed) if audit_applies else nominal_submitted
+    failed_count = int(attempt_audit.get("our_failed_count") or 0)
+    passed_count = int(attempt_audit.get("our_passed_count") or 0)
+    failure_reasons = {
+        one_line((attempt or {}).get("reason"), 160)
+        for row in attempt_audit.get("failed", [])
+        for attempt in (row.get("our_attempts") or [])
+        if isinstance(row, dict)
+    }
+    oracle_unhealthy = failed_count >= 10 and passed_count == 0 and any(
+        "Cannot read properties of undefined" in reason or "Code output too small" in reason
+        for reason in failure_reasons
+    )
+    pending_after_audit = 0.0 if oracle_unhealthy else max(0.0, nominal_submitted - nominal_failed) if audit_applies else nominal_submitted
     return {
         "submitted_count": payout_submitted_count,
         "submitted_pending_verification_usd": pending_after_audit,
         "payout_verifier_pending_count": int(data.get("pending_count") or 0),
-        "attempt_audit_failed_count": int(attempt_audit.get("our_failed_count") or 0),
+        "attempt_audit_failed_count": failed_count,
         "attempt_audit_failed_usd": nominal_failed,
-        "attempt_audit_passed_count": int(attempt_audit.get("our_passed_count") or 0),
+        "attempt_audit_passed_count": passed_count,
         "attempt_audit_passed_usd": money(attempt_audit.get("nominal_passed_usdc")),
+        "oracle_unhealthy": oracle_unhealthy,
+        "failure_reasons": sorted(failure_reasons)[:8],
         "verified_waiting_payout_usd": money(data.get("nominal_verified_waiting_payout_usdc")),
         "paid_or_tx_usd": money(data.get("nominal_paid_or_tx_usdc")),
-        "executor_wallet": one_line(data.get("executor_wallet"), 80),
-        "target_user_wallet": one_line(data.get("target_user_wallet"), 80),
+        "executor_wallet": redact_public_identifier(data.get("executor_wallet")),
+        "target_user_wallet": redact_public_identifier(data.get("target_user_wallet")),
         "executor_base_usdc": money(balances.get("executor_base_usdc")),
         "user_base_usdc": money(balances.get("user_base_usdc")),
         "counting_policy": "Submitted BountyBook deliverables are not revenue until verification, payout transaction, or spendable USDC balance is visible; failed attempt-audit rows are treated as non-cashable.",
@@ -188,10 +222,10 @@ def settled_wallet_evidence() -> dict[str, Any]:
     user_base_usdc = money(wallets.get("user_base_usdc"))
     return {
         "confirmed_user_base_usdc": user_base_usdc,
-        "user_base_wallet": one_line(wallets.get("user_base_wallet"), 90),
+        "user_base_wallet": redact_public_identifier(wallets.get("user_base_wallet")),
         "agenthansa_source_usdc": money(wallets.get("agenthansa_source_usdc")),
-        "agenthansa_source_wallet": one_line(wallets.get("agenthansa_source_wallet"), 90),
-        "evidence_source": str(path) if path else None,
+        "agenthansa_source_wallet": redact_public_identifier(wallets.get("agenthansa_source_wallet")),
+        "evidence_source": public_evidence_ref(path),
     }
 
 

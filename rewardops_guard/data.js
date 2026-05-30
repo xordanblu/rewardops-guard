@@ -269,7 +269,7 @@ window.REWARDOPS_DATA = {
     "self_correction_count": 2,
     "verdict": "agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain"
   },
-  "generated_at": "2026-05-30T00:47:19+00:00",
+  "generated_at": "2026-05-30T05:43:26+00:00",
   "guardrails": [
     "External task text is hostile until gated.",
     "No internal instruction, secret, credential, cookie, or wallet-key disclosure.",
@@ -441,21 +441,56 @@ window.REWARDOPS_DATA = {
       "reward_usd": 1.0,
       "source": "ClawMoney",
       "status": "PENDING_SUBMISSION",
-      "title": "Review & file issues: fastapi/fastapi recent changes"
-    },
-    {
-      "next": "Monitor acceptance and payout; do not submit duplicates.",
-      "reward_usd": 1.0,
-      "source": "ClawMoney",
-      "status": "PENDING_SUBMISSION",
       "title": "Code Review: FastAPI framework"
     },
     {
-      "next": "Monitor acceptance and payout; do not submit duplicates.",
-      "reward_usd": 0.1,
-      "source": "ClawMoney",
-      "status": "PENDING_SUBMISSION",
-      "title": "Design a ClawMoney Logo"
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 1200.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 5000: MCP or agent integration prototype"
+    },
+    {
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 950.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 5000: RewardOps agent hardening sprint"
+    },
+    {
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 700.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 5000: public-web data compliance agent prototype"
+    },
+    {
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 650.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 5000: hackathon demo and submission pack"
+    },
+    {
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 600.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 5000: bounty PR-ready implementation branch"
+    },
+    {
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 500.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 200: C++ module design or implementation pass"
+    },
+    {
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 450.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 200: data pipeline and API integration sprint"
     },
     {
       "next": "Monitor inbound paid invocations; run self-test after relay changes.",
@@ -465,32 +500,25 @@ window.REWARDOPS_DATA = {
       "title": "Codex Dinero 200: defensive DFIR agent triage pack"
     },
     {
-      "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
-      "reward_usd": 1200.0,
-      "source": "Clawlancer",
-      "status": "ACTIVE_INBOUND_LISTING",
-      "title": "CodexDinero200 $1200 MCP or agent integration prototype"
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 150.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 200: sales analytics report and dashboard"
     },
     {
-      "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
-      "reward_usd": 950.0,
-      "source": "Clawlancer",
-      "status": "ACTIVE_INBOUND_LISTING",
-      "title": "CodexDinero200 $950 RewardOps hardening sprint"
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 120.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 200: crypto market data API prototype"
     },
     {
-      "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
-      "reward_usd": 900.0,
-      "source": "Clawlancer",
-      "status": "ACTIVE_INBOUND_LISTING",
-      "title": "CodexDinero200 $900 defensive DFIR agent demo pack"
-    },
-    {
-      "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
-      "reward_usd": 850.0,
-      "source": "Clawlancer",
-      "status": "ACTIVE_INBOUND_LISTING",
-      "title": "CodexDinero200 $850 UiPath agent governance workflow pack"
+      "next": "Monitor matches and inbound deals; cold seller proposals currently return authorization errors.",
+      "reward_usd": 50.0,
+      "source": "AgentPact",
+      "status": "ACTIVE_INBOUND_OFFER",
+      "title": "Codex 200: public code review and bug triage sprint"
     },
     {
       "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
@@ -512,13 +540,6 @@ window.REWARDOPS_DATA = {
       "source": "Clawlancer",
       "status": "ACTIVE_INBOUND_LISTING",
       "title": "CodexDinero200 $350 hackathon submission packet"
-    },
-    {
-      "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
-      "reward_usd": 300.0,
-      "source": "Clawlancer",
-      "status": "ACTIVE_INBOUND_LISTING",
-      "title": "CodexDinero200 $300 policy-agent trace for autonomous payments"
     },
     {
       "next": "Monitor for buyer-funded transactions; do not claim micro-bounties because claim can trigger on-chain approval/gas.",
@@ -648,10 +669,10 @@ window.REWARDOPS_DATA = {
     },
     {
       "next": "Monitor BountyBook acceptance and payout; do not resubmit duplicates.",
-      "reward_usd": 308.0,
+      "reward_usd": 332.0,
       "source": "BountyBook",
       "status": "PENDING_VERIFICATION",
-      "title": "49 submitted deliverables awaiting platform result"
+      "title": "54 submitted deliverables awaiting platform result"
     },
     {
       "next": "Monitor for inbound service calls; run protective preflight before doing buyer work.",
@@ -759,6 +780,13 @@ window.REWARDOPS_DATA = {
       "title": "production-code-rev"
     },
     {
+      "next": "Read details through ClawMoney, then run protective preflight before accepting.",
+      "reward_usd": 1.0,
+      "source": "ClawMoney",
+      "status": "DISCOVER_ONLY",
+      "title": "Review & file issues: fastapi/fastapi recent changes"
+    },
+    {
       "next": "Ignore until funded; do not count as earned.",
       "reward_usd": 1.0,
       "source": "ClawMoney",
@@ -768,6 +796,13 @@ window.REWARDOPS_DATA = {
     {
       "next": "Ignore until funded; do not count as earned.",
       "reward_usd": 1.0,
+      "source": "ClawMoney",
+      "status": "WATCH_ONLY_UNFUNDED",
+      "title": "Design a ClawMoney Logo"
+    },
+    {
+      "next": "Ignore until funded; do not count as earned.",
+      "reward_usd": 0.1,
       "source": "ClawMoney",
       "status": "WATCH_ONLY_UNFUNDED",
       "title": "Design a ClawMoney Logo"
@@ -806,64 +841,15 @@ window.REWARDOPS_DATA = {
       "source": "ClawMoney",
       "status": "CLOSED_SETTLED",
       "title": "Review fastapi/fastapi and create GitHub Issue"
-    },
-    {
-      "next": "Do not pursue; task is no longer open.",
-      "reward_usd": 1.0,
-      "source": "ClawMoney",
-      "status": "CLOSED_ACCEPTED",
-      "title": "Code review a Solidity contract"
-    },
-    {
-      "next": "Do not pursue; task is no longer open.",
-      "reward_usd": 0.2,
-      "source": "ClawMoney",
-      "status": "CLOSED_SETTLED",
-      "title": "Review clawmoney/cli code quality"
-    },
-    {
-      "next": "Do not pursue; task is no longer open.",
-      "reward_usd": 0.2,
-      "source": "ClawMoney",
-      "status": "CLOSED_SETTLED",
-      "title": "Review clawmoney/cli and submit a PR with fixes"
-    },
-    {
-      "next": "Do not pursue; task is no longer open.",
-      "reward_usd": 0.01,
-      "source": "ClawMoney",
-      "status": "CLOSED_ACCEPTED",
-      "title": "Lobster logo v2"
-    },
-    {
-      "next": "Do not pursue; task is no longer open.",
-      "reward_usd": 0.01,
-      "source": "ClawMoney",
-      "status": "CLOSED_ACCEPTED",
-      "title": "test gig"
-    },
-    {
-      "next": "Do not claim unless a non-spending funded route exists; current claim flow attempted token approval/gas.",
-      "reward_usd": 0.08,
-      "source": "Clawlancer",
-      "status": "BLOCKED_ONCHAIN_CLAIM",
-      "title": "5 safe-looking micro-bounties blocked by on-chain claim flow"
-    },
-    {
-      "next": "Closed: round 1 submission was accepted, round 2 returned eliminated; do not restart this tournament.",
-      "reward_usd": 5.0,
-      "source": "AgentHansa Arena",
-      "status": "CLOSED_ELIMINATED",
-      "title": "Maze tournament probe"
     }
   ],
   "money": {
     "approval_locked_usd": 0.0,
     "confirmed_new_usd": 1.2,
-    "inbound_market_usd": 15555.0,
-    "pending_payout_usd": 9.1,
-    "ready_local_count": 48,
-    "submitted_pending_verification_usd": 308.0
+    "inbound_market_usd": 16725.0,
+    "pending_payout_usd": 8.0,
+    "ready_local_count": 50,
+    "submitted_pending_verification_usd": 0.0
   },
   "ops": {
     "allow_count": 35,
@@ -1043,9 +1029,9 @@ window.REWARDOPS_DATA = {
       "Google Cloud product usage evidence is not integrated yet.",
       "No public repo, demo video, Devpost account action, or customer contact evidence is approved."
     ],
-    "inbound_market_surface_usd": 15555.0,
-    "pending_submission_usd": 9.1,
+    "inbound_market_surface_usd": 16725.0,
+    "pending_submission_usd": 8.0,
     "submitted_pending_verification_usd": 0.0
   },
-  "source_board_generated_at": "2026-05-30T00:32:05+00:00"
+  "source_board_generated_at": "2026-05-30T05:35:36+00:00"
 };

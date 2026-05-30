@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "/Users/openclaw/Documents/Dinero/outputs/rewardops_guard_public_submission/bundle_20260530T005921652604Z",
+  "bundle_dir": "bundle_20260530T054402251509Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -7,319 +7,13 @@
     "social/KYC/payment setup artifacts"
   ],
   "external_actions_performed": [],
-  "file_count": 81,
+  "file_count": 45,
   "files": [
-    {
-      "bytes": 680,
-      "ok": true,
-      "path": ".github/workflows/pages.yml",
-      "sha256": "b77375e7a6e51ec091ff8c934e018b8c521c08a3f38cfc06c6e9996cb6794266"
-    },
-    {
-      "bytes": 1,
-      "ok": true,
-      "path": ".nojekyll",
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
-    },
-    {
-      "bytes": 7459,
-      "ok": true,
-      "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "dad6f6016c23246b48eb55cd35f95ae39801efccb713a6e7552b8a71a924aca7"
-    },
-    {
-      "bytes": 7459,
-      "ok": true,
-      "path": "README.md",
-      "sha256": "dad6f6016c23246b48eb55cd35f95ae39801efccb713a6e7552b8a71a924aca7"
-    },
-    {
-      "bytes": 34,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/.gitignore",
-      "sha256": "1432fdfe6e077980c75c910be191dd950efc3c7415d5b8a8adfdaf656fb37ebc"
-    },
-    {
-      "bytes": 1065,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/LICENSE",
-      "sha256": "ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9"
-    },
-    {
-      "bytes": 4182,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/README.md",
-      "sha256": "2c57c55df954b7f15c7485678e3e53b154b5d804ad02a4e8f38322fce2116210"
-    },
-    {
-      "bytes": 32,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/__init__.py",
-      "sha256": "2975b81e18a7bc356bf089dc33477f438f5811e681061802d7d370ae616d8a92"
-    },
-    {
-      "bytes": 13001,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/dfir_triage.py",
-      "sha256": "0901ec62ef3e6e4dc70ac912c3ca7ebe5d149d21f8741001937995b79f594598"
-    },
-    {
-      "bytes": 6544,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/mcp_server.py",
-      "sha256": "2067605d825901b5917e7dc6ce3e8e8f9e19850e1631d681bbf3954ee459b3f8"
-    },
-    {
-      "bytes": 12154,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/rewardops_defender.py",
-      "sha256": "7d385a28c0dbd680917dc2bb48fb59945a2319ae8bf6653e66cef7888389be4b"
-    },
-    {
-      "bytes": 1181,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/sample_agent_events.jsonl",
-      "sha256": "244dab66a187b1ab46d6cc5d53962e4645b939acdd96d44cec8e3ee24006a83a"
-    },
-    {
-      "bytes": 1049,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/sample_events.jsonl",
-      "sha256": "e042449b0a525e183636bcdfa2a5f8c954b3d0f4a832ba7d5118d90991c06af3"
-    },
-    {
-      "bytes": 6006,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/dfir_triage_agent/submission_guard.py",
-      "sha256": "e4863467d041a73a93a6f5dd75c3aaae05ecbb475aab694b46f75a49d92a0b4b"
-    },
-    {
-      "bytes": 5055,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/docs/ACCURACY_REPORT.md",
-      "sha256": "18e07604a7851d03533a8c129ef80a3fff9b0fadb780eddbf0d870c133ff52c2"
-    },
-    {
-      "bytes": 2370,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/docs/ARCHITECTURE.md",
-      "sha256": "48aaf355764836ccfd7b28416a3a3dd929b52a0c9cd9698ca0f34d296b0c6338"
-    },
-    {
-      "bytes": 2601,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/docs/EVIDENCE_DATASET.md",
-      "sha256": "9e5fff06fa4a2a08fdc773703810f398d2a7d6692ac5e382082b5812e580ad52"
-    },
-    {
-      "bytes": 107463,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/docs/architecture.png",
-      "sha256": "e21917bb987f140191bbe878fb9f9249f4e02cfe9c2e78f77fac3df3ccd5cf52"
-    },
-    {
-      "bytes": 4005,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/docs/architecture.svg",
-      "sha256": "366b0747dbe2539b7692a2035cc37486f6b9a180e8679ed70cf8e653afa5abbc"
-    },
-    {
-      "bytes": 1943,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/index.html",
-      "sha256": "417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d"
-    },
-    {
-      "bytes": 8172,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/out/dfir_triage_report.json",
-      "sha256": "871011bd624c9f98973cd71ebc12d6e599ec120c0913cc381f578ee0c916b459"
-    },
-    {
-      "bytes": 1894,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/out/dfir_triage_report.md",
-      "sha256": "8d1ff4c60d9eb1db84b708eac84b92fd01e01b0f84937593724eed43ca64b70e"
-    },
-    {
-      "bytes": 6168,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/out/rewardops_defender_report.json",
-      "sha256": "2d5483b0dfd4c79803f3955eea6a94db015448560ce3b3dc345200dd3b8e2cbd"
-    },
-    {
-      "bytes": 1869,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/out/rewardops_defender_report.md",
-      "sha256": "f9d6d4789fa3468e33d4171958dbba405de7457d1b197b6c60c2e6c0ffef7723"
-    },
-    {
-      "bytes": 7896,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/out/submission_guard_manifest.json",
-      "sha256": "8fc4aa71d00bed22aae8b840137f29be367a6a1f8b493b1d4a58df3d325ffec3"
-    },
-    {
-      "bytes": 1666,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/run_terminal_demo.sh",
-      "sha256": "822cb0445187054bc455a992bfa62a5b1df4944329b40fe0b64e5ddfca674269"
-    },
-    {
-      "bytes": 1624,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md",
-      "sha256": "8af4994c71e4c308bb148b8a7b53d6e5523a160ebb09ef1aabd95a67b869d455"
-    },
-    {
-      "bytes": 1798,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md",
-      "sha256": "44678464c81b4a15a4af29446b4e5b7b777b5a4ccf3c5393e82bd952aa5997b4"
-    },
-    {
-      "bytes": 3947,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md",
-      "sha256": "d733db97260b73978745cb3d1070e98029942c31b662c01daf87f85df30a34e0"
-    },
-    {
-      "bytes": 2373,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/tests/test_dfir_triage.py",
-      "sha256": "df609a1d1731501d2638452019394fee539c1768c3bbb15cc413079eb1795875"
-    },
-    {
-      "bytes": 3106,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/tests/test_mcp_server.py",
-      "sha256": "2708061df4f2c7ef308f98f00cf2a474092a3a686e03cb7ec1656272f9951e9e"
-    },
-    {
-      "bytes": 3106,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/tests/test_rewardops_defender.py",
-      "sha256": "141e31257edebe6e6bede8dcbe90d30160840a7cf635d698931b1f155585ab85"
-    },
-    {
-      "bytes": 1433,
-      "ok": true,
-      "path": "find_evil_rewardops_defender/tests/test_submission_guard.py",
-      "sha256": "576167450bcb7c87d0b3294cafbdaa9ff3ca5d46f853d9956fb3fe3a99964009"
-    },
-    {
-      "bytes": 1125,
-      "ok": true,
-      "path": "index.html",
-      "sha256": "eb7103033aa4832eacca53880ccbd9a5c432d696a9802677d461ea5d05475b2b"
-    },
     {
       "bytes": 5069,
       "ok": true,
       "path": "rewardops_guard/README.md",
       "sha256": "1dbee345b349b71077eaa3fb81c4cf5c66c0ad5f872357c9e5811bb87235a496"
-    },
-    {
-      "bytes": 12589,
-      "ok": true,
-      "path": "rewardops_guard/build_dashboard.py",
-      "sha256": "93ae303ba94aa2d0034b2b5fd4c2be7849c10f1cdf9d2283c5aba5cffba5dff0"
-    },
-    {
-      "bytes": 1460,
-      "ok": true,
-      "path": "rewardops_guard/buyer_intake.md",
-      "sha256": "ee133394d94603ce6e7011a90f164f87871116f5da1ab36855f18bdf9c08801d"
-    },
-    {
-      "bytes": 2454,
-      "ok": true,
-      "path": "rewardops_guard/buyer_onepager.md",
-      "sha256": "20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29"
-    },
-    {
-      "bytes": 14609,
-      "ok": true,
-      "path": "rewardops_guard/clawmoney_skill_fulfillment_pack.json",
-      "sha256": "c07df4398811de514d3e6c6996e4ecfe3ce717a8c796b491bb3393e9b4f6612a"
-    },
-    {
-      "bytes": 7046,
-      "ok": true,
-      "path": "rewardops_guard/clawmoney_skill_fulfillment_pack.md",
-      "sha256": "f5eadf683ae84878225838a8023ceecd09e2063e857e28403232411c5689f776"
-    },
-    {
-      "bytes": 39187,
-      "ok": true,
-      "path": "rewardops_guard/data.js",
-      "sha256": "338dfa502b579fc9f756bb3292b896c27d565fd2acd9cb4a153cc3af0eaca75d"
-    },
-    {
-      "bytes": 2084,
-      "ok": true,
-      "path": "rewardops_guard/demo_script.md",
-      "sha256": "a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf"
-    },
-    {
-      "bytes": 9233,
-      "ok": true,
-      "path": "rewardops_guard/dfir_agent_demo.py",
-      "sha256": "6aefc1d8d2d4c409edc321d95c4b9d8e136cc56adc972c19c2be9389f017d705"
-    },
-    {
-      "bytes": 3343,
-      "ok": true,
-      "path": "rewardops_guard/dfir_agent_report.json",
-      "sha256": "d83ecbc63a14b50ae197fb4cf03e95cd405f22ae10c0b96259068c2fb56ed6ea"
-    },
-    {
-      "bytes": 1267,
-      "ok": true,
-      "path": "rewardops_guard/dfir_agent_report.md",
-      "sha256": "cb5c6a12b38c9c558591280b122a9ae4b142c3d0dd1ab7c8ecfd84a555ef6bb0"
-    },
-    {
-      "bytes": 14037,
-      "ok": true,
-      "path": "rewardops_guard/find_evil_defender_demo.py",
-      "sha256": "8d8b4dfb44b1c03e69d4efb6ae92dd561237f7dde4dece3fc430c06d3502bc13"
-    },
-    {
-      "bytes": 6551,
-      "ok": true,
-      "path": "rewardops_guard/find_evil_defender_report.json",
-      "sha256": "423a85d6637e612c1f37ab1c225dee3db3534487fc57a051523fc7d6272ddd80"
-    },
-    {
-      "bytes": 2586,
-      "ok": true,
-      "path": "rewardops_guard/find_evil_defender_report.md",
-      "sha256": "f82695d233c2b27c1d69edfe58c8f8350eeaf6662644e33d2170029846db1658"
-    },
-    {
-      "bytes": 26056,
-      "ok": true,
-      "path": "rewardops_guard/goal5000_current_routes.md",
-      "sha256": "b012baefcf58b700fb760b42ca39d789bf1ed879a3c9288fdf44ba77d1ebd5af"
-    },
-    {
-      "bytes": 13822,
-      "ok": true,
-      "path": "rewardops_guard/hackathon_submission_builder.py",
-      "sha256": "c7e32db54663258dd2056124b1841a293d38fc77dbfa26d222bd3b14f09c2865"
-    },
-    {
-      "bytes": 10906,
-      "ok": true,
-      "path": "rewardops_guard/hackathon_submission_pack.json",
-      "sha256": "5f050020eb30be1fba912ffb6364b099e7efa9d99628c2f8837558ee8f66fee4"
-    },
-    {
-      "bytes": 5662,
-      "ok": true,
-      "path": "rewardops_guard/hackathon_submission_pack.md",
-      "sha256": "d999faaa55836768c43c5060be950e7495a950bd1b715ff358f8e14044f1f3db"
     },
     {
       "bytes": 17603,
@@ -328,88 +22,16 @@
       "sha256": "491cbea4d24666a643110ea57350901c0c17c6e47e41a3759e2574f81c55a7b3"
     },
     {
-      "bytes": 7415,
+      "bytes": 38895,
       "ok": true,
-      "path": "rewardops_guard/ops_event_report.json",
-      "sha256": "a03988c0a4ddc050a4f06a75e09650a66f330ce9933445d105ae458b4180928c"
+      "path": "rewardops_guard/data.js",
+      "sha256": "90012de5de66e9b13920dfe0968fe438916ad417d65ce64015d8b7fbe4137716"
     },
     {
-      "bytes": 1686,
+      "bytes": 2084,
       "ok": true,
-      "path": "rewardops_guard/ops_event_report.md",
-      "sha256": "dcde613474699f66f9a65a31aca1f26e8910d76b0eef82db796d7840982d3810"
-    },
-    {
-      "bytes": 6663,
-      "ok": true,
-      "path": "rewardops_guard/ops_event_report.py",
-      "sha256": "962a18bdf58219cb248a97e3fe2758021893f23d28cf440f849e2164466528c2"
-    },
-    {
-      "bytes": 19784,
-      "ok": true,
-      "path": "rewardops_guard/ops_events.jsonl",
-      "sha256": "2de29fdb68d59739f16b8456e56c16c6d929df8cb5ddfe6fe2041058f61d762a"
-    },
-    {
-      "bytes": 9401,
-      "ok": true,
-      "path": "rewardops_guard/policy_agent.py",
-      "sha256": "0ef986b5f4e9c3a90a79a0f11c8bc1be613f69e61177070dfd995623ce21ff70"
-    },
-    {
-      "bytes": 4123,
-      "ok": true,
-      "path": "rewardops_guard/policy_agent_trace.json",
-      "sha256": "bb9a1bee26b42ed8bdceba062763850b7d6027140339dd58f1aa661c3a835956"
-    },
-    {
-      "bytes": 1469,
-      "ok": true,
-      "path": "rewardops_guard/policy_agent_trace.md",
-      "sha256": "8389305ec6e545d172cd75998098140a140be16073e0b6c70d420e5ea76bcee5"
-    },
-    {
-      "bytes": 1951,
-      "ok": true,
-      "path": "rewardops_guard/proposal_templates.md",
-      "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
-    },
-    {
-      "bytes": 6610,
-      "ok": true,
-      "path": "rewardops_guard/revenue_evidence_pack.json",
-      "sha256": "769b4c969a513a180a87c58cab8487eebbb4ea61fedf3c469ae2a6e9f5ea9c15"
-    },
-    {
-      "bytes": 1216,
-      "ok": true,
-      "path": "rewardops_guard/revenue_evidence_pack.md",
-      "sha256": "1eb94a4ee58a51c0541569c967a9c52ee96ee8ab3d5604d66998f1d31a9a41c0"
-    },
-    {
-      "bytes": 15254,
-      "ok": true,
-      "path": "rewardops_guard/revenue_evidence_pack.py",
-      "sha256": "374169b42d8134133be2b34e1500a395003a53d2d65979f6818fef2635c6de84"
-    },
-    {
-      "bytes": 5110,
-      "ok": true,
-      "path": "rewardops_guard/service_menu.md",
-      "sha256": "90e34b4db5984afeded7993265e0fcd0ff438d322e652c93b5a72a1a46b312f5"
-    },
-    {
-      "bytes": 5313,
-      "ok": true,
-      "path": "rewardops_guard/simulate_ops_events.py",
-      "sha256": "f32a930fe28a4cad27874f769414705e69ff3eef77605fda5733ac1024f2f77e"
-    },
-    {
-      "bytes": 2358,
-      "ok": true,
-      "path": "rewardops_guard/splunk_detection_pack.md",
-      "sha256": "15a3a97b0dee6dc5f34c847d05e816ac5c45b4bb610e6f5c5c1a7c3531afa6b8"
+      "path": "rewardops_guard/demo_script.md",
+      "sha256": "a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf"
     },
     {
       "bytes": 4753,
@@ -418,52 +40,178 @@
       "sha256": "90591f4a9fe62b8a56fcbf73719a5db6d69b918511753f9ea69005b56fad8b88"
     },
     {
-      "bytes": 1992,
+      "bytes": 5662,
       "ok": true,
-      "path": "rewardops_guard/test_dfir_agent_demo.py",
-      "sha256": "4349f1e4f1785db375941c2c5ff644b41d494fd1759f59196dc72b148140919a"
+      "path": "rewardops_guard/hackathon_submission_pack.md",
+      "sha256": "edf246d1379e80429dd510da7b8bea68685cf0da16271c08f0e7fc949a5969a1"
     },
     {
-      "bytes": 2833,
+      "bytes": 10906,
       "ok": true,
-      "path": "rewardops_guard/test_find_evil_defender_demo.py",
-      "sha256": "18571abbaf3602a8a089522b6389bb1b6d2148c34f77c5d59312506207eaf50f"
+      "path": "rewardops_guard/hackathon_submission_pack.json",
+      "sha256": "8bbb25135e6a265d781136d2085a2c6ecf2f5dba84252f2a6ce0040529db4c68"
     },
     {
-      "bytes": 2311,
+      "bytes": 1220,
       "ok": true,
-      "path": "rewardops_guard/test_hackathon_submission_builder.py",
-      "sha256": "5215edf73648522250350b159644cba6c877cee6d63a41dfe669943c7a927d1d"
+      "path": "rewardops_guard/revenue_evidence_pack.md",
+      "sha256": "ee7538565d8470ce296ce4859830d7dc38ee9759b89bf2d3a2a3fa2d85b22059"
     },
     {
-      "bytes": 2796,
+      "bytes": 6658,
       "ok": true,
-      "path": "rewardops_guard/test_ops_event_report.py",
-      "sha256": "0854fa6bee60421a89ace48273b7089c5c6b642b2274b37563d49a3bd444fbbf"
+      "path": "rewardops_guard/revenue_evidence_pack.json",
+      "sha256": "e243fbfd98769cf3ab50fd39d38f0bbda16227a46b74950adf87b4ee4996f916"
     },
     {
-      "bytes": 2175,
+      "bytes": 1686,
       "ok": true,
-      "path": "rewardops_guard/test_policy_agent.py",
-      "sha256": "48ed08bb67d811098d899ee878e6fe60ebc3e610be62ee83fa382a4625272e22"
+      "path": "rewardops_guard/ops_event_report.md",
+      "sha256": "64bc9726ab6802890a8c7a597442160731556427f40d7070a43157c510b08b7a"
+    },
+    {
+      "bytes": 7415,
+      "ok": true,
+      "path": "rewardops_guard/ops_event_report.json",
+      "sha256": "060679abc75a546204eeb250b0c37ed023813295681750589fa939d87e410e9e"
+    },
+    {
+      "bytes": 19784,
+      "ok": true,
+      "path": "rewardops_guard/ops_events.jsonl",
+      "sha256": "2de29fdb68d59739f16b8456e56c16c6d929df8cb5ddfe6fe2041058f61d762a"
+    },
+    {
+      "bytes": 1469,
+      "ok": true,
+      "path": "rewardops_guard/policy_agent_trace.md",
+      "sha256": "294debfd5e17f963bff00f2d78ae956f6a566a5dacd17b5214d3b8b9fee96bdb"
+    },
+    {
+      "bytes": 4123,
+      "ok": true,
+      "path": "rewardops_guard/policy_agent_trace.json",
+      "sha256": "c3edfabd44c93550c329f3bb470a5783a7be5116b135e61c0cd93cbd0eb78e96"
+    },
+    {
+      "bytes": 2586,
+      "ok": true,
+      "path": "rewardops_guard/find_evil_defender_report.md",
+      "sha256": "c2e53d6592865985c9296f676d7536cd2c36d6c670c6bfc10277ca03dd5538c2"
+    },
+    {
+      "bytes": 6551,
+      "ok": true,
+      "path": "rewardops_guard/find_evil_defender_report.json",
+      "sha256": "7b83b5e8844fbfacb5cfaf2f2583b8fc490c794c8bf8894dbb80e6e79a0b1b4d"
     },
     {
       "bytes": 1267,
       "ok": true,
-      "path": "rewardops_guard/test_revenue_evidence_pack.py",
-      "sha256": "7498694fb15415197cc41801b7c0100d9b4a36a5ad8ece538edd514733bc181c"
+      "path": "rewardops_guard/dfir_agent_report.md",
+      "sha256": "3c05ebeb1de685578ed335732f8f134e1cd42d3b7a6f3138e8e098e38f0a38d4"
+    },
+    {
+      "bytes": 3343,
+      "ok": true,
+      "path": "rewardops_guard/dfir_agent_report.json",
+      "sha256": "8a9ee91b2c3bea1aead641a7c29be91d617e6009c9a8ba941c0b80690895b4c5"
+    },
+    {
+      "bytes": 2358,
+      "ok": true,
+      "path": "rewardops_guard/splunk_detection_pack.md",
+      "sha256": "15a3a97b0dee6dc5f34c847d05e816ac5c45b4bb610e6f5c5c1a7c3531afa6b8"
+    },
+    {
+      "bytes": 5110,
+      "ok": true,
+      "path": "rewardops_guard/service_menu.md",
+      "sha256": "90e34b4db5984afeded7993265e0fcd0ff438d322e652c93b5a72a1a46b312f5"
+    },
+    {
+      "bytes": 2454,
+      "ok": true,
+      "path": "rewardops_guard/buyer_onepager.md",
+      "sha256": "20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29"
+    },
+    {
+      "bytes": 1460,
+      "ok": true,
+      "path": "rewardops_guard/buyer_intake.md",
+      "sha256": "ee133394d94603ce6e7011a90f164f87871116f5da1ab36855f18bdf9c08801d"
+    },
+    {
+      "bytes": 1951,
+      "ok": true,
+      "path": "rewardops_guard/proposal_templates.md",
+      "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
+    },
+    {
+      "bytes": 7046,
+      "ok": true,
+      "path": "rewardops_guard/clawmoney_skill_fulfillment_pack.md",
+      "sha256": "3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72"
+    },
+    {
+      "bytes": 14576,
+      "ok": true,
+      "path": "rewardops_guard/clawmoney_skill_fulfillment_pack.json",
+      "sha256": "ca33d5ccb6cf6792a1328da4782a98f51a9302091ce88f9db93e9c0ca6c2782c"
+    },
+    {
+      "bytes": 16416,
+      "ok": true,
+      "path": "rewardops_guard/revenue_evidence_pack.py",
+      "sha256": "26abaa8a26d0c70d008b67148e2ab6c6e9515c332a83763d7e0efca6600bc547"
+    },
+    {
+      "bytes": 13822,
+      "ok": true,
+      "path": "rewardops_guard/hackathon_submission_builder.py",
+      "sha256": "c7e32db54663258dd2056124b1841a293d38fc77dbfa26d222bd3b14f09c2865"
+    },
+    {
+      "bytes": 12589,
+      "ok": true,
+      "path": "rewardops_guard/build_dashboard.py",
+      "sha256": "93ae303ba94aa2d0034b2b5fd4c2be7849c10f1cdf9d2283c5aba5cffba5dff0"
+    },
+    {
+      "bytes": 6663,
+      "ok": true,
+      "path": "rewardops_guard/ops_event_report.py",
+      "sha256": "962a18bdf58219cb248a97e3fe2758021893f23d28cf440f849e2164466528c2"
+    },
+    {
+      "bytes": 9401,
+      "ok": true,
+      "path": "rewardops_guard/policy_agent.py",
+      "sha256": "0ef986b5f4e9c3a90a79a0f11c8bc1be613f69e61177070dfd995623ce21ff70"
+    },
+    {
+      "bytes": 14037,
+      "ok": true,
+      "path": "rewardops_guard/find_evil_defender_demo.py",
+      "sha256": "8d8b4dfb44b1c03e69d4efb6ae92dd561237f7dde4dece3fc430c06d3502bc13"
+    },
+    {
+      "bytes": 9233,
+      "ok": true,
+      "path": "rewardops_guard/dfir_agent_demo.py",
+      "sha256": "6aefc1d8d2d4c409edc321d95c4b9d8e136cc56adc972c19c2be9389f017d705"
+    },
+    {
+      "bytes": 5313,
+      "ok": true,
+      "path": "rewardops_guard/simulate_ops_events.py",
+      "sha256": "f32a930fe28a4cad27874f769414705e69ff3eef77605fda5733ac1024f2f77e"
     },
     {
       "bytes": 5744,
       "ok": true,
       "path": "safety_gate/README.md",
       "sha256": "f536f77d455449914b7fa204eac58702c8d52dc7fae6e1b4ec184df107008e93"
-    },
-    {
-      "bytes": 185,
-      "ok": true,
-      "path": "safety_gate/__init__.py",
-      "sha256": "7fb5e1c1761a3d7a059d9f3c48e170a203818e52ede21715f9636f6812d381ed"
     },
     {
       "bytes": 21974,
@@ -484,6 +232,42 @@
       "sha256": "d4d13e68b5af30e023d53be1fa116f725bda2b28558686092df3f0bfd1cc28fc"
     },
     {
+      "bytes": 1267,
+      "ok": true,
+      "path": "rewardops_guard/test_revenue_evidence_pack.py",
+      "sha256": "7498694fb15415197cc41801b7c0100d9b4a36a5ad8ece538edd514733bc181c"
+    },
+    {
+      "bytes": 2311,
+      "ok": true,
+      "path": "rewardops_guard/test_hackathon_submission_builder.py",
+      "sha256": "5215edf73648522250350b159644cba6c877cee6d63a41dfe669943c7a927d1d"
+    },
+    {
+      "bytes": 2796,
+      "ok": true,
+      "path": "rewardops_guard/test_ops_event_report.py",
+      "sha256": "0854fa6bee60421a89ace48273b7089c5c6b642b2274b37563d49a3bd444fbbf"
+    },
+    {
+      "bytes": 2175,
+      "ok": true,
+      "path": "rewardops_guard/test_policy_agent.py",
+      "sha256": "48ed08bb67d811098d899ee878e6fe60ebc3e610be62ee83fa382a4625272e22"
+    },
+    {
+      "bytes": 2833,
+      "ok": true,
+      "path": "rewardops_guard/test_find_evil_defender_demo.py",
+      "sha256": "18571abbaf3602a8a089522b6389bb1b6d2148c34f77c5d59312506207eaf50f"
+    },
+    {
+      "bytes": 1974,
+      "ok": true,
+      "path": "rewardops_guard/test_dfir_agent_demo.py",
+      "sha256": "34892e4a86c007b56176fa50f9bbb1b3987c43b28243cd3a7aaad58ee1bb53f6"
+    },
+    {
       "bytes": 7018,
       "ok": true,
       "path": "safety_gate/test_protective_pipeline.py",
@@ -494,19 +278,37 @@
       "ok": true,
       "path": "safety_gate/test_safety_gate.py",
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
+    },
+    {
+      "bytes": 6290,
+      "ok": true,
+      "path": "PUBLIC_SUBMISSION_README.md",
+      "sha256": "d309af39dbfc160ba2af8354f5c9342b9e346f4365b59da0d944cb3505e3eccb"
+    },
+    {
+      "bytes": 6290,
+      "ok": true,
+      "path": "README.md",
+      "sha256": "d309af39dbfc160ba2af8354f5c9342b9e346f4365b59da0d944cb3505e3eccb"
+    },
+    {
+      "bytes": 373,
+      "ok": true,
+      "path": "index.html",
+      "sha256": "4fd5176e17f98b0fabbd5a80d6d4b36b8367b0b4813c32aee7f89ffe245d71ac"
     }
   ],
-  "generated_at": "2026-05-30T02:35:18.931281+00:00",
-  "manifest_sha256": "4d14168a7b921adc3bb4d6c753d48c49b4586abe48588a36b1c0c6872a9041ed",
+  "generated_at": "2026-05-30T05:44:02+00:00",
+  "manifest_sha256": "fdbaa86a44d67b940d601ba1f0404c8498b3051021093386b1d7a50113305b05",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
-    "inbound_market_surface_usd": 15555.0,
-    "pending_submission_usd": 9.1,
+    "inbound_market_surface_usd": 16725.0,
+    "pending_submission_usd": 8.0,
     "submitted_pending_verification_usd": 0.0
   },
   "ok": true,
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "/Users/openclaw/Documents/Dinero/outputs/rewardops_guard_public_submission/bundle_20260530T005921652604Z.zip",
-  "zip_sha256": "507b26647990c6339f2a9f9c11c5a4697f9405191fd4c86e3fa7befc24e88ae5"
+  "zip_path": "bundle_20260530T054402251509Z.zip",
+  "zip_sha256": "e785039cdd08ce14b918242205bf6eea272421eed839bd0aad6ecb5d92ed6c7a"
 }
