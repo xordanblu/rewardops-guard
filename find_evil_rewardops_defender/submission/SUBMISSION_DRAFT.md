@@ -34,9 +34,10 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 ## Public Review Links
 
 - Repository: https://github.com/xordanx/rewardops-guard
-- Dashboard: https://xordanx.github.io/rewardops-guard/
-- Demo video: https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
-- Contact sheet: https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
+- Demo video: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- Contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## What It Demonstrates
 

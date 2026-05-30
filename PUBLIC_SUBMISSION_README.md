@@ -1,6 +1,6 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T07:50:56+00:00
+Generated: 2026-05-30T07:54:20+00:00
 
 ## Purpose
 
@@ -10,9 +10,10 @@ hackathon review, buyer diligence, or repository publication.
 ## Public Review Links
 
 - Repository: https://github.com/xordanx/rewardops-guard
-- Dashboard: https://xordanx.github.io/rewardops-guard/
-- FIND EVIL demo video: https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
-- FIND EVIL contact sheet: https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
+- FIND EVIL demo video: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- FIND EVIL contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## Safety Boundary
 
@@ -42,8 +43,8 @@ python3 rewardops_guard/public_submission_bundle.py
 ## Files
 
 - `.nojekyll` sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-- `PUBLIC_SUBMISSION_README.md` sha256=3b45d94169e110ce3b730eea437a32c73878fb44a97de60d03a0ba30084b9d7b
-- `README.md` sha256=d309af39dbfc160ba2af8354f5c9342b9e346f4365b59da0d944cb3505e3eccb
+- `PUBLIC_SUBMISSION_README.md` sha256=dba02284fa5cc69b38bc55a2ff9535842be5fb99309b99c38bab1eef6e5de628
+- `README.md` sha256=dba02284fa5cc69b38bc55a2ff9535842be5fb99309b99c38bab1eef6e5de628
 - `find_evil_rewardops_defender/.gitignore` sha256=1432fdfe6e077980c75c910be191dd950efc3c7415d5b8a8adfdaf656fb37ebc
 - `find_evil_rewardops_defender/LICENSE` sha256=ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9
 - `find_evil_rewardops_defender/README.md` sha256=2c57c55df954b7f15c7485678e3e53b154b5d804ad02a4e8f38322fce2116210
@@ -63,9 +64,9 @@ python3 rewardops_guard/public_submission_bundle.py
 - `find_evil_rewardops_defender/docs/architecture.svg` sha256=366b0747dbe2539b7692a2035cc37486f6b9a180e8679ed70cf8e653afa5abbc
 - `find_evil_rewardops_defender/index.html` sha256=417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d
 - `find_evil_rewardops_defender/run_terminal_demo.sh` sha256=822cb0445187054bc455a992bfa62a5b1df4944329b40fe0b64e5ddfca674269
-- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=c071636616547a7b87268ccc0bf782c9450d7f571090745914b67ec5c15fcf7f
+- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=da84ff78a61b41147c1d8072edb671acd348db8d162800d34cffbe24d390015b
 - `find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md` sha256=44678464c81b4a15a4af29446b4e5b7b777b5a4ccf3c5393e82bd952aa5997b4
-- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=65bfaf4a3611b326a13384f2e1c61e3231436de61077f79b5099d4f147fd9cf3
+- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=9e7e523ca0aeb34852ded0623a599345a2319cf137e8e9a61bd7492887491659
 - `find_evil_rewardops_defender/tests/test_dfir_triage.py` sha256=df609a1d1731501d2638452019394fee539c1768c3bbb15cc413079eb1795875
 - `find_evil_rewardops_defender/tests/test_mcp_server.py` sha256=2708061df4f2c7ef308f98f00cf2a474092a3a686e03cb7ec1656272f9951e9e
 - `find_evil_rewardops_defender/tests/test_rewardops_defender.py` sha256=141e31257edebe6e6bede8dcbe90d30160840a7cf635d698931b1f155585ab85
@@ -97,7 +98,7 @@ python3 rewardops_guard/public_submission_bundle.py
 - `rewardops_guard/policy_agent_trace.json` sha256=f08cc8d74b97cf10c0cd8fcf86ec90b773da8a6a7ccefeaa6a535d0fc7253b66
 - `rewardops_guard/policy_agent_trace.md` sha256=a1397238ea9793cfc2e59a263887edd122ede4f21fbb95ed95f5b419aecf6ec5
 - `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
-- `rewardops_guard/public_submission_bundle.py` sha256=7eaa20f8f3eb0815e23116148a6e8107212fe9cc6351761ae6940a3ad55ea584
+- `rewardops_guard/public_submission_bundle.py` sha256=4c368ba7c8cc749e8929a4ff8a4bfe23087e0f6c7a2309728125bf6a5ac11b92
 - `rewardops_guard/revenue_evidence_pack.json` sha256=32561eb8b81495df07b2a037442dccb6263697d1056fb8f977fc8bb05210922d
 - `rewardops_guard/revenue_evidence_pack.md` sha256=0f4081c9bd1a78b27746f3728e427d4a87e7023762d6190e45c97b8d4f17e084
 - `rewardops_guard/revenue_evidence_pack.py` sha256=1225a252a7be169d2c7bec78e1a60cefff374c163987758f4613bf34b9f0a5db

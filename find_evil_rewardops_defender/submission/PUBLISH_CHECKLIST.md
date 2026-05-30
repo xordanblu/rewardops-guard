@@ -38,9 +38,10 @@ Do not proceed without fresh approval for all of these:
 Already prepared without those external actions:
 
 - Sanitized public repository: `https://github.com/xordanx/rewardops-guard`
-- GitHub Pages dashboard: `https://xordanx.github.io/rewardops-guard/`
+- Dashboard source: `https://github.com/xordanx/rewardops-guard/blob/main/index.html`
 - Repo-hosted demo video asset: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4`
 - Repo-hosted contact sheet: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png`
+- GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## Non-Negotiable Safety Boundaries
 

@@ -45,13 +45,13 @@ EXCLUDED_BY_POLICY = [
 ]
 PUBLIC_LINKS = {
     "repository": "https://github.com/xordanx/rewardops-guard",
-    "dashboard": "https://xordanx.github.io/rewardops-guard/",
+    "dashboard_source": "https://github.com/xordanx/rewardops-guard/blob/main/index.html",
     "find_evil_demo_video": (
-        "https://xordanx.github.io/rewardops-guard/"
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4"
     ),
     "find_evil_contact_sheet": (
-        "https://xordanx.github.io/rewardops-guard/"
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/assets/"
         "rewardops-find-evil-guard-20260530-contact-sheet.png"
     ),
@@ -147,9 +147,10 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
         "## Public Review Links",
         "",
         f"- Repository: {PUBLIC_LINKS['repository']}",
-        f"- Dashboard: {PUBLIC_LINKS['dashboard']}",
+        f"- Dashboard source: {PUBLIC_LINKS['dashboard_source']}",
         f"- FIND EVIL demo video: {PUBLIC_LINKS['find_evil_demo_video']}",
         f"- FIND EVIL contact sheet: {PUBLIC_LINKS['find_evil_contact_sheet']}",
+        "- GitHub Pages is not claimed here because Actions is disabled for the account.",
         "",
         "## Safety Boundary",
         "",
@@ -218,10 +219,11 @@ def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any
   <h2>Public Review Links</h2>
   <ul>
     <li>Repository: <a href="{html.escape(PUBLIC_LINKS["repository"])}">{html.escape(PUBLIC_LINKS["repository"])}</a></li>
-    <li>Dashboard: <a href="{html.escape(PUBLIC_LINKS["dashboard"])}">{html.escape(PUBLIC_LINKS["dashboard"])}</a></li>
+    <li>Dashboard source: <a href="{html.escape(PUBLIC_LINKS["dashboard_source"])}">{html.escape(PUBLIC_LINKS["dashboard_source"])}</a></li>
     <li>FIND EVIL demo video: <a href="{html.escape(PUBLIC_LINKS["find_evil_demo_video"])}">{html.escape(PUBLIC_LINKS["find_evil_demo_video"])}</a></li>
     <li>FIND EVIL contact sheet: <a href="{html.escape(PUBLIC_LINKS["find_evil_contact_sheet"])}">{html.escape(PUBLIC_LINKS["find_evil_contact_sheet"])}</a></li>
   </ul>
+  <p>GitHub Pages is not claimed here because Actions is disabled for the account.</p>
   <h2>Money Evidence</h2>
   <ul>
     <li>Confirmed revenue: ${manifest["money"]["confirmed_revenue_usd"]:.2f}</li>

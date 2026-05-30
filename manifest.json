@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "bundle_20260530T075056304782Z",
+  "bundle_dir": "bundle_20260530T075420539799Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -16,16 +16,16 @@
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
-      "bytes": 10660,
+      "bytes": 10790,
       "ok": true,
       "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "dba02284fa5cc69b38bc55a2ff9535842be5fb99309b99c38bab1eef6e5de628"
+      "sha256": "ff9403794d3916bcda527985b0f6c765271889f11aba13aa5b74d7fbb496448e"
     },
     {
-      "bytes": 10660,
+      "bytes": 10790,
       "ok": true,
       "path": "README.md",
-      "sha256": "dba02284fa5cc69b38bc55a2ff9535842be5fb99309b99c38bab1eef6e5de628"
+      "sha256": "ff9403794d3916bcda527985b0f6c765271889f11aba13aa5b74d7fbb496448e"
     },
     {
       "bytes": 34,
@@ -142,10 +142,10 @@
       "sha256": "822cb0445187054bc455a992bfa62a5b1df4944329b40fe0b64e5ddfca674269"
     },
     {
-      "bytes": 2236,
+      "bytes": 2331,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md",
-      "sha256": "c071636616547a7b87268ccc0bf782c9450d7f571090745914b67ec5c15fcf7f"
+      "sha256": "da84ff78a61b41147c1d8072edb671acd348db8d162800d34cffbe24d390015b"
     },
     {
       "bytes": 1798,
@@ -154,10 +154,10 @@
       "sha256": "44678464c81b4a15a4af29446b4e5b7b777b5a4ccf3c5393e82bd952aa5997b4"
     },
     {
-      "bytes": 4944,
+      "bytes": 5074,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md",
-      "sha256": "65bfaf4a3611b326a13384f2e1c61e3231436de61077f79b5099d4f147fd9cf3"
+      "sha256": "9e7e523ca0aeb34852ded0623a599345a2319cf137e8e9a61bd7492887491659"
     },
     {
       "bytes": 2373,
@@ -346,10 +346,10 @@
       "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
     },
     {
-      "bytes": 12877,
+      "bytes": 13140,
       "ok": true,
       "path": "rewardops_guard/public_submission_bundle.py",
-      "sha256": "7eaa20f8f3eb0815e23116148a6e8107212fe9cc6351761ae6940a3ad55ea584"
+      "sha256": "4c368ba7c8cc749e8929a4ff8a4bfe23087e0f6c7a2309728125bf6a5ac11b92"
     },
     {
       "bytes": 5347,
@@ -472,8 +472,8 @@
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
     }
   ],
-  "generated_at": "2026-05-30T07:50:56+00:00",
-  "manifest_sha256": "9238a50e55ab38085d10b853aa0e35c7052a3e491d209a7db2dc33413c21d84d",
+  "generated_at": "2026-05-30T07:54:20+00:00",
+  "manifest_sha256": "0add247df65575f03641020d150d0a650275a9d12fa8361005daf8b4a40e4710",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
@@ -483,13 +483,13 @@
   },
   "ok": true,
   "public_links": {
-    "dashboard": "https://xordanx.github.io/rewardops-guard/",
-    "find_evil_contact_sheet": "https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
-    "find_evil_demo_video": "https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
+    "dashboard_source": "https://github.com/xordanx/rewardops-guard/blob/main/index.html",
+    "find_evil_contact_sheet": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+    "find_evil_demo_video": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
     "repository": "https://github.com/xordanx/rewardops-guard"
   },
-  "single_html_path": "bundle_20260530T075056304782Z.html",
+  "single_html_path": "bundle_20260530T075420539799Z.html",
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "bundle_20260530T075056304782Z.zip",
-  "zip_sha256": "6ee149bcffad33e384ec2614bfcd1bbe72e3a8347b348b73ef621635a4d612c3"
+  "zip_path": "bundle_20260530T075420539799Z.zip",
+  "zip_sha256": "4fff8cdc3e101beb500cbbfe2bfdd79514555a23795bca1c59f4d4279b8c474a"
 }
