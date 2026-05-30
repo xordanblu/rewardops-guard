@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "bundle_20260530T074024376484Z",
+  "bundle_dir": "bundle_20260530T075056304782Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -7,7 +7,7 @@
     "social/KYC/payment setup artifacts"
   ],
   "external_actions_performed": [],
-  "file_count": 75,
+  "file_count": 77,
   "files": [
     {
       "bytes": 1,
@@ -16,16 +16,16 @@
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
-      "bytes": 9906,
+      "bytes": 10660,
       "ok": true,
       "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "3b45d94169e110ce3b730eea437a32c73878fb44a97de60d03a0ba30084b9d7b"
+      "sha256": "dba02284fa5cc69b38bc55a2ff9535842be5fb99309b99c38bab1eef6e5de628"
     },
     {
-      "bytes": 6290,
+      "bytes": 10660,
       "ok": true,
       "path": "README.md",
-      "sha256": "d309af39dbfc160ba2af8354f5c9342b9e346f4365b59da0d944cb3505e3eccb"
+      "sha256": "dba02284fa5cc69b38bc55a2ff9535842be5fb99309b99c38bab1eef6e5de628"
     },
     {
       "bytes": 34,
@@ -44,6 +44,18 @@
       "ok": true,
       "path": "find_evil_rewardops_defender/README.md",
       "sha256": "2c57c55df954b7f15c7485678e3e53b154b5d804ad02a4e8f38322fce2116210"
+    },
+    {
+      "bytes": 297954,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+      "sha256": "f93b6cae993e29650d80374ac13245dc2a1329b45f3e0b4b762f8e5de8b276f3"
+    },
+    {
+      "bytes": 5508281,
+      "ok": true,
+      "path": "find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
+      "sha256": "7c0f1dd0c59e3312864f0e65e4a293d02c10d29c6c14e91a1da11c1e330d8b1c"
     },
     {
       "bytes": 32,
@@ -130,10 +142,10 @@
       "sha256": "822cb0445187054bc455a992bfa62a5b1df4944329b40fe0b64e5ddfca674269"
     },
     {
-      "bytes": 1624,
+      "bytes": 2236,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md",
-      "sha256": "8af4994c71e4c308bb148b8a7b53d6e5523a160ebb09ef1aabd95a67b869d455"
+      "sha256": "c071636616547a7b87268ccc0bf782c9450d7f571090745914b67ec5c15fcf7f"
     },
     {
       "bytes": 1798,
@@ -142,10 +154,10 @@
       "sha256": "44678464c81b4a15a4af29446b4e5b7b777b5a4ccf3c5393e82bd952aa5997b4"
     },
     {
-      "bytes": 3947,
+      "bytes": 4944,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md",
-      "sha256": "d733db97260b73978745cb3d1070e98029942c31b662c01daf87f85df30a34e0"
+      "sha256": "65bfaf4a3611b326a13384f2e1c61e3231436de61077f79b5099d4f147fd9cf3"
     },
     {
       "bytes": 2373,
@@ -334,10 +346,10 @@
       "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
     },
     {
-      "bytes": 11248,
+      "bytes": 12877,
       "ok": true,
       "path": "rewardops_guard/public_submission_bundle.py",
-      "sha256": "0300142efc896b8046c353059dbab0fa098924298b6c73c5c9d77e07bf461b95"
+      "sha256": "7eaa20f8f3eb0815e23116148a6e8107212fe9cc6351761ae6940a3ad55ea584"
     },
     {
       "bytes": 5347,
@@ -460,8 +472,8 @@
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
     }
   ],
-  "generated_at": "2026-05-30T07:40:24+00:00",
-  "manifest_sha256": "7e769d551ede9a15e50aa2285873e9c3e072d484a2065ecb3eb1fd0684c56aa8",
+  "generated_at": "2026-05-30T07:50:56+00:00",
+  "manifest_sha256": "9238a50e55ab38085d10b853aa0e35c7052a3e491d209a7db2dc33413c21d84d",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
@@ -470,8 +482,14 @@
     "submitted_pending_verification_usd": 0.0
   },
   "ok": true,
-  "single_html_path": "bundle_20260530T074024376484Z.html",
+  "public_links": {
+    "dashboard": "https://xordanx.github.io/rewardops-guard/",
+    "find_evil_contact_sheet": "https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+    "find_evil_demo_video": "https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
+    "repository": "https://github.com/xordanx/rewardops-guard"
+  },
+  "single_html_path": "bundle_20260530T075056304782Z.html",
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "bundle_20260530T074024376484Z.zip",
-  "zip_sha256": "4998200b2c26a2c51e66a2ac31d96fb37df007088f74da6f8094e6813840d57c"
+  "zip_path": "bundle_20260530T075056304782Z.zip",
+  "zip_sha256": "6ee149bcffad33e384ec2614bfcd1bbe72e3a8347b348b73ef621635a4d612c3"
 }

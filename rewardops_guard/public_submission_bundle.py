@@ -43,6 +43,19 @@ EXCLUDED_BY_POLICY = [
     "wallet keys or signing material",
     "social/KYC/payment setup artifacts",
 ]
+PUBLIC_LINKS = {
+    "repository": "https://github.com/xordanx/rewardops-guard",
+    "dashboard": "https://xordanx.github.io/rewardops-guard/",
+    "find_evil_demo_video": (
+        "https://xordanx.github.io/rewardops-guard/"
+        "find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4"
+    ),
+    "find_evil_contact_sheet": (
+        "https://xordanx.github.io/rewardops-guard/"
+        "find_evil_rewardops_defender/assets/"
+        "rewardops-find-evil-guard-20260530-contact-sheet.png"
+    ),
+}
 WALLET_OR_KEY_BLOCKLIST = (
     "0xEAF9f10F8ff6c5175" + "B87A0aDd982Fa2BE83366FB",
     "0x7b582985b30971b164" + "e00b8e5124b120dc187dd6",
@@ -131,9 +144,16 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
         "This bundle contains a sanitized local demo and evidence pack for public",
         "hackathon review, buyer diligence, or repository publication.",
         "",
+        "## Public Review Links",
+        "",
+        f"- Repository: {PUBLIC_LINKS['repository']}",
+        f"- Dashboard: {PUBLIC_LINKS['dashboard']}",
+        f"- FIND EVIL demo video: {PUBLIC_LINKS['find_evil_demo_video']}",
+        f"- FIND EVIL contact sheet: {PUBLIC_LINKS['find_evil_contact_sheet']}",
+        "",
         "## Safety Boundary",
         "",
-        "- No Devpost/forum/GitHub submission was performed by this bundle.",
+        "- No Devpost/forum/contest submission was performed by this bundle.",
         "- No account creation, KYC, social posting, wallet signing, or spend action was performed.",
         "- Raw external task prompts and private credentials are intentionally excluded.",
         "- Money is counted only when spendable or visibly settled.",
@@ -163,7 +183,9 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
     lines.extend(
         f"- `{item['path']}` sha256={item['sha256']}" for item in files if item["ok"]
     )
-    (ROOT / "PUBLIC_SUBMISSION_README.md").write_text("\n".join(lines) + "\n")
+    content = "\n".join(lines) + "\n"
+    (ROOT / "PUBLIC_SUBMISSION_README.md").write_text(content)
+    (ROOT / "README.md").write_text(content)
 
 
 def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any]) -> None:
@@ -193,6 +215,13 @@ def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any
   <h1>RewardOps Guard Public Submission</h1>
   <p>Generated: {html.escape(manifest["generated_at"])}</p>
   <p>Submission gate: <strong>{html.escape(manifest["submission_gate"])}</strong></p>
+  <h2>Public Review Links</h2>
+  <ul>
+    <li>Repository: <a href="{html.escape(PUBLIC_LINKS["repository"])}">{html.escape(PUBLIC_LINKS["repository"])}</a></li>
+    <li>Dashboard: <a href="{html.escape(PUBLIC_LINKS["dashboard"])}">{html.escape(PUBLIC_LINKS["dashboard"])}</a></li>
+    <li>FIND EVIL demo video: <a href="{html.escape(PUBLIC_LINKS["find_evil_demo_video"])}">{html.escape(PUBLIC_LINKS["find_evil_demo_video"])}</a></li>
+    <li>FIND EVIL contact sheet: <a href="{html.escape(PUBLIC_LINKS["find_evil_contact_sheet"])}">{html.escape(PUBLIC_LINKS["find_evil_contact_sheet"])}</a></li>
+  </ul>
   <h2>Money Evidence</h2>
   <ul>
     <li>Confirmed revenue: ${manifest["money"]["confirmed_revenue_usd"]:.2f}</li>
@@ -202,7 +231,7 @@ def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any
   </ul>
   <h2>Safety Boundary</h2>
   <ul>
-    <li>No external submission, social post, signing, spend, KYC, or account action was performed.</li>
+    <li>No Devpost/forum/contest submission, social post, signing, spend, KYC, or account action was performed.</li>
     <li>Private credentials, raw prompts, and signing material are excluded.</li>
   </ul>
   <h2>Files</h2>
@@ -246,15 +275,15 @@ def build_bundle() -> dict[str, Any]:
         )
 
     write_public_readme(generated_at, file_entries, money)
-    readme_source = ROOT / "PUBLIC_SUBMISSION_README.md"
-    readme_rel = readme_source.relative_to(ROOT).as_posix()
-    readme_data = readme_source.read_bytes()
-    shutil.copy2(readme_source, bundle_dir / readme_rel)
-    for item in file_entries:
-        if item["path"] == readme_rel:
-            item["bytes"] = len(readme_data)
-            item["sha256"] = sha256_bytes(readme_data)
-            break
+    for readme_source in (ROOT / "PUBLIC_SUBMISSION_README.md", ROOT / "README.md"):
+        readme_rel = readme_source.relative_to(ROOT).as_posix()
+        readme_data = readme_source.read_bytes()
+        shutil.copy2(readme_source, bundle_dir / readme_rel)
+        for item in file_entries:
+            if item["path"] == readme_rel:
+                item["bytes"] = len(readme_data)
+                item["sha256"] = sha256_bytes(readme_data)
+                break
 
     manifest = {
         "ok": not blocked,
@@ -265,6 +294,7 @@ def build_bundle() -> dict[str, Any]:
         "money": money,
         "submission_gate": "HOLD_PUBLIC_SUBMISSION",
         "external_actions_performed": [],
+        "public_links": PUBLIC_LINKS,
         "excluded_by_policy": EXCLUDED_BY_POLICY,
         "missing_or_blocked": blocked,
         "zip_path": f"{bundle_name}.zip",

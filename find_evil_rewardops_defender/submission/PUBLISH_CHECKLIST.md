@@ -1,6 +1,8 @@
 # Publish Checklist
 
-Status: HOLD until explicitly approved.
+Status: public repository and repo-hosted video asset are prepared. HOLD
+external contest submission, external video hosting, account creation, payout,
+tax/KYC, wallet signing, and social activity until explicitly approved.
 
 ## Local Quality Gate
 
@@ -28,10 +30,17 @@ Status: HOLD until explicitly approved.
 Do not proceed without fresh approval for all of these:
 
 - Create or use a Devpost account.
-- Publish this package to a public GitHub repository.
 - Upload a demo video to YouTube, Vimeo, or Youku.
 - Submit to FIND EVIL.
 - Provide payout/tax/KYC/banking details if selected as a winner.
+- Add any wallet, social, identity, or payment action.
+
+Already prepared without those external actions:
+
+- Sanitized public repository: `https://github.com/xordanx/rewardops-guard`
+- GitHub Pages dashboard: `https://xordanx.github.io/rewardops-guard/`
+- Repo-hosted demo video asset: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4`
+- Repo-hosted contact sheet: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png`
 
 ## Non-Negotiable Safety Boundaries
 

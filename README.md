@@ -1,15 +1,22 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T05:44:02+00:00
+Generated: 2026-05-30T07:50:56+00:00
 
 ## Purpose
 
 This bundle contains a sanitized local demo and evidence pack for public
 hackathon review, buyer diligence, or repository publication.
 
+## Public Review Links
+
+- Repository: https://github.com/xordanx/rewardops-guard
+- Dashboard: https://xordanx.github.io/rewardops-guard/
+- FIND EVIL demo video: https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- FIND EVIL contact sheet: https://xordanx.github.io/rewardops-guard/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+
 ## Safety Boundary
 
-- No Devpost/forum/GitHub submission was performed by this bundle.
+- No Devpost/forum/contest submission was performed by this bundle.
 - No account creation, KYC, social posting, wallet signing, or spend action was performed.
 - Raw external task prompts and private credentials are intentionally excluded.
 - Money is counted only when spendable or visibly settled.
@@ -17,62 +24,97 @@ hackathon review, buyer diligence, or repository publication.
 ## Current Money Evidence
 
 - Confirmed revenue: $1.20
-- Pending ClawMoney submissions: $8.00
+- Pending ClawMoney submissions: $9.10
 - Submitted pending verification after failed-audit adjustment: $0.00
+- Inbound market surface: $15755.00
 
 ## Verification
 
 Run from the repository root:
 
 ```bash
-python3 -m unittest rewardops_guard.test_revenue_evidence_pack rewardops_guard.test_hackathon_submission_builder rewardops_guard.test_ops_event_report rewardops_guard.test_policy_agent rewardops_guard.test_find_evil_defender_demo rewardops_guard.test_dfir_agent_demo safety_gate.test_protective_pipeline safety_gate.test_safety_gate
+python3 -m unittest discover -s . -p 'test_*.py' -v
+python3 -m unittest discover -s rewardops_guard -p 'test_*.py' -v
 python3 rewardops_guard/build_dashboard.py
+python3 rewardops_guard/public_submission_bundle.py
 ```
 
 ## Files
 
+- `.nojekyll` sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+- `PUBLIC_SUBMISSION_README.md` sha256=3b45d94169e110ce3b730eea437a32c73878fb44a97de60d03a0ba30084b9d7b
+- `README.md` sha256=d309af39dbfc160ba2af8354f5c9342b9e346f4365b59da0d944cb3505e3eccb
+- `find_evil_rewardops_defender/.gitignore` sha256=1432fdfe6e077980c75c910be191dd950efc3c7415d5b8a8adfdaf656fb37ebc
+- `find_evil_rewardops_defender/LICENSE` sha256=ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9
+- `find_evil_rewardops_defender/README.md` sha256=2c57c55df954b7f15c7485678e3e53b154b5d804ad02a4e8f38322fce2116210
+- `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png` sha256=f93b6cae993e29650d80374ac13245dc2a1329b45f3e0b4b762f8e5de8b276f3
+- `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4` sha256=7c0f1dd0c59e3312864f0e65e4a293d02c10d29c6c14e91a1da11c1e330d8b1c
+- `find_evil_rewardops_defender/dfir_triage_agent/__init__.py` sha256=2975b81e18a7bc356bf089dc33477f438f5811e681061802d7d370ae616d8a92
+- `find_evil_rewardops_defender/dfir_triage_agent/dfir_triage.py` sha256=0901ec62ef3e6e4dc70ac912c3ca7ebe5d149d21f8741001937995b79f594598
+- `find_evil_rewardops_defender/dfir_triage_agent/mcp_server.py` sha256=2067605d825901b5917e7dc6ce3e8e8f9e19850e1631d681bbf3954ee459b3f8
+- `find_evil_rewardops_defender/dfir_triage_agent/rewardops_defender.py` sha256=7d385a28c0dbd680917dc2bb48fb59945a2319ae8bf6653e66cef7888389be4b
+- `find_evil_rewardops_defender/dfir_triage_agent/sample_agent_events.jsonl` sha256=244dab66a187b1ab46d6cc5d53962e4645b939acdd96d44cec8e3ee24006a83a
+- `find_evil_rewardops_defender/dfir_triage_agent/sample_events.jsonl` sha256=e042449b0a525e183636bcdfa2a5f8c954b3d0f4a832ba7d5118d90991c06af3
+- `find_evil_rewardops_defender/dfir_triage_agent/submission_guard.py` sha256=e4863467d041a73a93a6f5dd75c3aaae05ecbb475aab694b46f75a49d92a0b4b
+- `find_evil_rewardops_defender/docs/ACCURACY_REPORT.md` sha256=18e07604a7851d03533a8c129ef80a3fff9b0fadb780eddbf0d870c133ff52c2
+- `find_evil_rewardops_defender/docs/ARCHITECTURE.md` sha256=48aaf355764836ccfd7b28416a3a3dd929b52a0c9cd9698ca0f34d296b0c6338
+- `find_evil_rewardops_defender/docs/EVIDENCE_DATASET.md` sha256=9e5fff06fa4a2a08fdc773703810f398d2a7d6692ac5e382082b5812e580ad52
+- `find_evil_rewardops_defender/docs/architecture.png` sha256=e21917bb987f140191bbe878fb9f9249f4e02cfe9c2e78f77fac3df3ccd5cf52
+- `find_evil_rewardops_defender/docs/architecture.svg` sha256=366b0747dbe2539b7692a2035cc37486f6b9a180e8679ed70cf8e653afa5abbc
+- `find_evil_rewardops_defender/index.html` sha256=417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d
+- `find_evil_rewardops_defender/run_terminal_demo.sh` sha256=822cb0445187054bc455a992bfa62a5b1df4944329b40fe0b64e5ddfca674269
+- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=c071636616547a7b87268ccc0bf782c9450d7f571090745914b67ec5c15fcf7f
+- `find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md` sha256=44678464c81b4a15a4af29446b4e5b7b777b5a4ccf3c5393e82bd952aa5997b4
+- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=65bfaf4a3611b326a13384f2e1c61e3231436de61077f79b5099d4f147fd9cf3
+- `find_evil_rewardops_defender/tests/test_dfir_triage.py` sha256=df609a1d1731501d2638452019394fee539c1768c3bbb15cc413079eb1795875
+- `find_evil_rewardops_defender/tests/test_mcp_server.py` sha256=2708061df4f2c7ef308f98f00cf2a474092a3a686e03cb7ec1656272f9951e9e
+- `find_evil_rewardops_defender/tests/test_rewardops_defender.py` sha256=141e31257edebe6e6bede8dcbe90d30160840a7cf635d698931b1f155585ab85
+- `find_evil_rewardops_defender/tests/test_submission_guard.py` sha256=576167450bcb7c87d0b3294cafbdaa9ff3ca5d46f853d9956fb3fe3a99964009
+- `index.html` sha256=4fd5176e17f98b0fabbd5a80d6d4b36b8367b0b4813c32aee7f89ffe245d71ac
 - `rewardops_guard/README.md` sha256=1dbee345b349b71077eaa3fb81c4cf5c66c0ad5f872357c9e5811bb87235a496
-- `rewardops_guard/index.html` sha256=491cbea4d24666a643110ea57350901c0c17c6e47e41a3759e2574f81c55a7b3
-- `rewardops_guard/data.js` sha256=90012de5de66e9b13920dfe0968fe438916ad417d65ce64015d8b7fbe4137716
-- `rewardops_guard/demo_script.md` sha256=a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf
-- `rewardops_guard/submission_packet.md` sha256=90591f4a9fe62b8a56fcbf73719a5db6d69b918511753f9ea69005b56fad8b88
-- `rewardops_guard/hackathon_submission_pack.md` sha256=edf246d1379e80429dd510da7b8bea68685cf0da16271c08f0e7fc949a5969a1
-- `rewardops_guard/hackathon_submission_pack.json` sha256=8bbb25135e6a265d781136d2085a2c6ecf2f5dba84252f2a6ce0040529db4c68
-- `rewardops_guard/revenue_evidence_pack.md` sha256=ee7538565d8470ce296ce4859830d7dc38ee9759b89bf2d3a2a3fa2d85b22059
-- `rewardops_guard/revenue_evidence_pack.json` sha256=e243fbfd98769cf3ab50fd39d38f0bbda16227a46b74950adf87b4ee4996f916
-- `rewardops_guard/ops_event_report.md` sha256=64bc9726ab6802890a8c7a597442160731556427f40d7070a43157c510b08b7a
-- `rewardops_guard/ops_event_report.json` sha256=060679abc75a546204eeb250b0c37ed023813295681750589fa939d87e410e9e
-- `rewardops_guard/ops_events.jsonl` sha256=2de29fdb68d59739f16b8456e56c16c6d929df8cb5ddfe6fe2041058f61d762a
-- `rewardops_guard/policy_agent_trace.md` sha256=294debfd5e17f963bff00f2d78ae956f6a566a5dacd17b5214d3b8b9fee96bdb
-- `rewardops_guard/policy_agent_trace.json` sha256=c3edfabd44c93550c329f3bb470a5783a7be5116b135e61c0cd93cbd0eb78e96
-- `rewardops_guard/find_evil_defender_report.md` sha256=c2e53d6592865985c9296f676d7536cd2c36d6c670c6bfc10277ca03dd5538c2
-- `rewardops_guard/find_evil_defender_report.json` sha256=7b83b5e8844fbfacb5cfaf2f2583b8fc490c794c8bf8894dbb80e6e79a0b1b4d
-- `rewardops_guard/dfir_agent_report.md` sha256=3c05ebeb1de685578ed335732f8f134e1cd42d3b7a6f3138e8e098e38f0a38d4
-- `rewardops_guard/dfir_agent_report.json` sha256=8a9ee91b2c3bea1aead641a7c29be91d617e6009c9a8ba941c0b80690895b4c5
-- `rewardops_guard/splunk_detection_pack.md` sha256=15a3a97b0dee6dc5f34c847d05e816ac5c45b4bb610e6f5c5c1a7c3531afa6b8
-- `rewardops_guard/service_menu.md` sha256=90e34b4db5984afeded7993265e0fcd0ff438d322e652c93b5a72a1a46b312f5
-- `rewardops_guard/buyer_onepager.md` sha256=20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29
+- `rewardops_guard/build_dashboard.py` sha256=18d8a0d58fef30557a22c67b6931e1c9c6bf5d0be938170e4e1b6b242bdf2f22
 - `rewardops_guard/buyer_intake.md` sha256=ee133394d94603ce6e7011a90f164f87871116f5da1ab36855f18bdf9c08801d
-- `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
-- `rewardops_guard/clawmoney_skill_fulfillment_pack.md` sha256=3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72
+- `rewardops_guard/buyer_onepager.md` sha256=20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29
 - `rewardops_guard/clawmoney_skill_fulfillment_pack.json` sha256=ca33d5ccb6cf6792a1328da4782a98f51a9302091ce88f9db93e9c0ca6c2782c
-- `rewardops_guard/revenue_evidence_pack.py` sha256=26abaa8a26d0c70d008b67148e2ab6c6e9515c332a83763d7e0efca6600bc547
-- `rewardops_guard/hackathon_submission_builder.py` sha256=c7e32db54663258dd2056124b1841a293d38fc77dbfa26d222bd3b14f09c2865
-- `rewardops_guard/build_dashboard.py` sha256=93ae303ba94aa2d0034b2b5fd4c2be7849c10f1cdf9d2283c5aba5cffba5dff0
-- `rewardops_guard/ops_event_report.py` sha256=962a18bdf58219cb248a97e3fe2758021893f23d28cf440f849e2164466528c2
-- `rewardops_guard/policy_agent.py` sha256=0ef986b5f4e9c3a90a79a0f11c8bc1be613f69e61177070dfd995623ce21ff70
-- `rewardops_guard/find_evil_defender_demo.py` sha256=8d8b4dfb44b1c03e69d4efb6ae92dd561237f7dde4dece3fc430c06d3502bc13
+- `rewardops_guard/clawmoney_skill_fulfillment_pack.md` sha256=3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72
+- `rewardops_guard/data.js` sha256=84a7fda2becd9c4367187ace0c46f0ac4977aa6c141b4244bc84923254f5566d
+- `rewardops_guard/demo_script.md` sha256=a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf
 - `rewardops_guard/dfir_agent_demo.py` sha256=6aefc1d8d2d4c409edc321d95c4b9d8e136cc56adc972c19c2be9389f017d705
-- `rewardops_guard/simulate_ops_events.py` sha256=f32a930fe28a4cad27874f769414705e69ff3eef77605fda5733ac1024f2f77e
-- `safety_gate/README.md` sha256=f536f77d455449914b7fa204eac58702c8d52dc7fae6e1b4ec184df107008e93
-- `safety_gate/policy.json` sha256=84f37bed8e0e044f2065d322fb541b0986b76765a247d617cb7fd4e04c31a4b1
-- `safety_gate/protective_pipeline.py` sha256=af978933a6bc834c6462f302ca07f6ad0039a2c8d9f12976eeed60a400ce6ddc
-- `safety_gate/safety_gate.py` sha256=d4d13e68b5af30e023d53be1fa116f725bda2b28558686092df3f0bfd1cc28fc
-- `rewardops_guard/test_revenue_evidence_pack.py` sha256=7498694fb15415197cc41801b7c0100d9b4a36a5ad8ece538edd514733bc181c
+- `rewardops_guard/dfir_agent_report.json` sha256=ef8746bcf736f17c760744a3d4eb1094422bffeeccac94a4c5f6f01ecb2572aa
+- `rewardops_guard/dfir_agent_report.md` sha256=b57e8e9dc3d154bc7cab65da5fdbbfd71cce5a19197038a9d37aad6aea004703
+- `rewardops_guard/find_evil_defender_demo.py` sha256=8d8b4dfb44b1c03e69d4efb6ae92dd561237f7dde4dece3fc430c06d3502bc13
+- `rewardops_guard/find_evil_defender_report.json` sha256=7c7239304b7dff2b2c02edf31776d6483c004dea3a5e89ca6aab7e039b8274b5
+- `rewardops_guard/find_evil_defender_report.md` sha256=5d50249e69f5e619e18d50935418fc80554d607d481cef426103d0614f697892
+- `rewardops_guard/hackathon_submission_builder.py` sha256=c460a1d240a4ad91df57e7d7ab264aa3394b1ef99248aa6b1e600798f2abece0
+- `rewardops_guard/hackathon_submission_pack.json` sha256=7979b72c67828e826a0825830e4bf76908d69e82ab8516b9cefc3c7f0a8067f9
+- `rewardops_guard/hackathon_submission_pack.md` sha256=cfa27c7bd9bfa5f3d4ffc1e61b1097940be88f066561bb81f7265c2d5daca312
+- `rewardops_guard/index.html` sha256=491cbea4d24666a643110ea57350901c0c17c6e47e41a3759e2574f81c55a7b3
+- `rewardops_guard/ops_event_report.json` sha256=47817daea11d692460678f20687226bb96866cddaefb837fce6e2d71060cb0d0
+- `rewardops_guard/ops_event_report.md` sha256=8bb0909ee94f9b8ef3f6fced5162771ca77201ab4247241f0a13983c2b2dae4b
+- `rewardops_guard/ops_event_report.py` sha256=962a18bdf58219cb248a97e3fe2758021893f23d28cf440f849e2164466528c2
+- `rewardops_guard/ops_events.jsonl` sha256=1daf7ca8afe420231350356a05defc2a9ffc7016d48d76f587b68dc4d402f748
+- `rewardops_guard/policy_agent.py` sha256=0ef986b5f4e9c3a90a79a0f11c8bc1be613f69e61177070dfd995623ce21ff70
+- `rewardops_guard/policy_agent_trace.json` sha256=f08cc8d74b97cf10c0cd8fcf86ec90b773da8a6a7ccefeaa6a535d0fc7253b66
+- `rewardops_guard/policy_agent_trace.md` sha256=a1397238ea9793cfc2e59a263887edd122ede4f21fbb95ed95f5b419aecf6ec5
+- `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
+- `rewardops_guard/public_submission_bundle.py` sha256=7eaa20f8f3eb0815e23116148a6e8107212fe9cc6351761ae6940a3ad55ea584
+- `rewardops_guard/revenue_evidence_pack.json` sha256=32561eb8b81495df07b2a037442dccb6263697d1056fb8f977fc8bb05210922d
+- `rewardops_guard/revenue_evidence_pack.md` sha256=0f4081c9bd1a78b27746f3728e427d4a87e7023762d6190e45c97b8d4f17e084
+- `rewardops_guard/revenue_evidence_pack.py` sha256=1225a252a7be169d2c7bec78e1a60cefff374c163987758f4613bf34b9f0a5db
+- `rewardops_guard/service_menu.md` sha256=90e34b4db5984afeded7993265e0fcd0ff438d322e652c93b5a72a1a46b312f5
+- `rewardops_guard/simulate_ops_events.py` sha256=33af12e2d33f457435372bc9bf674922e2c4e00528b61dc4b9fc652a5b120e5d
+- `rewardops_guard/splunk_detection_pack.md` sha256=15a3a97b0dee6dc5f34c847d05e816ac5c45b4bb610e6f5c5c1a7c3531afa6b8
+- `rewardops_guard/submission_packet.md` sha256=90591f4a9fe62b8a56fcbf73719a5db6d69b918511753f9ea69005b56fad8b88
+- `rewardops_guard/test_dfir_agent_demo.py` sha256=34892e4a86c007b56176fa50f9bbb1b3987c43b28243cd3a7aaad58ee1bb53f6
+- `rewardops_guard/test_find_evil_defender_demo.py` sha256=18571abbaf3602a8a089522b6389bb1b6d2148c34f77c5d59312506207eaf50f
 - `rewardops_guard/test_hackathon_submission_builder.py` sha256=5215edf73648522250350b159644cba6c877cee6d63a41dfe669943c7a927d1d
 - `rewardops_guard/test_ops_event_report.py` sha256=0854fa6bee60421a89ace48273b7089c5c6b642b2274b37563d49a3bd444fbbf
 - `rewardops_guard/test_policy_agent.py` sha256=48ed08bb67d811098d899ee878e6fe60ebc3e610be62ee83fa382a4625272e22
-- `rewardops_guard/test_find_evil_defender_demo.py` sha256=18571abbaf3602a8a089522b6389bb1b6d2148c34f77c5d59312506207eaf50f
-- `rewardops_guard/test_dfir_agent_demo.py` sha256=34892e4a86c007b56176fa50f9bbb1b3987c43b28243cd3a7aaad58ee1bb53f6
+- `rewardops_guard/test_revenue_evidence_pack.py` sha256=7498694fb15415197cc41801b7c0100d9b4a36a5ad8ece538edd514733bc181c
+- `safety_gate/README.md` sha256=f536f77d455449914b7fa204eac58702c8d52dc7fae6e1b4ec184df107008e93
+- `safety_gate/__init__.py` sha256=7fb5e1c1761a3d7a059d9f3c48e170a203818e52ede21715f9636f6812d381ed
+- `safety_gate/policy.json` sha256=84f37bed8e0e044f2065d322fb541b0986b76765a247d617cb7fd4e04c31a4b1
+- `safety_gate/protective_pipeline.py` sha256=af978933a6bc834c6462f302ca07f6ad0039a2c8d9f12976eeed60a400ce6ddc
+- `safety_gate/safety_gate.py` sha256=d4d13e68b5af30e023d53be1fa116f725bda2b28558686092df3f0bfd1cc28fc
 - `safety_gate/test_protective_pipeline.py` sha256=c2275dcffedd1fa0672a62f04338727a843661bc62d65d74ca8bcc4b027f60d2
 - `safety_gate/test_safety_gate.py` sha256=62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db
