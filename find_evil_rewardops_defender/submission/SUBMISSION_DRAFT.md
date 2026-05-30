@@ -37,7 +37,9 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 - Repository: https://github.com/xordanx/rewardops-guard
 - Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
 - Repo-hosted demo video asset: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
-- Devpost-required video URL: TODO - upload to YouTube, Vimeo, or Youku.
+- Public MP4 mirror: https://tmpfiles.org/dl/wrwmfuLAMGyk/rewardops-find-evil-guard-20260530.mp4
+- Public ZIP mirror: https://tmpfiles.org/dl/wIw3frL3Ml7P/find-evil-rewardops-defender-submission-20260530.zip
+- Devpost-required video URL: TODO - upload to YouTube, Vimeo, or Youku if Devpost rejects the public MP4 mirror.
 - Contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
 - Video upload metadata: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
 - Captions: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
@@ -54,7 +56,7 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 - Submission guard: a local release manifest detects secrets before publication and records prompt-injection fixtures without obeying them.
 - Terminal reproducibility: the full demo runs with Python standard library commands.
 - Public package: a sanitized GitHub repository, dashboard, repo-hosted demo video asset, and contact sheet are ready for review.
-- Video package: duration, audio, upload description, captions, and transcript are locally prepared for the required public video host.
+- Video package: duration, audio, upload description, captions, transcript, and a public MP4 mirror are prepared.
 - Revenue boundary: confirmed revenue is separated from pending submissions and inbound market surface; no failed BountyBook amount is counted as earned.
 
 ## How It Maps To FIND EVIL

@@ -1,7 +1,8 @@
 # Publish Checklist
 
-Status: public repository and repo-hosted video asset are prepared. The FIND
-EVIL form still needs a YouTube, Vimeo, or Youku video URL. HOLD external
+Status: public repository, repo-hosted video asset, and public tmpfiles mirrors
+are prepared. The FIND EVIL form may still require YouTube, Vimeo, or Youku if
+it rejects direct MP4 links. HOLD external
 contest submission, external video hosting, account creation, payout, tax/KYC,
 wallet signing, and social activity until explicitly approved.
 
@@ -51,6 +52,8 @@ Already prepared without those external actions:
 - Sanitized public repository: `https://github.com/xordanx/rewardops-guard`
 - Dashboard source: `https://github.com/xordanx/rewardops-guard/blob/main/index.html`
 - Repo-hosted demo video asset: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4`
+- Public MP4 mirror: `https://tmpfiles.org/dl/wrwmfuLAMGyk/rewardops-find-evil-guard-20260530.mp4`
+- Public ZIP mirror: `https://tmpfiles.org/dl/wIw3frL3Ml7P/find-evil-rewardops-defender-submission-20260530.zip`
 - Video upload metadata: `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md`
 - Captions/transcript: `find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt` and `find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md`
 - Devpost-required YouTube/Vimeo/Youku URL: not prepared yet.

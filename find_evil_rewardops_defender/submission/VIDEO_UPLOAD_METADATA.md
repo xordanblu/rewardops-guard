@@ -2,8 +2,12 @@
 
 Source asset: `assets/rewardops-find-evil-guard-20260530.mp4`
 
+Public MP4 mirror: `https://tmpfiles.org/dl/wrwmfuLAMGyk/rewardops-find-evil-guard-20260530.mp4`
+
+Public ZIP mirror: `https://tmpfiles.org/dl/wIw3frL3Ml7P/find-evil-rewardops-defender-submission-20260530.zip`
+
 External host requirement: upload publicly to YouTube, Vimeo, or Youku before
-submitting the Devpost form.
+submitting the Devpost form if Devpost rejects a direct public MP4 URL.
 
 ## Technical Verification
 
