@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "bundle_20260530T204950861827Z",
+  "bundle_dir": "bundle_20260530T205135789502Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -16,16 +16,16 @@
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
-      "bytes": 24153,
+      "bytes": 24181,
       "ok": true,
       "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "435858b2d72322e42a7958623a99019274ed944eb415a3874adf7fd2f56412d2"
+      "sha256": "5c5b0c518b6f21ef87559f64aaf5a994ba625b5a9c75e236e3f539ddf549813d"
     },
     {
-      "bytes": 24153,
+      "bytes": 24181,
       "ok": true,
       "path": "README.md",
-      "sha256": "435858b2d72322e42a7958623a99019274ed944eb415a3874adf7fd2f56412d2"
+      "sha256": "5c5b0c518b6f21ef87559f64aaf5a994ba625b5a9c75e236e3f539ddf549813d"
     },
     {
       "bytes": 29,
@@ -148,10 +148,10 @@
       "sha256": "417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d"
     },
     {
-      "bytes": 5377,
+      "bytes": 5379,
       "ok": true,
       "path": "find_evil_rewardops_defender/out/devpost_preflight.json",
-      "sha256": "2812fec19216af077c6ce7738f2a35bf5990150aeb8623534d1110c591b077fd"
+      "sha256": "0220c2a74bde11ad14f64e7dfac5f3432363752f509bd3d73360c66df8027cdc"
     },
     {
       "bytes": 8172,
@@ -202,10 +202,10 @@
       "sha256": "6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be"
     },
     {
-      "bytes": 3464,
+      "bytes": 3468,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md",
-      "sha256": "c5441a03d97fd98be45224d00780fd8fb2c42870a49949f62c6bba5d08538a37"
+      "sha256": "4ab621fcca8a61af53d0561fcbba77873f9da88c95b1aca74d2b840389a6d519"
     },
     {
       "bytes": 1892,
@@ -214,10 +214,10 @@
       "sha256": "3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c"
     },
     {
-      "bytes": 6267,
+      "bytes": 6281,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md",
-      "sha256": "e123d3d3b5c7f328da68dc079c3deaf203cb2cc916b5e98d6a6207d1e19e9173"
+      "sha256": "0d0cbc718670187c8547b7a7117f9f6c1f0d89a9b94083cb5aa8b113e397e537"
     },
     {
       "bytes": 1255,
@@ -232,10 +232,10 @@
       "sha256": "50d5fbe7d1bb3f639be447c807752034e9401e8eda9bc0bde32cb6152f249aed"
     },
     {
-      "bytes": 1744,
+      "bytes": 1746,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md",
-      "sha256": "ea554aa9341b0ab9c2df8222235ac29683e7b9823254873b2a36bd639878735b"
+      "sha256": "26cff1297f652085b339bebe3538d45e7e5ccd22d773ccbd93590f9c8f0b306b"
     },
     {
       "bytes": 0,
@@ -244,10 +244,10 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "bytes": 8277,
+      "bytes": 8279,
       "ok": true,
       "path": "find_evil_rewardops_defender/submission/devpost_preflight.py",
-      "sha256": "ad09be80bbacf27eb926d2f2564d96d3f754576e79b945c762a70d66047bdb49"
+      "sha256": "b0662f5021d363f57f0d0ce684ea4b7a2ab42e94e11b55b2637409b55a31eb9f"
     },
     {
       "bytes": 1095,
@@ -442,10 +442,10 @@
       "sha256": "dd2a4a0ad6513682a6af6032795939a4b1a7a3cf3fbd1e9f6f82e37e93604b90"
     },
     {
-      "bytes": 545,
+      "bytes": 547,
       "ok": true,
       "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml",
-      "sha256": "4912847edc24195ebfad1b0154a54aeeb5f0fd13b1c45b6bad25bade3c0c1e9a"
+      "sha256": "76e38a7604a1476559dc105aa6d3fe61481a26c1af3ebd2c299d77368c308e8f"
     },
     {
       "bytes": 16785,
@@ -520,10 +520,10 @@
       "sha256": "b2ab7d978e58e600b2e44dce52ae913e2a7edf90fe7bbcd9603bfc7e019268b4"
     },
     {
-      "bytes": 2297,
+      "bytes": 2299,
       "ok": true,
       "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/SUBMISSION_DRAFT.md",
-      "sha256": "df0dfa965ef28a0f859f1854e74bda49072dfc11dca31c17fd08627174a15d1c"
+      "sha256": "f3ce1a42dd29878f7f4769cf3f3bac9aa4d59a09de84142e1bd5ecc26fe4d0b5"
     },
     {
       "bytes": 1495,
@@ -766,10 +766,10 @@
       "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
     },
     {
-      "bytes": 18878,
+      "bytes": 18906,
       "ok": true,
       "path": "rewardops_guard/public_submission_bundle.py",
-      "sha256": "ee3bc4962fb31200d43d0031f4fb4e0c5caf5c827028743d9b38e0034eca4d26"
+      "sha256": "e4e43a9754ad93bebb2ec3bc810f72eedebb93c26d2e4039e47bde20ec1f7cce"
     },
     {
       "bytes": 5347,
@@ -892,8 +892,8 @@
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
     }
   ],
-  "generated_at": "2026-05-30T20:49:50+00:00",
-  "manifest_sha256": "2766136a8dd477929a216f130fb446ee1fa9ea5e9c1e88c5b75d42fcc6633676",
+  "generated_at": "2026-05-30T20:51:35+00:00",
+  "manifest_sha256": "c9fd45aadd2f67fac5890d75d00a19823c89d8ba72a919460b2653068387a025",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
@@ -903,23 +903,23 @@
   },
   "ok": true,
   "public_links": {
-    "dashboard_source": "https://github.com/xordanx/rewardops-guard/blob/main/index.html",
-    "fhir_agent_pack": "https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack",
-    "fhir_preflight": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md",
-    "find_evil_contact_sheet": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
-    "find_evil_demo_video": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
-    "find_evil_video_captions": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt",
-    "find_evil_video_metadata": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md",
-    "find_evil_video_transcript": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md",
-    "qdrant_contact_sheet": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_contact_sheet.png",
-    "qdrant_demo_video": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_demo.mp4",
-    "qdrant_preflight": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md",
-    "qdrant_reward_radar": "https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/qdrant_reward_radar",
-    "qdrant_video_manifest": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md",
-    "repository": "https://github.com/xordanx/rewardops-guard"
+    "dashboard_source": "https://github.com/xordanblu/rewardops-guard/blob/main/index.html",
+    "fhir_agent_pack": "https://github.com/xordanblu/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack",
+    "fhir_preflight": "https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md",
+    "find_evil_contact_sheet": "https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+    "find_evil_demo_video": "https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
+    "find_evil_video_captions": "https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt",
+    "find_evil_video_metadata": "https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md",
+    "find_evil_video_transcript": "https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md",
+    "qdrant_contact_sheet": "https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_contact_sheet.png",
+    "qdrant_demo_video": "https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_demo.mp4",
+    "qdrant_preflight": "https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md",
+    "qdrant_reward_radar": "https://github.com/xordanblu/rewardops-guard/tree/main/rewardops_guard/delivery_kits/qdrant_reward_radar",
+    "qdrant_video_manifest": "https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md",
+    "repository": "https://github.com/xordanblu/rewardops-guard"
   },
-  "single_html_path": "bundle_20260530T204950861827Z.html",
+  "single_html_path": "bundle_20260530T205135789502Z.html",
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "bundle_20260530T204950861827Z.zip",
-  "zip_sha256": "211350de7f6990db01a7e7ce69065c6f5998ba0a8976ae7d3274a41d0a834ec5"
+  "zip_path": "bundle_20260530T205135789502Z.zip",
+  "zip_sha256": "2412a1c9fd5aaca7847c3e8dfe10ec1b2021e12062004e45d591338b2aa93cc4"
 }

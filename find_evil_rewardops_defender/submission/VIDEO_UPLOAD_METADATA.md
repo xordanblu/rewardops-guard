@@ -36,7 +36,7 @@ correlation, approval-gated response planning, and current money-state
 accounting.
 
 Repository:
-https://github.com/xordanx/rewardops-guard
+https://github.com/xordanblu/rewardops-guard
 
 Submission notes:
 

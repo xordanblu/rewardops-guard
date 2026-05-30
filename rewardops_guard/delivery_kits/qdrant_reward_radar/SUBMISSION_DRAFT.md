@@ -27,7 +27,7 @@ Qdrant is used as the vector index and payload filter engine. The demo combines 
 
 ## Links To Prepare
 
-- GitHub repo: `https://github.com/xordanx/rewardops-guard`
+- GitHub repo: `https://github.com/xordanblu/rewardops-guard`
 - Package path: `rewardops_guard/delivery_kits/qdrant_reward_radar`
 - Local web demo command: `/tmp/qdrant-radar-venv/bin/python -m rewardops_guard.delivery_kits.qdrant_reward_radar.web_demo --host 127.0.0.1 --port 8787`
 - Video script: `rewardops_guard/delivery_kits/qdrant_reward_radar/VIDEO_SCRIPT.md`

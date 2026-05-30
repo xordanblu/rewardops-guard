@@ -130,7 +130,7 @@ def build_preflight(root: Path, video_url: str | None = None) -> dict[str, Any]:
         {
             "requirement": "public_repo_url",
             "ok": True,
-            "evidence": "https://github.com/xordanx/rewardops-guard",
+            "evidence": "https://github.com/xordanblu/rewardops-guard",
         },
         {
             "requirement": "mit_license",

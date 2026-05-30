@@ -126,7 +126,7 @@
       "requirement": "local_demo_video_transcript_ready"
     },
     {
-      "evidence": "https://github.com/xordanx/rewardops-guard",
+      "evidence": "https://github.com/xordanblu/rewardops-guard",
       "ok": true,
       "requirement": "public_repo_url"
     },

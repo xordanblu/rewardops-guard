@@ -1,6 +1,6 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T20:49:50+00:00
+Generated: 2026-05-30T20:51:35+00:00
 
 ## Purpose
 
@@ -9,20 +9,20 @@ hackathon review, buyer diligence, or repository publication.
 
 ## Public Review Links
 
-- Repository: https://github.com/xordanx/rewardops-guard
-- Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
-- FIND EVIL demo video: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
-- FIND EVIL contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
-- FIND EVIL video upload metadata: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
-- FIND EVIL captions: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
-- FIND EVIL transcript: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
-- InterSystems FHIR Agent Pack: https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack
-- InterSystems FHIR preflight: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md
-- Qdrant Reward Route Radar: https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/qdrant_reward_radar
-- Qdrant preflight: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md
-- Qdrant demo video: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_demo.mp4
-- Qdrant contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_contact_sheet.png
-- Qdrant video manifest: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md
+- Repository: https://github.com/xordanblu/rewardops-guard
+- Dashboard source: https://github.com/xordanblu/rewardops-guard/blob/main/index.html
+- FIND EVIL demo video: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- FIND EVIL contact sheet: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- FIND EVIL video upload metadata: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
+- FIND EVIL captions: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
+- FIND EVIL transcript: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
+- InterSystems FHIR Agent Pack: https://github.com/xordanblu/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack
+- InterSystems FHIR preflight: https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md
+- Qdrant Reward Route Radar: https://github.com/xordanblu/rewardops-guard/tree/main/rewardops_guard/delivery_kits/qdrant_reward_radar
+- Qdrant preflight: https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md
+- Qdrant demo video: https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_demo.mp4
+- Qdrant contact sheet: https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_contact_sheet.png
+- Qdrant video manifest: https://github.com/xordanblu/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## Safety Boundary
@@ -74,8 +74,8 @@ tasks.
 ## Files
 
 - `.nojekyll` sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-- `PUBLIC_SUBMISSION_README.md` sha256=038b037e05fef29fb1e9283e629f68b1d33e3c0895a15f6def3d91d27947991f
-- `README.md` sha256=038b037e05fef29fb1e9283e629f68b1d33e3c0895a15f6def3d91d27947991f
+- `PUBLIC_SUBMISSION_README.md` sha256=06decd5c33746db0874346f2a6ee5ce035fe0b73c0b972e1c43cfe448683ab8f
+- `README.md` sha256=06decd5c33746db0874346f2a6ee5ce035fe0b73c0b972e1c43cfe448683ab8f
 - `find_evil_rewardops_defender/.gitignore` sha256=60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672
 - `find_evil_rewardops_defender/LICENSE` sha256=ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9
 - `find_evil_rewardops_defender/README.md` sha256=508612140173b2256989a7442d592409fe3b6383ef43e331577462da84d50b68
@@ -96,7 +96,7 @@ tasks.
 - `find_evil_rewardops_defender/docs/architecture.png` sha256=e21917bb987f140191bbe878fb9f9249f4e02cfe9c2e78f77fac3df3ccd5cf52
 - `find_evil_rewardops_defender/docs/architecture.svg` sha256=366b0747dbe2539b7692a2035cc37486f6b9a180e8679ed70cf8e653afa5abbc
 - `find_evil_rewardops_defender/index.html` sha256=417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d
-- `find_evil_rewardops_defender/out/devpost_preflight.json` sha256=2812fec19216af077c6ce7738f2a35bf5990150aeb8623534d1110c591b077fd
+- `find_evil_rewardops_defender/out/devpost_preflight.json` sha256=0220c2a74bde11ad14f64e7dfac5f3432363752f509bd3d73360c66df8027cdc
 - `find_evil_rewardops_defender/out/dfir_triage_report.json` sha256=eeb69f59fa30efc36f314c1e9041f464ea395c4990f125edc6f440cfac6580ff
 - `find_evil_rewardops_defender/out/dfir_triage_report.md` sha256=cb24542cda178e93ea17b5e7b2cfe68c9b6b7e07a3f2067224682b4d9d4357a0
 - `find_evil_rewardops_defender/out/find_evil_case_report.json` sha256=9b0c1e0976dc5e02a744ac3af028d879ff96d17252e0dda95a5a79bec6a94727
@@ -105,14 +105,14 @@ tasks.
 - `find_evil_rewardops_defender/out/rewardops_defender_report.md` sha256=922acc87a55e2fefb9c9d8477ff901c63547069e01abc076a353e6d01af408e6
 - `find_evil_rewardops_defender/out/submission_guard_manifest.json` sha256=1c262c8d8aefd1843842d3a6cbb9d7111e0f7f3fb96415b6f3f5a4184ce4a2da
 - `find_evil_rewardops_defender/run_terminal_demo.sh` sha256=6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be
-- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=c5441a03d97fd98be45224d00780fd8fb2c42870a49949f62c6bba5d08538a37
+- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=4ab621fcca8a61af53d0561fcbba77873f9da88c95b1aca74d2b840389a6d519
 - `find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md` sha256=3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c
-- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=e123d3d3b5c7f328da68dc079c3deaf203cb2cc916b5e98d6a6207d1e19e9173
+- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=0d0cbc718670187c8547b7a7117f9f6c1f0d89a9b94083cb5aa8b113e397e537
 - `find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt` sha256=0fcedb0e675695636ff7b52b6305ca745e88d79813543b010d6dae050950026f
 - `find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md` sha256=50d5fbe7d1bb3f639be447c807752034e9401e8eda9bc0bde32cb6152f249aed
-- `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md` sha256=ea554aa9341b0ab9c2df8222235ac29683e7b9823254873b2a36bd639878735b
+- `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md` sha256=26cff1297f652085b339bebe3538d45e7e5ccd22d773ccbd93590f9c8f0b306b
 - `find_evil_rewardops_defender/submission/__init__.py` sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-- `find_evil_rewardops_defender/submission/devpost_preflight.py` sha256=ad09be80bbacf27eb926d2f2564d96d3f754576e79b945c762a70d66047bdb49
+- `find_evil_rewardops_defender/submission/devpost_preflight.py` sha256=b0662f5021d363f57f0d0ce684ea4b7a2ab42e94e11b55b2637409b55a31eb9f
 - `find_evil_rewardops_defender/submission/video_upload_metadata.json` sha256=23f67efd1f494d731270f72a7ff11c14413e587f1dce57644b808640839fadca
 - `find_evil_rewardops_defender/tests/__init__.py` sha256=98d7b18e4354029c958891950d8f3c67d02080e0e253ef5eaea3aa8b450f1fc8
 - `find_evil_rewardops_defender/tests/test_case_runner.py` sha256=84a76a44fc7be2dd8b6e0a958b9b3b1733211ae0fa05cd228b732e6156a5c1ad
@@ -145,7 +145,7 @@ tasks.
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_desktop.png` sha256=7b18296d025d1e7f4b2d061400911cc10f71e1ccdf6af07ab4244fb97ac6fbdf
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_mobile.png` sha256=50566ab707aca7254d1fce23b40164661231ec77838f2306f0ef64a2b3339200
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py` sha256=dd2a4a0ad6513682a6af6032795939a4b1a7a3cf3fbd1e9f6f82e37e93604b90
-- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml` sha256=4912847edc24195ebfad1b0154a54aeeb5f0fd13b1c45b6bad25bade3c0c1e9a
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml` sha256=76e38a7604a1476559dc105aa6d3fe61481a26c1af3ebd2c299d77368c308e8f
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py` sha256=2e361e2f040ee996fedbd1d75e85fb4acea710d5825efdbf91ff9140ac1b0b4d
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml` sha256=c00c88267a2834f61c12889d1236843d7d17071339b8056ccd1370cd699600f9
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_patient_bundle.json` sha256=64c85bd1ea06b8fb655390b5fe885d6991ff968c09d3beebd362bac089fd107d
@@ -158,7 +158,7 @@ tasks.
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/submission_bundle_manifest.md` sha256=c083126fb46262f8326f9f3bd232ca11e65180a86dfa56e6d30d0e3590aa63b2
 - `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py` sha256=aa62d7bf680dc1249166cbef7e6260e62041d61c776288214bbe85fa69c2573a
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/README.md` sha256=b2ab7d978e58e600b2e44dce52ae913e2a7edf90fe7bbcd9603bfc7e019268b4
-- `rewardops_guard/delivery_kits/qdrant_reward_radar/SUBMISSION_DRAFT.md` sha256=df0dfa965ef28a0f859f1854e74bda49072dfc11dca31c17fd08627174a15d1c
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/SUBMISSION_DRAFT.md` sha256=f3ce1a42dd29878f7f4769cf3f3bac9aa4d59a09de84142e1bd5ecc26fe4d0b5
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/VIDEO_SCRIPT.md` sha256=c9c1fa9fcad36426aa16f3beb113923b5fe8550d5eb7586384d4e8099e702c3b
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/__init__.py` sha256=d66eaf0995a7392e8a1aeedeec288f9f0b2482ed54d4ab49aba957ec3c07099b
 - `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.json` sha256=73e3bef32653797c56c590d55f4174be63857153f1d62aa05fb55ad5eb9965bd
@@ -199,7 +199,7 @@ tasks.
 - `rewardops_guard/policy_agent_trace.json` sha256=f08cc8d74b97cf10c0cd8fcf86ec90b773da8a6a7ccefeaa6a535d0fc7253b66
 - `rewardops_guard/policy_agent_trace.md` sha256=a1397238ea9793cfc2e59a263887edd122ede4f21fbb95ed95f5b419aecf6ec5
 - `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
-- `rewardops_guard/public_submission_bundle.py` sha256=ee3bc4962fb31200d43d0031f4fb4e0c5caf5c827028743d9b38e0034eca4d26
+- `rewardops_guard/public_submission_bundle.py` sha256=e4e43a9754ad93bebb2ec3bc810f72eedebb93c26d2e4039e47bde20ec1f7cce
 - `rewardops_guard/revenue_evidence_pack.json` sha256=32561eb8b81495df07b2a037442dccb6263697d1056fb8f977fc8bb05210922d
 - `rewardops_guard/revenue_evidence_pack.md` sha256=0f4081c9bd1a78b27746f3728e427d4a87e7023762d6190e45c97b8d4f17e084
 - `rewardops_guard/revenue_evidence_pack.py` sha256=1225a252a7be169d2c7bec78e1a60cefff374c163987758f4613bf34b9f0a5db

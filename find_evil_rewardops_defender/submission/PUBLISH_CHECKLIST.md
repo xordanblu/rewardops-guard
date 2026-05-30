@@ -49,8 +49,8 @@ Do not proceed without fresh approval for all of these:
 
 Already prepared without those external actions:
 
-- Sanitized public repository: `https://github.com/xordanx/rewardops-guard`
-- Dashboard source: `https://github.com/xordanx/rewardops-guard/blob/main/index.html`
+- Sanitized public repository: `https://github.com/xordanblu/rewardops-guard`
+- Dashboard source: `https://github.com/xordanblu/rewardops-guard/blob/main/index.html`
 - Repo-hosted demo video asset: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4`
 - Public MP4 mirror: `https://tmpfiles.org/dl/wrwmfuLAMGyk/rewardops-find-evil-guard-20260530.mp4`
 - Public ZIP mirror: `https://tmpfiles.org/dl/wIw3frL3Ml7P/find-evil-rewardops-defender-submission-20260530.zip`

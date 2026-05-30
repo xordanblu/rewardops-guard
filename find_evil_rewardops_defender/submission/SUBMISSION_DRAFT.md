@@ -34,16 +34,16 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 
 ## Public Review Links
 
-- Repository: https://github.com/xordanx/rewardops-guard
-- Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
-- Repo-hosted demo video asset: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
+- Repository: https://github.com/xordanblu/rewardops-guard
+- Dashboard source: https://github.com/xordanblu/rewardops-guard/blob/main/index.html
+- Repo-hosted demo video asset: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
 - Public MP4 mirror: https://tmpfiles.org/dl/wrwmfuLAMGyk/rewardops-find-evil-guard-20260530.mp4
 - Public ZIP mirror: https://tmpfiles.org/dl/wIw3frL3Ml7P/find-evil-rewardops-defender-submission-20260530.zip
 - Devpost-required video URL: TODO - upload to YouTube, Vimeo, or Youku if Devpost rejects the public MP4 mirror.
-- Contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
-- Video upload metadata: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
-- Captions: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
-- Clean transcript: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
+- Contact sheet: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- Video upload metadata: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
+- Captions: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
+- Clean transcript: https://github.com/xordanblu/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## What It Demonstrates

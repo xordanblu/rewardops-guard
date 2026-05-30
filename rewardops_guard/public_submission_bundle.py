@@ -44,57 +44,57 @@ EXCLUDED_BY_POLICY = [
     "social/KYC/payment setup artifacts",
 ]
 PUBLIC_LINKS = {
-    "repository": "https://github.com/xordanx/rewardops-guard",
-    "dashboard_source": "https://github.com/xordanx/rewardops-guard/blob/main/index.html",
+    "repository": "https://github.com/xordanblu/rewardops-guard",
+    "dashboard_source": "https://github.com/xordanblu/rewardops-guard/blob/main/index.html",
     "find_evil_demo_video": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4"
     ),
     "find_evil_contact_sheet": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/assets/"
         "rewardops-find-evil-guard-20260530-contact-sheet.png"
     ),
     "find_evil_video_metadata": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md"
     ),
     "find_evil_video_captions": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt"
     ),
     "find_evil_video_transcript": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md"
     ),
     "fhir_agent_pack": (
-        "https://github.com/xordanx/rewardops-guard/tree/main/"
+        "https://github.com/xordanblu/rewardops-guard/tree/main/"
         "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack"
     ),
     "fhir_preflight": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md"
     ),
     "qdrant_reward_radar": (
-        "https://github.com/xordanx/rewardops-guard/tree/main/"
+        "https://github.com/xordanblu/rewardops-guard/tree/main/"
         "rewardops_guard/delivery_kits/qdrant_reward_radar"
     ),
     "qdrant_preflight": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md"
     ),
     "qdrant_demo_video": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/"
         "qdrant_reward_route_radar_demo.mp4"
     ),
     "qdrant_contact_sheet": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/"
         "qdrant_reward_route_radar_contact_sheet.png"
     ),
     "qdrant_video_manifest": (
-        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "https://github.com/xordanblu/rewardops-guard/blob/main/"
         "rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md"
     ),
 }
