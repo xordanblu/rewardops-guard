@@ -1,0 +1,204 @@
+{
+  "event_count": 6,
+  "find_evil_fit": [
+    "sequence-aware analyst loop",
+    "agent prompt-injection and wallet-trap detection",
+    "false-positive correction for benign training/documentation context",
+    "approval-gated containment for irreversible actions"
+  ],
+  "generated_at": "2026-05-30T00:41:55+00:00",
+  "high_event_count": 4,
+  "hypotheses": [
+    {
+      "confidence": "high",
+      "id": "agent_tool_abuse",
+      "next_probe": "inspect tool-call intent, source trust, and approval scope before any side effect",
+      "why": "external content attempted to control the agent or trigger payment-capable approval"
+    },
+    {
+      "confidence": "high",
+      "id": "credential_theft_with_exfiltration",
+      "next_probe": "scope affected hosts, preserve evidence, and validate egress destination reputation",
+      "why": "credential material access and outbound transfer appeared in the same host timeline"
+    },
+    {
+      "confidence": "medium",
+      "id": "scripted_execution_chain",
+      "next_probe": "decode only in an isolated analysis context and compare parent process lineage",
+      "why": "encoded shell activity preceded higher-risk endpoint or network signals"
+    }
+  ],
+  "raw_text_policy": "raw event details are hashed and not stored",
+  "response_plan": [
+    {
+      "action": "rank events by sequence, source, score, and whether a tool side effect was requested",
+      "approval_required": false,
+      "phase": "triage"
+    },
+    {
+      "action": "scope affected hosts: agent-runner, workstation-17",
+      "approval_required": false,
+      "phase": "scope"
+    },
+    {
+      "action": "block prompt-exfiltration and wallet-signing lures before shell, browser, git, or wallet tools run",
+      "approval_required": false,
+      "phase": "agent_control"
+    },
+    {
+      "action": "pause unsafe agent tools and isolate affected endpoint hosts after operator approval",
+      "approval_required": true,
+      "phase": "contain"
+    },
+    {
+      "action": "remove malicious persistence and rotate credentials after evidence preservation",
+      "approval_required": true,
+      "phase": "eradicate"
+    },
+    {
+      "action": "restore normal tool access only after policy hooks block replayed prompt, wallet, and exfiltration probes",
+      "approval_required": false,
+      "phase": "recover"
+    }
+  ],
+  "self_corrections": [
+    {
+      "event_id": "2e54ddcca0690ebf",
+      "from": "high-risk keyword match",
+      "reason": "source is training or documentation context and no tool side effect occurred",
+      "to": "low-risk contextual reference"
+    },
+    {
+      "event_id": "analysis_loop",
+      "from": "keyword-only alerting",
+      "reason": "the agent keeps benign references out of the incident path while preserving real tool and endpoint attacks",
+      "to": "sequence-aware investigation"
+    }
+  ],
+  "signal_counts": {
+    "agent_prompt_injection": 2,
+    "credential_access": 2,
+    "encoded_execution": 1,
+    "exfiltration": 1,
+    "wallet_trap": 1
+  },
+  "timeline": [
+    {
+      "actor": "browser",
+      "benign_context_adjustment": true,
+      "detail_sha256": "d3d68733cb53d638d715c96a9b86c3eaab911623c72a8e05d9ca2c0bfb3bddc5",
+      "event_id": "2e54ddcca0690ebf",
+      "event_type": "web_content",
+      "explanations": [
+        "hostile instruction aimed at agent control or prompt disclosure"
+      ],
+      "host": "agent-runner",
+      "initial_score": 5,
+      "score": 1,
+      "severity": "low",
+      "signals": [
+        "agent_prompt_injection"
+      ],
+      "source": "training_doc",
+      "ts": "2026-05-29T18:00:02Z"
+    },
+    {
+      "actor": "assistant",
+      "benign_context_adjustment": false,
+      "detail_sha256": "f307bb8a43f51fa852e4c5f927d05a35ce5fff2e4aa6de66e7fe6ef94e65bce7",
+      "event_id": "f4302cf216575282",
+      "event_type": "tool_request",
+      "explanations": [
+        "hostile instruction aimed at agent control or prompt disclosure"
+      ],
+      "host": "agent-runner",
+      "initial_score": 5,
+      "score": 5,
+      "severity": "high",
+      "signals": [
+        "agent_prompt_injection"
+      ],
+      "source": "mcp",
+      "ts": "2026-05-29T18:01:14Z"
+    },
+    {
+      "actor": "marketplace",
+      "benign_context_adjustment": false,
+      "detail_sha256": "7724244aa293d12024d3b69e792f160e64bafa307cdd1cb833d0bf4e1e14143c",
+      "event_id": "5729b4524bd6d842",
+      "event_type": "approval_request",
+      "explanations": [
+        "payment-capable approval request"
+      ],
+      "host": "agent-runner",
+      "initial_score": 5,
+      "score": 5,
+      "severity": "high",
+      "signals": [
+        "wallet_trap"
+      ],
+      "source": "wallet",
+      "ts": "2026-05-29T18:01:45Z"
+    },
+    {
+      "actor": "powershell",
+      "benign_context_adjustment": false,
+      "detail_sha256": "883e2f0476b20a53520aed5b1719a345d323015cc521d26d867bf2e0735052c7",
+      "event_id": "1373b22965cff910",
+      "event_type": "process",
+      "explanations": [
+        "encoded or script execution"
+      ],
+      "host": "workstation-17",
+      "initial_score": 3,
+      "score": 3,
+      "severity": "medium",
+      "signals": [
+        "encoded_execution"
+      ],
+      "source": "endpoint",
+      "ts": "2026-05-29T18:02:20Z"
+    },
+    {
+      "actor": "powershell",
+      "benign_context_adjustment": false,
+      "detail_sha256": "e0bac49639d796e3f3c9a375a813f5d2114058eba5000a5fdb8e81cf13f91abc",
+      "event_id": "37acc545fc7a4d75",
+      "event_type": "credential_access",
+      "explanations": [
+        "credential material access pattern"
+      ],
+      "host": "workstation-17",
+      "initial_score": 5,
+      "score": 5,
+      "severity": "high",
+      "signals": [
+        "credential_access"
+      ],
+      "source": "endpoint",
+      "ts": "2026-05-29T18:02:51Z"
+    },
+    {
+      "actor": "powershell",
+      "benign_context_adjustment": false,
+      "detail_sha256": "ef0faca8b96988f54282831896b98805079a9ad6433cce73ab9ac2bd6a4cc368",
+      "event_id": "0f6cee70741600b8",
+      "event_type": "egress",
+      "explanations": [
+        "credential material access pattern",
+        "outbound transfer or upload pattern"
+      ],
+      "host": "workstation-17",
+      "initial_score": 10,
+      "score": 10,
+      "severity": "critical",
+      "signals": [
+        "credential_access",
+        "exfiltration"
+      ],
+      "source": "network",
+      "ts": "2026-05-29T18:03:04Z"
+    }
+  ],
+  "verdict": "agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain"
+}

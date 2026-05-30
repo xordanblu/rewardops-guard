@@ -1,0 +1,112 @@
+{
+  "affected_hosts": [
+    "agent-runner",
+    "workstation-17"
+  ],
+  "event_count": 5,
+  "generated_at": "2026-05-29T18:17:19+00:00",
+  "high_event_count": 2,
+  "raw_text_policy": "raw event details are hashed and not stored",
+  "recommended_actions": [
+    "Isolate affected hosts: agent-runner, workstation-17.",
+    "Rotate credentials only after preserving evidence and confirming scope.",
+    "Preserve source artifacts and collect hashes before enrichment.",
+    "Keep all irreversible containment actions behind human approval.",
+    "Do not expose credentials, prompts, or raw logs in the report.",
+    "Disable unsafe tool surface and require policy review before more tool calls."
+  ],
+  "signal_counts": {
+    "credential_access": 2,
+    "encoded_execution": 1,
+    "exfiltration": 2,
+    "unsafe_tool_request": 1
+  },
+  "timeline": [
+    {
+      "actor": "user",
+      "detail_sha256": "12fa2b9ac44455a85feb83f7a932e573813d65a20f7bbee8d1ffcf22bfc46d1a",
+      "event_id": "0c528fb2bf4c407c",
+      "event_type": "process",
+      "explanations": [
+        "encoded or script-based execution"
+      ],
+      "host": "workstation-17",
+      "score": 3,
+      "severity": "medium",
+      "signals": [
+        "encoded_execution"
+      ],
+      "source": "endpoint",
+      "ts": "2026-05-28T20:00:02Z"
+    },
+    {
+      "actor": "user",
+      "detail_sha256": "e0bac49639d796e3f3c9a375a813f5d2114058eba5000a5fdb8e81cf13f91abc",
+      "event_id": "4007af0328baa267",
+      "event_type": "process",
+      "explanations": [
+        "credential material access pattern"
+      ],
+      "host": "workstation-17",
+      "score": 4,
+      "severity": "medium",
+      "signals": [
+        "credential_access"
+      ],
+      "source": "endpoint",
+      "ts": "2026-05-28T20:00:29Z"
+    },
+    {
+      "actor": "powershell",
+      "detail_sha256": "ef0faca8b96988f54282831896b98805079a9ad6433cce73ab9ac2bd6a4cc368",
+      "event_id": "b7dbaa6e1a9ba5e1",
+      "event_type": "egress",
+      "explanations": [
+        "credential material access pattern",
+        "possible outbound exfiltration"
+      ],
+      "host": "workstation-17",
+      "score": 8,
+      "severity": "critical",
+      "signals": [
+        "credential_access",
+        "exfiltration"
+      ],
+      "source": "network",
+      "ts": "2026-05-28T20:01:04Z"
+    },
+    {
+      "actor": "assistant",
+      "detail_sha256": "a379e4e5659419279bf13d6408861903349ab06f31f8f96e3a244297300a2939",
+      "event_id": "432cfaef6eef1d8d",
+      "event_type": "tool_call",
+      "explanations": [
+        "possible outbound exfiltration",
+        "unsafe agent/tool request"
+      ],
+      "host": "agent-runner",
+      "score": 9,
+      "severity": "critical",
+      "signals": [
+        "exfiltration",
+        "unsafe_tool_request"
+      ],
+      "source": "mcp",
+      "ts": "2026-05-28T20:01:22Z"
+    },
+    {
+      "actor": "rewardops_guard",
+      "detail_sha256": "b75eb60e9845b2d2823395a89ce47d20c6864d16fdc158b5de668c5409724d62",
+      "event_id": "af9e75725fb29251",
+      "event_type": "decision",
+      "explanations": [],
+      "host": "agent-runner",
+      "score": 0,
+      "severity": "info",
+      "signals": [],
+      "source": "policy",
+      "ts": "2026-05-28T20:02:10Z"
+    }
+  ],
+  "verdict": "probable_credential_theft_with_exfiltration+agent_prompt_injection"
+}

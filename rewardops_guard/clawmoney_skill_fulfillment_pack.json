@@ -1,0 +1,331 @@
+{
+  "generated_at": "2026-05-30T00:44:08+00:00",
+  "missing": [],
+  "missing_count": 0,
+  "missing_value_usd": 0,
+  "prepared": [
+    {
+      "calls": 0,
+      "category": "code/prototype",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.google_rapid_agent_pack.test_rapid_agent_packet",
+        "python3 rewardops_guard/delivery_kits/google_rapid_agent_pack/rapid_agent_packet.py --track elastic"
+      ],
+      "handoff": "Google Rapid Agent partner-track packet with local artifact map, demo/submission checklist, and account/public/spend approval gates.",
+      "name": "google-rapid-agent-",
+      "price_usd": 1000.0,
+      "starter_kit": "rewardops_guard/delivery_kits/google_rapid_agent_pack",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "security",
+      "evidence_commands": [
+        "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py'",
+        "python3 -m unittest discover -s rewardops_guard -t . -p 'test_*.py'"
+      ],
+      "handoff": "Policy gates, hostile prompt handling, wallet/social/KYC blockers, and audit dashboard.",
+      "name": "rewardops-productio",
+      "price_usd": 950.0,
+      "starter_kit": "safety_gate",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "security",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.dfir_triage_agent.test_dfir_triage",
+        "python3 rewardops_guard/delivery_kits/dfir_triage_agent/dfir_triage.py --events rewardops_guard/delivery_kits/dfir_triage_agent/sample_events.jsonl --json-output /tmp/dfir_triage_report.json --markdown-output /tmp/dfir_triage_report.md"
+      ],
+      "handoff": "Defensive DFIR triage report with event scoring, redaction, evidence hashes, and containment checklist.",
+      "name": "security-triage-dfi",
+      "price_usd": 900.0,
+      "starter_kit": "rewardops_guard/delivery_kits/dfir_triage_agent",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/data",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.uipath_governance_workflow.test_workflow_governance",
+        "python3 -m unittest rewardops_guard.delivery_kits.uipath_governance_workflow.test_bpmn_blueprint",
+        "python3 rewardops_guard/delivery_kits/uipath_governance_workflow/workflow_governance.py --manifest rewardops_guard/delivery_kits/uipath_governance_workflow/sample_workflow.json --json-output /tmp/uipath_governance_report.json --markdown-output /tmp/uipath_governance_report.md",
+        "python3 rewardops_guard/delivery_kits/uipath_governance_workflow/bpmn_blueprint.py --manifest rewardops_guard/delivery_kits/uipath_governance_workflow/sample_workflow.json --bpmn-output /tmp/uipath_governance_blueprint.bpmn --runbook-output /tmp/uipath_governance_blueprint.md --metadata-output /tmp/uipath_governance_blueprint.json",
+        "ffprobe -v error -show_entries format=duration outputs/manual-20260529-uipath/hyperframes/uipath-agenthack-demo/renders/uipath-agenthack-demo-draft.mp4"
+      ],
+      "handoff": "UiPath-style workflow risk review, release gates, BPMN 2.0 blueprint, controls, remediation checklist, PPTX deck, and local demo video packet.",
+      "name": "uipath-case-workflo",
+      "price_usd": 850.0,
+      "starter_kit": "rewardops_guard/delivery_kits/uipath_governance_workflow",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/debug",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.mcp_agent_integration.test_mcp_agent_integration",
+        "python3 rewardops_guard/delivery_kits/mcp_agent_integration/demo_client.py"
+      ],
+      "handoff": "MCP-style JSON-RPC server, tool manifest, policy-gated calls, demo client, and tests.",
+      "name": "mcp-agent-prototype",
+      "price_usd": 800.0,
+      "starter_kit": "rewardops_guard/delivery_kits/mcp_agent_integration",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/debug",
+      "evidence_commands": [
+        "npm test --prefix hedera_enterprise_policy_plugin"
+      ],
+      "handoff": "Hackathon-ready local project, demo script, generated tile, submission draft, and publish checklist.",
+      "name": "devpost-demo-builde",
+      "price_usd": 650.0,
+      "starter_kit": "hedera_enterprise_policy_plugin",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/review",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "bounty-pr-ready-bra",
+      "price_usd": 600.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "security",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.public_web_compliance_agent.test_web_compliance_agent"
+      ],
+      "handoff": "Allowlisted public-web compliance agent with redaction, evidence hashes, and report output.",
+      "name": "webdata-compliance-",
+      "price_usd": 500.0,
+      "starter_kit": "rewardops_guard/delivery_kits/public_web_compliance_agent",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/debug",
+      "evidence_commands": [
+        "npm test --prefix hedera_enterprise_policy_plugin"
+      ],
+      "handoff": "Hackathon-ready local project, demo script, generated tile, submission draft, and publish checklist.",
+      "name": "hackathon-agent-pro",
+      "price_usd": 500.0,
+      "starter_kit": "hedera_enterprise_policy_plugin",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/data",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.uipath_governance_workflow.test_workflow_governance",
+        "python3 -m unittest rewardops_guard.delivery_kits.uipath_governance_workflow.test_bpmn_blueprint",
+        "python3 rewardops_guard/delivery_kits/uipath_governance_workflow/workflow_governance.py --manifest rewardops_guard/delivery_kits/uipath_governance_workflow/sample_workflow.json --json-output /tmp/uipath_governance_report.json --markdown-output /tmp/uipath_governance_report.md",
+        "python3 rewardops_guard/delivery_kits/uipath_governance_workflow/bpmn_blueprint.py --manifest rewardops_guard/delivery_kits/uipath_governance_workflow/sample_workflow.json --bpmn-output /tmp/uipath_governance_blueprint.bpmn --runbook-output /tmp/uipath_governance_blueprint.md --metadata-output /tmp/uipath_governance_blueprint.json",
+        "ffprobe -v error -show_entries format=duration outputs/manual-20260529-uipath/hyperframes/uipath-agenthack-demo/renders/uipath-agenthack-demo-draft.mp4"
+      ],
+      "handoff": "UiPath-style workflow risk review, release gates, BPMN 2.0 blueprint, controls, remediation checklist, PPTX deck, and local demo video packet.",
+      "name": "uipath-case-prototy",
+      "price_usd": 350.0,
+      "starter_kit": "rewardops_guard/delivery_kits/uipath_governance_workflow",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "code",
+      "evidence_commands": [
+        "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py'",
+        "python3 -m unittest discover -s rewardops_guard -t . -p 'test_*.py'"
+      ],
+      "handoff": "Policy gates, hostile prompt handling, wallet/social/KYC blockers, and audit dashboard.",
+      "name": "policy-agent-trace",
+      "price_usd": 300.0,
+      "starter_kit": "safety_gate",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/data",
+      "evidence_commands": [
+        "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py'",
+        "python3 -m unittest discover -s rewardops_guard -t . -p 'test_*.py'"
+      ],
+      "handoff": "Policy gates, hostile prompt handling, wallet/social/KYC blockers, and audit dashboard.",
+      "name": "rewardops-guard-das",
+      "price_usd": 250.0,
+      "starter_kit": "safety_gate",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/rust",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "rust-test-bounty-sp",
+      "price_usd": 200.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/debug",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "bounty-implementati",
+      "price_usd": 150.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/data",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.data_pipeline.test_pipeline"
+      ],
+      "handoff": "JSONL pipeline, schema normalization, dedupe, dead-letter output, report, and tests.",
+      "name": "data-pipeline-sprin",
+      "price_usd": 120.0,
+      "starter_kit": "rewardops_guard/delivery_kits/data_pipeline",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/api",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.ohlcv_feed.test_ohlcv_feed"
+      ],
+      "handoff": "OHLCV validation/export prototype with schema, reporting, and tests.",
+      "name": "crypto-market-data-",
+      "price_usd": 120.0,
+      "starter_kit": "rewardops_guard/delivery_kits/ohlcv_feed",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/debug",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.mcp_agent_integration.test_mcp_agent_integration",
+        "python3 rewardops_guard/delivery_kits/mcp_agent_integration/demo_client.py"
+      ],
+      "handoff": "MCP-style JSON-RPC server, tool manifest, policy-gated calls, demo client, and tests.",
+      "name": "agent-tool-builder",
+      "price_usd": 120.0,
+      "starter_kit": "rewardops_guard/delivery_kits/mcp_agent_integration",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "data/analytics",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.sales_analytics.test_sales_analytics"
+      ],
+      "handoff": "CSV sales analytics report, dashboard output, KPI rollups, and tests.",
+      "name": "analytics-dashboard",
+      "price_usd": 100.0,
+      "starter_kit": "rewardops_guard/delivery_kits/sales_analytics",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "security",
+      "evidence_commands": [
+        "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py'",
+        "python3 -m unittest discover -s rewardops_guard -t . -p 'test_*.py'"
+      ],
+      "handoff": "Policy gates, hostile prompt handling, wallet/social/KYC blockers, and audit dashboard.",
+      "name": "prompt-injection-sa",
+      "price_usd": 100.0,
+      "starter_kit": "safety_gate",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/review",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "warpspeed-bounty-ki",
+      "price_usd": 95.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "security/code",
+      "evidence_commands": [
+        "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py'",
+        "python3 -m unittest discover -s rewardops_guard -t . -p 'test_*.py'"
+      ],
+      "handoff": "Policy gates, hostile prompt handling, wallet/social/KYC blockers, and audit dashboard.",
+      "name": "security-triage-spr",
+      "price_usd": 75.0,
+      "starter_kit": "safety_gate",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/review",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "deep-bounty-triage",
+      "price_usd": 75.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "security",
+      "evidence_commands": [
+        "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py'",
+        "python3 -m unittest discover -s rewardops_guard -t . -p 'test_*.py'"
+      ],
+      "handoff": "Policy gates, hostile prompt handling, wallet/social/KYC blockers, and audit dashboard.",
+      "name": "agent-security-audi",
+      "price_usd": 75.0,
+      "starter_kit": "safety_gate",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/web",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "wordpress-ai-plugin",
+      "price_usd": 60.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    },
+    {
+      "calls": 0,
+      "category": "coding/review",
+      "evidence_commands": [
+        "python3 -m unittest rewardops_guard.delivery_kits.code_task_triage.test_triage_task"
+      ],
+      "handoff": "Safe code task triage, unsafe requirement detection, checklist, and PR-ready packet.",
+      "name": "production-code-rev",
+      "price_usd": 50.0,
+      "starter_kit": "rewardops_guard/delivery_kits/code_task_triage",
+      "status": "active"
+    }
+  ],
+  "prepared_count": 25,
+  "prepared_value_usd": 8990.0,
+  "side_effects": "none; local fulfillment mapping only",
+  "source": "/Users/openclaw/Documents/Dinero/live_status/clawmoney_market_skills/latest.json",
+  "source_checked_at": "2026-05-30T00:38:17+00:00"
+}

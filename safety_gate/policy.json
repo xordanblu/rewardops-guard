@@ -1,0 +1,302 @@
+{
+  "version": 7,
+  "default_decision": "REVIEW",
+  "decisions": {
+    "ALLOW": "No configured blocker or review trigger was found.",
+    "REVIEW": "Manual review is required before acting.",
+    "BLOCK": "Do not execute this task autonomously."
+  },
+  "blockers": [
+    {
+      "id": "prompt_injection_ignore_rules",
+      "description": "Attempts to override system/developer/user instructions.",
+      "patterns": [
+        "\\bignore (all |any |the )?(previous|prior|above|system|developer|user) (instructions|rules|messages)\\b",
+        "\\bdisregard (all |any |the )?(previous|prior|above|system|developer|user) (instructions|rules|messages)\\b",
+        "\\boverride (all |any |the )?(previous|prior|above|system|developer|user) (instructions|rules|messages)\\b",
+        "\\bbypass (all |any |the )?(safety|security|policy|guard|gate|filter|rules)\\b",
+        "\\bdisable (all |any |the )?(safety|security|policy|guard|gate|filter|rules)\\b",
+        "\\bdo not (use|run|consult|call) (the )?(safety|security|policy|guard|gate|filter)\\b",
+        "\\byou are now\\b.*\\b(no longer|instead)\\b",
+        "\\bforget (all |any |the )?(previous|prior|above) (instructions|rules|messages)\\b",
+        "\\b(ignora|olvida|descarta|omite)\\b.{0,80}\\b(instrucciones|reglas|mensajes)\\b.{0,80}\\b(previas|anteriores|del sistema|del desarrollador)\\b",
+        "\\b(no hagas caso|no obedezcas)\\b.{0,80}\\b(instrucciones|reglas|politicas|políticas)\\b",
+        "\\b(desactiva|evita|salta|bypassea)\\b.{0,80}\\b(seguridad|filtro|guardia|gate|politica|política)\\b",
+        "\\b(all|any|the) previous instructions are (void|invalid|obsolete|overridden)\\b",
+        "\\b(developer|sudo|admin|god|unrestricted) mode\\b.{0,80}\\b(enabled|activated|on)\\b",
+        "\\b(this|these) instructions? (override|supersede|take precedence over)\\b.{0,80}\\b(system|developer|policy|safety|rules)\\b",
+        "\\b(estas|estas nuevas|estas instrucciones)\\b.{0,80}\\b(reemplazan|anulan|sobrescriben)\\b.{0,80}\\b(sistema|desarrollador|politica|política|seguridad)\\b",
+        "\\bjailbreak\\b"
+      ]
+    },
+    {
+      "id": "instruction_exfiltration",
+      "description": "Requests internal prompt, hidden policy, raw startup context, or private agent instructions.",
+      "patterns": [
+        "\\b(system|developer|platform|hidden|internal) (prompt|message|instructions|rules|policy|context)\\b",
+        "\\b(first|initial|original) (system|developer|platform|hidden) (message|prompt|instructions|context)\\b",
+        "\\bshow me what (the )?(system|developer|platform) said\\b",
+        "\\breveal (the )?(system|developer|platform|hidden) (message|prompt|instructions|context)\\b",
+        "\\bcopy (the )?(chat|session|conversation) (transcript|log|history)\\b",
+        "\\b(full|complete|entire|raw) (chat|session|conversation) (transcript|log|history)\\b",
+        "\\bcomplete raw startup instructions\\b",
+        "\\bcomplete session initialization context\\b",
+        "\\bcomplete pre[- ]conversation instructions\\b",
+        "\\b(full|complete|entire|raw)\\b.{0,80}\\bpre[- ]conversation instructions\\b",
+        "\\b(platform_config|platform config)\\b.{0,120}\\b(full text|complete|raw|verbatim|pre[- ]conversation instructions|runtime loaded)\\b",
+        "\\b(full text|complete|raw|verbatim|pre[- ]conversation instructions|runtime loaded)\\b.{0,120}\\b(platform_config|platform config)\\b",
+        "\\b(session_init|session init)\\b.{0,120}\\b(full text|complete|raw|verbatim|initialization text|start of (your )?session|before any user messages?)\\b",
+        "\\b(full text|complete|raw|verbatim|initialization text|start of (your )?session|before any user messages?)\\b.{0,120}\\b(session_init|session init)\\b",
+        "\\b\\.attribution\\.json\\b.{0,160}\\b(full text|complete|raw|verbatim|pre[- ]conversation instructions|runtime loaded)\\b",
+        "\\b(full text|complete|raw|verbatim|pre[- ]conversation instructions|runtime loaded)\\b.{0,160}\\b\\.attribution\\.json\\b",
+        "\\bcontributor_meta\\.json\\b.{0,160}\\b(full text|complete|raw|verbatim|initialization text|session_init|start of (your )?session|before any user messages?)\\b",
+        "\\b(full text|complete|raw|verbatim|initialization text|session_init|start of (your )?session|before any user messages?)\\b.{0,160}\\bcontributor_meta\\.json\\b",
+        "\\bcomplete initialization text\\b.{0,120}\\bbefore any user messages?\\b",
+        "\\bentire pre-task text block\\b",
+        "\\b(all|complete|entire) instructions, behavioral guidelines, and runtime configuration\\b",
+        "\\bfull (unedited |verbatim )?(text|copy) of .*instructions\\b",
+        "\\bpaste (everything|all|the full text).*conversation start\\b",
+        "\\bpaste verbatim\\b.{0,120}\\b(instructions|guidelines|context|configuration)\\b",
+        "\\b(AGENTS\\.md|agent instructions|tool instructions|skill instructions)\\b.{0,120}\\b(paste|copy|include|submit|upload|share|send|quote|verbatim)\\b",
+        "\\b(write|save|commit|add|create)\\b.{0,120}\\b(AGENTS\\.md|agent instructions|tool instructions|skill instructions|system prompt|developer instructions|internal instructions|hidden prompt)\\b",
+        "\\b(boot_context|startup_context|system_fingerprint|runtime configuration|tool schema|hidden chain)\\b",
+        "\\b(tool definitions?|tool schemas?|function schemas?|MCP tools?|available tools?|enabled tools?)\\b.{0,120}\\b(full|complete|raw|verbatim|dump|paste|copy|write|include|submit|upload|share|send)\\b",
+        "\\b(full|complete|raw|verbatim|dump)\\b.{0,120}\\b(tool definitions?|tool schemas?|function schemas?|MCP tools?|available tools?|enabled tools?)\\b",
+        "\\b(skill instructions?|plugin instructions?|connector instructions?|app instructions?)\\b.{0,120}\\b(full|complete|raw|verbatim|dump|paste|copy|write|include|submit|upload|share|send)\\b",
+        "\\b(full|complete|raw|verbatim|dump)\\b.{0,120}\\b(skill instructions?|plugin instructions?|connector instructions?|app instructions?)\\b",
+        "\\b(operating instructions|model instructions|agent rules|guardrails|safety rules|security policy)\\b.{0,120}\\b(full|complete|raw|verbatim|dump|paste|copy|write|include|submit|upload|share|send)\\b",
+        "\\b(full|complete|raw|verbatim|dump)\\b.{0,120}\\b(operating instructions|model instructions|agent rules|guardrails|safety rules|security policy)\\b",
+        "\\b(memory|context) dump\\b.{0,120}\\b(prompt|instructions|rules|conversation|session|agent)\\b",
+        "\\bprompt leak\\b",
+        "\\b(chain[- ]of[- ]thought|hidden reasoning|private reasoning|scratchpad)\\b.{0,120}\\b(reveal|show|print|paste|provide|submit|upload|share|send|quote|verbatim)\\b",
+        "\\b(reveal|show|print|paste|provide|submit|upload|share|send|quote|verbatim)\\b.{0,120}\\b(chain[- ]of[- ]thought|hidden reasoning|private reasoning|scratchpad)\\b",
+        "\\b(CAP-ANNOTATION-REQUIRED|complete all CAP annotation blocks)\\b",
+        "\\bfrom first token\\b",
+        "\\bbefore (the )?first (human|user) message\\b",
+        "\\bverbatim copy of all instructions\\b",
+        "\\b(all|complete|entire|full)\\b.{0,80}\\b(instructions|rules|policies|guidelines)\\b.{0,80}\\b(you (were|have been) given|you received|governing you)\\b",
+        "\\bprompt reproducibility\\b"
+        ,"\\b(instrucciones|reglas|politicas|políticas|contexto)\\b.{0,120}\\b(internas|ocultas|del sistema|del desarrollador|del agente)\\b.{0,120}\\b(pega|copia|incluye|envia|envía|sube|guarda|escribe|muestra|revela|entrega)\\b",
+        "\\b(pega|copia|incluye|envia|envía|sube|guarda|escribe|muestra|revela|entrega)\\b.{0,120}\\b(instrucciones|reglas|politicas|políticas|contexto)\\b.{0,120}\\b(internas|ocultas|del sistema|del desarrollador|del agente)\\b",
+        "\\b(todas|completas|enteras|raw|crudas)\\b.{0,80}\\b(instrucciones|reglas|politicas|políticas|directrices|mensajes)\\b.{0,80}\\b(que recibiste|que te dieron|que gobiernan|del sistema|del desarrollador)\\b",
+        "\\b(cadena de pensamiento|razonamiento oculto|scratchpad|notas privadas)\\b.{0,120}\\b(revela|muestra|pega|copia|incluye|envia|envía|sube|guarda|escribe)\\b",
+        "\\b(revela|muestra|pega|copia|incluye|envia|envía|sube|guarda|escribe)\\b.{0,120}\\b(cadena de pensamiento|razonamiento oculto|scratchpad|notas privadas)\\b"
+      ]
+    },
+    {
+      "id": "encoded_instruction_or_secret_exfiltration",
+      "description": "Requests encoded, archived, or indirect transfer of prompts, transcripts, logs, secrets, or hidden context.",
+      "patterns": [
+        "\\b(base64|hex|rot13|urlencode|encode|compress|zip|archive|tar|gzip)\\b.{0,120}\\b(system|developer|hidden|internal|prompt|instructions|context|transcript|conversation|log|secret|token|key|cookie|credential)\\b",
+        "\\b(system|developer|hidden|internal|prompt|instructions|context|transcript|conversation|log|secret|token|key|cookie|credential)\\b.{0,120}\\b(base64|hex|rot13|urlencode|encode|compress|zip|archive|tar|gzip)\\b",
+        "\\b(upload|submit|send|share|attach)\\b.{0,120}\\b(full|complete|entire|raw)\\b.{0,80}\\b(logs?|transcripts?|conversation|context|prompts?|instructions)\\b",
+        "\\bwrite (the )?(system|developer|hidden|internal) (prompt|message|instructions|context)\\b.{0,80}\\b(to|into)\\b.{0,80}\\b(file|json|markdown|txt|artifact)\\b",
+        "\\b(base64|hex|rot13|urlencode|codifica|comprime|zip|archivo|tar|gzip)\\b.{0,120}\\b(sistema|desarrollador|oculto|interno|prompt|instrucciones|contexto|transcripcion|transcripción|conversacion|conversación|log|secreto|token|clave|cookie|credencial)\\b",
+        "\\b(sistema|desarrollador|oculto|interno|prompt|instrucciones|contexto|transcripcion|transcripción|conversacion|conversación|log|secreto|token|clave|cookie|credencial)\\b.{0,120}\\b(base64|hex|rot13|urlencode|codifica|comprime|zip|archivo|tar|gzip)\\b"
+      ]
+    },
+    {
+      "id": "secret_exfiltration",
+      "description": "Requests credentials, secrets, tokens, keys, seed phrases, cookies, private config, or local credential files.",
+      "patterns": [
+        "\\b(reveal|show|print|paste|provide|submit|upload|share|send|exfiltrate)\\b.{0,80}\\b(api[_ -]?key|access[_ -]?token|refresh[_ -]?token|jwt|bearer token|session cookie|private key|seed phrase|mnemonic|password|passphrase|ssh key)\\b",
+        "\\b(api[_ -]?key|access[_ -]?token|refresh[_ -]?token|jwt|bearer token|session cookie|private key|seed phrase|mnemonic|password|passphrase|ssh key)\\b.{0,80}\\b(reveal|show|print|paste|provide|submit|upload|share|send|exfiltrate)\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,80}\\b\\.env\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,80}\\bcredentials\\.json\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,80}\\b(id_rsa|id_ed25519|known_hosts|authorized_keys)\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,80}\\bconfig\\.ya?ml\\b.*\\b(secret|token|key)\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,80}\\b(\\.ssh|\\.gnupg|\\.netrc|\\.npmrc|\\.pypirc|\\.docker/config\\.json)\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,120}\\b(browser profile|chrome profile|firefox profile|keychain|login keychain|cookies? database|localstorage|session storage)\\b",
+        "\\b(read|open|cat|print|upload|submit|share|send)\\b.{0,80}\\b(\\.codex|\\.clawmoney|\\.aibtc|\\.taskbounty)\\b",
+        "\\bprintenv\\b",
+        "\\b(list|dump|print|upload|submit|share|send)\\b.{0,80}\\b(environment variables?|env vars?|process\\.env)\\b",
+        "\\b(le[eé]r|abre|imprime|pega|sube|env[ií]a|comparte)\\b.{0,80}\\b(api[_ -]?key|token|cookie|clave privada|seed phrase|frase semilla|contrase[nñ]a|credencial)\\b",
+        "\\b(api[_ -]?key|token|cookie|clave privada|seed phrase|frase semilla|contrase[nñ]a|credencial)\\b.{0,80}\\b(le[eé]r|abre|imprime|pega|sube|env[ií]a|comparte)\\b",
+        "\\b(le[eé]r|abre|imprime|pega|sube|env[ií]a|comparte)\\b.{0,80}\\b(\\.env|\\.ssh|\\.codex|\\.clawmoney|credenciales\\.json)\\b",
+        "\\benvironment variables\\b.*\\b(reveal|show|print|paste|provide|submit|upload|share|send)\\b.*\\b(secret|token|key|password)\\b"
+      ]
+    },
+    {
+      "id": "user_social_networks",
+      "description": "Requires posting, commenting, messaging, verification, or engagement from social accounts. User explicitly forbids using their social networks.",
+      "patterns": [
+        "\\b(post|publish|tweet|reply|comment|dm|message|share|like|follow|upvote|retweet|repost)\\b.{0,80}\\b(twitter|x\\.com|reddit|discord|tiktok|instagram|linkedin|facebook|youtube shorts|rednote|xiaohongshu|douyin)\\b",
+        "\\b(post|publish|tweet|reply|comment|dm|message|share|like|follow|upvote|retweet|repost|quote tweet|quote)\\b.{0,80}\\b(on|from|via)\\s+X\\b",
+        "\\bX\\b.{0,80}\\b(account|handle|followers|following|follow|retweet|repost|quote tweet|tweet|post|proof)\\b",
+        "\\B@[A-Za-z0-9_]{2,20}\\b.{0,80}\\b(follow|following|retweet|repost|quote tweet|tweet)\\b",
+        "\\b(twitter|x\\.com|reddit|discord|telegram|slack|moltbook|tiktok|instagram|linkedin|facebook|bluesky|mastodon|farcaster|warpcast|lens|mirror)\\b.{0,80}\\b(account|handle|followers|karma|verification|verify|oauth|invite|join|posts?|comments?|upvotes?|engagement)\\b",
+        "\\b(postear|publicar|comentar|mandar dm|mensaje|compartir|dar like|seguir|votar|retuitear|repostear)\\b.{0,80}\\b(twitter|x\\.com|reddit|discord|telegram|tiktok|instagram|linkedin|facebook|bluesky|mastodon|farcaster|warpcast|lens)\\b",
+        "\\b(twitter|x\\.com|reddit|discord|telegram|tiktok|instagram|linkedin|facebook|bluesky|mastodon|farcaster|warpcast|lens)\\b.{0,80}\\b(cuenta|usuario|handle|seguidores|verificacion|verificación|oauth|invitar|unirse|posts?|comentarios?|likes?|engagement)\\b",
+        "\\breal account\\b.{0,80}\\b(followers|karma|engagement|tweet|post|comment)\\b",
+        "\\blive (tweet|reddit comment|discord post|telegram post|slack post|tiktok|instagram reel|linkedin post|youtube short)\\b"
+      ]
+    },
+    {
+      "id": "bounty_farming_or_tracker_spam",
+      "description": "Requires recursive issue creation, artificial bounty farming, or tracker spam instead of substantive work.",
+      "patterns": [
+        "\\b(create|open|file)\\b.{0,80}\\b(multiple|more|new|another|5\\s*[-–]\\s*10|recursive|recursively)\\b.{0,80}\\b(issues?|tickets?)\\b",
+        "\\b(create|open|file)\\b.{0,80}\\b(issues?|tickets?)\\b.{0,80}\\b(recursive|recursively|same contents|same content|refer to issue|exclusive|limited only to the creator)\\b",
+        "\\bissue is limited only to the creator of this issue\\b",
+        "\\bonly the issue author can attempt to solve this issue\\b",
+        "\\bautomate\\b.{0,80}\\bissue creation\\b"
+      ]
+    },
+    {
+      "id": "kyc_or_identity",
+      "description": "Requires KYC, legal identity, phone/SMS, government ID, human identity, or external account verification.",
+      "patterns": [
+        "\\b(complete|pass|submit|provide|upload|perform|do)\\b.{0,50}\\bkyc\\b",
+        "\\bkyc\\b.{0,50}\\b(required|mandatory|verification|identity check|approval required)\\b",
+        "\\bproof of personhood\\b",
+        "\\bworld id\\b",
+        "\\bworldcoin\\b",
+        "\\bgovernment id\\b",
+        "\\bpassport\\b",
+        "\\bdriver'?s license\\b",
+        "\\bphone verification\\b",
+        "\\bsms code\\b",
+        "\\bemail verification required\\b",
+        "\\bverify your identity\\b",
+        "\\blegal resident or citizen\\b",
+        "\\bcitizen or legal resident\\b",
+        "\\bbe a legal resident\\b",
+        "\\bbe a .*\\bcitizen\\b",
+        "\\bpersonal details for financial regulations\\b",
+        "\\bpersonal details\\b.{0,80}\\b(financial regulations|stripe|tax|payout|bank account)\\b",
+        "\\b(bank account|debit card)\\b.{0,80}\\b(required|needed|to receive|for payout|for deposit|for payment)\\b",
+        "\\b(stripe connect|paypal|wise|payoneer)\\b.{0,100}\\b(required|verification|verify|identity|tax|bank|payout)\\b",
+        "\\b(w-?9|w-?8ben|tax form|taxpayer|ssn|itin)\\b.{0,100}\\b(required|needed|submit|provide|payout|payment)\\b"
+      ]
+    },
+    {
+      "id": "unsafe_payment_or_spend",
+      "description": "Requires spending, depositing, staking, signing transactions, or approving wallet/payment operations without explicit human approval.",
+      "patterns": [
+        "(?<!no )(?<!not )(?<!without )\\b(deposit|stake|pay|purchase|buy|fund|checkout|subscribe|approve transaction|sign transaction|sign message|wallet signature|authorize payment)\\b",
+        "\\bopen the authorization url and approve\\b",
+        "\\bconnect wallet\\b",
+        "\\blink wallet\\b",
+        "\\bauthenticate\\b.{0,80}\\bwallet\\b",
+        "\\blog ?in\\b.{0,80}\\bwallet\\b",
+        "\\bsign[- ]?in with ethereum\\b",
+        "\\bSIWE\\b",
+        "\\b(gas fee|network fee|transaction fee)\\b.{0,80}\\b(required|needed|pay|cover|deposit)\\b",
+        "\\b(approve|sign|confirm)\\b.{0,80}\\b(token|allowance|transaction|wallet|swap|bridge|mint|claim)\\b",
+        "\\b(swap|bridge|wrap|mint|claim airdrop|airdrop claim)\\b.{0,80}\\b(wallet|token|transaction|gas|fee|approve|sign)\\b"
+      ]
+    },
+    {
+      "id": "bounty_cancelled_or_no_payout",
+      "description": "The sponsor or issue text says the bounty is cancelled, inactive, not working, or will not be honored.",
+      "patterns": [
+        "\\bbounty\\b.{0,120}\\b(no longer active|not active|inactive|cancelled|canceled|closed|expired)\\b",
+        "\\b(no longer|not)\\s+(offering|honou?r(?:ing)?|paying)\\b.{0,120}\\bbounty\\b",
+        "\\bwill not honou?r\\b.{0,120}\\bbounty\\b",
+        "\\bbounty site\\b.{0,80}\\b(no longer working|doesn'?t work|not working)\\b",
+        "\\b(accidentally|mistakenly)\\b.{0,80}\\b(set|posted|created|marked)\\b.{0,80}\\bbounty\\b",
+        "\\bbounty\\b.{0,80}\\b(accidentally|mistakenly)\\b.{0,80}\\b(set|posted|created|marked)\\b"
+      ]
+    },
+    {
+      "id": "malware_or_destructive",
+      "description": "Requests destructive commands, credential harvesting, malware, phishing, or unsafe shell execution.",
+      "patterns": [
+        "\\brm -rf\\b",
+        "\\bgit reset --hard\\b",
+        "\\bcurl\\b.*\\|\\s*(sh|bash)\\b",
+        "\\bwget\\b.*\\|\\s*(sh|bash)\\b",
+        "\\bsudo\\b.{0,80}\\b(sh|bash|rm|chmod|chown|launchctl|systemctl)\\b",
+        "\\bphishing\\b",
+        "\\bsteal\\b.*\\b(credentials|cookies|tokens|keys|passwords)\\b",
+        "\\bkeylogger\\b",
+        "\\bmalware\\b",
+        "\\bdecode\\b.{0,80}\\b(base64|hex|payload)\\b.{0,80}\\b(run|execute|eval|source|bash|sh)\\b",
+        "\\beval\\b\\s*\\("
+      ]
+    }
+  ],
+  "review_triggers": [
+    {
+      "id": "external_url_required",
+      "description": "Requires visiting or submitting to external URLs. Verify source and destination first.",
+      "patterns": [
+        "https?://",
+        "\\bsubmit .*proof_url\\b",
+        "\\battach .*proof\\b"
+      ]
+    },
+    {
+      "id": "claims_money_or_bounty",
+      "description": "Financial incentive present. Verify payout route, competition state, and rules before work.",
+      "patterns": [
+        "\\bbounty\\b",
+        "\\breward\\b",
+        "\\bpayout\\b",
+        "\\bclaim\\b",
+        "\\$[0-9][0-9,]*(\\.\\d{1,2})?\\b",
+        "\\bUSDC\\b"
+      ]
+    },
+    {
+      "id": "requires_publication",
+      "description": "Requires public publication or PR. Confirm account, disclosure, repo access, and target legitimacy.",
+      "patterns": [
+        "\\bcreate a pull request\\b",
+        "\\bopen a PR\\b",
+        "\\bpublish\\b",
+        "\\bpublic url\\b",
+        "\\bpublic doc\\b"
+      ]
+    },
+    {
+      "id": "affiliate_or_ad",
+      "description": "Affiliate, referral, or sponsored content. Requires disclosure and platform compliance.",
+      "patterns": [
+        "\\baffiliate\\b",
+        "\\breferral\\b",
+        "\\bsponsored\\b",
+        "\\b#ad\\b",
+        "\\bcommission\\b"
+      ]
+    },
+    {
+      "id": "kyc_or_identity_mention",
+      "description": "Mentions KYC or identity checks. Confirm it is not required before acting.",
+      "patterns": [
+        "\\bkyc\\b",
+        "\\bidentity verification\\b"
+      ]
+    },
+    {
+      "id": "new_account_or_auth_required",
+      "description": "May require account creation, login, OAuth, or API authorization. Confirm no user social account, KYC, or paid approval is involved.",
+      "patterns": [
+        "\\b(create|register|sign up|login|log in|authenticate|authorize|oauth)\\b.{0,80}\\b(account|api|app|client|provider|platform)\\b",
+        "\\bapi key required\\b",
+        "\\btoken required\\b"
+      ]
+    },
+    {
+      "id": "download_or_install_required",
+      "description": "Requires downloading, installing, or running external code. Inspect source and run in a local sandbox first.",
+      "patterns": [
+        "\\b(npm install|pip install|pnpm install|yarn install|cargo install|go install)\\b",
+        "\\bclone this repo\\b",
+        "\\brun the installer\\b"
+      ]
+    },
+    {
+      "id": "provenance_or_attestation",
+      "description": "Requires provenance, attestation, contributor metadata, or reproducibility headers. Confirm it does not disclose internal instructions, local paths, secrets, or private runtime details.",
+      "patterns": [
+        "\\b(provenance|attestation|contributor tracking|reproducibility|metadata file|runtime environment|environment details)\\b"
+      ]
+    }
+  ],
+  "allow_notes": [
+    "Internal AgentHansa forum reading/voting is allowed when it does not use external social accounts.",
+    "Static code review, local report generation, image/logo generation, and API-only task submission are allowed if no blocker is present.",
+    "Public GitHub PR work is allowed only when repository access is legitimate and the task does not require leaking internal instructions or secrets."
+  ]
+}

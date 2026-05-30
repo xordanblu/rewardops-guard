@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RewardOps Guard</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7f9;
+        --panel: #ffffff;
+        --ink: #16202a;
+        --muted: #5a6572;
+        --line: #dce1e7;
+        --green: #1d7f56;
+        --blue: #2463a7;
+        --amber: #a96312;
+        --red: #b23636;
+        --shadow: 0 1px 2px rgba(22, 32, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.45;
+        overflow-x: hidden;
+      }
+
+      main {
+        width: min(1320px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 18px 0 28px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: minmax(260px, 1fr) auto;
+        align-items: end;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.1;
+        font-weight: 760;
+        letter-spacing: 0;
+      }
+
+      .timestamp {
+        color: var(--muted);
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .metric,
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .metric {
+        min-height: 92px;
+        padding: 13px;
+      }
+
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 25px;
+        line-height: 1.05;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(560px, 1.5fr) minmax(360px, 1fr);
+        gap: 12px;
+        align-items: start;
+      }
+
+      .panel {
+        overflow: hidden;
+      }
+
+      .panel h2 {
+        margin: 0;
+        padding: 12px 14px;
+        font-size: 15px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      th,
+      td {
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .money {
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .status {
+        display: inline-block;
+        justify-self: start;
+        align-self: start;
+        max-width: 100%;
+        padding: 2px 7px;
+        border-radius: 999px;
+        background: #eef1f5;
+        color: #364351;
+        font-size: 11px;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+      }
+
+      .status[data-kind*="INBOUND"] {
+        background: #e7f3ed;
+        color: var(--green);
+      }
+
+      .status[data-kind*="PENDING"] {
+        background: #fff2df;
+        color: var(--amber);
+      }
+
+      .status[data-kind*="APPROVAL"],
+      .status[data-kind*="REVIEW"] {
+        background: #e9f0fb;
+        color: var(--blue);
+      }
+
+      .status[data-kind*="BLOCK"],
+      .status[data-kind*="CLOSED"] {
+        background: #f7e7e7;
+        color: var(--red);
+      }
+
+      .side {
+        display: grid;
+        gap: 12px;
+      }
+
+      .hackathon,
+      .event,
+      .guardrail {
+        padding: 11px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hackathon:last-child,
+      .event:last-child,
+      .guardrail:last-child {
+        border-bottom: 0;
+      }
+
+      .hackathon a {
+        color: var(--blue);
+        font-weight: 720;
+        text-decoration: none;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 6px 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .angle,
+      .next {
+        color: var(--muted);
+      }
+
+      .ops-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-bottom: 1px solid var(--line);
+      }
+
+      .ops-stat {
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+      }
+
+      .ops-stat:last-child {
+        border-right: 0;
+      }
+
+      .ops-stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .ops-stat strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 18px;
+      }
+
+      @media (max-width: 980px) {
+        main {
+          width: min(100vw - 20px, 760px);
+        }
+
+        header,
+        .layout,
+        .metrics,
+        .ops-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timestamp {
+          text-align: left;
+          white-space: normal;
+        }
+      }
+
+      @media (max-width: 700px) {
+        table,
+        thead,
+        tbody,
+        tr,
+        th,
+        td {
+          display: block;
+        }
+
+        thead {
+          display: none;
+        }
+
+        tr {
+          padding: 10px 12px;
+          border-bottom: 1px solid var(--line);
+        }
+
+        tr:last-child {
+          border-bottom: 0;
+        }
+
+        td {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          padding: 5px 0;
+          border-bottom: 0;
+          min-width: 0;
+          overflow-wrap: anywhere;
+          word-break: normal;
+          hyphens: auto;
+          white-space: normal;
+        }
+
+        td::before {
+          display: block;
+          margin-bottom: 2px;
+          color: var(--muted);
+          font-size: 12px;
+          font-weight: 700;
+        }
+
+        td:nth-child(1)::before {
+          content: "Source";
+        }
+
+        td:nth-child(2)::before {
+          content: "Route";
+        }
+
+        td:nth-child(3)::before {
+          content: "Status";
+        }
+
+        td:nth-child(4)::before {
+          content: "USD";
+        }
+
+        td:nth-child(5)::before {
+          content: "Next";
+        }
+
+        .money {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>RewardOps Guard</h1>
+        </div>
+        <div class="timestamp" id="timestamp"></div>
+      </header>
+
+      <section class="metrics" aria-label="Money metrics">
+        <div class="metric"><span>Confirmed</span><strong id="confirmed">$0</strong></div>
+        <div class="metric"><span>Pending</span><strong id="pending">$0</strong></div>
+        <div class="metric"><span>Inbound</span><strong id="inbound">$0</strong></div>
+        <div class="metric"><span>Approval-Locked</span><strong id="locked">$0</strong></div>
+        <div class="metric"><span>Active Lanes</span><strong id="lanes-count">0</strong></div>
+      </section>
+
+      <section class="layout">
+        <section class="panel">
+          <h2>Money Path Queue</h2>
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 15%">Source</th>
+                <th style="width: 33%">Route</th>
+                <th style="width: 17%">Status</th>
+                <th style="width: 11%" class="money">USD</th>
+                <th style="width: 24%">Next</th>
+              </tr>
+            </thead>
+            <tbody id="lanes"></tbody>
+          </table>
+        </section>
+
+        <aside class="side">
+          <section class="panel">
+            <h2>Hackathon Routes</h2>
+            <div id="hackathons"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Latest Intake Gate</h2>
+            <div id="intake"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Ops Evidence</h2>
+            <div id="ops"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Policy Agent</h2>
+            <div id="policy-agent"></div>
+          </section>
+
+          <section class="panel">
+            <h2>DFIR Agent</h2>
+            <div id="dfir"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Revenue Evidence</h2>
+            <div id="revenue"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Guardrails</h2>
+            <div id="guardrails"></div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script>
+      const data = window.REWARDOPS_DATA || {};
+      const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+      const money = data.money || {};
+
+      document.getElementById("timestamp").textContent =
+        `Generated ${data.generated_at || "unknown"} | Policy v${data.policy_version || "n/a"}`;
+      document.getElementById("confirmed").textContent = fmt.format(money.confirmed_new_usd || 0);
+      document.getElementById("pending").textContent = fmt.format(money.pending_payout_usd || 0);
+      document.getElementById("inbound").textContent = fmt.format(money.inbound_market_usd || 0);
+      document.getElementById("locked").textContent = fmt.format(money.approval_locked_usd || 0);
+      document.getElementById("lanes-count").textContent = String(money.ready_local_count || 0);
+
+      const laneRows = (data.lanes || []).map((lane) => `
+        <tr>
+          <td>${escapeHtml(lane.source)}</td>
+          <td>${escapeHtml(lane.title)}</td>
+          <td><span class="status" data-kind="${escapeHtml(lane.status)}">${escapeHtml(formatStatus(lane.status))}</span></td>
+          <td class="money">${fmt.format(lane.reward_usd || 0)}</td>
+          <td class="next">${escapeHtml(lane.next)}</td>
+        </tr>
+      `).join("");
+      document.getElementById("lanes").innerHTML = laneRows;
+
+      document.getElementById("hackathons").innerHTML = (data.hackathons || []).map((item) => `
+        <div class="hackathon">
+          <a href="${escapeAttr(item.url || "#")}">${escapeHtml(item.source)}</a>
+          <div class="meta">
+            <span>${fmt.format(item.reward_usd || 0)}</span>
+            <span>${escapeHtml(item.deadline)}</span>
+            <span>${escapeHtml(item.gate)}</span>
+          </div>
+          <div class="angle">${escapeHtml(item.angle)}</div>
+        </div>
+      `).join("");
+
+      const intake = data.intake || {};
+      document.getElementById("intake").innerHTML = `
+        <div class="hackathon">
+          <div><strong>${escapeHtml(intake.name || "No intake report")}</strong></div>
+          <div class="meta">
+            <span><span class="status" data-kind="${escapeHtml(intake.decision || "")}">${escapeHtml(intake.decision || "N/A")}</span></span>
+            <span>${intake.may_execute ? "may execute" : "hold"}</span>
+          </div>
+          <div class="angle">Signals: ${escapeHtml((intake.signals || []).join(", ") || "none")}</div>
+          <div class="angle">Reasons: ${escapeHtml((intake.reasons || []).join(", ") || "none")}</div>
+          <div class="angle">Hash: ${escapeHtml(intake.opportunity_sha256 || "n/a")}</div>
+        </div>
+      `;
+
+      const ops = data.ops || {};
+      document.getElementById("ops").innerHTML = `
+        <div class="ops-grid">
+          <div class="ops-stat"><span>Events</span><strong>${Number(ops.event_count || 0)}</strong></div>
+          <div class="ops-stat"><span>Blocked</span><strong>${Number(ops.blocked_count || 0)}</strong></div>
+          <div class="ops-stat"><span>Review</span><strong>${Number(ops.review_count || 0)}</strong></div>
+          <div class="ops-stat"><span>High Risk</span><strong>${Number(ops.high_risk_count || 0)}</strong></div>
+        </div>
+        ${(ops.top_events || []).map((item) => `
+          <div class="event">
+            <div><strong>${escapeHtml(item.route || item.source || "event")}</strong></div>
+            <div class="meta">
+              <span>${escapeHtml(item.source)}</span>
+              <span><span class="status" data-kind="${escapeHtml(item.decision || "")}">${escapeHtml(item.decision || "N/A")}</span></span>
+              <span>${escapeHtml(item.severity || "info")}</span>
+              <span>${fmt.format(item.reward_usd || 0)}</span>
+            </div>
+            <div class="angle">Signals: ${escapeHtml((item.signals || []).join(", ") || "none")}</div>
+            <div class="angle">${escapeHtml(item.next_action || "")}</div>
+          </div>
+        `).join("")}
+      `;
+
+      const policyAgent = data.policy_agent || {};
+      document.getElementById("policy-agent").innerHTML = `
+        <div class="ops-grid">
+          <div class="ops-stat"><span>Requests</span><strong>${Number(policyAgent.request_count || 0)}</strong></div>
+          <div class="ops-stat"><span>Blocked</span><strong>${Number(policyAgent.blocked_count || 0)}</strong></div>
+          <div class="ops-stat"><span>Review</span><strong>${Number(policyAgent.review_count || 0)}</strong></div>
+          <div class="ops-stat"><span>Allowed</span><strong>${Number(policyAgent.allow_count || 0)}</strong></div>
+        </div>
+        ${(policyAgent.requests || []).map((item) => `
+          <div class="event">
+            <div><strong>${escapeHtml(item.name || "request")}</strong></div>
+            <div class="meta">
+              <span>${escapeHtml(item.source)}</span>
+              <span>${escapeHtml(item.requested_action)}</span>
+              <span><span class="status" data-kind="${escapeHtml(item.decision || "")}">${escapeHtml(item.decision || "N/A")}</span></span>
+            </div>
+            <div class="angle">Reasons: ${escapeHtml((item.reasons || []).join(", ") || "none")}</div>
+            <div class="angle">${escapeHtml(item.next_action || "")}</div>
+          </div>
+        `).join("")}
+      `;
+
+      const revenue = data.revenue || {};
+      const dfir = data.dfir || {};
+      document.getElementById("dfir").innerHTML = `
+        <div class="ops-grid">
+          <div class="ops-stat"><span>Events</span><strong>${Number(dfir.event_count || 0)}</strong></div>
+          <div class="ops-stat"><span>High/Critical</span><strong>${Number(dfir.high_event_count || 0)}</strong></div>
+          <div class="ops-stat"><span>Hosts</span><strong>${Number((dfir.affected_hosts || []).length)}</strong></div>
+          <div class="ops-stat"><span>Signals</span><strong>${Number(Object.keys(dfir.signal_counts || {}).length)}</strong></div>
+        </div>
+        <div class="event">
+          <div><strong>${escapeHtml(dfir.verdict || "No DFIR report")}</strong></div>
+          <div class="angle">Hosts: ${escapeHtml((dfir.affected_hosts || []).join(", ") || "none")}</div>
+        </div>
+        ${(dfir.timeline || []).map((item) => `
+          <div class="event">
+            <div><strong>${escapeHtml(item.host || "host")} ${escapeHtml(item.source || "")}/${escapeHtml(item.event_type || "")}</strong></div>
+            <div class="meta">
+              <span>${escapeHtml(item.ts || "")}</span>
+              <span>${escapeHtml(item.severity || "info")}</span>
+            </div>
+            <div class="angle">Signals: ${escapeHtml((item.signals || []).join(", ") || "none")}</div>
+          </div>
+        `).join("")}
+      `;
+
+      document.getElementById("revenue").innerHTML = `
+        <div class="ops-grid">
+          <div class="ops-stat"><span>Revenue</span><strong>${fmt.format(revenue.confirmed_revenue_usd || 0)}</strong></div>
+          <div class="ops-stat"><span>Pending</span><strong>${fmt.format(revenue.pending_submission_usd || 0)}</strong></div>
+          <div class="ops-stat"><span>Inbound</span><strong>${fmt.format(revenue.inbound_market_surface_usd || 0)}</strong></div>
+          <div class="ops-stat"><span>Expenses</span><strong>${fmt.format(revenue.expenses_declared_usd || 0)}</strong></div>
+        </div>
+        ${(revenue.gaps || []).map((item) => `
+          <div class="guardrail">${escapeHtml(item)}</div>
+        `).join("")}
+      `;
+
+      document.getElementById("guardrails").innerHTML = (data.guardrails || []).map((text) => `
+        <div class="guardrail">${escapeHtml(text)}</div>
+      `).join("");
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        }[char]));
+      }
+
+      function escapeAttr(value) {
+        return escapeHtml(value).replace(/`/g, "&#96;");
+      }
+
+      function formatStatus(value) {
+        const status = String(value || "");
+        if (status.includes("ACTIVE_INBOUND")) return "INBOUND";
+        if (status.includes("PENDING")) return "PENDING";
+        if (status.includes("APPROVAL")) return "APPROVAL";
+        if (status.includes("ALLOW")) return "ALLOW";
+        if (status.includes("REVIEW")) return "REVIEW";
+        if (status.includes("WATCH")) return "WATCH";
+        if (status.includes("BLOCK")) return "BLOCKED";
+        if (status.includes("CLOSED")) return "CLOSED";
+        return status.replaceAll("_", " ");
+      }
+    </script>
+  </body>
+</html>

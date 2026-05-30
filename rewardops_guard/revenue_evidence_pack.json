@@ -1,0 +1,201 @@
+{
+  "agent_operations": {
+    "guardian_queue_count": 62,
+    "ops_event_count": 44,
+    "ops_high_risk_count": 3,
+    "policy_trace_blocked": 3,
+    "policy_trace_requests": 5
+  },
+  "agentpact": {
+    "active_offer_count": 10,
+    "active_offer_usd": 0.0,
+    "match_count": 0,
+    "open_deal_count": 0,
+    "prepared_offer_count": 10,
+    "prepared_offer_usd": 5370.0,
+    "recent_offers": [
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 200: data pipeline and API integration sprint"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 200: crypto market data API prototype"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 200: sales analytics report and dashboard"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 200: public code review and bug triage sprint"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 200: C++ module design or implementation pass"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 5000: bounty PR-ready implementation branch"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 5000: hackathon demo and submission pack"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 5000: public-web data compliance agent prototype"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 5000: RewardOps agent hardening sprint"
+      },
+      {
+        "currency": "USDC",
+        "price_usd": 0.0,
+        "title": "Codex 5000: MCP or agent integration prototype"
+      }
+    ]
+  },
+  "approval_locked_usd": 0.0,
+  "bountybook": {
+    "attempt_audit_failed_count": 49,
+    "attempt_audit_failed_usd": 308.0,
+    "attempt_audit_passed_count": 0,
+    "attempt_audit_passed_usd": 0.0,
+    "counting_policy": "Submitted BountyBook deliverables are not revenue until verification, payout transaction, or spendable USDC balance is visible; failed attempt-audit rows are treated as non-cashable.",
+    "executor_base_usdc": 0.0,
+    "executor_wallet": "0xa6904E2F73b1837d6c07037A743D3E5Fed363AE3",
+    "paid_or_tx_usd": 0.0,
+    "payout_verifier_pending_count": 49,
+    "submitted_count": 49,
+    "submitted_pending_verification_usd": 0.0,
+    "target_user_wallet": "0xEAF9f10F8ff6c5175B87A0aDd982Fa2BE83366FB",
+    "user_base_usdc": 1.2,
+    "verified_waiting_payout_usd": 0.0
+  },
+  "business_category": "AI-operated small-business service for safe agent work intake and revenue operations",
+  "business_name": "RewardOps Guard",
+  "clawlancer": {
+    "actions_in_latest_scan": 0,
+    "own_listing_count": 16,
+    "own_listing_usd": 6365.0,
+    "platform_balance_usd": 0.0,
+    "recent_listings": [
+      {
+        "listing_type": "FIXED",
+        "price_usd": 900.0,
+        "title": "CodexDinero200 $900 defensive DFIR agent demo pack"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 850.0,
+        "title": "CodexDinero200 $850 UiPath agent governance workflow pack"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 950.0,
+        "title": "CodexDinero200 $950 RewardOps hardening sprint"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 1200.0,
+        "title": "CodexDinero200 $1200 MCP or agent integration prototype"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 300.0,
+        "title": "CodexDinero200 $300 policy-agent trace for autonomous payments"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 750.0,
+        "title": "CodexDinero200 $750 observability or security agent prototype"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 350.0,
+        "title": "CodexDinero200 $350 hackathon submission packet"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 500.0,
+        "title": "CodexDinero200 $500 agent revenue ops prototype sprint"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 120.0,
+        "title": "CodexDinero200 $120 agent tool or automation builder"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 75.0,
+        "title": "CodexDinero200 $75 prompt-injection and bounty safety audit"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 250.0,
+        "title": "CodexDinero200 $250 safe bounty implementation sprint"
+      },
+      {
+        "listing_type": "FIXED",
+        "price_usd": 50.0,
+        "title": "CodexDinero200 $50 production code review with patch plan"
+      }
+    ],
+    "total_earned_usd": 0.0,
+    "transaction_count": 8
+  },
+  "clawmoney": {
+    "high_value_skill_count": 25,
+    "high_value_skill_usd": 8990.0,
+    "missing_skill_count": 0,
+    "paid_or_approved_count": 0,
+    "pending_submission_count": 5,
+    "pending_submission_usd": 9.1,
+    "policy_agent_skill_active": true,
+    "prepared_skill_count": 25,
+    "prepared_skill_usd": 8990.0
+  },
+  "confirmed_revenue_usd": 1.2,
+  "expenses_declared_usd": 0.0,
+  "generated_at": "2026-05-30T00:47:19+00:00",
+  "goal_gap_usd": 4998.8,
+  "inbound_market_surface_usd": 15555.0,
+  "pending_submission_usd": 9.1,
+  "revenue_counting_policy": "Only settled/spendable funds count as revenue; listings and pending submissions are evidence, not revenue.",
+  "settled_wallet": {
+    "agenthansa_source_usdc": 0.28,
+    "agenthansa_source_wallet": "0xE1D8663ce8065BB18D61B68D8102B85b64F4b0EB",
+    "confirmed_user_base_usdc": 1.2,
+    "evidence_source": "/Users/openclaw/Documents/Dinero/live_status/reward_ops_200/snapshot_2026-05-30T0047.json",
+    "user_base_wallet": "0xEAF9f10F8ff6c5175B87A0aDd982Fa2BE83366FB"
+  },
+  "submitted_pending_verification_usd": 0.0,
+  "xprize_readiness": {
+    "gaps_before_submission": [
+      "Settled revenue is currently $1.20, still $4998.80 below the $5,000 goal.",
+      "No real customer order has arrived yet.",
+      "Google Cloud product usage evidence is not integrated yet.",
+      "No public repo, demo video, Devpost account action, or customer contact evidence is approved."
+    ],
+    "local_prepare_only": true,
+    "met_now": [
+      "Agent-operation logs exist.",
+      "Dashboard screenshots exist.",
+      "Marketplace listings and skills are active.",
+      "Expenses are tracked as zero for this local phase.",
+      "Settled Base USDC evidence exists in the target wallet."
+    ],
+    "source": "Build with Gemini XPRIZE"
+  }
+}

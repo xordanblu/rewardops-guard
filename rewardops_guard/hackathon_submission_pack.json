@@ -1,0 +1,231 @@
+{
+  "evidence": {
+    "artifact_refs": [
+      "rewardops_guard/index.html",
+      "rewardops_guard/data.js",
+      "rewardops_guard/ops_events.jsonl",
+      "rewardops_guard/ops_event_report.md",
+      "rewardops_guard/policy_agent_trace.md",
+      "rewardops_guard/find_evil_defender_report.md",
+      "rewardops_guard/revenue_evidence_pack.md",
+      "rewardops_guard/splunk_detection_pack.md",
+      "safety_gate/protective_pipeline.py"
+    ],
+    "confirmed_revenue_usd": 1.2,
+    "find_evil_event_count": 6,
+    "find_evil_high_event_count": 4,
+    "find_evil_self_corrections": 2,
+    "find_evil_verdict": "agent_tool_abuse+credential_theft_with_exfiltration+scripted_execution_chain",
+    "goal_gap_usd": 4998.8,
+    "inbound_market_surface_usd": 15555.0,
+    "ops_blocked_count": 3,
+    "ops_event_count": 44,
+    "ops_high_risk_count": 3,
+    "pending_submission_usd": 9.1,
+    "policy_blocked_count": 3,
+    "policy_request_count": 5,
+    "ready_local_count": 48
+  },
+  "generated_at": "2026-05-30T00:42:40+00:00",
+  "objective": "Package a local defensive agent demo for cash-prize routes without making public submissions.",
+  "product": "RewardOps Guard",
+  "routes": [
+    {
+      "cash_surface_usd": 22000,
+      "deadline": "2026-06-15 23:45 EDT",
+      "demo_outline": [
+        "Show the dashboard money queue and active guardrails.",
+        "Run a hostile prompt-injection intake and show BLOCK quorum.",
+        "Show wallet/social/payment lures held before any external action.",
+        "Show SIEM-style evidence and revenue separation.",
+        "Close with exact external submission blockers still held."
+      ],
+      "external_action_gate": "HOLD_PUBLIC_SUBMISSION",
+      "fit": "Agent-threat defender that blocks prompt injection, wallet-sign traps, and unsafe external actions.",
+      "id": "find_evil",
+      "local_artifacts": [
+        "rewardops_guard/find_evil_defender_demo.py",
+        "rewardops_guard/find_evil_defender_report.md",
+        "rewardops_guard/dfir_agent_demo.py",
+        "rewardops_guard/policy_agent_trace.md",
+        "safety_gate/protective_pipeline.py"
+      ],
+      "may_prepare_local": true,
+      "name": "FIND EVIL!",
+      "pitch": "RewardOps Guard finds malicious paid-work prompts before autonomous agents can leak secrets or execute unsafe actions.",
+      "requires": [
+        "Devpost submission",
+        "Public source repository",
+        "Demo video",
+        "Public project description"
+      ],
+      "revenue_claim": "$1.20 settled revenue is claimed only from wallet/balance evidence; pending submissions and inbound listings remain evidence only.",
+      "submission_title": "RewardOps Guard for FIND EVIL!",
+      "target_prize_usd": 10000,
+      "track": "Defensive agent / MCP / multi-agent security workflow",
+      "url": "https://findevil.devpost.com/"
+    },
+    {
+      "cash_surface_usd": 20000,
+      "deadline": "2026-06-15 09:00 PDT",
+      "demo_outline": [
+        "Show the dashboard money queue and active guardrails.",
+        "Run a hostile prompt-injection intake and show BLOCK quorum.",
+        "Show wallet/social/payment lures held before any external action.",
+        "Show SIEM-style evidence and revenue separation.",
+        "Close with exact external submission blockers still held."
+      ],
+      "external_action_gate": "HOLD_PUBLIC_SUBMISSION",
+      "fit": "SIEM-ready event stream and analyst workflow for agent prompt-injection and unsafe-tool events.",
+      "id": "splunk_agentic_ops",
+      "local_artifacts": [],
+      "may_prepare_local": true,
+      "name": "Splunk Agentic Ops Hackathon",
+      "pitch": "RewardOps Guard ships agent-risk telemetry that Splunk can ingest, investigate, and escalate.",
+      "requires": [
+        "Devpost submission",
+        "Splunk setup or developer license",
+        "Public source repository",
+        "Demo video"
+      ],
+      "revenue_claim": "$1.20 settled revenue is claimed only from wallet/balance evidence; pending submissions and inbound listings remain evidence only.",
+      "submission_title": "RewardOps Guard for Splunk Agentic Ops Hackathon",
+      "target_prize_usd": 10000,
+      "track": "Security or platform/developer experience",
+      "url": "https://splunk.devpost.com/"
+    },
+    {
+      "cash_surface_usd": 50000,
+      "deadline": "2026-06-29 23:45 PDT",
+      "demo_outline": [
+        "Show the dashboard money queue and active guardrails.",
+        "Run a hostile prompt-injection intake and show BLOCK quorum.",
+        "Show wallet/social/payment lures held before any external action.",
+        "Show SIEM-style evidence and revenue separation.",
+        "Close with exact external submission blockers still held."
+      ],
+      "external_action_gate": "HOLD_PUBLIC_SUBMISSION",
+      "fit": "Human-in-the-loop case workflow for autonomous coding-agent intake, test risk, and payout-route approval.",
+      "id": "uipath_agenthack",
+      "local_artifacts": [],
+      "may_prepare_local": true,
+      "name": "UiPath AgentHack",
+      "pitch": "RewardOps Guard gives UiPath a governance case flow for coding agents that chase paid work safely.",
+      "requires": [
+        "Devpost submission",
+        "UiPath Automation Cloud or Labs access",
+        "Public source repository",
+        "Demo video",
+        "Presentation deck"
+      ],
+      "revenue_claim": "$1.20 settled revenue is claimed only from wallet/balance evidence; pending submissions and inbound listings remain evidence only.",
+      "submission_title": "RewardOps Guard for UiPath AgentHack",
+      "target_prize_usd": 8000,
+      "track": "Maestro Case or Test Cloud",
+      "url": "https://uipath-agenthack.devpost.com/"
+    },
+    {
+      "cash_surface_usd": 60000,
+      "deadline": "2026-06-11 14:00 PDT",
+      "demo_outline": [
+        "Show the dashboard money queue and active guardrails.",
+        "Run a hostile prompt-injection intake and show BLOCK quorum.",
+        "Show wallet/social/payment lures held before any external action.",
+        "Show SIEM-style evidence and revenue separation.",
+        "Close with exact external submission blockers still held."
+      ],
+      "external_action_gate": "HOLD_PUBLIC_SUBMISSION",
+      "fit": "Gemini-powered security operations agent for unsafe paid-work and tool-use triage.",
+      "id": "google_rapid_agent",
+      "local_artifacts": [],
+      "may_prepare_local": true,
+      "name": "Google Cloud Rapid Agent Hackathon",
+      "pitch": "RewardOps Guard turns untrusted bounty and marketplace prompts into a Gemini-ready security queue with auditable decisions.",
+      "requires": [
+        "Devpost submission",
+        "Google Cloud/Gemini setup",
+        "Partner MCP integration",
+        "Hosted project URL",
+        "Public source repository",
+        "Demo video"
+      ],
+      "revenue_claim": "$1.20 settled revenue is claimed only from wallet/balance evidence; pending submissions and inbound listings remain evidence only.",
+      "submission_title": "RewardOps Guard for Google Cloud Rapid Agent Hackathon",
+      "target_prize_usd": 5000,
+      "track": "Elastic or GitLab partner track",
+      "url": "https://rapid-agent.devpost.com/"
+    },
+    {
+      "cash_surface_usd": 4750,
+      "deadline": "2026-06-21 23:59 UTC final close",
+      "demo_outline": [
+        "Show the dashboard money queue and active guardrails.",
+        "Run a hostile prompt-injection intake and show BLOCK quorum.",
+        "Show wallet/social/payment lures held before any external action.",
+        "Show SIEM-style evidence and revenue separation.",
+        "Close with exact external submission blockers still held."
+      ],
+      "external_action_gate": "HOLD_PUBLIC_SUBMISSION",
+      "fit": "Explicit-consent policy layer for payment-capable HBAR/USDC agents.",
+      "id": "hedera_policy_agent",
+      "local_artifacts": [],
+      "may_prepare_local": true,
+      "name": "Hedera AI Agent Bounty",
+      "pitch": "RewardOps Guard is a policy agent that refuses wallet, spend, and secret-disclosure actions without scoped approval.",
+      "requires": [
+        "Public source repository",
+        "Demo URL or video",
+        "Winner payout wallet address",
+        "Hedera tool feedback"
+      ],
+      "revenue_claim": "$1.20 settled revenue is claimed only from wallet/balance evidence; pending submissions and inbound listings remain evidence only.",
+      "submission_title": "RewardOps Guard for Hedera AI Agent Bounty",
+      "target_prize_usd": 1500,
+      "track": "Week 5 Policy Agent",
+      "url": "https://ai-bounties.hedera.com/"
+    },
+    {
+      "cash_surface_usd": 750,
+      "deadline": "2026-05-31 23:59 UTC for Week 2",
+      "demo_outline": [
+        "Show the dashboard money queue and active guardrails.",
+        "Run a hostile prompt-injection intake and show BLOCK quorum.",
+        "Show wallet/social/payment lures held before any external action.",
+        "Show SIEM-style evidence and revenue separation.",
+        "Close with exact external submission blockers still held."
+      ],
+      "external_action_gate": "HOLD_PUBLIC_SUBMISSION",
+      "fit": "Enterprise policy plugin for Hedera Agent Kit tool calls.",
+      "id": "hedera_enterprise_policy_plugin",
+      "local_artifacts": [
+        "hedera_enterprise_policy_plugin/README.md",
+        "hedera_enterprise_policy_plugin/assets/hedera-enterprise-policy-plugin-tile.png",
+        "hedera_enterprise_policy_plugin/site/index.html",
+        "hedera_enterprise_policy_plugin/src/policy.js",
+        "hedera_enterprise_policy_plugin/src/hederaAgentKitAdapter.js",
+        "hedera_enterprise_policy_plugin/submission/HEDERA_BOUNTY_SUBMISSION.md"
+      ],
+      "may_prepare_local": true,
+      "name": "Hedera AI Agent Bounty",
+      "pitch": "Hedera Enterprise Policy Plugin gates transaction-capable agent tools with deterministic allow/review/block decisions and HCS-ready audit payloads.",
+      "requires": [
+        "Public source repository",
+        "Demo URL or video",
+        "Winner payout wallet address",
+        "Hedera tool feedback",
+        "Submission form"
+      ],
+      "revenue_claim": "$1.20 settled revenue is claimed only from wallet/balance evidence; pending submissions and inbound listings remain evidence only.",
+      "submission_title": "RewardOps Guard for Hedera AI Agent Bounty",
+      "target_prize_usd": 750,
+      "track": "Week 2 Enterprise Agent + Plugin",
+      "url": "https://ai-bounties.hedera.com/"
+    }
+  ],
+  "submission_boundary": [
+    "No Devpost/lablab/forum submission is performed by this packet.",
+    "No public repository, public PR, social post, or demo video is published here.",
+    "No KYC, payment setup, wallet signing, account creation, paid API spend, or user social account use is authorized here.",
+    "All live rules, payout routes, and account requirements must be rechecked before external action."
+  ]
+}
