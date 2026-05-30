@@ -67,6 +67,22 @@ PUBLIC_LINKS = {
         "https://github.com/xordanx/rewardops-guard/blob/main/"
         "find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md"
     ),
+    "fhir_agent_pack": (
+        "https://github.com/xordanx/rewardops-guard/tree/main/"
+        "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack"
+    ),
+    "fhir_preflight": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md"
+    ),
+    "qdrant_reward_radar": (
+        "https://github.com/xordanx/rewardops-guard/tree/main/"
+        "rewardops_guard/delivery_kits/qdrant_reward_radar"
+    ),
+    "qdrant_preflight": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md"
+    ),
 }
 WALLET_OR_KEY_BLOCKLIST = (
     "0xEAF9f10F8ff6c5175" + "B87A0aDd982Fa2BE83366FB",
@@ -165,6 +181,10 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
         f"- FIND EVIL video upload metadata: {PUBLIC_LINKS['find_evil_video_metadata']}",
         f"- FIND EVIL captions: {PUBLIC_LINKS['find_evil_video_captions']}",
         f"- FIND EVIL transcript: {PUBLIC_LINKS['find_evil_video_transcript']}",
+        f"- InterSystems FHIR Agent Pack: {PUBLIC_LINKS['fhir_agent_pack']}",
+        f"- InterSystems FHIR preflight: {PUBLIC_LINKS['fhir_preflight']}",
+        f"- Qdrant Reward Route Radar: {PUBLIC_LINKS['qdrant_reward_radar']}",
+        f"- Qdrant preflight: {PUBLIC_LINKS['qdrant_preflight']}",
         "- GitHub Pages is not claimed here because Actions is disabled for the account.",
         "",
         "## Safety Boundary",
@@ -190,10 +210,29 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
         "python3 -m unittest discover -s safety_gate -t . -p 'test_*.py' -v",
         "python3 -m unittest discover -s find_evil_rewardops_defender/tests -t find_evil_rewardops_defender -v",
         "python3 -m unittest discover -s rewardops_guard -p 'test_*.py' -v",
+        "python3 -m unittest rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.test_fhir_summary_agent -v",
+        "python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
+        "python3 -m unittest rewardops_guard.delivery_kits.qdrant_reward_radar.test_reward_radar -v",
+        "/tmp/qdrant-radar-venv/bin/python -m rewardops_guard.delivery_kits.qdrant_reward_radar.contest_preflight",
         "cd find_evil_rewardops_defender && ./run_terminal_demo.sh",
         "python3 rewardops_guard/build_dashboard.py",
         "python3 rewardops_guard/public_submission_bundle.py",
         "```",
+        "",
+        "## Current $5k Routes",
+        "",
+        "The `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack` folder is a",
+        "sanitized, synthetic-data-first app package for the InterSystems Programming",
+        "Contest: AI Agents for FHIR. It targets the Smart Patient Summary Generator",
+        "idea, adds medication-safety and care-plan task outputs, and keeps Open",
+        "Exchange submission, identity verification, video/article publication, and",
+        "real patient data behind explicit approval gates.",
+        "",
+        "The `rewardops_guard/delivery_kits/qdrant_reward_radar` folder is a",
+        "non-chatbot vector-search demo for Qdrant's Think Outside the Bot hackathon.",
+        "It uses Qdrant payload filters and local embeddings to rank high-upside reward",
+        "routes while filtering social-account, wallet-signing, and secret-disclosure",
+        "tasks.",
         "",
         "## Files",
         "",
@@ -242,6 +281,10 @@ def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any
     <li>FIND EVIL video upload metadata: <a href="{html.escape(PUBLIC_LINKS["find_evil_video_metadata"])}">{html.escape(PUBLIC_LINKS["find_evil_video_metadata"])}</a></li>
     <li>FIND EVIL captions: <a href="{html.escape(PUBLIC_LINKS["find_evil_video_captions"])}">{html.escape(PUBLIC_LINKS["find_evil_video_captions"])}</a></li>
     <li>FIND EVIL transcript: <a href="{html.escape(PUBLIC_LINKS["find_evil_video_transcript"])}">{html.escape(PUBLIC_LINKS["find_evil_video_transcript"])}</a></li>
+    <li>InterSystems FHIR Agent Pack: <a href="{html.escape(PUBLIC_LINKS["fhir_agent_pack"])}">{html.escape(PUBLIC_LINKS["fhir_agent_pack"])}</a></li>
+    <li>InterSystems FHIR preflight: <a href="{html.escape(PUBLIC_LINKS["fhir_preflight"])}">{html.escape(PUBLIC_LINKS["fhir_preflight"])}</a></li>
+    <li>Qdrant Reward Route Radar: <a href="{html.escape(PUBLIC_LINKS["qdrant_reward_radar"])}">{html.escape(PUBLIC_LINKS["qdrant_reward_radar"])}</a></li>
+    <li>Qdrant preflight: <a href="{html.escape(PUBLIC_LINKS["qdrant_preflight"])}">{html.escape(PUBLIC_LINKS["qdrant_preflight"])}</a></li>
   </ul>
   <p>GitHub Pages is not claimed here because Actions is disabled for the account.</p>
   <h2>Money Evidence</h2>

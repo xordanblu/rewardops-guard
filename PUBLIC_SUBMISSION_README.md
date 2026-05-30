@@ -1,6 +1,6 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T13:09:05+00:00
+Generated: 2026-05-30T13:59:52+00:00
 
 ## Purpose
 
@@ -18,6 +18,8 @@ hackathon review, buyer diligence, or repository publication.
 - FIND EVIL transcript: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
 - InterSystems FHIR Agent Pack: https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack
 - InterSystems FHIR preflight: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md
+- Qdrant Reward Route Radar: https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/qdrant_reward_radar
+- Qdrant preflight: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## Safety Boundary
@@ -44,12 +46,14 @@ python3 -m unittest discover -s find_evil_rewardops_defender/tests -t find_evil_
 python3 -m unittest discover -s rewardops_guard -p 'test_*.py' -v
 python3 -m unittest rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.test_fhir_summary_agent -v
 python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py
+python3 -m unittest rewardops_guard.delivery_kits.qdrant_reward_radar.test_reward_radar -v
+/tmp/qdrant-radar-venv/bin/python -m rewardops_guard.delivery_kits.qdrant_reward_radar.contest_preflight
 cd find_evil_rewardops_defender && ./run_terminal_demo.sh
 python3 rewardops_guard/build_dashboard.py
 python3 rewardops_guard/public_submission_bundle.py
 ```
 
-## Current $5k Route
+## Current $5k Routes
 
 The `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack` folder is a
 sanitized, synthetic-data-first app package for the InterSystems Programming
@@ -58,11 +62,17 @@ idea, adds medication-safety and care-plan task outputs, and keeps Open
 Exchange submission, identity verification, video/article publication, and
 real patient data behind explicit approval gates.
 
+The `rewardops_guard/delivery_kits/qdrant_reward_radar` folder is a
+non-chatbot vector-search demo for Qdrant's Think Outside the Bot hackathon.
+It uses Qdrant payload filters and local embeddings to rank high-upside reward
+routes while filtering social-account, wallet-signing, and secret-disclosure
+tasks.
+
 ## Files
 
 - `.nojekyll` sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-- `PUBLIC_SUBMISSION_README.md` sha256=aff0a3441a381cddb3070b78baa993578be3fa3d2a8f08980f5d0ec5c65eddd9
-- `README.md` sha256=aff0a3441a381cddb3070b78baa993578be3fa3d2a8f08980f5d0ec5c65eddd9
+- `PUBLIC_SUBMISSION_README.md` sha256=2a68433b917ae73bb2c0f52a5adf7af6b5c726faa217b32eb8e63be45ba4f9b1
+- `README.md` sha256=2a68433b917ae73bb2c0f52a5adf7af6b5c726faa217b32eb8e63be45ba4f9b1
 - `find_evil_rewardops_defender/.gitignore` sha256=60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672
 - `find_evil_rewardops_defender/LICENSE` sha256=ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9
 - `find_evil_rewardops_defender/README.md` sha256=508612140173b2256989a7442d592409fe3b6383ef43e331577462da84d50b68
@@ -115,7 +125,45 @@ real patient data behind explicit approval gates.
 - `rewardops_guard/buyer_onepager.md` sha256=20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29
 - `rewardops_guard/clawmoney_skill_fulfillment_pack.json` sha256=ca33d5ccb6cf6792a1328da4782a98f51a9302091ce88f9db93e9c0ca6c2782c
 - `rewardops_guard/clawmoney_skill_fulfillment_pack.md` sha256=3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72
-- `rewardops_guard/data.js` sha256=e145086862eecca844a07caf336e476e0a61213c00cf90644a79d09bdbbc0904
+- `rewardops_guard/data.js` sha256=eecc63d748ec38bd753022c1a59ba8f644bd36ec197cd82575a1cf9f642b93a2
+- `rewardops_guard/delivery_kits/__init__.py` sha256=c14ec12abedadc14ac1e410d89034e5d5a6f49b478a14dc60e4dbc2620bad445
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/ARTICLE_DRAFT.md` sha256=a3002c5469f505976f42867296f5dc12a95def1d0190be9507e68635787c10a9
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/Dockerfile` sha256=030e940e6862b8ae02ec0254f2b7704ecab8e938217b9571af0f2c6cb1b68ab4
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/README.md` sha256=f4102d03d330fc615cde6c1d0156a36e580c21a0c570fdb5659854d700979da9
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/SUBMISSION_DRAFT.md` sha256=3a3fc3e28f17bb776917f2c4e6cd016962444577492a72566756ff5c409d99d9
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/__init__.py` sha256=b1e7640ead08d0bdcd5fbdb825667434c099deaca135076620c5e5af73ffb55b
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.json` sha256=26aafa9895ee83d25e7609e4c4700b2bdb64a4d8da3d0e39c8c619a849688d43
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.md` sha256=e445d7e4de7885edab00088aaefeac02be9ef24145537fee6707d0779616028b
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.py` sha256=ba464ff4c156181738b08b67ee3398511a086aa22186aa70d24ba06e363634f2
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.json` sha256=fd2387125fb8bfa3cec31efd2dabe4d6d0200c353c493012b0280b9451d4ee54
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md` sha256=8710236f8d6af6f4a023ada04382d33a3f16af1f9bf75cf9735dff0a1e36f88a
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py` sha256=434ef68bcc2778851bc29c25000824d20f6bdc92e17b248c478dccfe41d5f03f
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/README.md` sha256=dea61eedd65f1361a26267e1dbf2af449d42ab1caa171fc3bfbd57a57539db14
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_desktop.png` sha256=7b18296d025d1e7f4b2d061400911cc10f71e1ccdf6af07ab4244fb97ac6fbdf
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_mobile.png` sha256=50566ab707aca7254d1fce23b40164661231ec77838f2306f0ef64a2b3339200
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py` sha256=dd2a4a0ad6513682a6af6032795939a4b1a7a3cf3fbd1e9f6f82e37e93604b90
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml` sha256=4912847edc24195ebfad1b0154a54aeeb5f0fd13b1c45b6bad25bade3c0c1e9a
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py` sha256=2e361e2f040ee996fedbd1d75e85fb4acea710d5825efdbf91ff9140ac1b0b4d
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml` sha256=c00c88267a2834f61c12889d1236843d7d17071339b8056ccd1370cd699600f9
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_patient_bundle.json` sha256=64c85bd1ea06b8fb655390b5fe885d6991ff968c09d3beebd362bac089fd107d
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.json` sha256=f0cac375f7c3da71268bb7cdd76e244789a10e25d607927809894807247af6cd
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.md` sha256=446497b764ebeb4d06b291a2bb5fb9ac9c9964ee9ec7026b31c70c36efc376f6
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/src/cls/RewardOps/FHIR/CareBriefAgent.cls` sha256=119bc614bba52a6a7b708fbaf23f9abb702e9c4e5731ea53d2211bb4d4d3a194
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle.py` sha256=32f67d5aaf2e8d825f4a87f0bad2c0fabb032307c86284b91e3c65455048d9bb
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/fhir_care_brief_agent_submission_bundle.zip` sha256=f25cf2211fbba53e6973888c01abb2b2130afbe963e5cdfa48d36375f304f874
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/submission_bundle_manifest.json` sha256=06830bdb0b667f6446584cc5c22e48e4cc4b10462950b5009e8e4d59f4850c08
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/submission_bundle_manifest.md` sha256=c083126fb46262f8326f9f3bd232ca11e65180a86dfa56e6d30d0e3590aa63b2
+- `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py` sha256=aa62d7bf680dc1249166cbef7e6260e62041d61c776288214bbe85fa69c2573a
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/README.md` sha256=41e1fa221b86b2ce50645262bf6f5594c446c115dbe0718b9d387c2960d57451
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/SUBMISSION_DRAFT.md` sha256=262b8eed28b2ae35ffa80a562ea7247afac6e3a8596be5899c6da423f5b74641
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/__init__.py` sha256=d66eaf0995a7392e8a1aeedeec288f9f0b2482ed54d4ab49aba957ec3c07099b
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.json` sha256=388c637dd487645b84d0cfecde891b6079a564724c81562d6b60a2a1c7795f9b
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md` sha256=880b5cfb6aed3a62a74894c33aa1134f46fd536ca61da5c9bb25023446004001
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.py` sha256=bd54993eb41dd121b68e4dfcc539ee98f66ad829b5eb7a80dceb14120c5df343
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/requirements.txt` sha256=35d2f3fb9fbae040db0b9b6865ce752387d90729b3c125dc30aaf1c612e0fe70
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/reward_radar.py` sha256=ce14ab775f57fb8b37e618a732eb6d024e07f063a171de946a1bf7bca5e21f2e
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/sample_opportunities.json` sha256=f17d3543d529011d40a7b4865b2f32ac6b762ac4f37c68c9e96f6969b8d058f5
+- `rewardops_guard/delivery_kits/qdrant_reward_radar/test_reward_radar.py` sha256=dc756794af8810a94bbfcd34f8353489b6e68596045e68d85ddaf434ce1d9b75
 - `rewardops_guard/demo_script.md` sha256=a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf
 - `rewardops_guard/dfir_agent_demo.py` sha256=6aefc1d8d2d4c409edc321d95c4b9d8e136cc56adc972c19c2be9389f017d705
 - `rewardops_guard/dfir_agent_report.json` sha256=ef8746bcf736f17c760744a3d4eb1094422bffeeccac94a4c5f6f01ecb2572aa
@@ -135,7 +183,7 @@ real patient data behind explicit approval gates.
 - `rewardops_guard/policy_agent_trace.json` sha256=f08cc8d74b97cf10c0cd8fcf86ec90b773da8a6a7ccefeaa6a535d0fc7253b66
 - `rewardops_guard/policy_agent_trace.md` sha256=a1397238ea9793cfc2e59a263887edd122ede4f21fbb95ed95f5b419aecf6ec5
 - `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
-- `rewardops_guard/public_submission_bundle.py` sha256=bfc48260cfe383f25448436ccb261359efa2c53a5f02eac7b53a3d44424f0b8c
+- `rewardops_guard/public_submission_bundle.py` sha256=99edb9ae5bf7b7c5b290592f3d12e6d49399122018c37ed5edc8dd3178416f85
 - `rewardops_guard/revenue_evidence_pack.json` sha256=32561eb8b81495df07b2a037442dccb6263697d1056fb8f977fc8bb05210922d
 - `rewardops_guard/revenue_evidence_pack.md` sha256=0f4081c9bd1a78b27746f3728e427d4a87e7023762d6190e45c97b8d4f17e084
 - `rewardops_guard/revenue_evidence_pack.py` sha256=1225a252a7be169d2c7bec78e1a60cefff374c163987758f4613bf34b9f0a5db

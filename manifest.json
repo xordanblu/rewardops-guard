@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "bundle_20260530T130905524811Z",
+  "bundle_dir": "bundle_20260530T135952274786Z",
   "excluded_by_policy": [
     "secrets and account configs",
     "raw external task prompt archives",
@@ -7,7 +7,7 @@
     "social/KYC/payment setup artifacts"
   ],
   "external_actions_performed": [],
-  "file_count": 96,
+  "file_count": 134,
   "files": [
     {
       "bytes": 1,
@@ -16,16 +16,16 @@
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
-      "bytes": 13959,
+      "bytes": 21597,
       "ok": true,
       "path": "PUBLIC_SUBMISSION_README.md",
-      "sha256": "8d9a3749fa9ae7d846c89b38f3fcd5ee1fb202198528cf51cb9454f2507f06c2"
+      "sha256": "53aaef14477397b18a4ffb1e9cd435eb4489c246964700bd615e5c6399dabaf8"
     },
     {
-      "bytes": 13959,
+      "bytes": 21597,
       "ok": true,
       "path": "README.md",
-      "sha256": "8d9a3749fa9ae7d846c89b38f3fcd5ee1fb202198528cf51cb9454f2507f06c2"
+      "sha256": "53aaef14477397b18a4ffb1e9cd435eb4489c246964700bd615e5c6399dabaf8"
     },
     {
       "bytes": 29,
@@ -343,7 +343,235 @@
       "bytes": 34574,
       "ok": true,
       "path": "rewardops_guard/data.js",
-      "sha256": "e145086862eecca844a07caf336e476e0a61213c00cf90644a79d09bdbbc0904"
+      "sha256": "eecc63d748ec38bd753022c1a59ba8f644bd36ec197cd82575a1cf9f642b93a2"
+    },
+    {
+      "bytes": 67,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/__init__.py",
+      "sha256": "c14ec12abedadc14ac1e410d89034e5d5a6f49b478a14dc60e4dbc2620bad445"
+    },
+    {
+      "bytes": 2033,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/ARTICLE_DRAFT.md",
+      "sha256": "a3002c5469f505976f42867296f5dc12a95def1d0190be9507e68635787c10a9"
+    },
+    {
+      "bytes": 286,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/Dockerfile",
+      "sha256": "030e940e6862b8ae02ec0254f2b7704ecab8e938217b9571af0f2c6cb1b68ab4"
+    },
+    {
+      "bytes": 3281,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/README.md",
+      "sha256": "f4102d03d330fc615cde6c1d0156a36e580c21a0c570fdb5659854d700979da9"
+    },
+    {
+      "bytes": 2217,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/SUBMISSION_DRAFT.md",
+      "sha256": "3a3fc3e28f17bb776917f2c4e6cd016962444577492a72566756ff5c409d99d9"
+    },
+    {
+      "bytes": 45,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/__init__.py",
+      "sha256": "b1e7640ead08d0bdcd5fbdb825667434c099deaca135076620c5e5af73ffb55b"
+    },
+    {
+      "bytes": 6254,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.json",
+      "sha256": "26aafa9895ee83d25e7609e4c4700b2bdb64a4d8da3d0e39c8c619a849688d43"
+    },
+    {
+      "bytes": 4128,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.md",
+      "sha256": "e445d7e4de7885edab00088aaefeac02be9ef24145537fee6707d0779616028b"
+    },
+    {
+      "bytes": 8558,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_packet.py",
+      "sha256": "ba464ff4c156181738b08b67ee3398511a086aa22186aa70d24ba06e363634f2"
+    },
+    {
+      "bytes": 6431,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.json",
+      "sha256": "fd2387125fb8bfa3cec31efd2dabe4d6d0200c353c493012b0280b9451d4ee54"
+    },
+    {
+      "bytes": 1949,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md",
+      "sha256": "8710236f8d6af6f4a023ada04382d33a3f16af1f9bf75cf9735dff0a1e36f88a"
+    },
+    {
+      "bytes": 12938,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
+      "sha256": "434ef68bcc2778851bc29c25000824d20f6bdc92e17b248c478dccfe41d5f03f"
+    },
+    {
+      "bytes": 1169,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/README.md",
+      "sha256": "dea61eedd65f1361a26267e1dbf2af449d42ab1caa171fc3bfbd57a57539db14"
+    },
+    {
+      "bytes": 152793,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_desktop.png",
+      "sha256": "7b18296d025d1e7f4b2d061400911cc10f71e1ccdf6af07ab4244fb97ac6fbdf"
+    },
+    {
+      "bytes": 59550,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_assets/care_brief_demo_mobile.png",
+      "sha256": "50566ab707aca7254d1fce23b40164661231ec77838f2306f0ef64a2b3339200"
+    },
+    {
+      "bytes": 7820,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/demo_server.py",
+      "sha256": "dd2a4a0ad6513682a6af6032795939a4b1a7a3cf3fbd1e9f6f82e37e93604b90"
+    },
+    {
+      "bytes": 545,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/docker-compose.yml",
+      "sha256": "4912847edc24195ebfad1b0154a54aeeb5f0fd13b1c45b6bad25bade3c0c1e9a"
+    },
+    {
+      "bytes": 16785,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py",
+      "sha256": "2e361e2f040ee996fedbd1d75e85fb4acea710d5825efdbf91ff9140ac1b0b4d"
+    },
+    {
+      "bytes": 600,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/module.xml",
+      "sha256": "c00c88267a2834f61c12889d1236843d7d17071339b8056ccd1370cd699600f9"
+    },
+    {
+      "bytes": 3950,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_patient_bundle.json",
+      "sha256": "64c85bd1ea06b8fb655390b5fe885d6991ff968c09d3beebd362bac089fd107d"
+    },
+    {
+      "bytes": 1847,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.json",
+      "sha256": "f0cac375f7c3da71268bb7cdd76e244789a10e25d607927809894807247af6cd"
+    },
+    {
+      "bytes": 1681,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.md",
+      "sha256": "446497b764ebeb4d06b291a2bb5fb9ac9c9964ee9ec7026b31c70c36efc376f6"
+    },
+    {
+      "bytes": 371,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/src/cls/RewardOps/FHIR/CareBriefAgent.cls",
+      "sha256": "119bc614bba52a6a7b708fbaf23f9abb702e9c4e5731ea53d2211bb4d4d3a194"
+    },
+    {
+      "bytes": 5570,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle.py",
+      "sha256": "32f67d5aaf2e8d825f4a87f0bad2c0fabb032307c86284b91e3c65455048d9bb"
+    },
+    {
+      "bytes": 237807,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/fhir_care_brief_agent_submission_bundle.zip",
+      "sha256": "f25cf2211fbba53e6973888c01abb2b2130afbe963e5cdfa48d36375f304f874"
+    },
+    {
+      "bytes": 4748,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/submission_bundle_manifest.json",
+      "sha256": "06830bdb0b667f6446584cc5c22e48e4cc4b10462950b5009e8e4d59f4850c08"
+    },
+    {
+      "bytes": 3148,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/submission_bundle/submission_bundle_manifest.md",
+      "sha256": "c083126fb46262f8326f9f3bd232ca11e65180a86dfa56e6d30d0e3590aa63b2"
+    },
+    {
+      "bytes": 8737,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py",
+      "sha256": "aa62d7bf680dc1249166cbef7e6260e62041d61c776288214bbe85fa69c2573a"
+    },
+    {
+      "bytes": 2242,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/README.md",
+      "sha256": "41e1fa221b86b2ce50645262bf6f5594c446c115dbe0718b9d387c2960d57451"
+    },
+    {
+      "bytes": 1767,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/SUBMISSION_DRAFT.md",
+      "sha256": "262b8eed28b2ae35ffa80a562ea7247afac6e3a8596be5899c6da423f5b74641"
+    },
+    {
+      "bytes": 69,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/__init__.py",
+      "sha256": "d66eaf0995a7392e8a1aeedeec288f9f0b2482ed54d4ab49aba957ec3c07099b"
+    },
+    {
+      "bytes": 1452,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.json",
+      "sha256": "388c637dd487645b84d0cfecde891b6079a564724c81562d6b60a2a1c7795f9b"
+    },
+    {
+      "bytes": 603,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md",
+      "sha256": "880b5cfb6aed3a62a74894c33aa1134f46fd536ca61da5c9bb25023446004001"
+    },
+    {
+      "bytes": 4385,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.py",
+      "sha256": "bd54993eb41dd121b68e4dfcc539ee98f66ad829b5eb7a80dceb14120c5df343"
+    },
+    {
+      "bytes": 23,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/requirements.txt",
+      "sha256": "35d2f3fb9fbae040db0b9b6865ce752387d90729b3c125dc30aaf1c612e0fe70"
+    },
+    {
+      "bytes": 8814,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/reward_radar.py",
+      "sha256": "ce14ab775f57fb8b37e618a732eb6d024e07f063a171de946a1bf7bca5e21f2e"
+    },
+    {
+      "bytes": 4209,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/sample_opportunities.json",
+      "sha256": "f17d3543d529011d40a7b4865b2f32ac6b762ac4f37c68c9e96f6969b8d058f5"
+    },
+    {
+      "bytes": 2194,
+      "ok": true,
+      "path": "rewardops_guard/delivery_kits/qdrant_reward_radar/test_reward_radar.py",
+      "sha256": "dc756794af8810a94bbfcd34f8353489b6e68596045e68d85ddaf434ce1d9b75"
     },
     {
       "bytes": 2084,
@@ -460,10 +688,10 @@
       "sha256": "61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8"
     },
     {
-      "bytes": 14612,
+      "bytes": 17555,
       "ok": true,
       "path": "rewardops_guard/public_submission_bundle.py",
-      "sha256": "bfc48260cfe383f25448436ccb261359efa2c53a5f02eac7b53a3d44424f0b8c"
+      "sha256": "99edb9ae5bf7b7c5b290592f3d12e6d49399122018c37ed5edc8dd3178416f85"
     },
     {
       "bytes": 5347,
@@ -586,8 +814,8 @@
       "sha256": "62f1f0de8d25725c278b1a70f4341ddc54e0781236e71f01a4970d52f73608db"
     }
   ],
-  "generated_at": "2026-05-30T13:09:05+00:00",
-  "manifest_sha256": "ac2ab7965887f3f63fb56d1b50be9f9eb08f0ce414012f5912b7a8900ed431ac",
+  "generated_at": "2026-05-30T13:59:52+00:00",
+  "manifest_sha256": "fe7598ca293a1f9cb150278d6bbb0391304616f734f4021b62256bd0d634e171",
   "missing_or_blocked": [],
   "money": {
     "confirmed_revenue_usd": 1.2,
@@ -598,15 +826,19 @@
   "ok": true,
   "public_links": {
     "dashboard_source": "https://github.com/xordanx/rewardops-guard/blob/main/index.html",
+    "fhir_agent_pack": "https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack",
+    "fhir_preflight": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md",
     "find_evil_contact_sheet": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
     "find_evil_demo_video": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4",
     "find_evil_video_captions": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt",
     "find_evil_video_metadata": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md",
     "find_evil_video_transcript": "https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md",
+    "qdrant_preflight": "https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md",
+    "qdrant_reward_radar": "https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/qdrant_reward_radar",
     "repository": "https://github.com/xordanx/rewardops-guard"
   },
-  "single_html_path": "bundle_20260530T130905524811Z.html",
+  "single_html_path": "bundle_20260530T135952274786Z.html",
   "submission_gate": "HOLD_PUBLIC_SUBMISSION",
-  "zip_path": "bundle_20260530T130905524811Z.zip",
-  "zip_sha256": "afe0f247ed6777949fed622a65b56747282bbb018429b2a21aa117141ace3d4a"
+  "zip_path": "bundle_20260530T135952274786Z.zip",
+  "zip_sha256": "b80f1398e28d7ebf9f02cc0d974eb54e4274a6350b34561c8895a760e6f44eaa"
 }

@@ -1,0 +1,55 @@
+{
+  "demo_smoke": {
+    "indexed_opportunities": 7,
+    "ok": true,
+    "route_ids": [
+      "qdrant-vsd-2026"
+    ]
+  },
+  "external_gates": [
+    "Register for Qdrant Think Outside the Bot Hackathon",
+    "Publish or share a GitHub repository with organizers",
+    "Record and host a demo video of no more than 3 minutes",
+    "Submit through the Qdrant hackathon form before 2026-06-01 23:59 PT",
+    "Provide prize identity/payment documentation only if selected"
+  ],
+  "external_submission_ok": false,
+  "generated_at": "2026-05-30T13:59:15+00:00",
+  "hackathon": {
+    "deadline": "2026-06-01 23:59 PT",
+    "first_prize_usd": 5000,
+    "name": "Qdrant Think Outside the Bot Virtual Hackathon",
+    "non_chatbot_positioning": "A vector-search ranking surface for reward operations, not a conversational Q&A bot.",
+    "source": "https://try.qdrant.tech/hackathon-vsd"
+  },
+  "local_ok": true,
+  "missing_required_files": [],
+  "project": "Qdrant Reward Route Radar",
+  "qdrant_client_available": true,
+  "required_files": [
+    {
+      "exists": true,
+      "path": "README.md"
+    },
+    {
+      "exists": true,
+      "path": "SUBMISSION_DRAFT.md"
+    },
+    {
+      "exists": true,
+      "path": "requirements.txt"
+    },
+    {
+      "exists": true,
+      "path": "sample_opportunities.json"
+    },
+    {
+      "exists": true,
+      "path": "reward_radar.py"
+    },
+    {
+      "exists": true,
+      "path": "test_reward_radar.py"
+    }
+  ]
+}
