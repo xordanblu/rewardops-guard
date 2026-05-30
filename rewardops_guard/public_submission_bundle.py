@@ -55,6 +55,18 @@ PUBLIC_LINKS = {
         "find_evil_rewardops_defender/assets/"
         "rewardops-find-evil-guard-20260530-contact-sheet.png"
     ),
+    "find_evil_video_metadata": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md"
+    ),
+    "find_evil_video_captions": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt"
+    ),
+    "find_evil_video_transcript": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md"
+    ),
 }
 WALLET_OR_KEY_BLOCKLIST = (
     "0xEAF9f10F8ff6c5175" + "B87A0aDd982Fa2BE83366FB",
@@ -150,6 +162,9 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
         f"- Dashboard source: {PUBLIC_LINKS['dashboard_source']}",
         f"- FIND EVIL demo video: {PUBLIC_LINKS['find_evil_demo_video']}",
         f"- FIND EVIL contact sheet: {PUBLIC_LINKS['find_evil_contact_sheet']}",
+        f"- FIND EVIL video upload metadata: {PUBLIC_LINKS['find_evil_video_metadata']}",
+        f"- FIND EVIL captions: {PUBLIC_LINKS['find_evil_video_captions']}",
+        f"- FIND EVIL transcript: {PUBLIC_LINKS['find_evil_video_transcript']}",
         "- GitHub Pages is not claimed here because Actions is disabled for the account.",
         "",
         "## Safety Boundary",
@@ -224,6 +239,9 @@ def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any
     <li>Dashboard source: <a href="{html.escape(PUBLIC_LINKS["dashboard_source"])}">{html.escape(PUBLIC_LINKS["dashboard_source"])}</a></li>
     <li>FIND EVIL demo video: <a href="{html.escape(PUBLIC_LINKS["find_evil_demo_video"])}">{html.escape(PUBLIC_LINKS["find_evil_demo_video"])}</a></li>
     <li>FIND EVIL contact sheet: <a href="{html.escape(PUBLIC_LINKS["find_evil_contact_sheet"])}">{html.escape(PUBLIC_LINKS["find_evil_contact_sheet"])}</a></li>
+    <li>FIND EVIL video upload metadata: <a href="{html.escape(PUBLIC_LINKS["find_evil_video_metadata"])}">{html.escape(PUBLIC_LINKS["find_evil_video_metadata"])}</a></li>
+    <li>FIND EVIL captions: <a href="{html.escape(PUBLIC_LINKS["find_evil_video_captions"])}">{html.escape(PUBLIC_LINKS["find_evil_video_captions"])}</a></li>
+    <li>FIND EVIL transcript: <a href="{html.escape(PUBLIC_LINKS["find_evil_video_transcript"])}">{html.escape(PUBLIC_LINKS["find_evil_video_transcript"])}</a></li>
   </ul>
   <p>GitHub Pages is not claimed here because Actions is disabled for the account.</p>
   <h2>Money Evidence</h2>

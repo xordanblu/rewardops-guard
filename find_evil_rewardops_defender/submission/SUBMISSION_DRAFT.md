@@ -39,6 +39,9 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 - Repo-hosted demo video asset: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
 - Devpost-required video URL: TODO - upload to YouTube, Vimeo, or Youku.
 - Contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- Video upload metadata: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
+- Captions: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
+- Clean transcript: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## What It Demonstrates
@@ -51,6 +54,7 @@ exfiltration are correlated as one sequence. Raw hostile text is never stored.
 - Submission guard: a local release manifest detects secrets before publication and records prompt-injection fixtures without obeying them.
 - Terminal reproducibility: the full demo runs with Python standard library commands.
 - Public package: a sanitized GitHub repository, dashboard, repo-hosted demo video asset, and contact sheet are ready for review.
+- Video package: duration, audio, upload description, captions, and transcript are locally prepared for the required public video host.
 - Revenue boundary: confirmed revenue is separated from pending submissions and inbound market surface; no failed BountyBook amount is counted as earned.
 
 ## How It Maps To FIND EVIL

@@ -33,6 +33,8 @@ wallet signing, and social activity until explicitly approved.
 - Review README, architecture, dataset docs, and submission draft for claims that exceed local evidence.
 - Confirm `docs/architecture.svg` renders as a readable visual architecture diagram.
 - Confirm `docs/ACCURACY_REPORT.md` clearly documents false positives, missed artifacts, hallucination controls, and evidence integrity.
+- Confirm `submission/video_upload_metadata.json` shows duration under five minutes and audio present.
+- Confirm `submission/VIDEO_CAPTIONS.srt` and `submission/VIDEO_TRANSCRIPT.md` are present before uploading the external public video.
 
 ## External Action Gate
 
@@ -49,6 +51,8 @@ Already prepared without those external actions:
 - Sanitized public repository: `https://github.com/xordanx/rewardops-guard`
 - Dashboard source: `https://github.com/xordanx/rewardops-guard/blob/main/index.html`
 - Repo-hosted demo video asset: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4`
+- Video upload metadata: `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md`
+- Captions/transcript: `find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt` and `find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md`
 - Devpost-required YouTube/Vimeo/Youku URL: not prepared yet.
 - Repo-hosted contact sheet: `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png`
 - GitHub Pages is not claimed here because Actions is disabled for the account.

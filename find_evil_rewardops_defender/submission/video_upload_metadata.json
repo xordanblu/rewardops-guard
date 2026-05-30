@@ -1,0 +1,31 @@
+{
+  "schema": "rewardops.find_evil.video_upload_metadata.v1",
+  "title": "RewardOps Guard - FIND EVIL Terminal Demo",
+  "source_asset": "assets/rewardops-find-evil-guard-20260530.mp4",
+  "contact_sheet": "assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+  "caption_file": "submission/VIDEO_CAPTIONS.srt",
+  "transcript_file": "submission/VIDEO_TRANSCRIPT.md",
+  "duration_seconds": 64.021333,
+  "max_allowed_seconds": 300,
+  "width": 1920,
+  "height": 1080,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_channels": 2,
+  "has_audio": true,
+  "mean_volume_db": -22.6,
+  "max_volume_db": -4.7,
+  "external_visibility_required": "public",
+  "allowed_external_hosts": [
+    "YouTube",
+    "Vimeo",
+    "Youku"
+  ],
+  "verified_at": "2026-05-30T13:06:49Z",
+  "verified_with": [
+    "ffprobe -v error -show_entries format=duration,size,bit_rate -show_streams -of json assets/rewardops-find-evil-guard-20260530.mp4",
+    "ffmpeg -i assets/rewardops-find-evil-guard-20260530.mp4 -af volumedetect -f null -"
+  ],
+  "external_video_url": null,
+  "external_action_required": true
+}

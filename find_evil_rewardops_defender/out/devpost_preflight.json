@@ -11,6 +11,16 @@
       "requirement": "file:LICENSE"
     },
     {
+      "evidence": "assets/rewardops-find-evil-guard-20260530.mp4",
+      "ok": true,
+      "requirement": "file:assets/rewardops-find-evil-guard-20260530.mp4"
+    },
+    {
+      "evidence": "assets/rewardops-find-evil-guard-20260530-contact-sheet.png",
+      "ok": true,
+      "requirement": "file:assets/rewardops-find-evil-guard-20260530-contact-sheet.png"
+    },
+    {
       "evidence": "docs/ARCHITECTURE.md",
       "ok": true,
       "requirement": "file:docs/ARCHITECTURE.md"
@@ -41,6 +51,26 @@
       "requirement": "file:submission/SCREENCAST_SCRIPT.md"
     },
     {
+      "evidence": "submission/VIDEO_UPLOAD_METADATA.md",
+      "ok": true,
+      "requirement": "file:submission/VIDEO_UPLOAD_METADATA.md"
+    },
+    {
+      "evidence": "submission/VIDEO_CAPTIONS.srt",
+      "ok": true,
+      "requirement": "file:submission/VIDEO_CAPTIONS.srt"
+    },
+    {
+      "evidence": "submission/VIDEO_TRANSCRIPT.md",
+      "ok": true,
+      "requirement": "file:submission/VIDEO_TRANSCRIPT.md"
+    },
+    {
+      "evidence": "submission/video_upload_metadata.json",
+      "ok": true,
+      "requirement": "file:submission/video_upload_metadata.json"
+    },
+    {
       "evidence": "cases/find_evil_local_case.json",
       "ok": true,
       "requirement": "file:cases/find_evil_local_case.json"
@@ -64,6 +94,36 @@
       "evidence": "run_terminal_demo.sh",
       "ok": true,
       "requirement": "file:run_terminal_demo.sh"
+    },
+    {
+      "evidence": "submission/video_upload_metadata.json",
+      "ok": true,
+      "requirement": "local_demo_video_metadata"
+    },
+    {
+      "evidence": "assets/rewardops-find-evil-guard-20260530.mp4",
+      "ok": true,
+      "requirement": "local_demo_video_asset"
+    },
+    {
+      "evidence": "64.021333 seconds",
+      "ok": true,
+      "requirement": "local_demo_video_under_5_minutes"
+    },
+    {
+      "evidence": "codec=aac channels=2",
+      "ok": true,
+      "requirement": "local_demo_video_has_audio"
+    },
+    {
+      "evidence": "submission/VIDEO_CAPTIONS.srt",
+      "ok": true,
+      "requirement": "local_demo_video_captions_ready"
+    },
+    {
+      "evidence": "submission/VIDEO_TRANSCRIPT.md",
+      "ok": true,
+      "requirement": "local_demo_video_transcript_ready"
     },
     {
       "evidence": "https://github.com/xordanx/rewardops-guard",

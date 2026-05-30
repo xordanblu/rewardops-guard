@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:05,600
+This is RewardOps Guard, a public FIND EVIL demo for SIFT-style work and agent-tool workflows.
+
+2
+00:00:05,600 --> 00:00:14,500
+The sample sequence combines prompt injection, a wallet-signing trap, endpoint execution, credential access, and exfiltration.
+
+3
+00:00:14,500 --> 00:00:22,700
+The defender hashes raw text, scores the timeline, and triages tool, wallet, endpoint, and network events as one investigation path.
+
+4
+00:00:22,700 --> 00:00:30,800
+It also self-corrects: a training document process is downgraded while live tool and wallet requests remain high-risk.
+
+5
+00:00:30,800 --> 00:00:38,500
+The response plan is approval-gated. Unsafe agent actions are blocked, while containment and credential rotation stay behind human review.
+
+6
+00:00:38,500 --> 00:00:48,500
+The public package includes the defender module, safety tests, policy evidence, a sanitized threat bundle, and current revenue evidence.
+
+7
+00:00:48,500 --> 00:00:57,500
+$1.20 is confirmed, $9.10 is pending, and no BountyBook payout is counted. Pending work stays separate from earned money.
+
+8
+00:00:57,500 --> 00:01:04,021
+No Devpost submission, social account, wallet action, payment setup, spend, or KYC step is performed in this demo path.

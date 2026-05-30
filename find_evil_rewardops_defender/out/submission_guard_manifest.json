@@ -1,6 +1,6 @@
 {
   "blocking_findings": [],
-  "file_count": 40,
+  "file_count": 45,
   "file_manifest": [
     {
       "bytes": 29,
@@ -13,9 +13,9 @@
       "sha256": "ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9"
     },
     {
-      "bytes": 5417,
+      "bytes": 5627,
       "path": "README.md",
-      "sha256": "5fa1aaf9108eab28085a3361fbf7483a078bcb33d777b3faa1f793cccd1acb29"
+      "sha256": "1a5e01f0d6945c9294e7233ae707d5717704e088e07ba2a9fb025dc9e75c0ec5"
     },
     {
       "bytes": 297954,
@@ -103,39 +103,44 @@
       "sha256": "417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d"
     },
     {
+      "bytes": 5377,
+      "path": "out/devpost_preflight.json",
+      "sha256": "2812fec19216af077c6ce7738f2a35bf5990150aeb8623534d1110c591b077fd"
+    },
+    {
       "bytes": 8172,
       "path": "out/dfir_triage_report.json",
-      "sha256": "531f96c7df24e480600b49aedf996acea157f11aa3f251ba94cb48f1449fe35c"
+      "sha256": "eeb69f59fa30efc36f314c1e9041f464ea395c4990f125edc6f440cfac6580ff"
     },
     {
       "bytes": 1894,
       "path": "out/dfir_triage_report.md",
-      "sha256": "84f9fc24b118fdaebb4b06672d4a6743fa2d95cf8c9670e2fa9c27dec441aaca"
+      "sha256": "cb24542cda178e93ea17b5e7b2cfe68c9b6b7e07a3f2067224682b4d9d4357a0"
     },
     {
       "bytes": 8368,
       "path": "out/find_evil_case_report.json",
-      "sha256": "d3ab79c6a9290bd21a47bfba652ff9fc918af1eba9e5031e19134c88554d0690"
+      "sha256": "37f16a8a266234d231d038806b678871163d5f37c97c5f42bb5547c292d3fd8e"
     },
     {
       "bytes": 962,
       "path": "out/find_evil_case_report.md",
-      "sha256": "819f5f6bac55926348296d83ee4df4237d63dcc7549bc9af83536bd67ffe5182"
+      "sha256": "91453fe457ae58ea7c6ab09f730c56f47cb29ade40f5a013ab3df25a66495ddd"
     },
     {
       "bytes": 6427,
       "path": "out/rewardops_defender_report.json",
-      "sha256": "9ef20d9f838913a6f352b78cfaff0f805a97380172bab75edd4ade11339620fe"
+      "sha256": "0bae92e31d64456243af8870e675b8cbc257702fc846f4519e243a48d601b103"
     },
     {
       "bytes": 1929,
       "path": "out/rewardops_defender_report.md",
-      "sha256": "cefa79383bfbaac00c43e0ea7e3620fb0b39e6e1d8cd63e2abee156a35fa8f01"
+      "sha256": "922acc87a55e2fefb9c9d8477ff901c63547069e01abc076a353e6d01af408e6"
     },
     {
-      "bytes": 9448,
+      "bytes": 10580,
       "path": "out/submission_guard_manifest.json",
-      "sha256": "4bd6dcb8deecaf42fff7872f67d411fb12a696889dccedbeddc489ef00ab61cc"
+      "sha256": "987ea6a16008f95fc0354cec62582e17c3b0b53886c95c4dbb7bde8b2f2e00e8"
     },
     {
       "bytes": 2120,
@@ -143,9 +148,9 @@
       "sha256": "6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be"
     },
     {
-      "bytes": 2721,
+      "bytes": 3201,
       "path": "submission/PUBLISH_CHECKLIST.md",
-      "sha256": "f9470ed6064a01d4c5aadaddeeb566e6f51e1da3dcc24311569c915537351ed0"
+      "sha256": "ae2788f6126a9fc07cb74f41143e1717ea36a95eb3f42f9c86f922354af4903b"
     },
     {
       "bytes": 1892,
@@ -153,9 +158,24 @@
       "sha256": "3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c"
     },
     {
-      "bytes": 5504,
+      "bytes": 6040,
       "path": "submission/SUBMISSION_DRAFT.md",
-      "sha256": "f614551682a598974c22ed00160889dd8838066551633879306e0f77340490e4"
+      "sha256": "3b20c0d8dd4a5be14cc9a5974fa59bd7f0a365549e6981ca286763ab67a96a0f"
+    },
+    {
+      "bytes": 1255,
+      "path": "submission/VIDEO_CAPTIONS.srt",
+      "sha256": "0fcedb0e675695636ff7b52b6305ca745e88d79813543b010d6dae050950026f"
+    },
+    {
+      "bytes": 1126,
+      "path": "submission/VIDEO_TRANSCRIPT.md",
+      "sha256": "50d5fbe7d1bb3f639be447c807752034e9401e8eda9bc0bde32cb6152f249aed"
+    },
+    {
+      "bytes": 1491,
+      "path": "submission/VIDEO_UPLOAD_METADATA.md",
+      "sha256": "d39aae5cf36b51f5a3674edbb65d3a3afba072bc70956a0047ebe5ab334d42e9"
     },
     {
       "bytes": 0,
@@ -163,9 +183,14 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "bytes": 5569,
+      "bytes": 8277,
       "path": "submission/devpost_preflight.py",
-      "sha256": "09a1582a9dd16d72e64a29083cc5885916cee02ef0f4b784edfceb9ac921fbd3"
+      "sha256": "ad09be80bbacf27eb926d2f2564d96d3f754576e79b945c762a70d66047bdb49"
+    },
+    {
+      "bytes": 1095,
+      "path": "submission/video_upload_metadata.json",
+      "sha256": "23f67efd1f494d731270f72a7ff11c14413e587f1dce57644b808640839fadca"
     },
     {
       "bytes": 32,
@@ -178,9 +203,9 @@
       "sha256": "84a76a44fc7be2dd8b6e0a958b9b3b1733211ae0fa05cd228b732e6156a5c1ad"
     },
     {
-      "bytes": 1190,
+      "bytes": 1821,
       "path": "tests/test_devpost_preflight.py",
-      "sha256": "87e813e0ccede3712eda4c4d79c1dea9a7993c6b13956d0792331f0f9b432e71"
+      "sha256": "684feb762efa70c979d4955c6a4a59cc8f9449d4bcf15ee600da48aa6124f1e6"
     },
     {
       "bytes": 2373,
@@ -203,7 +228,7 @@
       "sha256": "576167450bcb7c87d0b3294cafbdaa9ff3ca5d46f853d9956fb3fe3a99964009"
     }
   ],
-  "generated_at": "2026-05-30T12:58:16Z",
+  "generated_at": "2026-05-30T13:08:22Z",
   "injection_fixture_count": 26,
   "injection_fixtures": [
     {
@@ -343,8 +368,8 @@
     "Prompt-injection phrases are recorded as fixtures, not executed as instructions.",
     "The guard does not make network calls, publish content, sign wallets, or submit forms."
   ],
-  "scanned_text_file_count": 37,
+  "scanned_text_file_count": 41,
   "schema": "rewardops.submission_guard.v1",
-  "total_bytes": 6058166,
+  "total_bytes": 6074207,
   "verdict": "release_ready"
 }

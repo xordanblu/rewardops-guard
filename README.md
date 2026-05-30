@@ -1,6 +1,6 @@
 # RewardOps Guard Public Submission Bundle
 
-Generated: 2026-05-30T12:58:40+00:00
+Generated: 2026-05-30T13:09:05+00:00
 
 ## Purpose
 
@@ -13,6 +13,9 @@ hackathon review, buyer diligence, or repository publication.
 - Dashboard source: https://github.com/xordanx/rewardops-guard/blob/main/index.html
 - FIND EVIL demo video: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4
 - FIND EVIL contact sheet: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png
+- FIND EVIL video upload metadata: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
+- FIND EVIL captions: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
+- FIND EVIL transcript: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## Safety Boundary
@@ -45,11 +48,11 @@ python3 rewardops_guard/public_submission_bundle.py
 ## Files
 
 - `.nojekyll` sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-- `PUBLIC_SUBMISSION_README.md` sha256=6ba8b9db484a57bb4902f6f8f452309d1a6f369fc41249c6c81983f644fb3a76
-- `README.md` sha256=6ba8b9db484a57bb4902f6f8f452309d1a6f369fc41249c6c81983f644fb3a76
+- `PUBLIC_SUBMISSION_README.md` sha256=aff0a3441a381cddb3070b78baa993578be3fa3d2a8f08980f5d0ec5c65eddd9
+- `README.md` sha256=aff0a3441a381cddb3070b78baa993578be3fa3d2a8f08980f5d0ec5c65eddd9
 - `find_evil_rewardops_defender/.gitignore` sha256=60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672
 - `find_evil_rewardops_defender/LICENSE` sha256=ed8ea90fab43dd04ee896edd4b24e6a3e61dd946d6b0b43b67db23b5e58c23f9
-- `find_evil_rewardops_defender/README.md` sha256=5fa1aaf9108eab28085a3361fbf7483a078bcb33d777b3faa1f793cccd1acb29
+- `find_evil_rewardops_defender/README.md` sha256=508612140173b2256989a7442d592409fe3b6383ef43e331577462da84d50b68
 - `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530-contact-sheet.png` sha256=f93b6cae993e29650d80374ac13245dc2a1329b45f3e0b4b762f8e5de8b276f3
 - `find_evil_rewardops_defender/assets/rewardops-find-evil-guard-20260530.mp4` sha256=7c0f1dd0c59e3312864f0e65e4a293d02c10d29c6c14e91a1da11c1e330d8b1c
 - `find_evil_rewardops_defender/cases/find_evil_local_case.json` sha256=71a3f16d1c457606ae06cbc82737212a551cc78219c7b4fb9ccea4f81c9528f2
@@ -67,23 +70,27 @@ python3 rewardops_guard/public_submission_bundle.py
 - `find_evil_rewardops_defender/docs/architecture.png` sha256=e21917bb987f140191bbe878fb9f9249f4e02cfe9c2e78f77fac3df3ccd5cf52
 - `find_evil_rewardops_defender/docs/architecture.svg` sha256=366b0747dbe2539b7692a2035cc37486f6b9a180e8679ed70cf8e653afa5abbc
 - `find_evil_rewardops_defender/index.html` sha256=417b4d7fc5f71acf95df1523475b8c77540caba0a3669a48fa2f6481630da32d
-- `find_evil_rewardops_defender/out/devpost_preflight.json` sha256=14f47236faf49b291482753398d5e1fe46d59ed081f3ac2d1a67f43656e11948
-- `find_evil_rewardops_defender/out/dfir_triage_report.json` sha256=531f96c7df24e480600b49aedf996acea157f11aa3f251ba94cb48f1449fe35c
-- `find_evil_rewardops_defender/out/dfir_triage_report.md` sha256=84f9fc24b118fdaebb4b06672d4a6743fa2d95cf8c9670e2fa9c27dec441aaca
-- `find_evil_rewardops_defender/out/find_evil_case_report.json` sha256=37f16a8a266234d231d038806b678871163d5f37c97c5f42bb5547c292d3fd8e
-- `find_evil_rewardops_defender/out/find_evil_case_report.md` sha256=91453fe457ae58ea7c6ab09f730c56f47cb29ade40f5a013ab3df25a66495ddd
-- `find_evil_rewardops_defender/out/rewardops_defender_report.json` sha256=9ef20d9f838913a6f352b78cfaff0f805a97380172bab75edd4ade11339620fe
-- `find_evil_rewardops_defender/out/rewardops_defender_report.md` sha256=cefa79383bfbaac00c43e0ea7e3620fb0b39e6e1d8cd63e2abee156a35fa8f01
-- `find_evil_rewardops_defender/out/submission_guard_manifest.json` sha256=987ea6a16008f95fc0354cec62582e17c3b0b53886c95c4dbb7bde8b2f2e00e8
+- `find_evil_rewardops_defender/out/devpost_preflight.json` sha256=2812fec19216af077c6ce7738f2a35bf5990150aeb8623534d1110c591b077fd
+- `find_evil_rewardops_defender/out/dfir_triage_report.json` sha256=eeb69f59fa30efc36f314c1e9041f464ea395c4990f125edc6f440cfac6580ff
+- `find_evil_rewardops_defender/out/dfir_triage_report.md` sha256=cb24542cda178e93ea17b5e7b2cfe68c9b6b7e07a3f2067224682b4d9d4357a0
+- `find_evil_rewardops_defender/out/find_evil_case_report.json` sha256=9b0c1e0976dc5e02a744ac3af028d879ff96d17252e0dda95a5a79bec6a94727
+- `find_evil_rewardops_defender/out/find_evil_case_report.md` sha256=44f26a52e16ae9ae75aa2f5f5f3ef3c84ebaf03fe11a9c2e71559c91e6442318
+- `find_evil_rewardops_defender/out/rewardops_defender_report.json` sha256=0bae92e31d64456243af8870e675b8cbc257702fc846f4519e243a48d601b103
+- `find_evil_rewardops_defender/out/rewardops_defender_report.md` sha256=922acc87a55e2fefb9c9d8477ff901c63547069e01abc076a353e6d01af408e6
+- `find_evil_rewardops_defender/out/submission_guard_manifest.json` sha256=1c262c8d8aefd1843842d3a6cbb9d7111e0f7f3fb96415b6f3f5a4184ce4a2da
 - `find_evil_rewardops_defender/run_terminal_demo.sh` sha256=6eaa1b48acf726883fb358a726d18a345800f46725c490dd7fe2a29b04bbe9be
-- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=f9470ed6064a01d4c5aadaddeeb566e6f51e1da3dcc24311569c915537351ed0
+- `find_evil_rewardops_defender/submission/PUBLISH_CHECKLIST.md` sha256=ae2788f6126a9fc07cb74f41143e1717ea36a95eb3f42f9c86f922354af4903b
 - `find_evil_rewardops_defender/submission/SCREENCAST_SCRIPT.md` sha256=3fb1fad7a06b1be0227b7c6938206f70440ab2b3f3680716644511d581703d7c
-- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=f614551682a598974c22ed00160889dd8838066551633879306e0f77340490e4
+- `find_evil_rewardops_defender/submission/SUBMISSION_DRAFT.md` sha256=3b20c0d8dd4a5be14cc9a5974fa59bd7f0a365549e6981ca286763ab67a96a0f
+- `find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt` sha256=0fcedb0e675695636ff7b52b6305ca745e88d79813543b010d6dae050950026f
+- `find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md` sha256=50d5fbe7d1bb3f639be447c807752034e9401e8eda9bc0bde32cb6152f249aed
+- `find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md` sha256=d39aae5cf36b51f5a3674edbb65d3a3afba072bc70956a0047ebe5ab334d42e9
 - `find_evil_rewardops_defender/submission/__init__.py` sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-- `find_evil_rewardops_defender/submission/devpost_preflight.py` sha256=09a1582a9dd16d72e64a29083cc5885916cee02ef0f4b784edfceb9ac921fbd3
+- `find_evil_rewardops_defender/submission/devpost_preflight.py` sha256=ad09be80bbacf27eb926d2f2564d96d3f754576e79b945c762a70d66047bdb49
+- `find_evil_rewardops_defender/submission/video_upload_metadata.json` sha256=23f67efd1f494d731270f72a7ff11c14413e587f1dce57644b808640839fadca
 - `find_evil_rewardops_defender/tests/__init__.py` sha256=98d7b18e4354029c958891950d8f3c67d02080e0e253ef5eaea3aa8b450f1fc8
 - `find_evil_rewardops_defender/tests/test_case_runner.py` sha256=84a76a44fc7be2dd8b6e0a958b9b3b1733211ae0fa05cd228b732e6156a5c1ad
-- `find_evil_rewardops_defender/tests/test_devpost_preflight.py` sha256=87e813e0ccede3712eda4c4d79c1dea9a7993c6b13956d0792331f0f9b432e71
+- `find_evil_rewardops_defender/tests/test_devpost_preflight.py` sha256=684feb762efa70c979d4955c6a4a59cc8f9449d4bcf15ee600da48aa6124f1e6
 - `find_evil_rewardops_defender/tests/test_dfir_triage.py` sha256=df609a1d1731501d2638452019394fee539c1768c3bbb15cc413079eb1795875
 - `find_evil_rewardops_defender/tests/test_mcp_server.py` sha256=2708061df4f2c7ef308f98f00cf2a474092a3a686e03cb7ec1656272f9951e9e
 - `find_evil_rewardops_defender/tests/test_rewardops_defender.py` sha256=8192cfa414cb6157ab0c2e0a7c288dd66ac0f000260243509331d304d7658a10
@@ -95,7 +102,7 @@ python3 rewardops_guard/public_submission_bundle.py
 - `rewardops_guard/buyer_onepager.md` sha256=20cfdcde8aa156c1aa29f83d0600e4337721f79850e8d103debbe390b2164c29
 - `rewardops_guard/clawmoney_skill_fulfillment_pack.json` sha256=ca33d5ccb6cf6792a1328da4782a98f51a9302091ce88f9db93e9c0ca6c2782c
 - `rewardops_guard/clawmoney_skill_fulfillment_pack.md` sha256=3acc05118feba2344f6a2671cfd9266792737ca5b7a57541af78c3c5c7548f72
-- `rewardops_guard/data.js` sha256=a4a01ba0e300f2048fd61460556abf7b0e317861b440d8f5cc9a6a32c36ba05e
+- `rewardops_guard/data.js` sha256=e145086862eecca844a07caf336e476e0a61213c00cf90644a79d09bdbbc0904
 - `rewardops_guard/demo_script.md` sha256=a4cd491502027e3e87207d58cd1f6bd55e45a60c311c53cb3ce2978ae8cc15bf
 - `rewardops_guard/dfir_agent_demo.py` sha256=6aefc1d8d2d4c409edc321d95c4b9d8e136cc56adc972c19c2be9389f017d705
 - `rewardops_guard/dfir_agent_report.json` sha256=ef8746bcf736f17c760744a3d4eb1094422bffeeccac94a4c5f6f01ecb2572aa
@@ -115,7 +122,7 @@ python3 rewardops_guard/public_submission_bundle.py
 - `rewardops_guard/policy_agent_trace.json` sha256=f08cc8d74b97cf10c0cd8fcf86ec90b773da8a6a7ccefeaa6a535d0fc7253b66
 - `rewardops_guard/policy_agent_trace.md` sha256=a1397238ea9793cfc2e59a263887edd122ede4f21fbb95ed95f5b419aecf6ec5
 - `rewardops_guard/proposal_templates.md` sha256=61c9539f7ea61f1e36a416cf0488b4ecf63a023b39b42c43bc513702ba89a3d8
-- `rewardops_guard/public_submission_bundle.py` sha256=3d2c857ed65235f51bf924e5f7f6ff8d83219b5cb347d1853f434b08e4ec395f
+- `rewardops_guard/public_submission_bundle.py` sha256=bfc48260cfe383f25448436ccb261359efa2c53a5f02eac7b53a3d44424f0b8c
 - `rewardops_guard/revenue_evidence_pack.json` sha256=32561eb8b81495df07b2a037442dccb6263697d1056fb8f977fc8bb05210922d
 - `rewardops_guard/revenue_evidence_pack.md` sha256=0f4081c9bd1a78b27746f3728e427d4a87e7023762d6190e45c97b8d4f17e084
 - `rewardops_guard/revenue_evidence_pack.py` sha256=1225a252a7be169d2c7bec78e1a60cefff374c163987758f4613bf34b9f0a5db
