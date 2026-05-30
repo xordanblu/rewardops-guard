@@ -1,0 +1,96 @@
+{
+  "approval_gates_before_public_submission": [
+    "InterSystems Developer Community / Open Exchange account creation or login",
+    "Public GitHub/GitLab repository publication",
+    "Demo video recording or upload",
+    "Open Exchange contest submission",
+    "Identity verification for cash prize collection",
+    "Real patient data, PHI, credentials, cloud deployment, paid API spend, wallet action, or social posting"
+  ],
+  "bonus_context": {
+    "docker_container_usage": 2,
+    "embedded_python": 3,
+    "first_time_contribution": 3,
+    "intersystems_fhir_server_usage": 2,
+    "llm_or_langchain_usage": 3,
+    "online_demo": 2,
+    "suggested_task": 5,
+    "vector_search_usage": 4,
+    "youtube_video": 3,
+    "zpm_package_deployment": 2
+  },
+  "generated_at": "2026-05-30T13:16:45+00:00",
+  "kit": "intersystems_fhir_agent_pack",
+  "local_artifacts": [
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/README.md",
+      "size_bytes": 2076
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/fhir_summary_agent.py",
+      "size_bytes": 14388
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py",
+      "size_bytes": 6750
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_patient_bundle.json",
+      "size_bytes": 3950
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.json",
+      "size_bytes": 1847
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/sample_summary_ed_doctor.md",
+      "size_bytes": 1681
+    },
+    {
+      "exists": true,
+      "path": "rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/test_fhir_summary_agent.py",
+      "size_bytes": 3503
+    }
+  ],
+  "missing_local_artifacts": [],
+  "prize_context": {
+    "community_first_place_usd": 1000,
+    "expert_first_place_usd": 5000,
+    "expert_second_place_usd": 2500,
+    "expert_third_place_usd": 1000,
+    "submission_deadline": "2026-06-07 23:59 EST",
+    "total_pool_usd": 12000,
+    "voting_period": "2026-06-08 through 2026-06-14 23:59 EST"
+  },
+  "project": {
+    "agent_workflow": [
+      "Load an approved FHIR Bundle.",
+      "Extract active clinical signals from the required resources.",
+      "Generate current issues, recent changes, and risks/follow-up items.",
+      "Generate medication-safety findings, care-plan task candidates, and evidence traceability.",
+      "Render role-specific outputs for ED doctor, care manager, patient, or family caregiver.",
+      "Block PHI, account, publication, video, KYC, spend, wallet, and social steps until approved."
+    ],
+    "contest_fit": "Matches the Smart Patient Summary Generator bonus idea and now includes medication-safety and care-plan navigator outputs for a stronger expert-judging story.",
+    "name": "FHIR Care Brief Agent",
+    "one_liner": "A synthetic-data-first FHIR agent that turns Patient, Condition, MedicationRequest, AllergyIntolerance, Observation, Encounter, and CarePlan resources into role-specific care summaries.",
+    "suggested_tracks": [
+      "Smart Patient Summary Generator",
+      "Medication Safety and Interaction Assistant",
+      "AI-Powered Care Plan Navigator"
+    ]
+  },
+  "ready_locally": true,
+  "side_effects": "none; packet generation is local only",
+  "source_urls": [
+    "https://community.intersystems.com/post/intersystems-programming-contest-ai-agents-fhir",
+    "https://community.intersystems.com/post/technology-bonuses-intersystems-programming-contest-ai-agents-fhir",
+    "https://openexchange.intersystems.com/contests?archive=1"
+  ]
+}

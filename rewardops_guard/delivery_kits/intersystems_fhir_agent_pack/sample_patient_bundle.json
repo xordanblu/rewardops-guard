@@ -1,0 +1,184 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-001",
+        "name": [
+          {
+            "given": ["Alex"],
+            "family": "Rivera"
+          }
+        ],
+        "birthDate": "1964-04-12",
+        "gender": "female"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-diabetes",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Type 2 diabetes mellitus"
+        },
+        "recordedDate": "2026-05-08"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-hypertension",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Essential hypertension"
+        },
+        "recordedDate": "2025-11-18"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-metformin",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Metformin 500 mg tablet twice daily"
+        },
+        "authoredOn": "2026-04-26"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-lisinopril",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Lisinopril 10 mg tablet daily"
+        },
+        "authoredOn": "2026-01-05"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "allergy-penicillin",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Penicillin"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Hives"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-a1c",
+        "status": "final",
+        "code": {
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2026-05-24",
+        "valueQuantity": {
+          "value": 8.7,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "high": {
+              "value": 7.0,
+              "unit": "%"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bp",
+        "status": "final",
+        "code": {
+          "text": "Systolic blood pressure"
+        },
+        "effectiveDateTime": "2026-05-24",
+        "valueQuantity": {
+          "value": 152,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "high": {
+              "value": 130,
+              "unit": "mmHg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-ed",
+        "status": "finished",
+        "class": {
+          "code": "AMB"
+        },
+        "period": {
+          "start": "2026-05-24T09:30:00Z",
+          "end": "2026-05-24T10:05:00Z"
+        },
+        "reasonCode": [
+          {
+            "text": "Dizziness and elevated home blood pressure"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "careplan-diabetes",
+        "status": "active",
+        "title": "Diabetes and hypertension follow-up",
+        "activity": [
+          {
+            "detail": {
+              "description": "Repeat A1c in 3 months and schedule blood pressure medication review."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+

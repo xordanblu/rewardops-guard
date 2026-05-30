@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+"""Local preflight for the InterSystems FHIR contest route.
+
+This script validates local artifacts only. It deliberately reports external
+submission gates instead of creating accounts, publishing repos, uploading
+videos, submitting to Open Exchange, handling PHI, or verifying identity.
+"""
+
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import json
+from pathlib import Path
+import sys
+from typing import Any
+
+if __package__ in {None, ""}:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+
+from rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.fhir_summary_agent import (
+    REQUIRED_CONTEST_RESOURCES,
+    ROLE_GUIDANCE,
+    load_bundle,
+    render_markdown,
+    summarize_bundle,
+)
+
+
+ROOT = Path(__file__).resolve().parents[3]
+KIT_ROOT = Path(__file__).resolve().parent
+
+REQUIRED_LOCAL_FILES = [
+    "README.md",
+    "fhir_summary_agent.py",
+    "sample_patient_bundle.json",
+    "test_fhir_summary_agent.py",
+    "contest_packet.py",
+]
+
+EXTERNAL_BLOCKERS = [
+    "Create or log into InterSystems Developer Community / Open Exchange account",
+    "Publish the app as an open-source GitHub or GitLab repository",
+    "Publish the app on InterSystems Open Exchange",
+    "Apply the Open Exchange app to the contest before 2026-06-07 23:59 EST",
+    "Provide prize identity information if InterSystems requests it",
+    "Approve any public video/article/demo publication",
+]
+
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def bundle_resource_types(bundle: dict[str, Any]) -> set[str]:
+    resource_types = set()
+    for entry in bundle.get("entry", []):
+        resource = entry.get("resource") if isinstance(entry, dict) else None
+        if isinstance(resource, dict) and resource.get("resourceType"):
+            resource_types.add(str(resource["resourceType"]))
+    return resource_types
+
+
+def local_file_checks() -> list[dict[str, Any]]:
+    checks = []
+    for name in REQUIRED_LOCAL_FILES:
+        path = KIT_ROOT / name
+        checks.append({"path": name, "exists": path.exists(), "size_bytes": path.stat().st_size if path.exists() else 0})
+    return checks
+
+
+def role_checks(bundle: dict[str, Any]) -> list[dict[str, Any]]:
+    checks = []
+    for role in sorted(ROLE_GUIDANCE):
+        summary = summarize_bundle(bundle, role)
+        markdown = render_markdown(summary)
+        checks.append(
+            {
+                "role": role,
+                "ok": all(
+                    [
+                        bool(summary.current_issues),
+                        bool(summary.recent_changes),
+                        bool(summary.risks_follow_up),
+                        bool(summary.medication_safety),
+                        bool(summary.care_plan_next_steps),
+                        "## Evidence Trace" in markdown,
+                    ]
+                ),
+                "sections": {
+                    "current_issues": len(summary.current_issues),
+                    "recent_changes": len(summary.recent_changes),
+                    "risks_follow_up": len(summary.risks_follow_up),
+                    "medication_safety": len(summary.medication_safety),
+                    "care_plan_next_steps": len(summary.care_plan_next_steps),
+                    "evidence_trace": len(summary.evidence_trace),
+                },
+            }
+        )
+    return checks
+
+
+def build_report() -> dict[str, Any]:
+    bundle = load_bundle()
+    resource_types = bundle_resource_types(bundle)
+    missing_resources = sorted(REQUIRED_CONTEST_RESOURCES - resource_types)
+    files = local_file_checks()
+    roles = role_checks(bundle)
+    local_ok = (
+        all(item["exists"] and item["size_bytes"] > 0 for item in files)
+        and not missing_resources
+        and all(item["ok"] for item in roles)
+    )
+    return {
+        "checked_at": now_iso(),
+        "kit": "intersystems_fhir_agent_pack",
+        "local_ok": local_ok,
+        "external_submission_ok": False,
+        "contest_value": {
+            "expert_first_place_usd": 5000,
+            "total_prize_pool_usd": 12000,
+            "submission_deadline": "2026-06-07 23:59 EST",
+        },
+        "local_file_checks": files,
+        "resource_coverage": {
+            "required": sorted(REQUIRED_CONTEST_RESOURCES),
+            "found": sorted(resource_types),
+            "missing": missing_resources,
+        },
+        "role_checks": roles,
+        "covered_bonus_angles": [
+            "Suggested task: Smart Patient Summary Generator",
+            "Embedded Python-style local agent logic",
+            "LLM/AI-agent-ready summary workflow",
+            "Docker/ZPM/Open Exchange gates documented but not executed",
+        ],
+        "external_blockers_before_contest_submission": EXTERNAL_BLOCKERS,
+        "side_effects": "none; local read/validation only",
+    }
+
+
+def write_markdown(report: dict[str, Any], path: Path) -> None:
+    lines = [
+        "# InterSystems FHIR Contest Preflight",
+        "",
+        f"Checked: {report['checked_at']}",
+        f"Local OK: `{str(report['local_ok']).lower()}`",
+        f"External submission OK: `{str(report['external_submission_ok']).lower()}`",
+        f"First-place target: `${report['contest_value']['expert_first_place_usd']}`",
+        f"Deadline: {report['contest_value']['submission_deadline']}",
+        "",
+        "## Resource Coverage",
+        "",
+    ]
+    for resource_type in report["resource_coverage"]["required"]:
+        status = "present" if resource_type in report["resource_coverage"]["found"] else "missing"
+        lines.append(f"- {status}: {resource_type}")
+    lines.extend(["", "## Role Checks", ""])
+    for role in report["role_checks"]:
+        lines.append(f"- {'ok' if role['ok'] else 'missing'}: {role['role']}")
+    lines.extend(["", "## External Blockers", ""])
+    lines.extend(f"- {item}" for item in report["external_blockers_before_contest_submission"])
+    lines.append("")
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--json-output", type=Path, default=KIT_ROOT / "contest_preflight.json")
+    parser.add_argument("--markdown-output", type=Path, default=KIT_ROOT / "contest_preflight.md")
+    args = parser.parse_args()
+
+    report = build_report()
+    args.json_output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_markdown(report, args.markdown_output)
+    print(json.dumps({"json": str(args.json_output), "markdown": str(args.markdown_output), "local_ok": report["local_ok"]}))
+    return 0 if report["local_ok"] else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,48 @@
+# FHIR Patient Summary - ED doctor
+
+Patient: Alex Rivera
+
+## Current Issues
+
+- Active condition: Type 2 diabetes mellitus
+- Active condition: Essential hypertension
+- Active medication: Metformin 500 mg tablet twice daily
+- Active medication: Lisinopril 10 mg tablet daily
+- Known allergy/intolerance: Penicillin
+
+## Recent Changes
+
+- Recent encounter 2026-05-24: Dizziness and elevated home blood pressure
+- Hemoglobin A1c: 8.7 % on 2026-05-24
+- Systolic blood pressure: 152 mmHg on 2026-05-24
+
+## Risks / Follow-Up Items
+
+- Follow up abnormal observation: Hemoglobin A1c: 8.7 % on 2026-05-24
+- Follow up abnormal observation: Systolic blood pressure: 152 mmHg on 2026-05-24
+- Diabetes and hypertension follow-up: Repeat A1c in 3 months and schedule blood pressure medication review.
+- Medication safety check should account for allergies before new orders.
+- Prioritize acute causes for symptoms and reconcile meds before discharge.
+
+## Medication Safety
+
+- Medication reconciliation: 2 active medication requests found.
+- No duplicate active medication classes detected in supplied bundle.
+- Allergy alert: Penicillin; verify before new medication orders.
+
+## Care Plan Next Steps
+
+- Task candidate from Diabetes and hypertension follow-up: Repeat A1c in 3 months and schedule blood pressure medication review.
+- Task candidate: follow up Hemoglobin A1c: 8.7 % on 2026-05-24.
+- Task candidate: follow up Systolic blood pressure: 152 mmHg on 2026-05-24.
+- ED handoff: decide what must happen before discharge versus outpatient follow-up.
+
+## Evidence Trace
+
+- AllergyIntolerance: 1
+- CarePlan: 1
+- Condition: 2
+- Encounter: 1
+- MedicationRequest: 2
+- Observation: 2
+- Patient: 1

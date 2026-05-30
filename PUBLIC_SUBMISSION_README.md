@@ -16,6 +16,8 @@ hackathon review, buyer diligence, or repository publication.
 - FIND EVIL video upload metadata: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_UPLOAD_METADATA.md
 - FIND EVIL captions: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_CAPTIONS.srt
 - FIND EVIL transcript: https://github.com/xordanx/rewardops-guard/blob/main/find_evil_rewardops_defender/submission/VIDEO_TRANSCRIPT.md
+- InterSystems FHIR Agent Pack: https://github.com/xordanx/rewardops-guard/tree/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack
+- InterSystems FHIR preflight: https://github.com/xordanx/rewardops-guard/blob/main/rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.md
 - GitHub Pages is not claimed here because Actions is disabled for the account.
 
 ## Safety Boundary
@@ -40,10 +42,21 @@ Run from the repository root:
 python3 -m unittest discover -s safety_gate -t . -p 'test_*.py' -v
 python3 -m unittest discover -s find_evil_rewardops_defender/tests -t find_evil_rewardops_defender -v
 python3 -m unittest discover -s rewardops_guard -p 'test_*.py' -v
+python3 -m unittest rewardops_guard.delivery_kits.intersystems_fhir_agent_pack.test_fhir_summary_agent -v
+python3 rewardops_guard/delivery_kits/intersystems_fhir_agent_pack/contest_preflight.py
 cd find_evil_rewardops_defender && ./run_terminal_demo.sh
 python3 rewardops_guard/build_dashboard.py
 python3 rewardops_guard/public_submission_bundle.py
 ```
+
+## Current $5k Route
+
+The `rewardops_guard/delivery_kits/intersystems_fhir_agent_pack` folder is a
+sanitized, synthetic-data-first app package for the InterSystems Programming
+Contest: AI Agents for FHIR. It targets the Smart Patient Summary Generator
+idea, adds medication-safety and care-plan task outputs, and keeps Open
+Exchange submission, identity verification, video/article publication, and
+real patient data behind explicit approval gates.
 
 ## Files
 

@@ -1,0 +1,124 @@
+{
+  "checked_at": "2026-05-30T13:18:06+00:00",
+  "contest_value": {
+    "expert_first_place_usd": 5000,
+    "submission_deadline": "2026-06-07 23:59 EST",
+    "total_prize_pool_usd": 12000
+  },
+  "covered_bonus_angles": [
+    "Suggested task: Smart Patient Summary Generator",
+    "Embedded Python-style local agent logic",
+    "LLM/AI-agent-ready summary workflow",
+    "Docker/ZPM/Open Exchange gates documented but not executed"
+  ],
+  "external_blockers_before_contest_submission": [
+    "Create or log into InterSystems Developer Community / Open Exchange account",
+    "Publish the app as an open-source GitHub or GitLab repository",
+    "Publish the app on InterSystems Open Exchange",
+    "Apply the Open Exchange app to the contest before 2026-06-07 23:59 EST",
+    "Provide prize identity information if InterSystems requests it",
+    "Approve any public video/article/demo publication"
+  ],
+  "external_submission_ok": false,
+  "kit": "intersystems_fhir_agent_pack",
+  "local_file_checks": [
+    {
+      "exists": true,
+      "path": "README.md",
+      "size_bytes": 2076
+    },
+    {
+      "exists": true,
+      "path": "fhir_summary_agent.py",
+      "size_bytes": 14388
+    },
+    {
+      "exists": true,
+      "path": "sample_patient_bundle.json",
+      "size_bytes": 3950
+    },
+    {
+      "exists": true,
+      "path": "test_fhir_summary_agent.py",
+      "size_bytes": 3503
+    },
+    {
+      "exists": true,
+      "path": "contest_packet.py",
+      "size_bytes": 6868
+    }
+  ],
+  "local_ok": true,
+  "resource_coverage": {
+    "found": [
+      "AllergyIntolerance",
+      "CarePlan",
+      "Condition",
+      "Encounter",
+      "MedicationRequest",
+      "Observation",
+      "Patient"
+    ],
+    "missing": [],
+    "required": [
+      "AllergyIntolerance",
+      "CarePlan",
+      "Condition",
+      "Encounter",
+      "MedicationRequest",
+      "Observation",
+      "Patient"
+    ]
+  },
+  "role_checks": [
+    {
+      "ok": true,
+      "role": "care_manager",
+      "sections": {
+        "care_plan_next_steps": 4,
+        "current_issues": 5,
+        "evidence_trace": 7,
+        "medication_safety": 3,
+        "recent_changes": 3,
+        "risks_follow_up": 5
+      }
+    },
+    {
+      "ok": true,
+      "role": "ed_doctor",
+      "sections": {
+        "care_plan_next_steps": 4,
+        "current_issues": 5,
+        "evidence_trace": 7,
+        "medication_safety": 3,
+        "recent_changes": 3,
+        "risks_follow_up": 5
+      }
+    },
+    {
+      "ok": true,
+      "role": "family_caregiver",
+      "sections": {
+        "care_plan_next_steps": 4,
+        "current_issues": 5,
+        "evidence_trace": 7,
+        "medication_safety": 3,
+        "recent_changes": 3,
+        "risks_follow_up": 5
+      }
+    },
+    {
+      "ok": true,
+      "role": "patient",
+      "sections": {
+        "care_plan_next_steps": 4,
+        "current_issues": 5,
+        "evidence_trace": 7,
+        "medication_safety": 3,
+        "recent_changes": 3,
+        "risks_follow_up": 5
+      }
+    }
+  ],
+  "side_effects": "none; local read/validation only"
+}
