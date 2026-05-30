@@ -47,7 +47,15 @@ Open `http://127.0.0.1:8787`. The web demo exposes the same Qdrant-backed rankin
 
 ## Demo Video Prep
 
-`VIDEO_SCRIPT.md` contains a sub-3-minute walkthrough script. External video upload is intentionally held until submission approval.
+`VIDEO_SCRIPT.md` contains the walkthrough script. A local rendered MP4 is available in `demo_video/renders/qdrant_reward_route_radar_demo.mp4`, with validation details in `demo_video/VIDEO_MANIFEST.md`.
+
+```bash
+cd rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video
+npm run check
+npm run render -- --output renders/qdrant_reward_route_radar_demo.mp4 --quality draft --fps 24 --workers 1
+```
+
+External video upload is intentionally held until submission approval.
 
 ## Submission Gate
 

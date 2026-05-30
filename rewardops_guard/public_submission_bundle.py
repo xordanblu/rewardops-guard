@@ -83,6 +83,20 @@ PUBLIC_LINKS = {
         "https://github.com/xordanx/rewardops-guard/blob/main/"
         "rewardops_guard/delivery_kits/qdrant_reward_radar/contest_preflight.md"
     ),
+    "qdrant_demo_video": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/"
+        "qdrant_reward_route_radar_demo.mp4"
+    ),
+    "qdrant_contact_sheet": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/"
+        "qdrant_reward_route_radar_contact_sheet.png"
+    ),
+    "qdrant_video_manifest": (
+        "https://github.com/xordanx/rewardops-guard/blob/main/"
+        "rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md"
+    ),
 }
 WALLET_OR_KEY_BLOCKLIST = (
     "0xEAF9f10F8ff6c5175" + "B87A0aDd982Fa2BE83366FB",
@@ -185,6 +199,9 @@ def write_public_readme(generated_at: str, files: list[dict[str, Any]], money: d
         f"- InterSystems FHIR preflight: {PUBLIC_LINKS['fhir_preflight']}",
         f"- Qdrant Reward Route Radar: {PUBLIC_LINKS['qdrant_reward_radar']}",
         f"- Qdrant preflight: {PUBLIC_LINKS['qdrant_preflight']}",
+        f"- Qdrant demo video: {PUBLIC_LINKS['qdrant_demo_video']}",
+        f"- Qdrant contact sheet: {PUBLIC_LINKS['qdrant_contact_sheet']}",
+        f"- Qdrant video manifest: {PUBLIC_LINKS['qdrant_video_manifest']}",
         "- GitHub Pages is not claimed here because Actions is disabled for the account.",
         "",
         "## Safety Boundary",
@@ -285,6 +302,9 @@ def write_single_html(bundle_dir: Path, html_path: Path, manifest: dict[str, Any
     <li>InterSystems FHIR preflight: <a href="{html.escape(PUBLIC_LINKS["fhir_preflight"])}">{html.escape(PUBLIC_LINKS["fhir_preflight"])}</a></li>
     <li>Qdrant Reward Route Radar: <a href="{html.escape(PUBLIC_LINKS["qdrant_reward_radar"])}">{html.escape(PUBLIC_LINKS["qdrant_reward_radar"])}</a></li>
     <li>Qdrant preflight: <a href="{html.escape(PUBLIC_LINKS["qdrant_preflight"])}">{html.escape(PUBLIC_LINKS["qdrant_preflight"])}</a></li>
+    <li>Qdrant demo video: <a href="{html.escape(PUBLIC_LINKS["qdrant_demo_video"])}">{html.escape(PUBLIC_LINKS["qdrant_demo_video"])}</a></li>
+    <li>Qdrant contact sheet: <a href="{html.escape(PUBLIC_LINKS["qdrant_contact_sheet"])}">{html.escape(PUBLIC_LINKS["qdrant_contact_sheet"])}</a></li>
+    <li>Qdrant video manifest: <a href="{html.escape(PUBLIC_LINKS["qdrant_video_manifest"])}">{html.escape(PUBLIC_LINKS["qdrant_video_manifest"])}</a></li>
   </ul>
   <p>GitHub Pages is not claimed here because Actions is disabled for the account.</p>
   <h2>Money Evidence</h2>

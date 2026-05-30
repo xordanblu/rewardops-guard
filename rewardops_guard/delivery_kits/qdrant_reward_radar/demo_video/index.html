@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qdrant Reward Route Radar Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --canvas: #f5f7fb;
+        --panel: #ffffff;
+        --ink: #17202a;
+        --muted: #5c6675;
+        --line: #d7dde6;
+        --teal: #0f766e;
+        --blue: #2563eb;
+        --green: #15803d;
+        --amber: #b45309;
+        --red: #b91c1c;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      #radar-video {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(215, 221, 230, 0.55) 1px, transparent 1px) 0 0 / 120px 120px,
+          linear-gradient(0deg, rgba(215, 221, 230, 0.55) 1px, transparent 1px) 0 0 / 120px 120px,
+          var(--canvas);
+      }
+
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+
+      .scene-content {
+        width: 100%;
+        height: 100%;
+        padding: 84px 110px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .eyebrow {
+        color: var(--teal);
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 1180px;
+        font-size: 86px;
+        line-height: 1.02;
+        font-weight: 820;
+      }
+
+      h2 {
+        font-size: 52px;
+        line-height: 1.08;
+        font-weight: 800;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 30px;
+        line-height: 1.34;
+        max-width: 1160px;
+      }
+
+      .top-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 430px;
+        gap: 32px;
+        align-items: stretch;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 26px 28px;
+      }
+
+      .metric .label {
+        color: var(--muted);
+        font-size: 22px;
+        font-weight: 740;
+      }
+
+      .metric .value {
+        margin-top: 8px;
+        color: var(--green);
+        font-size: 62px;
+        line-height: 1;
+        font-weight: 840;
+      }
+
+      .metric .mode {
+        color: var(--teal);
+        font-size: 42px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card,
+      .guard,
+      .proof {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 24px;
+        box-sizing: border-box;
+      }
+
+      .card-title,
+      .guard-title {
+        font-size: 26px;
+        font-weight: 800;
+      }
+
+      .card-body,
+      .guard-body {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 22px;
+        line-height: 1.35;
+      }
+
+      .blocked {
+        border-color: #fecaca;
+        background: #fff7f7;
+      }
+
+      .blocked .card-title {
+        color: var(--red);
+      }
+
+      .review {
+        border-color: #fde68a;
+        background: #fffdf2;
+      }
+
+      .review .card-title {
+        color: var(--amber);
+      }
+
+      .route-table {
+        display: grid;
+        grid-template-columns: 110px minmax(0, 1fr) 180px 130px 210px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--panel);
+      }
+
+      .route-table > div {
+        padding: 18px 20px;
+        border-bottom: 1px solid #e7ebf1;
+        font-size: 22px;
+      }
+
+      .route-table .head {
+        background: #f8fafc;
+        color: #475569;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .route-table .money {
+        color: var(--green);
+        font-weight: 820;
+      }
+
+      .route-table .risk {
+        color: var(--amber);
+        font-weight: 820;
+      }
+
+      .route-table .route-name {
+        font-weight: 820;
+      }
+
+      .route-table .final-row {
+        border-bottom: 0;
+      }
+
+      .guard-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .guard-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--teal);
+        flex: 0 0 auto;
+      }
+
+      .dot.red {
+        background: var(--red);
+      }
+
+      .dot.amber {
+        background: var(--amber);
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .proof {
+        min-height: 150px;
+      }
+
+      .proof strong {
+        display: block;
+        color: var(--ink);
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .proof span {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.25;
+      }
+
+      .path {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8fafc;
+        padding: 18px 20px;
+        color: var(--blue);
+        font-family: monospace;
+        font-size: 25px;
+        overflow-wrap: anywhere;
+      }
+
+      .caption {
+        position: absolute;
+        left: 110px;
+        right: 110px;
+        bottom: 58px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.96);
+        padding: 18px 24px;
+        color: #334155;
+        font-size: 24px;
+        font-weight: 720;
+      }
+
+      .wipe {
+        position: absolute;
+        inset: 0;
+        background: var(--teal);
+        transform: translateX(-100%);
+        z-index: 20;
+      }
+
+      .final-fade {
+        position: absolute;
+        inset: 0;
+        background: var(--canvas);
+        opacity: 0;
+        z-index: 30;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="radar-video"
+      data-composition-id="radar-video"
+      data-width="1920"
+      data-height="1080"
+      data-start="0"
+      data-duration="72"
+    >
+      <section id="scene-1" class="clip" data-start="0" data-duration="14" data-track-index="1">
+        <div class="scene-content">
+          <div class="eyebrow">Qdrant Think Outside the Bot</div>
+          <h1>Reward Route Radar</h1>
+          <p>
+            A vector-search triage surface for real-money reward routes. It ranks high-upside work
+            while refusing social-account, wallet-signing, and instruction-disclosure tasks.
+          </p>
+          <div class="top-row">
+            <div class="metric">
+              <div class="label">Top route returned by Qdrant</div>
+              <div class="value">$5,000</div>
+            </div>
+            <div class="metric">
+              <div class="label">Mode</div>
+              <div class="value mode">Non-chatbot</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">The demo is an operator dashboard, not a conversational Q&amp;A bot.</div>
+      </section>
+
+      <section id="scene-2" class="clip" data-start="14" data-duration="14" data-track-index="1">
+        <div class="scene-content">
+          <div class="eyebrow">Synthetic Dataset With Adversarial Fixtures</div>
+          <h2>Valid routes stay visible. Unsafe routes are blocked.</h2>
+          <p>
+            The same dataset carries legitimate prize routes and hostile fixtures so the filter
+            behavior is visible in one run.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <div class="card-title">Qdrant hackathon</div>
+              <div class="card-body">Public repo, local demo, no social account, no wallet signing.</div>
+            </div>
+            <div class="card review">
+              <div class="card-title">Google Rapid Agent</div>
+              <div class="card-body">High prize track, but account or prize paperwork remains review-gated.</div>
+            </div>
+            <div class="card review">
+              <div class="card-title">InterSystems FHIR</div>
+              <div class="card-body">Synthetic-data app path. Real patient data and identity steps remain held.</div>
+            </div>
+            <div class="card blocked">
+              <div class="card-title">Prompt leak bounty</div>
+              <div class="card-body">Blocked because it requests internal instructions or private context.</div>
+            </div>
+            <div class="card blocked">
+              <div class="card-title">Social growth task</div>
+              <div class="card-body">Blocked because user social accounts are off limits.</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Low-value filler</div>
+              <div class="card-body">Allowed only after higher funded routes are exhausted.</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">Bad tasks are in the dataset on purpose, so the filters have to prove themselves.</div>
+      </section>
+
+      <section id="scene-3" class="clip" data-start="28" data-duration="16" data-track-index="1">
+        <div class="scene-content">
+          <div class="eyebrow">Qdrant Vector Search Plus Payload Filters</div>
+          <h2>Default query result</h2>
+          <p>
+            Semantic search ranks the operator intent while payload filters keep execution inside
+            the approved safety boundary.
+          </p>
+          <div class="route-table">
+            <div class="head">Rank</div>
+            <div class="head">Route</div>
+            <div class="head">Reward</div>
+            <div class="head">Risk</div>
+            <div class="head">Decision</div>
+            <div>1</div>
+            <div class="route-name">qdrant-vsd-2026</div>
+            <div class="money">$5,000</div>
+            <div class="risk">2</div>
+            <div>ALLOW</div>
+            <div>2</div>
+            <div class="route-name">google-rapid-agent-2026</div>
+            <div class="money">$5,000</div>
+            <div class="risk">4</div>
+            <div>REVIEW</div>
+            <div class="final-row">3</div>
+            <div class="route-name final-row">intersystems-fhir-agent-2026</div>
+            <div class="money final-row">$10,000</div>
+            <div class="risk final-row">5</div>
+            <div class="final-row">REVIEW</div>
+          </div>
+        </div>
+        <div class="caption">Similarity ranks the opportunity. Payload fields enforce reward, risk, and safety constraints.</div>
+      </section>
+
+      <section id="scene-4" class="clip" data-start="44" data-duration="14" data-track-index="1">
+        <div class="scene-content">
+          <div class="eyebrow">Hard Safety Boundary</div>
+          <h2>Automation can move fast without leaking private context.</h2>
+          <p>
+            The demo separates public preparation from account, identity, payment, and signing
+            actions that need explicit review.
+          </p>
+          <div class="guard-list">
+            <div class="guard">
+              <div class="guard-title"><span class="dot red"></span>Blocked</div>
+              <div class="guard-body">Social accounts, wallet signing, spending, and instruction disclosure.</div>
+            </div>
+            <div class="guard">
+              <div class="guard-title"><span class="dot amber"></span>Review</div>
+              <div class="guard-body">KYC, payment documents, account registration, and external submission steps.</div>
+            </div>
+            <div class="guard">
+              <div class="guard-title"><span class="dot"></span>Allowed</div>
+              <div class="guard-body">Public repo work, local demos, synthetic data, tests, and submission drafts.</div>
+            </div>
+            <div class="guard">
+              <div class="guard-title"><span class="dot"></span>Money rule</div>
+              <div class="guard-body">Nothing is counted as earned until payout or visible settlement exists.</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">The route radar separates preparation from irreversible external actions.</div>
+      </section>
+
+      <section id="scene-5" class="clip" data-start="58" data-duration="14" data-track-index="1">
+        <div class="scene-content">
+          <div class="eyebrow">Submission-Ready Local Evidence</div>
+          <h2>Repeatable package for organizers</h2>
+          <p>
+            The public repo includes a local web demo, preflight report, test coverage, and a
+            held external-submission gate.
+          </p>
+          <div class="proof-grid">
+            <div class="proof"><strong>5 OK</strong><span>Qdrant integration tests in the venv.</span></div>
+            <div class="proof"><strong>34 OK</strong><span>RewardOps repository tests with dependency-light checks.</span></div>
+            <div class="proof"><strong>49 OK</strong><span>Safety gate tests for prompt injection and wallet risks.</span></div>
+            <div class="proof"><strong>20 OK</strong><span>Defender tests for malicious task text and exfiltration.</span></div>
+          </div>
+          <div class="path">rewardops_guard/delivery_kits/qdrant_reward_radar</div>
+        </div>
+        <div class="caption">External upload and submission remain gated; the local evidence is ready.</div>
+      </section>
+
+      <div id="wipe-1" class="clip wipe" data-start="13.3" data-duration="1.2" data-track-index="8"></div>
+      <div id="wipe-2" class="clip wipe" data-start="27.3" data-duration="1.2" data-track-index="8"></div>
+      <div id="wipe-3" class="clip wipe" data-start="43.3" data-duration="1.2" data-track-index="8"></div>
+      <div id="wipe-4" class="clip wipe" data-start="57.3" data-duration="1.2" data-track-index="8"></div>
+      <div id="final-fade" class="clip final-fade" data-start="70.5" data-duration="1.5" data-track-index="9"></div>
+
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        function sceneIn(selector, at) {
+          tl.from(selector + " .eyebrow", { opacity: 0, y: 24, duration: 0.5, ease: "power2.out" }, at + 0.15);
+          tl.from(selector + " h1, " + selector + " h2", { opacity: 0, y: 36, duration: 0.6, ease: "power3.out" }, at + 0.35);
+          tl.from(selector + " p", { opacity: 0, y: 28, duration: 0.5, ease: "power2.out" }, at + 0.65);
+          tl.from(
+            selector + " .metric, " + selector + " .card, " + selector + " .route-table, " + selector + " .guard, " + selector + " .proof, " + selector + " .path",
+            { opacity: 0, y: 32, duration: 0.55, stagger: 0.07, ease: "power2.out" },
+            at + 0.9,
+          );
+          tl.from(selector + " .caption", { opacity: 0, y: 18, duration: 0.45, ease: "power2.out" }, at + 1.2);
+        }
+
+        function wipe(selector, at) {
+          tl.fromTo(selector, { x: "-100%" }, { x: "0%", duration: 0.45, ease: "power2.inOut" }, at);
+          tl.to(selector, { x: "100%", duration: 0.45, ease: "power2.inOut" }, at + 0.45);
+        }
+
+        sceneIn("#scene-1", 0);
+        sceneIn("#scene-2", 14);
+        sceneIn("#scene-3", 28);
+        sceneIn("#scene-4", 44);
+        sceneIn("#scene-5", 58);
+        wipe("#wipe-1", 13.3);
+        wipe("#wipe-2", 27.3);
+        wipe("#wipe-3", 43.3);
+        wipe("#wipe-4", 57.3);
+        tl.to("#scene-5 .scene-content, #scene-5 .caption", { opacity: 0, duration: 0.6, ease: "power2.in" }, 70.7);
+        tl.to("#final-fade", { opacity: 1, duration: 1.0, ease: "power1.inOut" }, 70.8);
+
+        window.__timelines["radar-video"] = tl;
+      </script>
+    </div>
+  </body>
+</html>

@@ -31,7 +31,9 @@ Qdrant is used as the vector index and payload filter engine. The demo combines 
 - Package path: `rewardops_guard/delivery_kits/qdrant_reward_radar`
 - Local web demo command: `/tmp/qdrant-radar-venv/bin/python -m rewardops_guard.delivery_kits.qdrant_reward_radar.web_demo --host 127.0.0.1 --port 8787`
 - Video script: `rewardops_guard/delivery_kits/qdrant_reward_radar/VIDEO_SCRIPT.md`
-- Demo video: hold until explicitly approved and recorded.
+- Demo video file: `rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/renders/qdrant_reward_route_radar_demo.mp4`
+- Demo video manifest: `rewardops_guard/delivery_kits/qdrant_reward_radar/demo_video/VIDEO_MANIFEST.md`
+- Demo video upload: hold until explicitly approved.
 
 ## External Gates
 

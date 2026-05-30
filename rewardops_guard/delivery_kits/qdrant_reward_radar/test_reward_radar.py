@@ -4,6 +4,7 @@ import unittest
 
 from rewardops_guard.delivery_kits.qdrant_reward_radar import reward_radar
 from rewardops_guard.delivery_kits.qdrant_reward_radar import web_demo
+from rewardops_guard.delivery_kits.qdrant_reward_radar import contest_preflight
 
 
 class RewardRadarTests(unittest.TestCase):
@@ -64,6 +65,13 @@ class RewardRadarTests(unittest.TestCase):
         self.assertIn("Qdrant Reward Route Radar", html)
         self.assertIn("/api/search", html)
         self.assertNotIn("https://", html)
+
+    @unittest.skipIf(reward_radar.QdrantClient is None, "qdrant-client is not installed")
+    def test_preflight_tracks_rendered_video_artifacts(self) -> None:
+        report = contest_preflight.build_report()
+        self.assertTrue(report["video_ok"])
+        self.assertTrue(report["web_demo_ok"])
+        self.assertTrue(report["local_ok"])
 
 
 if __name__ == "__main__":

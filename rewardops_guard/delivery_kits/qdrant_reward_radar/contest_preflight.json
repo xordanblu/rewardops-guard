@@ -16,7 +16,7 @@
     "Provide prize identity/payment documentation only if selected"
   ],
   "external_submission_ok": false,
-  "generated_at": "2026-05-30T14:10:33+00:00",
+  "generated_at": "2026-05-30T14:27:29+00:00",
   "hackathon": {
     "deadline": "2026-06-01 23:59 PT",
     "first_prize_usd": 5000,
@@ -60,7 +60,32 @@
     {
       "exists": true,
       "path": "VIDEO_SCRIPT.md"
+    },
+    {
+      "exists": true,
+      "path": "demo_video/DESIGN.md"
+    },
+    {
+      "exists": true,
+      "path": "demo_video/index.html"
+    },
+    {
+      "exists": true,
+      "path": "demo_video/VIDEO_MANIFEST.md"
+    },
+    {
+      "exists": true,
+      "path": "demo_video/renders/qdrant_reward_route_radar_demo.mp4"
+    },
+    {
+      "exists": true,
+      "path": "demo_video/renders/qdrant_reward_route_radar_contact_sheet.png"
+    },
+    {
+      "exists": true,
+      "path": "demo_video/renders/qdrant_reward_route_radar_hero_frames.png"
     }
   ],
+  "video_ok": true,
   "web_demo_ok": true
 }

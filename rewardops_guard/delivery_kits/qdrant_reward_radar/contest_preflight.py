@@ -25,6 +25,12 @@ REQUIRED_FILES = [
     "web_demo.py",
     "test_reward_radar.py",
     "VIDEO_SCRIPT.md",
+    "demo_video/DESIGN.md",
+    "demo_video/index.html",
+    "demo_video/VIDEO_MANIFEST.md",
+    "demo_video/renders/qdrant_reward_route_radar_demo.mp4",
+    "demo_video/renders/qdrant_reward_route_radar_contact_sheet.png",
+    "demo_video/renders/qdrant_reward_route_radar_hero_frames.png",
 ]
 EXTERNAL_GATES = [
     "Register for Qdrant Think Outside the Bot Hackathon",
@@ -70,6 +76,8 @@ def build_report() -> dict[str, Any]:
         web_demo_ok = "Qdrant Reward Route Radar" in page and "/api/search" in page
     except Exception:
         web_demo_ok = False
+    video_path = KIT_ROOT / "demo_video" / "renders" / "qdrant_reward_route_radar_demo.mp4"
+    video_ok = video_path.exists() and video_path.stat().st_size > 1_000_000
     return {
         "generated_at": now_iso(),
         "project": "Qdrant Reward Route Radar",
@@ -85,7 +93,8 @@ def build_report() -> dict[str, Any]:
         "qdrant_client_available": qdrant_available(),
         "demo_smoke": smoke,
         "web_demo_ok": web_demo_ok,
-        "local_ok": not missing and smoke["ok"] and web_demo_ok,
+        "video_ok": video_ok,
+        "local_ok": not missing and smoke["ok"] and web_demo_ok and video_ok,
         "external_submission_ok": False,
         "external_gates": EXTERNAL_GATES,
     }
@@ -100,6 +109,7 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         f"Qdrant client available: `{str(report['qdrant_client_available']).lower()}`",
         f"External submission OK: `{str(report['external_submission_ok']).lower()}`",
         f"Web demo OK: `{str(report['web_demo_ok']).lower()}`",
+        f"Video OK: `{str(report['video_ok']).lower()}`",
         "",
         "## Demo Smoke",
         "",
