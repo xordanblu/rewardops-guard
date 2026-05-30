@@ -22,7 +22,9 @@ REQUIRED_FILES = [
     "requirements.txt",
     "sample_opportunities.json",
     "reward_radar.py",
+    "web_demo.py",
     "test_reward_radar.py",
+    "VIDEO_SCRIPT.md",
 ]
 EXTERNAL_GATES = [
     "Register for Qdrant Think Outside the Bot Hackathon",
@@ -60,6 +62,14 @@ def demo_smoke() -> dict[str, Any]:
 def build_report() -> dict[str, Any]:
     missing = [path for path in REQUIRED_FILES if not (KIT_ROOT / path).exists()]
     smoke = demo_smoke()
+    web_demo_ok = False
+    try:
+        from rewardops_guard.delivery_kits.qdrant_reward_radar import web_demo
+
+        page = web_demo.render_page()
+        web_demo_ok = "Qdrant Reward Route Radar" in page and "/api/search" in page
+    except Exception:
+        web_demo_ok = False
     return {
         "generated_at": now_iso(),
         "project": "Qdrant Reward Route Radar",
@@ -74,7 +84,8 @@ def build_report() -> dict[str, Any]:
         "missing_required_files": missing,
         "qdrant_client_available": qdrant_available(),
         "demo_smoke": smoke,
-        "local_ok": not missing and smoke["ok"],
+        "web_demo_ok": web_demo_ok,
+        "local_ok": not missing and smoke["ok"] and web_demo_ok,
         "external_submission_ok": False,
         "external_gates": EXTERNAL_GATES,
     }
@@ -88,6 +99,7 @@ def write_markdown(report: dict[str, Any], path: Path) -> None:
         f"Local OK: `{str(report['local_ok']).lower()}`",
         f"Qdrant client available: `{str(report['qdrant_client_available']).lower()}`",
         f"External submission OK: `{str(report['external_submission_ok']).lower()}`",
+        f"Web demo OK: `{str(report['web_demo_ok']).lower()}`",
         "",
         "## Demo Smoke",
         "",
@@ -119,4 +131,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

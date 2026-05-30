@@ -1,15 +1,16 @@
 # Qdrant Reward Route Radar Preflight
 
-Generated: `2026-05-30T13:59:15+00:00`
+Generated: `2026-05-30T14:10:33+00:00`
 Local OK: `true`
 Qdrant client available: `true`
 External submission OK: `false`
+Web demo OK: `true`
 
 ## Demo Smoke
 
 - ok: `true`
 - indexed opportunities: `7`
-- route ids: `qdrant-vsd-2026`
+- route ids: `qdrant-vsd-2026, google-rapid-agent-2026, intersystems-fhir-agent-2026`
 
 ## Missing Required Files
 

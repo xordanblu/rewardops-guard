@@ -1,6 +1,6 @@
 # InterSystems FHIR Contest Preflight
 
-Checked: 2026-05-30T13:59:23+00:00
+Checked: 2026-05-30T14:11:22+00:00
 Local OK: `true`
 External submission OK: `false`
 First-place target: `$5000`

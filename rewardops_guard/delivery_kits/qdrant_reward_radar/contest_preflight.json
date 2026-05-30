@@ -3,7 +3,9 @@
     "indexed_opportunities": 7,
     "ok": true,
     "route_ids": [
-      "qdrant-vsd-2026"
+      "qdrant-vsd-2026",
+      "google-rapid-agent-2026",
+      "intersystems-fhir-agent-2026"
     ]
   },
   "external_gates": [
@@ -14,7 +16,7 @@
     "Provide prize identity/payment documentation only if selected"
   ],
   "external_submission_ok": false,
-  "generated_at": "2026-05-30T13:59:15+00:00",
+  "generated_at": "2026-05-30T14:10:33+00:00",
   "hackathon": {
     "deadline": "2026-06-01 23:59 PT",
     "first_prize_usd": 5000,
@@ -49,7 +51,16 @@
     },
     {
       "exists": true,
+      "path": "web_demo.py"
+    },
+    {
+      "exists": true,
       "path": "test_reward_radar.py"
+    },
+    {
+      "exists": true,
+      "path": "VIDEO_SCRIPT.md"
     }
-  ]
+  ],
+  "web_demo_ok": true
 }

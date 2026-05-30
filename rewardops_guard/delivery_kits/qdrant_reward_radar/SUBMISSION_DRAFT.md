@@ -18,19 +18,21 @@ Qdrant is used as the vector index and payload filter engine. The demo combines 
 
 ## Demo Script
 
-1. Show the sample opportunity dataset and the unsafe fixtures.
-2. Run the CLI with a high-upside query.
-3. Show Qdrant returning `qdrant-vsd-2026` while excluding social and prompt-exfiltration routes.
-4. Change `--min-reward` and `--allow-review` to show how filters reshape the action queue.
-5. Show the preflight report and external submission gates.
+1. Open the local web demo at `http://127.0.0.1:8787`.
+2. Show the sample opportunity dataset and the unsafe fixtures.
+3. Run the default high-upside query.
+4. Show Qdrant returning `qdrant-vsd-2026` while excluding social and prompt-exfiltration routes.
+5. Change minimum reward, maximum risk, and review-mode controls to show how filters reshape the action queue.
+6. Show the preflight report and external submission gates.
 
 ## Links To Prepare
 
 - GitHub repo: `https://github.com/xordanx/rewardops-guard`
 - Package path: `rewardops_guard/delivery_kits/qdrant_reward_radar`
+- Local web demo command: `/tmp/qdrant-radar-venv/bin/python -m rewardops_guard.delivery_kits.qdrant_reward_radar.web_demo --host 127.0.0.1 --port 8787`
+- Video script: `rewardops_guard/delivery_kits/qdrant_reward_radar/VIDEO_SCRIPT.md`
 - Demo video: hold until explicitly approved and recorded.
 
 ## External Gates
 
 Do not submit externally until registration, GitHub sharing, video hosting, and prize-documentation implications are approved.
-

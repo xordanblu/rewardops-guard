@@ -29,7 +29,8 @@ KIT_ROOT = Path(__file__).resolve().parent
 DEFAULT_DATASET = KIT_ROOT / "sample_opportunities.json"
 COLLECTION = "reward_route_radar"
 VECTOR_SIZE = 96
-BLOCKED_FLAGS = ("requires_social", "requires_kyc", "requires_wallet_signing", "requires_secret_disclosure")
+BLOCKED_FLAGS = ("requires_social", "requires_wallet_signing", "requires_secret_disclosure")
+REVIEW_FLAGS = ("requires_kyc",)
 
 
 @dataclass(frozen=True)
@@ -76,14 +77,20 @@ def opportunity_text(opportunity: dict[str, Any]) -> str:
 
 def safety_decision(opportunity: dict[str, Any]) -> dict[str, Any]:
     blockers = [flag for flag in BLOCKED_FLAGS if opportunity.get(flag)]
+    review_flags = [flag for flag in REVIEW_FLAGS if opportunity.get(flag)]
     risk_level = int(opportunity.get("risk_level", 0))
     if blockers or risk_level >= 8:
         decision = "BLOCK"
-    elif risk_level >= 4:
+    elif review_flags or risk_level >= 4:
         decision = "REVIEW"
     else:
         decision = "ALLOW"
-    return {"decision": decision, "blockers": blockers, "risk_level": risk_level}
+    return {
+        "decision": decision,
+        "blockers": blockers,
+        "review_flags": review_flags,
+        "risk_level": risk_level,
+    }
 
 
 def require_qdrant() -> None:
@@ -111,6 +118,7 @@ def payload_for(opportunity: dict[str, Any]) -> dict[str, Any]:
         **opportunity,
         "decision": decision["decision"],
         "blockers": decision["blockers"],
+        "review_flags": decision["review_flags"],
         "search_text": opportunity_text(opportunity),
     }
 
@@ -197,11 +205,17 @@ def next_action(payload: dict[str, Any]) -> str:
     return "Keep as filler only after funded higher-value work is exhausted."
 
 
-def build_demo_report(query: str, min_reward: float, allow_review: bool) -> dict[str, Any]:
+def build_demo_report(query: str, min_reward: float, allow_review: bool, max_risk: int = 5) -> dict[str, Any]:
     opportunities = load_opportunities()
     client = build_client()
     index_opportunities(client, opportunities)
-    ranked = search_routes(client, query, min_reward=min_reward, allow_review=allow_review)
+    ranked = search_routes(
+        client,
+        query,
+        min_reward=min_reward,
+        max_risk=max_risk,
+        allow_review=allow_review,
+    )
     return {
         "project": "Qdrant Reward Route Radar",
         "mode": "non-chatbot vector-search triage",
@@ -210,7 +224,10 @@ def build_demo_report(query: str, min_reward: float, allow_review: bool) -> dict
         "qdrant_collection": COLLECTION,
         "safety_policy": {
             "blocks": list(BLOCKED_FLAGS),
+            "review_flags": list(REVIEW_FLAGS),
             "allow_review": allow_review,
+            "min_reward_usd": min_reward,
+            "max_risk": max_risk,
         },
         "ranked_routes": [route.__dict__ for route in ranked],
     }
@@ -220,10 +237,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Rank reward routes with Qdrant vector search.")
     parser.add_argument("--query", default="high upside vector search hackathon no chatbot safe public repo")
     parser.add_argument("--min-reward", type=float, default=0)
+    parser.add_argument("--max-risk", type=int, default=5)
     parser.add_argument("--allow-review", action="store_true", help="Allow non-blocked routes that still need external review.")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
-    report = build_demo_report(args.query, args.min_reward, args.allow_review)
+    report = build_demo_report(args.query, args.min_reward, args.allow_review, max_risk=args.max_risk)
     if args.json:
         print(json.dumps(report, indent=2, sort_keys=True))
     else:

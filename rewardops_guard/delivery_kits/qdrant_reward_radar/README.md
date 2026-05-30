@@ -35,7 +35,19 @@ python3 -m unittest rewardops_guard.delivery_kits.qdrant_reward_radar.test_rewar
   --allow-review
 ```
 
-Expected top route: `qdrant-vsd-2026`, while social-account and prompt-exfiltration fixtures are filtered out.
+Expected top route: `qdrant-vsd-2026`, while social-account and prompt-exfiltration fixtures are filtered out. Routes that might require prize paperwork later are kept in review mode instead of being treated as safe to execute automatically.
+
+## Local Web Demo
+
+```bash
+/tmp/qdrant-radar-venv/bin/python -m rewardops_guard.delivery_kits.qdrant_reward_radar.web_demo --host 127.0.0.1 --port 8787
+```
+
+Open `http://127.0.0.1:8787`. The web demo exposes the same Qdrant-backed ranking API at `/api/search`, with controls for intent, minimum reward, maximum risk, and review-mode routing.
+
+## Demo Video Prep
+
+`VIDEO_SCRIPT.md` contains a sub-3-minute walkthrough script. External video upload is intentionally held until submission approval.
 
 ## Submission Gate
 
@@ -46,4 +58,3 @@ This repository package is local-only until these external steps are explicitly 
 - Record and host a demo video no longer than 3 minutes.
 - Submit through the Qdrant form before the deadline.
 - Provide prize identity/payment documents only if selected.
-
